@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Lokasi Tambang – PT Nanda Jaya Silika</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lokasi tambang pasir kuarsa PT Nanda Jaya Silika di Desa Sukorahayu, Labuhan Maringgai, Lampung Timur — akses strategis, luas 27,25 Ha.">
+    <link rel="icon" href="img/logo PT Nanda Jaya Silika.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+:root{
+  --blue:#009FE3;--blue-dark:#0A2C4E;--blue-mid:#0D3A63;
+  --red:#E53935;--red-dark:#C62828;--green:#12b886;
+  --white:#FFF;--gray-light:#F5F7FA;--gray-mid:#E0E6ED;--gray-text:#3D5A73;
+  --fh:'Poppins',sans-serif;--fb:'Inter',sans-serif;
+  --tr:.3s ease;--ss:0 4px 16px rgba(10,44,78,.08);--sm:0 8px 32px rgba(10,44,78,.14)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);font-size:15px;color:var(--blue-dark);background:var(--white);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:var(--fh);font-weight:700;color:var(--blue-dark)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.red-stripe{height:4px;background:var(--red)}
+
+@keyframes fadeUp  {from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulseRing{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.6);opacity:0}}
+.anim-up{opacity:0}.anim-left{opacity:0}.anim-right{opacity:0}
+.anim-up.visible{animation:fadeUp .7s ease forwards}
+.anim-left.visible{animation:fadeLeft .7s ease forwards}
+.anim-right.visible{animation:fadeRight .7s ease forwards}
+
+/* ── NAVBAR ── */
+.main-nav{background:var(--blue-mid);position:sticky;top:0;z-index:1000;transition:background var(--tr),box-shadow var(--tr)}
+.main-nav.nav-scrolled{background:var(--blue-dark);box-shadow:0 4px 24px rgba(0,0,0,.25)}
+.nav-inner{height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo-compact{display:flex;align-items:center;gap:10px}
+.nav-logo-container{width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);border-radius:10px;border:1px solid rgba(255,255,255,.2);overflow:hidden;flex-shrink:0}
+.nav-logo-img{width:100%;height:100%;object-fit:contain}
+.nav-brand-name{font-family:var(--fh);font-weight:600;font-size:14px;color:#fff;margin-left:8px}
+.nav-menu{display:flex;align-items:center;gap:2px}
+.nav-link-item{font-family:var(--fh);font-size:13px;font-weight:500;color:rgba(255,255,255,.75);padding:8px 12px;border-radius:6px;transition:color var(--tr);position:relative;white-space:nowrap}
+.nav-link-item::after{content:'';position:absolute;bottom:4px;left:12px;right:12px;height:2px;background:var(--blue);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform var(--tr)}
+.nav-link-item:hover,.nav-link-item.active{color:#fff}
+.nav-link-item:hover::after,.nav-link-item.active::after{transform:scaleX(1)}
+.btn-nav-cta{font-family:var(--fh);font-size:13px;font-weight:600;color:#fff!important;background:var(--blue);padding:9px 18px;border-radius:8px;margin-left:6px;transition:background var(--tr);white-space:nowrap}
+.btn-nav-cta:hover{background:var(--red);color:#fff!important}
+.nav-toggler{display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:transparent;border:none;cursor:pointer;padding:8px}
+.nav-toggler span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:all var(--tr)}
+.nav-toggler.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggler.open span:nth-child(2){opacity:0}
+.nav-toggler.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:991px){
+  .nav-menu{position:fixed;top:64px;left:0;right:0;background:var(--blue-dark);flex-direction:column;align-items:stretch;padding:20px 24px 28px;gap:2px;transform:translateY(-110%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:0 12px 40px rgba(0,0,0,.3);z-index:999;max-height:calc(100vh - 64px);overflow-y:auto}
+  .nav-menu.is-open{transform:translateY(0)}
+  .nav-link-item{padding:12px 16px;font-size:15px;color:rgba(255,255,255,.9);white-space:normal}
+  .btn-nav-cta{margin:12px 0 0;text-align:center;padding:12px;font-size:15px;display:block}
+  .nav-inner{padding:0 16px}
+}
+
+/* ── PAGE HERO ── */
+.page-hero{background:var(--blue-dark);padding:72px 0 56px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px),repeating-linear-gradient(90deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px)}
+.page-hero-content{position:relative;z-index:2}
+.breadcrumb-njs{display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.breadcrumb-njs a{font-family:var(--fh);font-size:12px;color:rgba(255,255,255,.5);transition:color var(--tr)}
+.breadcrumb-njs a:hover{color:var(--blue)}
+.breadcrumb-njs span{color:rgba(255,255,255,.25);font-size:11px}
+.breadcrumb-njs .current{font-family:var(--fh);font-size:12px;color:var(--blue)}
+.page-hero-title{font-family:var(--fh);font-size:clamp(24px,4vw,40px);font-weight:800;color:#fff;margin-bottom:8px;line-height:1.2}
+.page-hero-sub{font-size:14px;color:rgba(255,255,255,.6);max-width:560px;line-height:1.8}
+.page-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,159,227,.15);border:1px solid rgba(0,159,227,.35);color:#7DD4F5;font-family:var(--fh);font-size:11px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.3px}
+.trust-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.trust-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:8px 16px;border-radius:10px;font-family:var(--fh);font-size:12px;font-weight:600;color:#fff}
+.trust-badge i{color:var(--blue)}
+.trust-badge .t-green{color:#4DE89C}
+
+/* ── SECTION ── */
+.sec{padding:72px 0}
+.sec--gray{background:var(--gray-light)}
+.sec--dark{background:var(--blue-dark)}
+.sbadge{display:inline-block;background:rgba(0,159,227,.1);color:var(--blue);font-family:var(--fh);font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.sbadge--light{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9)}
+.stitle{font-size:clamp(20px,3.5vw,32px);font-weight:800;line-height:1.3;margin-bottom:4px}
+.stitle--white{color:#fff}
+.srule{width:48px;height:4px;background:var(--red);border-radius:2px;margin:16px 0 28px}
+.srule--center{margin-left:auto;margin-right:auto}
+.srule--blue{background:var(--blue)}
+.stext{font-size:14px;color:var(--gray-text);line-height:1.8}
+.stext--light{color:rgba(255,255,255,.7)}
+
+/* ══════════════════════════════
+   DATA CARD & TABLE (sama seperti legalitas)
+   ══════════════════════════════ */
+.data-card{background:#fff;border-radius:18px;border:1px solid var(--gray-mid);box-shadow:var(--ss);overflow:hidden}
+.data-card-header{background:var(--blue-dark);padding:20px 28px;display:flex;align-items:center;gap:14px}
+.data-card-icon{width:44px;height:44px;border-radius:11px;background:rgba(0,159,227,.2);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--blue);flex-shrink:0}
+.data-card-header h3{font-family:var(--fh);font-size:15px;font-weight:700;color:#fff;margin:0}
+.data-card-header p{font-size:12px;color:rgba(255,255,255,.55);margin:3px 0 0}
+.data-table{width:100%;border-collapse:collapse;table-layout:fixed}
+.data-table tr{border-bottom:1px solid var(--gray-mid)}
+.data-table tr:last-child{border-bottom:none}
+.data-table td{padding:14px 20px;font-size:13px;vertical-align:top;word-break:break-word;overflow-wrap:anywhere}
+.data-table td:first-child{width:40%;color:var(--gray-text);font-family:var(--fh);font-weight:500;font-size:12px;line-height:1.5}
+.data-table td:nth-child(2){width:4%;color:var(--gray-text);padding-left:0;padding-right:0}
+.data-table td:last-child{width:56%;color:var(--blue-dark);font-weight:600;font-family:var(--fh);font-size:13px;line-height:1.5}
+.data-table tr:hover td{background:var(--gray-light)}
+.data-table .sep-row td{padding:0!important;height:4px;background:var(--gray-light);border-bottom:none}
+.data-table .val-green{display:inline-flex;align-items:center;gap:5px;background:rgba(0,200,120,.1);border:1px solid rgba(0,200,120,.25);color:#27AE60;font-size:12px;padding:3px 10px;border-radius:20px;font-weight:600;font-family:var(--fh)}
+.data-table .val-blue{display:inline-flex;align-items:center;gap:5px;background:rgba(0,159,227,.1);border:1px solid rgba(0,159,227,.2);color:var(--blue);font-size:12px;padding:3px 10px;border-radius:20px;font-weight:600;font-family:var(--fh)}
+
+/* ══════════════════════════════
+   LOKASI HERO CARDS
+   ══════════════════════════════ */
+.loc-hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:48px}
+.loc-hero-card{background:#fff;border-radius:18px;border:1px solid var(--gray-mid);padding:26px 22px;box-shadow:var(--ss);transition:all var(--tr);position:relative;overflow:hidden;text-align:center}
+.loc-hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.loc-hero-card.card-area::before{background:linear-gradient(90deg,var(--blue),#00c6ff)}
+.loc-hero-card.card-koord::before{background:linear-gradient(90deg,var(--green),#20c997)}
+.loc-hero-card.card-akses::before{background:linear-gradient(90deg,var(--red),#ff8080)}
+.loc-hero-card.card-wilayah::before{background:linear-gradient(90deg,#F59E0B,#FBBF24)}
+.loc-hero-card:hover{transform:translateY(-4px);box-shadow:var(--sm)}
+.lhc-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto 14px}
+.lhc-icon.icon-area{background:rgba(0,159,227,.1);color:var(--blue);border:1px solid rgba(0,159,227,.2)}
+.lhc-icon.icon-koord{background:rgba(18,184,134,.1);color:var(--green);border:1px solid rgba(18,184,134,.2)}
+.lhc-icon.icon-akses{background:rgba(229,57,53,.1);color:var(--red);border:1px solid rgba(229,57,53,.2)}
+.lhc-icon.icon-wilayah{background:rgba(245,158,11,.1);color:#F59E0B;border:1px solid rgba(245,158,11,.2)}
+.lhc-label{font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray-text);margin-bottom:6px}
+.lhc-val{font-family:var(--fh);font-size:clamp(16px,2vw,22px);font-weight:800;color:var(--blue-dark);margin-bottom:4px;line-height:1.3}
+.lhc-note{font-size:12px;color:var(--gray-text);line-height:1.5}
+
+/* ══════════════════════════════
+   MAP SECTION
+   ══════════════════════════════ */
+.map-wrapper{background:#fff;border-radius:18px;border:1px solid var(--gray-mid);box-shadow:var(--sm);overflow:hidden}
+.map-header{background:var(--blue-dark);padding:18px 28px;display:flex;align-items:center;gap:14px}
+.map-header-icon{width:44px;height:44px;border-radius:11px;background:rgba(0,159,227,.2);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--blue);flex-shrink:0}
+.map-header h3{font-family:var(--fh);font-size:15px;font-weight:700;color:#fff;margin:0}
+.map-header p{font-size:12px;color:rgba(255,255,255,.55);margin:3px 0 0}
+.map-iframe-wrap{position:relative;width:100%;padding-top:56.25%;background:var(--gray-light)}
+.map-iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--gray-light);color:var(--gray-text);font-family:var(--fh);gap:12px}
+.map-fallback i{font-size:48px;color:var(--blue);opacity:.4}
+.map-fallback p{font-size:14px}
+.map-coord-bar{display:flex;align-items:center;gap:16px;padding:14px 24px;background:rgba(0,159,227,.05);border-top:1px solid var(--gray-mid);flex-wrap:wrap}
+.map-coord-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--gray-text);font-family:var(--fh)}
+.map-coord-item i{color:var(--blue);font-size:13px}
+.map-coord-item strong{color:var(--blue-dark);font-weight:700}
+.map-coord-item.copy-btn{cursor:pointer;padding:4px 12px;background:rgba(0,159,227,.1);border:1px solid rgba(0,159,227,.2);border-radius:8px;transition:all var(--tr);color:var(--blue);font-weight:600}
+.map-coord-item.copy-btn:hover{background:rgba(0,159,227,.2);border-color:rgba(0,159,227,.4)}
+
+/* ══════════════════════════════
+   AKSES & JARAK CARDS
+   ══════════════════════════════ */
+.akses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.akses-card{background:#fff;border:1px solid var(--gray-mid);border-radius:16px;padding:24px 22px;transition:all var(--tr);position:relative;overflow:hidden}
+.akses-card:hover{border-color:var(--blue);box-shadow:var(--ss);transform:translateY(-2px)}
+.akses-card-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.akses-card-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.akses-card-icon.icon-jalan{background:rgba(0,159,227,.1);color:var(--blue);border:1px solid rgba(0,159,227,.2)}
+.akses-card-icon.icon-pelabuhan{background:rgba(18,184,134,.1);color:var(--green);border:1px solid rgba(18,184,134,.2)}
+.akses-card-icon.icon-bandara{background:rgba(229,57,53,.1);color:var(--red);border:1px solid rgba(229,57,53,.2)}
+.akses-card-title{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--blue-dark)}
+.akses-card-sub{font-size:11px;color:var(--gray-text);font-family:var(--fh)}
+.akses-dist-list{display:flex;flex-direction:column;gap:10px}
+.akses-dist-item{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--gray-light);border-radius:10px;transition:background var(--tr)}
+.akses-dist-item:hover{background:rgba(0,159,227,.06)}
+.akses-dist-name{font-family:var(--fh);font-size:12px;font-weight:600;color:var(--blue-dark);display:flex;align-items:center;gap:8px}
+.akses-dist-name i{color:var(--blue);font-size:12px;width:16px;text-align:center}
+.akses-dist-val{font-family:var(--fh);font-size:13px;font-weight:800;color:var(--blue);white-space:nowrap}
+
+/* ══════════════════════════════
+   KEUNGGULAN LOKASI
+   ══════════════════════════════ */
+.keunggulan-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.keunggulan-item{background:#fff;border:1px solid var(--gray-mid);border-radius:16px;padding:24px 22px;display:flex;align-items:flex-start;gap:18px;transition:all var(--tr)}
+.keunggulan-item:hover{border-color:var(--blue);box-shadow:var(--ss);transform:translateY(-2px)}
+.keunggulan-icon{width:50px;height:50px;border-radius:12px;background:rgba(0,159,227,.1);border:1px solid rgba(0,159,227,.2);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--blue);flex-shrink:0}
+.keunggulan-label{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--blue-dark);margin-bottom:6px}
+.keunggulan-desc{font-size:13px;color:var(--gray-text);line-height:1.7}
+
+/* ══════════════════════════════
+   RUTE BOX
+   ══════════════════════════════ */
+.rute-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:18px;padding:36px 32px;position:relative;overflow:hidden;border:1px solid rgba(0,159,227,.2)}
+.rute-box::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 28px)}
+.rute-tag{font-family:var(--fh);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.rute-steps{display:flex;flex-direction:column;gap:0;position:relative;z-index:2}
+.rute-step{display:flex;align-items:flex-start;gap:16px;padding:14px 0;position:relative}
+.rute-step:not(:last-child){border-bottom:1px solid rgba(255,255,255,.08)}
+.rute-step-num{width:32px;height:32px;border-radius:50%;background:rgba(0,159,227,.2);border:1px solid rgba(0,159,227,.4);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:13px;font-weight:800;color:var(--blue);flex-shrink:0}
+.rute-step-text{font-family:var(--fh);font-size:13px;font-weight:600;color:rgba(255,255,255,.85);line-height:1.6}
+.rute-step-text span{display:block;font-size:12px;font-weight:400;color:rgba(255,255,255,.5);margin-top:2px}
+
+/* ══════════════════════════════
+   VISI BOX (reuse)
+   ══════════════════════════════ */
+.visi-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:18px;padding:40px 36px;position:relative;overflow:hidden;border:1px solid rgba(0,159,227,.2)}
+.visi-box::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 28px)}
+.visi-quote-icon{font-size:48px;color:rgba(0,159,227,.2);position:absolute;top:24px;right:28px}
+.visi-tag{font-family:var(--fh);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:12px}
+.visi-text{font-family:var(--fh);font-size:clamp(16px,2.5vw,22px);font-weight:700;color:#fff;line-height:1.6;position:relative;z-index:2}
+
+/* ══════════════════════════════
+   CTA & FOOTER
+   ══════════════════════════════ */
+.cta-section{background:var(--blue-dark);padding:64px 0;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 40px)}
+.btn-cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:14px;padding:14px 32px;border-radius:10px;transition:all var(--tr);border:2px solid var(--red)}
+.btn-cta-main:hover{background:var(--red-dark);border-color:var(--red-dark);color:#fff;transform:translateY(-2px);box-shadow:0 8px 28px rgba(229,57,53,.4)}
+.btn-cta-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-family:var(--fh);font-weight:600;font-size:14px;padding:13px 28px;border-radius:10px;border:2px solid rgba(255,255,255,.3);transition:all var(--tr)}
+.btn-cta-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);color:#fff}
+
+.site-footer{background:#050F1C;padding:56px 0 0;color:rgba(255,255,255,.6)}
+.footer-logo-img{width:40px;height:40px;object-fit:contain;flex-shrink:0}
+.footer-brand-name{font-family:var(--fh);font-weight:700;font-size:14px;color:#fff}
+.footer-brand-tag{font-size:11px;color:rgba(255,255,255,.4)}
+.footer-about{font-size:13px;line-height:1.8;color:rgba(255,255,255,.5);margin-top:4px}
+.footer-heading{font-family:var(--fh);font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.footer-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.footer-links a,.footer-links li{font-size:12px;color:rgba(255,255,255,.55);transition:color var(--tr)}
+.footer-links a:hover{color:var(--blue)}
+.footer-links--contact li{display:flex;align-items:flex-start;gap:10px}
+.footer-links--contact i{color:var(--blue);width:16px;flex-shrink:0;margin-top:3px}
+.footer-bottom{margin-top:40px;padding:18px 0;border-top:1px solid rgba(255,255,255,.07)}
+.footer-bottom p{margin:0;font-size:12px;color:rgba(255,255,255,.3)}
+.footer-bottom strong{color:rgba(255,255,255,.6)}
+.footer-bottom-right{color:rgba(0,159,227,.5)!important}
+
+/* WA Float */
+.wa-float{position:fixed;left:24px;bottom:32px;z-index:9998;display:flex;align-items:center;opacity:0;pointer-events:none;transform:translateY(16px);transition:opacity .4s ease,transform .4s ease}
+.wa-float.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.wa-float-icon{width:52px;height:52px;border-radius:16px;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;box-shadow:0 4px 20px rgba(37,211,102,.45);border:2px solid rgba(255,255,255,.2);position:relative;z-index:2;transition:transform .3s,box-shadow .3s,background .3s}
+.wa-float-icon::before{content:'';position:absolute;inset:-4px;border-radius:20px;border:2px solid rgba(37,211,102,.4);animation:waPulse 2s ease-out infinite}
+@keyframes waPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.25);opacity:0}}
+.wa-float-tooltip{background:var(--blue-dark);color:#fff;font-family:var(--fh);font-size:12px;font-weight:600;padding:8px 14px;border-radius:0 10px 10px 0;white-space:nowrap;opacity:0;transform:translateX(-10px);pointer-events:none;transition:opacity .25s,transform .25s;border:1px solid rgba(255,255,255,.08);border-left:none;box-shadow:2px 4px 16px rgba(0,0,0,.2);margin-left:-2px;position:relative;z-index:1}
+.wa-float:hover .wa-float-icon{transform:scale(1.06);background:#20BD5A}
+.wa-float:hover .wa-float-tooltip{opacity:1;transform:translateX(0)}
+.back-to-top{position:fixed;right:24px;bottom:32px;z-index:9999;width:46px;height:46px;border-radius:12px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;opacity:0;pointer-events:none;transition:all var(--tr);box-shadow:0 4px 16px rgba(0,159,227,.4)}
+.back-to-top.visible{opacity:1;pointer-events:auto}
+.back-to-top:hover{background:var(--red);color:#fff;transform:translateY(-3px)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:991px){
+  .loc-hero-grid{grid-template-columns:repeat(2,1fr)}
+  .akses-grid{grid-template-columns:1fr}
+  .keunggulan-grid{grid-template-columns:1fr}
+}
+@media(max-width:767px){
+  .sec{padding:48px 0}
+  .page-hero{padding:48px 0 36px}
+  .loc-hero-grid{grid-template-columns:1fr}
+  .data-table td{padding:10px 12px;font-size:12px}
+  .data-table td:first-child{width:45%}
+  .map-coord-bar{flex-direction:column;gap:8px;align-items:flex-start}
+  .footer-bottom .d-flex{flex-direction:column;text-align:center;gap:6px}
+  .wa-float{left:16px;bottom:24px}
+  .wa-float-icon{width:46px;height:46px;font-size:22px}
+  .back-to-top{right:16px;bottom:24px;width:44px;height:44px}
+  .btn-cta-main,.btn-cta-outline{width:100%;justify-content:center}
+  .cta-btn-row{flex-direction:column;align-items:center!important}
+  .rute-box{padding:24px 20px}
+}
+@media(max-width:480px){
+  .akses-dist-item{flex-direction:column;align-items:flex-start;gap:4px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="main-nav" id="mainNav">
+    <div class="container-fluid">
+        <div class="nav-inner">
+            <a class="nav-logo-compact d-flex align-items-center" href="index.html">
+                <div class="nav-logo-container">
+                    <img src="img/pt-njs.png" alt="NJS" class="nav-logo-img">
+                </div>
+                <span class="nav-brand-name d-none d-lg-inline">PT Nanda Jaya Silika</span>
+            </a>
+            <button class="nav-toggler d-lg-none" id="navToggler" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                    <a href="#hero"       class="nav-link-item">Beranda</a>
+                    <a href="tentang.html"    class="nav-link-item">Tentang</a>
+                    <a href="legalitas.html"  class="nav-link-item">Legalitas</a>
+                    <a href="visi.html"  class="nav-link-item">Visi &amp; Misi</a>
+                    <a href="produk.html"     class="nav-link-item">Produk</a>
+                    <a href="galeri.html"     class="nav-link-item">Galeri</a>
+                    <a href="keunggulan.html" class="nav-link-item">Keunggulan</a>
+                    <a href="lokasi.html"     class="nav-link-item active">Lokasi</a>
+                <a href="kontak.html"    class="btn-nav-cta"><i class="fab fa-whatsapp"></i> Hubungi</a>
+                </div>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <div class="breadcrumb-njs anim-up">
+                <a href="index.html"><i class="fas fa-home" style="font-size:11px"></i> Beranda</a>
+                <span>›</span><span class="current">Lokasi</span>
+            </div>
+            <div class="page-hero-badge anim-up" style="animation-delay:.05s">
+                <i class="fas fa-map-marked-alt"></i> Lokasi Tambang &amp; Akses
+            </div>
+            <h1 class="page-hero-title anim-up" style="animation-delay:.1s">Lokasi Tambang Pasir Kuarsa</h1>
+            <p class="page-hero-sub anim-up" style="animation-delay:.15s">Berlokasi strategis di Desa Sukorahayu, Kecamatan Labuhan Maringgai, Kabupaten Lampung Timur — mudah dijangkau via jalan darat dan dekat jalur pelabuhan ekspor.</p>
+            <div class="trust-row anim-up" style="animation-delay:.2s">
+                <div class="trust-badge"><i class="fas fa-ruler-combined"></i> 27,25 Hektar</div>
+                <div class="trust-badge"><i class="fas fa-road"></i> Akses Jalan Keras</div>
+                <div class="trust-badge"><i class="fas fa-ship t-green"></i> Dekat Pelabuhan</div>
+                <div class="trust-badge"><i class="fas fa-check-circle t-green"></i> WIUP Terverifikasi</div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="red-stripe"></div>
+
+<!-- ══════════════════════════
+     4 KARTU LOKASI UTAMA
+     ══════════════════════════ -->
+<section class="sec" id="overview">
+    <div class="container">
+        <div class="text-center mb-5 anim-up">
+            <div class="sbadge">Ikhtisar Lokasi</div>
+            <h2 class="stitle">Data Lokasi Tambang</h2>
+            <div class="srule srule--center"></div>
+            <p class="stext mx-auto" style="max-width:520px">Wilayah Izin Usaha Pertambangan (WIUP) terverifikasi dengan luas 27,25 hektar dan aksesibilitas yang mendukung distribusi material skala besar.</p>
+        </div>
+        <div class="loc-hero-grid">
+            <div class="loc-hero-card card-area anim-up">
+                <div class="lhc-icon icon-area"><i class="fas fa-ruler-combined"></i></div>
+                <div class="lhc-label">Luas WIUP</div>
+                <div class="lhc-val">27,25 Ha</div>
+                <div class="lhc-note">Wilayah izin pertambangan resmi yang tercatat dalam SK IUP</div>
+            </div>
+            <div class="loc-hero-card card-koord anim-up" style="animation-delay:.1s">
+                <div class="lhc-icon icon-koord"><i class="fas fa-crosshairs"></i></div>
+                <div class="lhc-label">Koordinat</div>
+                <div class="lhc-val" style="font-size:clamp(13px,1.6vw,17px)">5.08°S, 105.62°E</div>
+                <div class="lhc-note">Titik koordinat pusat area tambang</div>
+            </div>
+            <div class="loc-hero-card card-akses anim-up" style="animation-delay:.2s">
+                <div class="lhc-icon icon-akses"><i class="fas fa-truck"></i></div>
+                <div class="lhc-label">Akses Jalan</div>
+                <div class="lhc-val">Jalan Keras</div>
+                <div class="lhc-note">Bisa dilalui truk besar dan alat berat</div>
+            </div>
+            <div class="loc-hero-card card-wilayah anim-up" style="animation-delay:.3s">
+                <div class="lhc-icon icon-wilayah"><i class="fas fa-map"></i></div>
+                <div class="lhc-label">Kode Wilayah</div>
+                <div class="lhc-val" style="font-size:clamp(13px,1.6vw,17px)">18.07.24.1.02.001</div>
+                <div class="lhc-note">Kode wilayah administrasi terdaftar</div>
+            </div>
+        </div>
+
+        <!-- Tabel detail + Rute -->
+        <div class="row">
+            <div class="col-lg-7 mb-4 mb-lg-0 anim-left">
+                <div class="data-card">
+                    <div class="data-card-header">
+                        <div class="data-card-icon"><i class="fas fa-map-pin"></i></div>
+                        <div>
+                            <h3>Detail Lokasi WIUP</h3>
+                            <p>Data administratif wilayah pertambangan</p>
+                        </div>
+                    </div>
+                    <table class="data-table">
+                        <tbody>
+                            <tr><td>Desa / Kelurahan</td><td>:</td><td>Sukorahayu</td></tr>
+                            <tr><td>Kecamatan</td><td>:</td><td>Labuhan Maringgai</td></tr>
+                            <tr><td>Kabupaten</td><td>:</td><td>Lampung Timur</td></tr>
+                            <tr><td>Provinsi</td><td>:</td><td>Lampung</td></tr>
+                            <tr class="sep-row"><td colspan="3"></td></tr>
+                            <tr><td>Luas WIUP</td><td>:</td><td><span class="val-blue">27,25 Hektar</span></td></tr>
+                            <tr><td>Kode Wilayah</td><td>:</td><td>18.07.24.1.02.001</td></tr>
+                            <tr><td>Koordinat Pusat</td><td>:</td><td>5°08'S · 105°37'E</td></tr>
+                            <tr><td>Jenis Komoditas</td><td>:</td><td>Pasir Silika (Mineral Bukan Logam)</td></tr>
+                            <tr class="sep-row"><td colspan="3"></td></tr>
+                            <tr><td>Kondisi Jalan</td><td>:</td><td><span class="val-green"><i class="fas fa-check-circle"></i> Jalan Keras</span></td></tr>
+                            <tr><td>Akses Truk Besar</td><td>:</td><td><span class="val-green"><i class="fas fa-check-circle"></i> Bisa Dilalui</span></td></tr>
+                            <tr><td>Status WIUP</td><td>:</td><td><span class="val-green"><i class="fas fa-check-circle"></i> Terverifikasi CNC</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-5 anim-right">
+                <!-- Rute dari Bandar Lampung -->
+                <div class="rute-box mb-4">
+                    <div class="rute-tag"><i class="fas fa-route"></i> Rute dari Bandar Lampung</div>
+                    <div class="rute-steps">
+                        <div class="rute-step">
+                            <div class="rute-step-num">1</div>
+                            <div class="rute-step-text">Kota Bandar Lampung<span>Titik awal — pusat kota / pelabuhan Bakauheni</span></div>
+                        </div>
+                        <div class="rute-step">
+                            <div class="rute-step-num">2</div>
+                            <div class="rute-step-text">Jalan Lintas Timur (JLT)<span>→ Melalui jalur utama provinsi ke arah timur</span></div>
+                        </div>
+                        <div class="rute-step">
+                            <div class="rute-step-num">3</div>
+                            <div class="rute-step-text">Kec. Sukadana / Way Jepara<span>→ Belok selatan menuju pesisir timur</span></div>
+                        </div>
+                        <div class="rute-step">
+                            <div class="rute-step-num">4</div>
+                            <div class="rute-step-text">Kec. Labuhan Maringgai<span>→ Masuk area desa Sukorahayu</span></div>
+                        </div>
+                        <div class="rute-step">
+                            <div class="rute-step-num" style="background:rgba(0,200,120,.2);border-color:rgba(0,200,120,.4);color:#4DE89C"><i class="fas fa-flag" style="font-size:12px"></i></div>
+                            <div class="rute-step-text" style="color:#4DE89C">Lokasi Tambang NJS<span>Desa Sukorahayu — estimasi ~3 jam perjalanan</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Quote box -->
+                <div class="visi-box">
+                    <i class="fas fa-quote-left visi-quote-icon"></i>
+                    <div class="visi-tag">Keunggulan Strategis</div>
+                    <p class="visi-text">"Lokasi pesisir timur Lampung memberikan akses langsung menuju jalur perdagangan maritim Selat Sunda dan Laut Jawa."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════
+     PETA LOKASI
+     ══════════════════════════ -->
+<section class="sec sec--gray" id="peta">
+    <div class="container">
+        <div class="text-center mb-5 anim-up">
+            <div class="sbadge">Peta Interaktif</div>
+            <h2 class="stitle">Posisi Tambang di Peta</h2>
+            <div class="srule srule--center"></div>
+            <p class="stext mx-auto" style="max-width:540px">Lokasi tambang pasir kuarsa NJS di wilayah pesisir timur Lampung — strategis untuk distribusi darat maupun laut ke berbagai tujuan industri.</p>
+        </div>
+        <div class="map-wrapper anim-up">
+            <div class="map-header">
+                <div class="map-header-icon"><i class="fas fa-satellite"></i></div>
+                <div>
+                    <h3>Peta Lokasi Tambang — Desa Sukorahayu</h3>
+                    <p>Kec. Labuhan Maringgai, Kab. Lampung Timur, Provinsi Lampung</p>
+                </div>
+            </div>
+            <div class="map-iframe-wrap">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31715.7!2d105.60!3d-5.13!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40d5b7a5c3a0a3%3A0x1234567890abcdef!2sLabuhan+Maringgai%2C+Lampung+Timur!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Peta Lokasi Tambang PT Nanda Jaya Silika">
+                </iframe>
+                <div class="map-fallback" id="mapFallback" style="display:none">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Peta tidak dapat dimuat</p>
+                    <a href="https://www.google.com/maps/search/Labuhan+Maringgai+Lampung+Timur" target="_blank" class="btn-cta-main" style="font-size:12px;padding:10px 20px">
+                        <i class="fas fa-external-link-alt"></i> Buka Google Maps
+                    </a>
+                </div>
+            </div>
+            <div class="map-coord-bar">
+                <div class="map-coord-item">
+                    <i class="fas fa-crosshairs"></i>
+                    <span>Latitude:</span>
+                    <strong>5°08'24"S (-5.1398)</strong>
+                </div>
+                <div class="map-coord-item">
+                    <i class="fas fa-crosshairs"></i>
+                    <span>Longitude:</span>
+                    <strong>105°37'12"E (105.6201)</strong>
+                </div>
+                <div class="map-coord-item copy-btn" id="copyCoord" title="Salin koordinat">
+                    <i class="fas fa-copy"></i>
+                    <span>Salin Koordinat</span>
+                </div>
+                <div class="map-coord-item" style="margin-left:auto">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=-5.1398,105.6201" target="_blank" style="display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-weight:600;font-size:12px">
+                        <i class="fas fa-directions"></i> Buka Navigasi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════
+     AKSES & JARAK
+     ══════════════════════════ -->
+<section class="sec" id="akses">
+    <div class="container">
+        <div class="text-center mb-5 anim-up">
+            <div class="sbadge">Aksesibilitas</div>
+            <h2 class="stitle">Jarak dari Pusat Ekonomi</h2>
+            <div class="srule srule--center"></div>
+            <p class="stext mx-auto" style="max-width:520px">Posisi strategis dengan akses multimoda — jalur darat ke kota-kota industri dan jalur laut melalui pelabuhan terdekat.</p>
+        </div>
+        <div class="akses-grid">
+            <!-- Akses Darat -->
+            <div class="akses-card anim-up">
+                <div class="akses-card-head">
+                    <div class="akses-card-icon icon-jalan"><i class="fas fa-road"></i></div>
+                    <div>
+                        <div class="akses-card-title">Akses Darat</div>
+                        <div class="akses-card-sub">Jarak tempuh via jalan provinsi</div>
+                    </div>
+                </div>
+                <div class="akses-dist-list">
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-city"></i> Bandar Lampung</div>
+                        <div class="akses-dist-val">~130 km</div>
+                    </div>
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-landmark"></i> Metro</div>
+                        <div class="akses-dist-val">~95 km</div>
+                    </div>
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-store"></i> Sukadana</div>
+                        <div class="akses-dist-val">~40 km</div>
+                    </div>
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-city"></i> Way Jepara</div>
+                        <div class="akses-dist-val">~50 km</div>
+                    </div>
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-warehouse"></i> Labuhan Maringgai</div>
+                        <div class="akses-dist-val">~8 km</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Akses Pelabuhan -->
+            <div class="akses-card anim-up" style="animation-delay:.1s">
+                <div class="akses-card-head">
+                    <div class="akses-card-icon icon-pelabuhan"><i class="fas fa-anchor"></i></div>
+                    <div>
+                        <div class="akses-card-title">Akses Pelabuhan</div>
+                        <div class="akses-card-sub">Jalur distribusi laut</div>
+                    </div>
+                </div>
+                <div class="akses-dist-list">
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-ship"></i> Pelabuhan Panjang</div>
+                        <div class="akses-dist-val">~150 km</div>
+                    </div>
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-ferry"></i> Pelabuhan Bakauheni</div>
+                        <div class="akses-dist-val">~180 km</div>
+                    </div>
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-anchor"></i> Pelabuhan Kota Bumi</div>
+                        <div class="akses-dist-val">~70 km</div>
+                    </div>
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-water"></i> Pesisir Timur (dermaga)</div>
+                        <div class="akses-dist-val">~5 km</div>
+                    </div>
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-route"></i> Jalur Laut Jawa</div>
+                        <div class="akses-dist-val">Akses Langsung</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Akses Bandara -->
+            <div class="akses-card anim-up" style="animation-delay:.2s">
+                <div class="akses-card-head">
+                    <div class="akses-card-icon icon-bandara"><i class="fas fa-plane"></i></div>
+                    <div>
+                        <div class="akses-card-title">Akses Udara</div>
+                        <div class="akses-card-sub">Bandara terdekat</div>
+                    </div>
+                </div>
+                <div class="akses-dist-list">
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-plane-departure"></i> Radin Inten II</div>
+                        <div class="akses-dist-val">~120 km</div>
+                    </div>
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-clock"></i> Estimasi Waktu</div>
+                        <div class="akses-dist-val">~2,5 jam</div>
+                    </div>
+                    <div class="akses-dist-item">
+                        <div class="akses-dist-name"><i class="fas fa-map-signs"></i> Rute</div>
+                        <div class="akses-dist-val" style="font-size:11px;font-weight:600;color:var(--gray-text)">Via JLT → Bandar Lampung</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════
+     KEUNGGULAN LOKASI
+     ══════════════════════════ -->
+<section class="sec sec--gray" id="keunggulan">
+    <div class="container">
+        <div class="text-center mb-5 anim-up">
+            <div class="sbadge">Advantages</div>
+            <h2 class="stitle">Keunggulan Lokasi Tambang</h2>
+            <div class="srule srule--center"></div>
+            <p class="stext mx-auto" style="max-width:520px">Posisi geografis yang mendukung efisiensi operasional dan logistik — mengurangi biaya distribusi secara signifikan.</p>
+        </div>
+        <div class="keunggulan-grid">
+            <div class="keunggulan-item anim-up">
+                <div class="keunggulan-icon"><i class="fas fa-ship"></i></div>
+                <div>
+                    <div class="keunggulan-label">Dekat Jalur Maritim</div>
+                    <p class="keunggulan-desc">Berada di pesisir timur Lampung, hanya ~5 km dari garis pantai. Memungkinkan distribusi via kapal tongkang langsung ke pelabuhan tujuan di Pulau Jawa dan Kalimantan.</p>
+                </div>
+            </div>
+            <div class="keunggulan-item anim-up" style="animation-delay:.1s">
+                <div class="keunggulan-icon"><i class="fas fa-truck-moving"></i></div>
+                <div>
+                    <div class="keunggulan-label">Akses Jalan Keras</div>
+                    <p class="keunggulan-desc">Jalan menuju lokasi tambang sudah beraspal dan dapat dilalui truk berkapasitas besar (dump truck, tronton) tanpa kendala, memastikan kontinuitas pengiriman material.</p>
+                </div>
+            </div>
+            <div class="keunggulan-item anim-up" style="animation-delay:.2s">
+                <div class="keunggulan-icon"><i class="fas fa-mountain"></i></div>
+                <div>
+                    <div class="keunggulan-label">Deposit Pasir Kuarsa Melimpah</div>
+                    <p class="keunggulan-desc">Formasi geologi pesisir timur Lampung menyimpan cadangan pasir kuarsa berkualitas tinggi dengan kandungan SiO₂ >97% — ideal untuk industri kaca, fiberglass, dan sandblasting.</p>
+                </div>
+            </div>
+            <div class="keunggulan-item anim-up" style="animation-delay:.3s">
+                <div class="keunggulan-icon"><i class="fas fa-handshake"></i></div>
+                <div>
+                    <div class="keunggulan-label">Dekat Pusat Industri Jawa</div>
+                    <p class="keunggulan-desc">Melalui Pelabuhan Bakauheni → Merak, material dapat sampai ke kawasan industri Cilegon, Tangerang, dan Jakarta dalam waktu relatif singkat via jalur laut.</p>
+                </div>
+            </div>
+            <div class="keunggulan-item anim-up" style="animation-delay:.4s">
+                <div class="keunggulan-icon"><i class="fas fa-shield-alt"></i></div>
+                <div>
+                    <div class="keunggulan-label">Status WIUP CNC</div>
+                    <p class="keunggulan-desc">Wilayah pertambangan sudah bersertifikat Clear &amp; Clean — tidak ada tumpang tindih dengan izin lain, tidak ada sengketa lahan, aman untuk investasi jangka panjang.</p>
+                </div>
+            </div>
+            <div class="keunggulan-item anim-up" style="animation-delay:.5s">
+                <div class="keunggulan-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <div>
+                    <div class="keunggulan-label">Kapasitas 5.500 Ton/Bulan</div>
+                    <p class="keunggulan-desc">Dengan luas 27,25 Ha dan akses logistik yang mendukung, produksi dapat ditingkatkan sesuai permintaan pasar tanpa terkendala infrastruktur wilayah.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container text-center position-relative" style="z-index:2">
+        <div class="sbadge sbadge--light anim-up"><i class="fas fa-map-marker-alt"></i> Kunjungi Lokasi</div>
+        <h2 class="stitle stitle--white anim-up" style="animation-delay:.05s">Ingin Melihat Langsung Lokasi Tambang?</h2>
+        <div class="srule srule--center anim-up" style="animation-delay:.1s"></div>
+        <p class="stext stext--light mx-auto mb-4 anim-up" style="max-width:480px;animation-delay:.15s">Kami menyambut kunjungan mitra bisnis untuk melihat langsung lokasi tambang, kualitas material, dan proses operasional di lapangan.</p>
+        <div class="d-flex justify-content-center flex-wrap cta-btn-row anim-up" style="gap:14px;animation-delay:.2s">
+            <a href="https://wa.me/6281296612892?text=Halo%2C%20saya%20ingin%20melakukan%20kunjungan%20ke%20lokasi%20tambang%20PT%20Nanda%20Jaya%20Silika.%20Mohon%20informasinya." target="_blank" class="btn-cta-main"><i class="fab fa-whatsapp"></i> Jadwalkan Kunjungan</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=-5.1398,105.6201" target="_blank" class="btn-cta-outline"><i class="fas fa-directions"></i> Buka Navigasi</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-3" style="gap:12px">
+                    <img src="img/pt-njs.png" alt="NJS" class="footer-logo-img">
+                    <div><div class="footer-brand-name">PT Nanda Jaya Silika</div><div class="footer-brand-tag">Tambang Pasir Kuarsa</div></div>
+                </div>
+                <p class="footer-about">Perusahaan pertambangan pasir kuarsa berizin resmi di Lampung Timur. IUP resmi, lahan 27,25 Ha, berlaku hingga 2030.</p>
+            </div>
+            <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+                <h5 class="footer-heading">Navigasi</h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="legalitas.html">Legalitas</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                <h5 class="footer-heading">Lokasi</h5>
+                <ul class="footer-links">
+                    <li><a href="#overview">Data Lokasi WIUP</a></li>
+                    <li><a href="#peta">Peta Interaktif</a></li>
+                    <li><a href="#akses">Jarak &amp; Akses</a></li>
+                    <li><a href="#keunggulan">Keunggulan Lokasi</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h5 class="footer-heading">Kontak</h5>
+                <ul class="footer-links footer-links--contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Desa Sukorahayu, Labuhan Maringgai, Lampung Timur</li>
+                    <li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li>
+                    <li><i class="far fa-envelope"></i> ptnandajayasilika@gmail.com</li>
+                    <li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <p>&copy; 2024 <strong>PT Nanda Jaya Silika</strong>. Hak cipta dilindungi undang-undang.</p>
+            <p class="footer-bottom-right">IUP Resmi · CNC · Lampung Timur</p>
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING -->
+<a href="https://wa.me/6281296612892" target="_blank" class="wa-float" id="waFloat" aria-label="WhatsApp">
+    <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
+    <span class="wa-float-tooltip">Hubungi Kami</span>
+</a>
+<a href="#" class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></a>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var nav  = document.getElementById('mainNav');
+  var tog  = document.getElementById('navToggler');
+  var menu = document.getElementById('navMenu');
+  var btt  = document.getElementById('backToTop');
+  var waF  = document.getElementById('waFloat');
+
+  /* Scroll events */
+  window.addEventListener('scroll', function(){
+    var s = window.scrollY;
+    nav.classList.toggle('nav-scrolled', s > 80);
+    if(btt) btt.classList.toggle('visible', s > 300);
+    if(waF) waF.classList.toggle('visible', s > 200);
+  }, { passive: true });
+
+  /* Mobile menu */
+  if(tog && menu){
+    tog.addEventListener('click', function(){
+      menu.classList.toggle('is-open');
+      tog.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(l){
+      l.addEventListener('click', function(){
+        menu.classList.remove('is-open');
+        tog.classList.remove('open');
+      });
+    });
+  }
+
+  /* Back to top */
+  if(btt) btt.addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* Scroll reveal */
+  var obs = new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, {threshold:.1, rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.anim-up,.anim-left,.anim-right').forEach(function(el){ obs.observe(el); });
+
+  /* Hero immediate */
+  document.querySelectorAll('.page-hero-content .anim-up').forEach(function(el,i){
+    setTimeout(function(){ el.classList.add('visible'); }, i * 100);
+  });
+
+  /* Smooth scroll anchors */
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var href = this.getAttribute('href');
+      if(href === '#') return;
+      var target = document.querySelector(href);
+      if(!target) return;
+      e.preventDefault();
+      var navH = nav ? nav.offsetHeight : 64;
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - navH - 16, behavior: 'smooth' });
+    });
+  });
+
+  /* Copy coordinates */
+  var copyBtn = document.getElementById('copyCoord');
+  if(copyBtn){
+    copyBtn.addEventListener('click', function(){
+      var coordText = '-5.1398, 105.6201';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(coordText).then(function(){
+          showCopyToast();
+        });
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = coordText;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try{ document.execCommand('copy'); showCopyToast(); } catch(e){}
+        document.body.removeChild(ta);
+      }
+    });
+  }
+
+  function showCopyToast(){
+    var btn = document.getElementById('copyCoord');
+    var orig = btn.querySelector('span').textContent;
+    btn.querySelector('span').textContent = 'Tersalin!';
+    btn.querySelector('i').className = 'fas fa-check';
+    btn.style.borderColor = 'rgba(0,200,120,.4)';
+    btn.style.color = '#27AE60';
+    setTimeout(function(){
+      btn.querySelector('span').textContent = orig;
+      btn.querySelector('i').className = 'fas fa-copy';
+      btn.style.borderColor = '';
+      btn.style.color = '';
+    }, 2000);
+  }
+
+  /* Map fallback — jika iframe gagal dimuat */
+  var iframe = document.querySelector('.map-iframe-wrap iframe');
+  var fallback = document.getElementById('mapFallback');
+  if(iframe && fallback){
+    iframe.addEventListener('error', function(){
+      iframe.style.display = 'none';
+      fallback.style.display = 'flex';
+    });
+    /* Timeout fallback untuk koneksi lambat */
+    setTimeout(function(){
+      /* Cek apakah iframe sudah punya konten (heuristic) */
+      try {
+        /* Jika cross-origin, ini akan throw — itu berarti iframe masih loading/loaded external content, yang baik */
+        iframe.contentWindow.document;
+      } catch(e) {
+        /* Cross-origin = normal, iframe kemungkinan OK */
+      }
+    }, 8000);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Tentang Kami – PT Nanda Jaya Silika</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profil lengkap PT Nanda Jaya Silika – Data identitas, operasional, spesifikasi lab SUCOFINDO, dan legalitas perusahaan.">
+    <link rel="icon" href="img/logo PT Nanda Jaya Silika.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+:root{
+  --blue:#009FE3;--blue-dark:#0A2C4E;--blue-mid:#0D3A63;
+  --red:#E53935;--red-dark:#C62828;
+  --white:#FFF;--gray-light:#F5F7FA;--gray-mid:#E0E6ED;--gray-text:#3D5A73;
+  --fh:'Poppins',sans-serif;--fb:'Inter',sans-serif;
+  --tr:.3s ease;
+  --ss:0 4px 16px rgba(10,44,78,.08);--sm:0 8px 32px rgba(10,44,78,.14)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);font-size:15px;color:var(--blue-dark);background:var(--white);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:var(--fh);font-weight:700;color:var(--blue-dark)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ── Animations ── */
+@keyframes fadeUp  {from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-36px)} to{opacity:1;transform:translateX(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(36px)} to{opacity:1;transform:translateX(0)}}
+.anim-up{opacity:0}.anim-left{opacity:0}.anim-right{opacity:0}
+.anim-up.visible{animation:fadeUp .7s ease forwards}
+.anim-left.visible{animation:fadeLeft .7s ease forwards}
+.anim-right.visible{animation:fadeRight .7s ease forwards}
+
+/* ══════════════════════════════════
+   NAVBAR
+   ══════════════════════════════════ */
+.main-nav{background:var(--blue-mid);position:sticky;top:0;z-index:1000;transition:background var(--tr),box-shadow var(--tr)}
+.main-nav.nav-scrolled{background:var(--blue-dark);box-shadow:0 4px 24px rgba(0,0,0,.25)}
+.nav-inner{height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo-compact{display:flex;align-items:center;gap:10px}
+.nav-logo-container{width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);border-radius:10px;border:1px solid rgba(255,255,255,.2);overflow:hidden;flex-shrink:0}
+.nav-logo-img{width:100%;height:100%;object-fit:contain}
+.nav-brand-name{font-family:var(--fh);font-weight:600;font-size:14px;color:#fff;margin-left:8px}
+.nav-menu{display:flex;align-items:center;gap:2px}
+.nav-link-item{font-family:var(--fh);font-size:13px;font-weight:500;color:rgba(255,255,255,.75);padding:8px 12px;border-radius:6px;transition:color var(--tr);position:relative;white-space:nowrap}
+.nav-link-item::after{content:'';position:absolute;bottom:4px;left:12px;right:12px;height:2px;background:var(--blue);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform var(--tr)}
+.nav-link-item:hover,.nav-link-item.active{color:#fff}
+.nav-link-item:hover::after,.nav-link-item.active::after{transform:scaleX(1)}
+.btn-nav-cta{font-family:var(--fh);font-size:13px;font-weight:600;color:#fff!important;background:var(--blue);padding:9px 18px;border-radius:8px;margin-left:6px;transition:background var(--tr);white-space:nowrap}
+.btn-nav-cta:hover{background:var(--red);color:#fff!important}
+.nav-toggler{display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:transparent;border:none;cursor:pointer;padding:8px}
+.nav-toggler span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:all var(--tr)}
+.nav-toggler.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggler.open span:nth-child(2){opacity:0}
+.nav-toggler.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:991px){
+  .nav-menu{position:fixed;top:64px;left:0;right:0;background:var(--blue-dark);flex-direction:column;align-items:stretch;padding:20px 24px 28px;gap:2px;transform:translateY(-110%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:0 12px 40px rgba(0,0,0,.3);z-index:999;max-height:calc(100vh - 64px);overflow-y:auto}
+  .nav-menu.is-open{transform:translateY(0)}
+  .nav-link-item{padding:12px 16px;font-size:15px;color:rgba(255,255,255,.9);white-space:normal}
+  .btn-nav-cta{margin:12px 0 0;text-align:center;padding:12px;font-size:15px;display:block}
+  .nav-inner{padding:0 16px}
+}
+
+/* ══════════════════════════════════
+   PAGE HERO
+   ══════════════════════════════════ */
+.page-hero{background:var(--blue-dark);padding:72px 0 56px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px),repeating-linear-gradient(90deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px)}
+.page-hero-content{position:relative;z-index:2}
+.breadcrumb-njs{display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.breadcrumb-njs a{font-family:var(--fh);font-size:12px;color:rgba(255,255,255,.5);transition:color var(--tr)}
+.breadcrumb-njs a:hover{color:var(--blue)}
+.breadcrumb-njs span{color:rgba(255,255,255,.25);font-size:11px}
+.breadcrumb-njs .current{font-family:var(--fh);font-size:12px;color:var(--blue)}
+.page-hero-title{font-family:var(--fh);font-size:clamp(24px,4vw,40px);font-weight:800;color:#fff;margin-bottom:8px;line-height:1.2}
+.page-hero-sub{font-size:14px;color:rgba(255,255,255,.6);max-width:540px;line-height:1.8}
+.page-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,159,227,.15);border:1px solid rgba(0,159,227,.35);color:#7DD4F5;font-family:var(--fh);font-size:11px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.3px}
+
+/* ══════════════════════════════════
+   SECTION COMMONS
+   ══════════════════════════════════ */
+.sec{padding:72px 0}
+.sec--gray{background:var(--gray-light)}
+.sbadge{display:inline-block;background:rgba(0,159,227,.1);color:var(--blue);font-family:var(--fh);font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.sbadge--light{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9)}
+.stitle{font-size:clamp(20px,3.5vw,32px);font-weight:800;line-height:1.3;margin-bottom:4px}
+.stitle--white{color:#fff}
+.srule{width:48px;height:4px;background:var(--red);border-radius:2px;margin:16px 0 28px}
+.srule--center{margin-left:auto;margin-right:auto}
+.stext{font-size:14px;color:var(--gray-text);line-height:1.8}
+.stext--light{color:rgba(255,255,255,.7)}
+
+/* ══════════════════════════════════
+   IDENTITY CARD
+   ══════════════════════════════════ */
+.identity-card{background:#fff;border-radius:20px;box-shadow:var(--sm);overflow:hidden;border:1px solid var(--gray-mid)}
+
+/* Header: kiri teks + kanan foto */
+.identity-header{
+  background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue-mid) 60%,rgba(0,159,227,.15) 100%);
+  position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1fr 380px;
+  min-height:260px
+}
+.identity-header::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.05) 0,rgba(0,159,227,.05) 1px,transparent 0,transparent 28px);z-index:0}
+
+.id-left{padding:36px 32px 36px 36px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:3}
+.id-logo-wrap{width:96px;height:96px;background:#fff;border-radius:14px;display:flex;align-items:center;justify-content:center;padding:12px;box-shadow:0 8px 32px rgba(0,0,0,.3);margin-bottom:16px;flex-shrink:0}
+.id-logo-wrap img{width:100%;object-fit:contain}
+.id-company-name{font-family:var(--fh);font-size:clamp(15px,2vw,24px);font-weight:900;color:#fff;line-height:1.2;margin-bottom:6px}
+.id-company-name span{color:var(--blue)}
+.id-tagline{font-size:12px;color:rgba(255,255,255,.6);margin-bottom:16px;font-family:var(--fh);line-height:1.5}
+.id-badges{display:flex;gap:6px;flex-wrap:wrap}
+.id-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(0,200,120,.2);border:1px solid rgba(0,200,120,.35);color:#4DE89C;font-size:10px;padding:4px 10px;border-radius:20px;font-weight:600;font-family:var(--fh)}
+.id-badge--blue{background:rgba(0,159,227,.2);border-color:rgba(0,159,227,.35);color:#7DD4F5}
+
+.id-photo-side{position:relative;overflow:hidden}
+.id-photo-side img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.id-photo-shadow{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to left,rgba(10,44,78,.82) 0%,rgba(10,44,78,.5) 30%,rgba(10,44,78,.1) 65%,rgba(10,44,78,0) 100%)}
+.id-photo-side::before{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 20px);opacity:.5}
+.id-photo-badge{position:absolute;bottom:14px;right:14px;z-index:4;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;color:#fff;font-family:var(--fh);font-size:11px;font-weight:600;line-height:1.4;display:flex;align-items:center;gap:8px}
+.id-photo-badge i{color:var(--blue);font-size:16px;flex-shrink:0}
+.id-photo-badge small{display:block;font-size:10px;color:rgba(255,255,255,.55);font-weight:400;margin-top:2px}
+
+/* Body */
+.identity-body{padding:36px}
+.id-desc{font-size:14px;color:var(--gray-text);line-height:1.9;padding:0 0 28px;border-bottom:1px solid var(--gray-mid);margin-bottom:32px}
+.id-desc strong{color:var(--blue-dark);font-weight:700}
+
+/* Table title */
+.id-table-title{font-family:var(--fh);font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+
+/* DATA TABLE — fully responsive */
+.id-table{width:100%;border-collapse:collapse;table-layout:fixed}
+.id-table tr{border-bottom:1px solid var(--gray-mid)}
+.id-table tr:last-child{border-bottom:none}
+.id-table td{padding:12px 14px;font-size:13px;vertical-align:top;word-break:break-word;overflow-wrap:anywhere}
+/* Kolom label */
+.id-table td:first-child{width:44%;color:var(--gray-text);font-family:var(--fh);font-weight:500;font-size:12px;line-height:1.5}
+/* Kolom titik dua */
+.id-table td:nth-child(2){width:6%;font-weight:400;color:var(--gray-text);padding-left:0;padding-right:0}
+/* Kolom nilai */
+.id-table td:last-child{width:50%;color:var(--blue-dark);font-weight:600;font-family:var(--fh);font-size:13px;line-height:1.5}
+.id-table tr:hover td{background:var(--gray-light)}
+.id-table .val-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(0,200,120,.1);border:1px solid rgba(0,200,120,.25);color:#27AE60;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:600;font-family:var(--fh)}
+.id-table .sep-row td{padding:0!important;height:3px;background:var(--gray-light)}
+
+/* Stats (Ringkasan) */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:14px;padding:22px 16px;text-align:center;position:relative;overflow:hidden;border:1px solid rgba(0,159,227,.2);transition:transform var(--tr)}
+.stat-box:hover{transform:translateY(-3px)}
+.stat-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(0,159,227,.1),transparent 60%)}
+.stat-icon{font-size:22px;color:rgba(0,159,227,.6);margin-bottom:10px;position:relative}
+.stat-val{font-family:var(--fh);font-size:20px;font-weight:800;color:#fff;position:relative;line-height:1}
+.stat-val span{font-size:13px;color:var(--blue);font-weight:600}
+.stat-label{font-size:10px;color:rgba(255,255,255,.5);margin-top:5px;font-family:var(--fh);position:relative}
+
+/* ══════════════════════════════════
+   CTA STRIP
+   ══════════════════════════════════ */
+.cta-strip{background:var(--blue-dark);padding:60px 0;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 40px)}
+.btn-cta{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:14px;padding:14px 32px;border-radius:10px;transition:all var(--tr);border:2px solid var(--red)}
+.btn-cta:hover{background:var(--red-dark);border-color:var(--red-dark);color:#fff;transform:translateY(-2px);box-shadow:0 8px 28px rgba(229,57,53,.4)}
+.btn-cta-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-family:var(--fh);font-weight:600;font-size:14px;padding:13px 28px;border-radius:10px;transition:all var(--tr);border:2px solid rgba(255,255,255,.3)}
+.btn-cta-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);color:#fff}
+
+/* ══════════════════════════════════
+   FOOTER
+   ══════════════════════════════════ */
+.site-footer{background:#050F1C;padding:56px 0 0;color:rgba(255,255,255,.6)}
+.footer-logo-img{width:40px;height:40px;object-fit:contain;flex-shrink:0}
+.footer-brand-name{font-family:var(--fh);font-weight:700;font-size:14px;color:#fff}
+.footer-brand-tag{font-size:11px;color:rgba(255,255,255,.4)}
+.footer-about{font-size:13px;line-height:1.8;color:rgba(255,255,255,.5);margin-top:4px}
+.footer-heading{font-family:var(--fh);font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.footer-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.footer-links a,.footer-links li{font-size:12px;color:rgba(255,255,255,.55);transition:color var(--tr)}
+.footer-links a:hover{color:var(--blue)}
+.footer-links--contact li{display:flex;align-items:flex-start;gap:10px}
+.footer-links--contact i{color:var(--blue);width:16px;flex-shrink:0;margin-top:3px}
+.footer-bottom{margin-top:40px;padding:18px 0;border-top:1px solid rgba(255,255,255,.07)}
+.footer-bottom p{margin:0;font-size:12px;color:rgba(255,255,255,.3)}
+.footer-bottom strong{color:rgba(255,255,255,.6)}
+.footer-bottom-right{color:rgba(0,159,227,.5)!important}
+
+/* ══════════════════════════════════
+   WA FLOAT — FIXED (tooltip di kanan)
+   ══════════════════════════════════ */
+.wa-float{
+  position:fixed;left:24px;bottom:32px;z-index:9998;
+  display:flex;align-items:center;gap:0;
+  opacity:0;pointer-events:none;
+  transform:translateY(16px);
+  transition:opacity .4s ease,transform .4s ease;
+}
+.wa-float.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+.wa-float-icon{
+  width:52px;height:52px;border-radius:16px;
+  background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;flex-shrink:0;
+  box-shadow:0 4px 20px rgba(37,211,102,.45),0 0 40px rgba(37,211,102,.2);
+  transition:transform .3s ease,box-shadow .3s ease,background .3s ease;
+  border:2px solid rgba(255,255,255,.2);
+  position:relative;z-index:2;
+}
+.wa-float-icon::before{
+  content:'';position:absolute;inset:-4px;border-radius:20px;
+  border:2px solid rgba(37,211,102,.4);
+  animation:waPulse 2s ease-out infinite;
+}
+@keyframes waPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.25);opacity:0}}
+
+/* Tooltip di KANAN ikon */
+.wa-float-tooltip{
+  background:var(--blue-dark);color:#fff;
+  font-family:var(--fh);font-size:12px;font-weight:600;
+  padding:8px 14px;
+  border-radius:0 10px 10px 0;
+  white-space:nowrap;
+  opacity:0;
+  transform:translateX(-10px);
+  pointer-events:none;
+  transition:opacity .25s ease,transform .25s ease;
+  border:1px solid rgba(255,255,255,.08);
+  border-left:none;
+  box-shadow:2px 4px 16px rgba(0,0,0,.2);
+  margin-left:-2px;
+  position:relative;z-index:1;
+}
+.wa-float:hover .wa-float-icon{
+  transform:scale(1.06);background:#20BD5A;
+  box-shadow:0 6px 28px rgba(37,211,102,.6);
+}
+.wa-float:hover .wa-float-tooltip{opacity:1;transform:translateX(0)}
+
+.back-to-top{
+  position:fixed;right:24px;bottom:32px;z-index:9999;
+  width:46px;height:46px;border-radius:12px;
+  background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;opacity:0;pointer-events:none;
+  transition:all var(--tr);box-shadow:0 4px 16px rgba(0,159,227,.4)
+}
+.back-to-top.visible{opacity:1;pointer-events:auto}
+.back-to-top:hover{background:var(--red);color:#fff;transform:translateY(-3px)}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════ */
+
+/* Tablet */
+@media(max-width:991px){
+  .identity-header{grid-template-columns:1fr;min-height:auto}
+  .id-left{padding:28px 24px 0}
+  .id-photo-side{min-height:240px}
+  .identity-body{padding:24px}
+  .id-desc{font-size:13px}
+  .id-table td{font-size:12px;padding:10px 10px}
+  .id-table td:first-child{width:42%}
+  .id-table td:last-child{font-size:12px}
+}
+
+/* Mobile */
+@media(max-width:767px){
+  .sec{padding:48px 0}
+  .page-hero{padding:48px 0 36px}
+  .page-hero-sub{font-size:13px}
+
+  /* Identity header: stack vertikal */
+  .identity-header{display:flex;flex-direction:column}
+  .id-left{padding:24px 16px 20px}
+  .id-logo-wrap{width:76px;height:76px;margin-bottom:12px}
+  .id-company-name{font-size:16px}
+  .id-tagline{font-size:11px}
+  .id-badges{gap:5px}
+  .id-badge,.id-badge--blue{font-size:10px;padding:3px 8px}
+  .id-photo-side{min-height:200px;width:100%}
+  .id-photo-badge{right:10px;bottom:10px;padding:8px 10px;font-size:10px}
+  .id-photo-badge i{font-size:14px}
+  .id-photo-badge small{font-size:9px}
+
+  /* Body */
+  .identity-body{padding:16px}
+  .id-desc{font-size:13px;padding:0 0 20px;margin-bottom:20px}
+
+  /* TABLE: 2 kolom (label + nilai), buang kolom titik dua) */
+  .id-table{display:block}
+  .id-table tbody{display:block}
+  .id-table tr{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border-bottom:1px solid var(--gray-mid);
+  }
+  .id-table tr.sep-row{display:block;height:6px;background:var(--gray-light)}
+  /* Sembunyikan kolom titik dua di mobile */
+  .id-table td:nth-child(2){display:none}
+  /* Label: full row jika hanya 1 td (sep-row) */
+  .id-table td:first-child{
+    width:auto;font-size:11px;padding:10px 10px 4px;
+    font-weight:600;color:var(--gray-text);
+    border-right:none;background:rgba(0,159,227,.03);
+  }
+  .id-table td:last-child{
+    font-size:12px;padding:4px 10px 10px;
+    word-break:break-all;overflow-wrap:anywhere;
+  }
+
+  /* Stats */
+  .stats-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .stat-val{font-size:17px}
+  .stat-icon{font-size:18px;margin-bottom:7px}
+
+  /* CTA */
+  .btn-cta,.btn-cta-outline{width:100%;justify-content:center;font-size:13px;padding:12px 20px}
+  .cta-btn-row{flex-direction:column;gap:10px!important;align-items:stretch!important}
+
+  /* Footer */
+  .footer-bottom .d-flex{flex-direction:column;text-align:center;gap:6px}
+
+  /* WA Float */
+  .wa-float{left:16px;bottom:24px}
+  .wa-float-icon{width:46px;height:46px;font-size:22px;border-radius:13px}
+  .wa-float-tooltip{font-size:11px;padding:6px 10px}
+  .back-to-top{right:16px;bottom:24px;width:44px;height:44px;border-radius:11px}
+}
+
+/* Extra small */
+@media(max-width:380px){
+  .id-table td:first-child{font-size:10px}
+  .id-table td:last-child{font-size:11px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat-val{font-size:15px}
+  .id-badges{gap:4px}
+  .id-badge,.id-badge--blue{font-size:9px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="main-nav" id="mainNav">
+        <div class="container-fluid">
+            <div class="nav-inner d-flex align-items-center justify-content-between">
+                <a class="nav-logo-compact d-flex align-items-center" href="index.html">
+                    <div class="nav-logo-container">
+                        <img src="img/pt-njs.png" alt="PT Nanda Jaya Silika" class="nav-logo-img">
+                    </div>
+                    <span class="nav-brand-name d-none d-lg-inline">PT Nanda Jaya Silika</span>
+                </a>
+                <button class="nav-toggler d-lg-none" id="navToggler" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html"       class="nav-link-item">Beranda</a>
+                    <a href="tentang.html"    class="nav-link-item active">Tentang</a>
+                    <a href="legalitas.html"  class="nav-link-item">Legalitas</a>
+                    <a href="visi.html"  class="nav-link-item">Visi &amp; Misi</a>
+                    <a href="produk.html"     class="nav-link-item">Produk</a>
+                    <a href="galeri.html"     class="nav-link-item">Galeri</a>
+                    <a href="keunggulan.html" class="nav-link-item">Keunggulan</a>
+                    <a href="lokasi.html"     class="nav-link-item">Lokasi</a>
+                <a href="kontak.html"    class="btn-nav-cta"><i class="fab fa-whatsapp"></i> Hubungi</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <div class="breadcrumb-njs anim-up">
+                <a href="index.html"><i class="fas fa-home" style="font-size:11px"></i> Beranda</a>
+                <span>›</span>
+                <span class="current">Profil Perusahaan</span>
+            </div>
+            <div class="page-hero-badge anim-up" style="animation-delay:.05s">
+                <i class="fas fa-building"></i> Profil Perusahaan Resmi
+            </div>
+            <h1 class="page-hero-title anim-up" style="animation-delay:.1s">Tentang PT Nanda Jaya Silika</h1>
+            <p class="page-hero-sub anim-up" style="animation-delay:.15s">Perusahaan pertambangan pasir kuarsa berizin resmi di Lampung Timur. Data lengkap, spesifikasi laboratorium SUCOFINDO terverifikasi, operasi produksi 5.500 ton/bulan.</p>
+        </div>
+    </div>
+</section>
+
+<!-- IDENTITAS + RINGKASAN -->
+<section class="sec">
+    <div class="container">
+        <div class="text-center mb-5 anim-up">
+            <div class="sbadge">Identitas Perusahaan</div>
+            <h2 class="stitle">Data Profil Resmi</h2>
+            <div class="srule srule--center"></div>
+        </div>
+
+        <div class="identity-card anim-up">
+
+            <!-- HEADER: Logo + foto -->
+            <div class="identity-header">
+                <div class="id-left">
+                    <div class="id-logo-wrap">
+                        <img src="img/pt-njs.png" alt="Logo PT Nanda Jaya Silika">
+                    </div>
+                    <h2 class="id-company-name">PT. <span>NANDA JAYA</span> SILIKA</h2>
+                    <p class="id-tagline">Pertambangan Mineral Bukan Logam · Pasir Silika · Lampung Timur</p>
+                    <div class="id-badges">
+                        <span class="id-badge"><i class="fas fa-check-circle"></i> IUP Resmi</span>
+                        <span class="id-badge"><i class="fas fa-shield-alt"></i> CNC</span>
+                        <span class="id-badge--blue"><i class="fas fa-calendar"></i> 2023</span>
+                        <span class="id-badge--blue"><i class="fas fa-map-marker-alt"></i> Lampung Timur</span>
+                    </div>
+                </div>
+                <div class="id-photo-side">
+                    <img src="img/produk5.jpeg" alt="Area Tambang PT Nanda Jaya Silika">
+                    <div class="id-photo-shadow"></div>
+                    <div class="id-photo-badge">
+                        <i class="fas fa-camera"></i>
+                        <div>Area Tambang<small>Foto dokumentasi resmi</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BODY: Deskripsi + Tabel + Ringkasan -->
+            <div class="identity-body">
+                <p class="id-desc">
+                    <strong>PT. Nanda Jaya Silika (NJS)</strong> adalah Perseroan Terbatas yang bergerak di bidang Pertambangan Mineral Bukan Logam Pasir Silika. Perusahaan memiliki Legalitas Izin Usaha Pertambangan Tahap Operasi Produksi yang berkantor di <strong>Desa Karang Anyar, Kecamatan Labuhan Maringgai, Kabupaten Lampung Timur, Provinsi Lampung</strong>, dipimpin oleh <strong>Muhammad Sidiq</strong> yang berpengalaman di bidang pertambangan sejak tahun 2012.
+                </p>
+
+                <div class="row">
+                    <!-- Tabel Identitas -->
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                        <div class="id-table-title"><i class="fas fa-id-card"></i> Data Identitas Perusahaan</div>
+                        <table class="id-table">
+                            <tbody>
+                                <tr><td>Nama Perusahaan</td><td>:</td><td>PT. Nanda Jaya Silika (NJS)</td></tr>
+                                <tr><td>Tanggal Berdiri</td><td>:</td><td>15 Mei 2023</td></tr>
+                                <tr><td>Pimpinan</td><td>:</td><td>Muhammad Sidiq (Direktur)</td></tr>
+                                <tr class="sep-row"><td colspan="3"></td></tr>
+                                <tr><td>Nomor NIB</td><td>:</td><td>0609230050531</td></tr>
+                                <tr><td>Nomor IUP OP</td><td>:</td><td>500.16.7.2/3532/V.16/2024</td></tr>
+                                <tr><td>Tgl Terbit IUP</td><td>:</td><td>04 November 2024</td></tr>
+                                <tr><td>Masa Berlaku</td><td>:</td><td>s/d 2030</td></tr>
+                                <tr class="sep-row"><td colspan="3"></td></tr>
+                                <tr><td>Kantor</td><td>:</td><td>Desa Karang Anyar, Kec. Labuhan Maringgai</td></tr>
+                                <tr><td>Lokasi Tambang</td><td>:</td><td>Desa Sukorahayu, Kec. Labuhan Maringgai, Lampung Timur</td></tr>
+                                <tr class="sep-row"><td colspan="3"></td></tr>
+                                <tr><td>Luas WIUP</td><td>:</td><td>27,25 Hektar</td></tr>
+                                <tr><td>Komoditas</td><td>:</td><td>Pasir Silika (berbagai ukuran/mesh)</td></tr>
+                                <tr><td>Kapasitas Produksi</td><td>:</td><td>5.500 ton / bulan (scalable)</td></tr>
+                                <tr><td>Email</td><td>:</td><td>ptnandajayasilika@gmail.com</td></tr>
+                                <tr><td>Status</td><td>:</td><td><span class="val-badge"><i class="fas fa-check-circle"></i> Clear &amp; Clean (CNC)</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Ringkasan -->
+                    <div class="col-lg-5">
+                        <div class="id-table-title"><i class="fas fa-chart-bar"></i> Ringkasan</div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fas fa-mountain"></i></div>
+                                <div class="stat-val">27,25<span> Ha</span></div>
+                                <div class="stat-label">Luas WIUP</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fas fa-industry"></i></div>
+                                <div class="stat-val">5.500<span> t/bln</span></div>
+                                <div class="stat-label">Kapasitas Produksi</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fas fa-file-contract"></i></div>
+                                <div class="stat-val">IUP</div>
+                                <div class="stat-label">Izin Resmi OP</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                                <div class="stat-val">CNC</div>
+                                <div class="stat-label">Clear &amp; Clean</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+    <div class="container text-center position-relative" style="z-index:2">
+        <div class="sbadge sbadge--light anim-up"><i class="fab fa-whatsapp"></i> Hubungi Kami</div>
+        <h2 class="stitle stitle--white anim-up" style="animation-delay:.05s">Siap Bermitra dengan PT Nanda Jaya Silika?</h2>
+        <div class="srule srule--center anim-up" style="animation-delay:.1s"></div>
+        <p class="stext stext--light mx-auto mb-4 anim-up" style="max-width:480px;animation-delay:.15s">Konsultasikan kebutuhan pasir kuarsa Anda. Tim kami siap memberikan solusi terbaik dengan respons cepat.</p>
+        <div class="d-flex justify-content-center flex-wrap cta-btn-row anim-up" style="gap:14px;animation-delay:.2s">
+            <a href="https://wa.me/6281296612892" target="_blank" class="btn-cta"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
+            <a href="kontak.html" class="btn-cta-outline"><i class="fas fa-envelope"></i> Form Kontak</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-3" style="gap:12px">
+                    <img src="img/pt-njs.png" alt="NJS" class="footer-logo-img">
+                    <div>
+                        <div class="footer-brand-name">PT Nanda Jaya Silika</div>
+                        <div class="footer-brand-tag">Tambang Pasir Kuarsa</div>
+                    </div>
+                </div>
+                <p class="footer-about">Perusahaan pertambangan pasir kuarsa berizin resmi di Lampung Timur. IUP resmi, lahan 27,25 Ha, berlaku hingga 2030.</p>
+            </div>
+            <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+                <h5 class="footer-heading">Navigasi</h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="legalitas.html">Legalitas</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                <h5 class="footer-heading">Produk</h5>
+                <ul class="footer-links">
+                    <li><a href="produk.html">Pasir Kuarsa Konstruksi</a></li>
+                    <li><a href="produk.html">Pasir Industri Grade</a></li>
+                    <li><a href="produk.html">Suplai Proyek Besar</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h5 class="footer-heading">Kontak</h5>
+                <ul class="footer-links footer-links--contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Lampung Timur, Lampung</li>
+                    <li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li>
+                    <li><i class="far fa-envelope"></i> ptnandajayasilika@gmail.com</li>
+                    <li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <p>&copy; 2024 <strong>PT Nanda Jaya Silika</strong>. Hak cipta dilindungi undang-undang.</p>
+            <p class="footer-bottom-right">IUP Resmi · CNC · Lampung Timur</p>
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<!-- WA Float: ikon kiri + tooltip muncul ke kanan saat hover -->
+<a href="https://wa.me/6281296612892" target="_blank" class="wa-float" id="waFloat" aria-label="Chat WhatsApp">
+    <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
+    <span class="wa-float-tooltip">Hubungi Kami</span>
+</a>
+<a href="#" class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></a>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  /* Scroll reveal */
+  var els = document.querySelectorAll('.anim-up,.anim-left,.anim-right');
+  var obs = new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){ obs.observe(el); });
+
+  /* Hero elements: langsung muncul */
+  document.querySelectorAll('.page-hero-content .anim-up').forEach(function(el,i){
+    setTimeout(function(){ el.classList.add('visible'); }, i * 100);
+  });
+
+  /* Sticky nav + back-to-top + WA float */
+  var nav   = document.getElementById('mainNav');
+  var btt   = document.getElementById('backToTop');
+  var waBtn = document.getElementById('waFloat');
+
+  window.addEventListener('scroll', function(){
+    var sy = window.scrollY;
+    nav.classList.toggle('nav-scrolled', sy > 80);
+    if(btt)   btt.classList.toggle('visible', sy > 280);
+    if(waBtn) waBtn.classList.toggle('visible', sy > 400);
+  }, { passive: true });
+
+  /* Mobile nav */
+  var tog  = document.getElementById('navToggler');
+  var menu = document.getElementById('navMenu');
+  if(tog && menu){
+    tog.addEventListener('click', function(){
+      menu.classList.toggle('is-open');
+      tog.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(l){
+      l.addEventListener('click', function(){
+        menu.classList.remove('is-open');
+        tog.classList.remove('open');
+      });
+    });
+  }
+
+  /* Back to top */
+  if(btt){
+    btt.addEventListener('click', function(e){
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

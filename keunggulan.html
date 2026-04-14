@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Keunggulan – PT Nanda Jaya Silika</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keunggulan PT Nanda Jaya Silika — supplier pasir kuarsa terpercaya. IUP resmi, SiO₂ 97,24%, harga langsung tambang, distribusi luas.">
+    <link rel="icon" href="img/logo PT Nanda Jaya Silika.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+:root{
+  --blue:#009FE3;--blue-dark:#0A2C4E;--blue-mid:#0D3A63;
+  --red:#E53935;--red-dark:#C62828;--green:#12b886;
+  --white:#FFF;--gray-light:#F5F7FA;--gray-mid:#E0E6ED;--gray-text:#3D5A73;
+  --fh:'Poppins',sans-serif;--fb:'Inter',sans-serif;
+  --tr:.3s ease;--ss:0 4px 16px rgba(10,44,78,.08);--sm:0 8px 32px rgba(10,44,78,.14)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);font-size:15px;color:var(--blue-dark);background:var(--white);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:var(--fh);font-weight:700;color:var(--blue-dark)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.red-stripe{height:4px;background:var(--red)}
+
+@keyframes fadeUp  {from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
+.anim-up{opacity:0}.anim-left{opacity:0}.anim-right{opacity:0}
+.anim-up.visible{animation:fadeUp .7s ease forwards}
+.anim-left.visible{animation:fadeLeft .7s ease forwards}
+.anim-right.visible{animation:fadeRight .7s ease forwards}
+
+/* ── NAVBAR ── */
+.main-nav{background:var(--blue-mid);position:sticky;top:0;z-index:1000;transition:background var(--tr),box-shadow var(--tr)}
+.main-nav.nav-scrolled{background:var(--blue-dark);box-shadow:0 4px 24px rgba(0,0,0,.25)}
+.nav-inner{height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo-compact{display:flex;align-items:center;gap:10px}
+.nav-logo-container{width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);border-radius:10px;border:1px solid rgba(255,255,255,.2);overflow:hidden;flex-shrink:0}
+.nav-logo-img{width:100%;height:100%;object-fit:contain}
+.nav-brand-name{font-family:var(--fh);font-weight:600;font-size:14px;color:#fff;margin-left:8px}
+.nav-menu{display:flex;align-items:center;gap:2px}
+.nav-link-item{font-family:var(--fh);font-size:13px;font-weight:500;color:rgba(255,255,255,.75);padding:8px 12px;border-radius:6px;transition:color var(--tr);position:relative;white-space:nowrap}
+.nav-link-item::after{content:'';position:absolute;bottom:4px;left:12px;right:12px;height:2px;background:var(--blue);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform var(--tr)}
+.nav-link-item:hover,.nav-link-item.active{color:#fff}
+.nav-link-item:hover::after,.nav-link-item.active::after{transform:scaleX(1)}
+.btn-nav-cta{font-family:var(--fh);font-size:13px;font-weight:600;color:#fff!important;background:var(--blue);padding:9px 18px;border-radius:8px;margin-left:6px;transition:background var(--tr);white-space:nowrap}
+.btn-nav-cta:hover{background:var(--red);color:#fff!important}
+.nav-toggler{display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:transparent;border:none;cursor:pointer;padding:8px}
+.nav-toggler span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:all var(--tr)}
+.nav-toggler.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggler.open span:nth-child(2){opacity:0}
+.nav-toggler.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:991px){
+  .nav-menu{position:fixed;top:64px;left:0;right:0;background:var(--blue-dark);flex-direction:column;align-items:stretch;padding:20px 24px 28px;gap:2px;transform:translateY(-110%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:0 12px 40px rgba(0,0,0,.3);z-index:999;max-height:calc(100vh - 64px);overflow-y:auto}
+  .nav-menu.is-open{transform:translateY(0)}
+  .nav-link-item{padding:12px 16px;font-size:15px;color:rgba(255,255,255,.9);white-space:normal}
+  .btn-nav-cta{margin:12px 0 0;text-align:center;padding:12px;font-size:15px;display:block}
+  .nav-inner{padding:0 16px}
+}
+
+/* ── PAGE HERO ── */
+.page-hero{background:var(--blue-dark);padding:72px 0 56px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px),repeating-linear-gradient(90deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px)}
+.page-hero-content{position:relative;z-index:2}
+.breadcrumb-njs{display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.breadcrumb-njs a{font-family:var(--fh);font-size:12px;color:rgba(255,255,255,.5);transition:color var(--tr)}
+.breadcrumb-njs a:hover{color:var(--blue)}
+.breadcrumb-njs span{color:rgba(255,255,255,.25);font-size:11px}
+.breadcrumb-njs .current{font-family:var(--fh);font-size:12px;color:var(--blue)}
+.page-hero-title{font-family:var(--fh);font-size:clamp(24px,4vw,40px);font-weight:800;color:#fff;margin-bottom:8px;line-height:1.2}
+.page-hero-sub{font-size:14px;color:rgba(255,255,255,.6);max-width:560px;line-height:1.8}
+.page-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,159,227,.15);border:1px solid rgba(0,159,227,.35);color:#7DD4F5;font-family:var(--fh);font-size:11px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.3px}
+.trust-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.trust-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:8px 16px;border-radius:10px;font-family:var(--fh);font-size:12px;font-weight:600;color:#fff}
+.trust-badge i{color:var(--blue)}
+.trust-badge .t-green{color:#4DE89C}
+
+/* ── SECTION ── */
+.sec{padding:72px 0}
+.sec--gray{background:var(--gray-light)}
+.sec--dark{background:var(--blue-dark)}
+.sbadge{display:inline-block;background:rgba(0,159,227,.1);color:var(--blue);font-family:var(--fh);font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.sbadge--red{background:rgba(229,57,53,.1);color:var(--red)}
+.sbadge--light{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9)}
+.stitle{font-size:clamp(20px,3.5vw,32px);font-weight:800;line-height:1.3;margin-bottom:4px}
+.stitle--white{color:#fff}
+.srule{width:48px;height:4px;background:var(--red);border-radius:2px;margin:16px 0 28px}
+.srule--center{margin-left:auto;margin-right:auto}
+.srule--blue{background:var(--blue)}
+.stext{font-size:14px;color:var(--gray-text);line-height:1.8}
+.stext--light{color:rgba(255,255,255,.7)}
+
+/* ══════════════════════════════
+   DATA CARD & TABLE (dari legalitas)
+   ══════════════════════════════ */
+.data-card{background:#fff;border-radius:18px;border:1px solid var(--gray-mid);box-shadow:var(--ss);overflow:hidden}
+.data-card-header{background:var(--blue-dark);padding:20px 28px;display:flex;align-items:center;gap:14px}
+.data-card-icon{width:44px;height:44px;border-radius:11px;background:rgba(0,159,227,.2);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--blue);flex-shrink:0}
+.data-card-header h3{font-family:var(--fh);font-size:15px;font-weight:700;color:#fff;margin:0}
+.data-card-header p{font-size:12px;color:rgba(255,255,255,.55);margin:3px 0 0}
+.data-table{width:100%;border-collapse:collapse;table-layout:fixed}
+.data-table tr{border-bottom:1px solid var(--gray-mid)}
+.data-table tr:last-child{border-bottom:none}
+.data-table td{padding:14px 20px;font-size:13px;vertical-align:top;word-break:break-word;overflow-wrap:anywhere}
+.data-table td:first-child{width:40%;color:var(--gray-text);font-family:var(--fh);font-weight:500;font-size:12px;line-height:1.5}
+.data-table td:nth-child(2){width:4%;color:var(--gray-text);padding-left:0;padding-right:0}
+.data-table td:last-child{width:56%;color:var(--blue-dark);font-weight:600;font-family:var(--fh);font-size:13px;line-height:1.5}
+.data-table tr:hover td{background:var(--gray-light)}
+.data-table .sep-row td{padding:0!important;height:4px;background:var(--gray-light);border-bottom:none}
+.data-table .val-green{display:inline-flex;align-items:center;gap:5px;background:rgba(0,200,120,.1);border:1px solid rgba(0,200,120,.25);color:#27AE60;font-size:12px;padding:3px 10px;border-radius:20px;font-weight:600;font-family:var(--fh)}
+.data-table .val-blue{display:inline-flex;align-items:center;gap:5px;background:rgba(0,159,227,.1);border:1px solid rgba(0,159,227,.2);color:var(--blue);font-size:12px;padding:3px 10px;border-radius:20px;font-weight:600;font-family:var(--fh)}
+
+/* ══════════════════════════════
+   VISI & RUTE BOX (dari legalitas)
+   ══════════════════════════════ */
+.visi-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:18px;padding:40px 36px;position:relative;overflow:hidden;border:1px solid rgba(0,159,227,.2)}
+.visi-box::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 28px)}
+.visi-quote-icon{font-size:48px;color:rgba(0,159,227,.2);position:absolute;top:24px;right:28px}
+.visi-tag{font-family:var(--fh);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:12px}
+.visi-text{font-family:var(--fh);font-size:clamp(16px,2.5vw,22px);font-weight:700;color:#fff;line-height:1.6;position:relative;z-index:2}
+
+/* ══════════════════════════════
+   STATS BAR (keunggulan)
+   ══════════════════════════════ */
+.adv-stat-bar{background:var(--blue-dark);padding:48px 0;position:relative;overflow:hidden}
+.adv-stat-bar::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px),repeating-linear-gradient(90deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px)}
+.adv-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:2}
+.adv-stat{background:rgba(0,159,227,.08);border:1px solid rgba(0,159,227,.15);border-radius:14px;padding:24px 16px;text-align:center;transition:all var(--tr)}
+.adv-stat:hover{background:rgba(0,159,227,.14);border-color:rgba(0,159,227,.3);transform:translateY(-2px)}
+.adv-stat-val{font-family:var(--fh);font-size:clamp(22px,3vw,32px);font-weight:800;color:#fff;line-height:1}
+.adv-stat-val span{font-size:clamp(14px,2vw,18px);color:var(--blue)}
+.adv-stat-label{font-size:11px;color:rgba(255,255,255,.5);margin-top:6px;font-family:var(--fh);font-weight:500}
+
+/* ══════════════════════════════
+   ADVANTAGE CARDS (keunggulan)
+   ══════════════════════════════ */
+.adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.adv-card{background:#fff;border-radius:18px;border:1px solid var(--gray-mid);padding:32px 26px;text-align:center;box-shadow:var(--ss);transition:all var(--tr);position:relative;overflow:hidden}
+.adv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.adv-card:hover{transform:translateY(-4px);box-shadow:var(--sm);border-color:transparent}
+.adv-card:hover::before{transform:scaleX(1)}
+.adv-card-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;transition:all var(--tr)}
+.adv-card:hover .adv-card-icon{transform:scale(1.1)}
+.adv-icon-blue{background:rgba(0,159,227,.1);color:var(--blue);border:1px solid rgba(0,159,227,.2)}
+.adv-icon-red{background:rgba(229,57,53,.08);color:var(--red);border:1px solid rgba(229,57,53,.15)}
+.adv-icon-dark{background:rgba(10,44,78,.08);color:var(--blue-dark);border:1px solid rgba(10,44,78,.12)}
+.adv-card h4{font-size:15px;font-weight:700;margin-bottom:8px;line-height:1.4}
+.adv-card p{font-size:13px;color:var(--gray-text);line-height:1.7;margin:0}
+
+/* ══════════════════════════════
+   FEATURE ROWS (keunggulan)
+   ══════════════════════════════ */
+.feat-row{display:flex;align-items:center;gap:48px;margin-bottom:64px}
+.feat-row:last-child{margin-bottom:0}
+.feat-row--reverse{flex-direction:row-reverse}
+.feat-img-box{border-radius:18px;overflow:hidden;position:relative;box-shadow:var(--sm);flex:0 0 400px;height:300px}
+.feat-img-inner{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative}
+.feat-img-inner::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 28px)}
+.feat-img-inner i{font-size:48px;color:rgba(255,255,255,.15);position:relative;z-index:1}
+.feat-img-inner span{font-family:var(--fh);font-size:11px;font-weight:600;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:1.5px;position:relative;z-index:1}
+.feat-img-badge{position:absolute;bottom:14px;left:14px;background:rgba(0,159,227,.85);backdrop-filter:blur(8px);color:#fff;font-family:var(--fh);font-size:11px;font-weight:700;padding:6px 14px;border-radius:50px;letter-spacing:.5px;z-index:2;display:flex;align-items:center;gap:5px}
+.fig-1{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid))}
+.fig-2{background:linear-gradient(135deg,#0E2A40,#1C5575)}
+.fig-3{background:linear-gradient(135deg,#102838,#1E5070)}
+.fig-4{background:linear-gradient(135deg,#0C2F48,#1A4868)}
+.feat-body{flex:1}
+.feat-body h3{font-size:clamp(18px,3vw,24px);font-weight:800;margin-bottom:12px;line-height:1.3}
+.feat-body>p{font-size:14px;color:var(--gray-text);line-height:1.8;margin-bottom:18px}
+.feat-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.feat-list li{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:var(--gray-text);line-height:1.6}
+.feat-list li i{color:var(--blue);font-size:13px;flex-shrink:0;margin-top:4px;width:16px;text-align:center}
+.feat-list li strong{color:var(--blue-dark);font-weight:600}
+
+/* ══════════════════════════════
+   COMPARISON TABLE (keunggulan)
+   ══════════════════════════════ */
+.cmp-table{width:100%;border-collapse:collapse}
+.cmp-table thead th{background:var(--blue-dark);font-family:var(--fh);font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;padding:14px 18px;text-align:center;border-bottom:2px solid var(--gray-mid)}
+.cmp-table thead th:first-child{text-align:left}
+.cmp-table thead th.cmp-hl{background:var(--blue);position:relative}
+.cmp-table thead th.cmp-hl::after{content:'Rekomendasi';position:absolute;top:6px;right:8px;font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;background:rgba(255,255,255,.25);color:#fff;padding:2px 8px;border-radius:4px}
+.cmp-table tbody td{padding:14px 18px;font-size:13px;border-bottom:1px solid var(--gray-mid);transition:background var(--tr);text-align:center}
+.cmp-table tbody td:first-child{text-align:left;font-family:var(--fh);font-weight:600;color:var(--blue-dark);font-size:12px}
+.cmp-table tbody tr:last-child td{border-bottom:none}
+.cmp-table tbody tr:hover td{background:var(--gray-light)}
+.cmp-table .cmp-hl{background:rgba(0,159,227,.04)!important;font-weight:600;color:var(--blue-dark);font-family:var(--fh)}
+.cmp-table tbody tr:hover .cmp-hl{background:rgba(0,159,227,.08)!important}
+.cmp-check{color:var(--blue);font-size:16px}
+.cmp-cross{color:#ccc;font-size:16px}
+.cmp-warn{color:#f0ad4e;font-size:16px}
+
+/* ══════════════════════════════
+   CTA & FOOTER
+   ══════════════════════════════ */
+.cta-section{background:var(--blue-dark);padding:64px 0;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 40px)}
+.btn-cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:14px;padding:14px 32px;border-radius:10px;transition:all var(--tr);border:2px solid var(--red)}
+.btn-cta-main:hover{background:var(--red-dark);border-color:var(--red-dark);color:#fff;transform:translateY(-2px);box-shadow:0 8px 28px rgba(229,57,53,.4)}
+.btn-cta-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-family:var(--fh);font-weight:600;font-size:14px;padding:13px 28px;border-radius:10px;border:2px solid rgba(255,255,255,.3);transition:all var(--tr)}
+.btn-cta-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);color:#fff}
+
+.site-footer{background:#050F1C;padding:56px 0 0;color:rgba(255,255,255,.6)}
+.footer-logo-img{width:40px;height:40px;object-fit:contain;flex-shrink:0}
+.footer-brand-name{font-family:var(--fh);font-weight:700;font-size:14px;color:#fff}
+.footer-brand-tag{font-size:11px;color:rgba(255,255,255,.4)}
+.footer-about{font-size:13px;line-height:1.8;color:rgba(255,255,255,.5);margin-top:4px}
+.footer-heading{font-family:var(--fh);font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.footer-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.footer-links a,.footer-links li{font-size:12px;color:rgba(255,255,255,.55);transition:color var(--tr)}
+.footer-links a:hover{color:var(--blue)}
+.footer-links--contact li{display:flex;align-items:flex-start;gap:10px}
+.footer-links--contact i{color:var(--blue);width:16px;flex-shrink:0;margin-top:3px}
+.footer-bottom{margin-top:40px;padding:18px 0;border-top:1px solid rgba(255,255,255,.07)}
+.footer-bottom p{margin:0;font-size:12px;color:rgba(255,255,255,.3)}
+.footer-bottom strong{color:rgba(255,255,255,.6)}
+.footer-bottom-right{color:rgba(0,159,227,.5)!important}
+
+/* WA Float */
+.wa-float{position:fixed;left:24px;bottom:32px;z-index:9998;display:flex;align-items:center;opacity:0;pointer-events:none;transform:translateY(16px);transition:opacity .4s ease,transform .4s ease}
+.wa-float.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.wa-float-icon{width:52px;height:52px;border-radius:16px;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;box-shadow:0 4px 20px rgba(37,211,102,.45);border:2px solid rgba(255,255,255,.2);position:relative;z-index:2;transition:transform .3s,box-shadow .3s,background .3s}
+.wa-float-icon::before{content:'';position:absolute;inset:-4px;border-radius:20px;border:2px solid rgba(37,211,102,.4);animation:waPulse 2s ease-out infinite}
+@keyframes waPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.25);opacity:0}}
+.wa-float-tooltip{background:var(--blue-dark);color:#fff;font-family:var(--fh);font-size:12px;font-weight:600;padding:8px 14px;border-radius:0 10px 10px 0;white-space:nowrap;opacity:0;transform:translateX(-10px);pointer-events:none;transition:opacity .25s,transform .25s;border:1px solid rgba(255,255,255,.08);border-left:none;box-shadow:2px 4px 16px rgba(0,0,0,.2);margin-left:-2px;position:relative;z-index:1}
+.wa-float:hover .wa-float-icon{transform:scale(1.06);background:#20BD5A}
+.wa-float:hover .wa-float-tooltip{opacity:1;transform:translateX(0)}
+.back-to-top{position:fixed;right:24px;bottom:32px;z-index:9999;width:46px;height:46px;border-radius:12px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;opacity:0;pointer-events:none;transition:all var(--tr);box-shadow:0 4px 16px rgba(0,159,227,.4)}
+.back-to-top.visible{opacity:1;pointer-events:auto}
+.back-to-top:hover{background:var(--red);color:#fff;transform:translateY(-3px)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:991px){
+  .adv-stat-grid{grid-template-columns:repeat(2,1fr)}
+  .adv-grid{grid-template-columns:repeat(2,1fr)}
+  .feat-row{flex-direction:column!important;gap:28px}
+  .feat-row--reverse{flex-direction:column!important}
+  .feat-img-box{flex:none;width:100%;height:240px}
+}
+@media(max-width:767px){
+  .sec{padding:48px 0}
+  .page-hero{padding:48px 0 36px}
+  .adv-stat-bar{padding:32px 0}
+  .adv-stat-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .adv-stat-val{font-size:22px}
+  .adv-grid{grid-template-columns:1fr;gap:16px}
+  .adv-card{padding:26px 22px}
+  .cmp-table thead th,.cmp-table tbody td{padding:10px 12px;font-size:11px}
+  .cmp-table thead th.cmp-hl::after{display:none}
+  .footer-bottom .d-flex{flex-direction:column;text-align:center;gap:6px}
+  .wa-float{left:16px;bottom:24px}
+  .wa-float-icon{width:46px;height:46px;font-size:22px}
+  .back-to-top{right:16px;bottom:24px;width:44px;height:44px}
+  .btn-cta-main,.btn-cta-outline{width:100%;justify-content:center}
+  .cta-btn-row{flex-direction:column;align-items:center!important}
+}
+@media(max-width:480px){
+  .adv-stat-grid{grid-template-columns:1fr 1fr}
+  .feat-img-box{height:200px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="main-nav" id="mainNav">
+    <div class="container-fluid">
+        <div class="nav-inner">
+            <a class="nav-logo-compact d-flex align-items-center" href="index.html">
+                <div class="nav-logo-container">
+                    <img src="img/pt-njs.png" alt="NJS" class="nav-logo-img">
+                </div>
+                <span class="nav-brand-name d-none d-lg-inline">PT Nanda Jaya Silika</span>
+            </a>
+            <button class="nav-toggler d-lg-none" id="navToggler" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html"       class="nav-link-item">Beranda</a>
+                <a href="tentang.html"     class="nav-link-item">Tentang</a>
+                <a href="legalitas.html"   class="nav-link-item">Legalitas</a>
+                <a href="visi.html"        class="nav-link-item">Visi &amp; Misi</a>
+                <a href="produk.html"      class="nav-link-item">Produk</a>
+                <a href="galeri.html"      class="nav-link-item">Galeri</a>
+                <a href="keunggulan.html"  class="nav-link-item active">Keunggulan</a>
+                <a href="lokasi.html"      class="nav-link-item">Lokasi</a>
+                <a href="kontak.html"      class="btn-nav-cta"><i class="fab fa-whatsapp"></i> Hubungi</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <div class="breadcrumb-njs anim-up">
+                <a href="index.html"><i class="fas fa-home" style="font-size:11px"></i> Beranda</a>
+                <span>›</span><span class="current">Keunggulan</span>
+            </div>
+            <div class="page-hero-badge anim-up" style="animation-delay:.05s">
+                <i class="fas fa-trophy"></i> Keunggulan Kompetitif
+            </div>
+            <h1 class="page-hero-title anim-up" style="animation-delay:.1s">Mengapa Memilih PT Nanda Jaya Silika?</h1>
+            <p class="page-hero-sub anim-up" style="animation-delay:.15s">Komitmen menghadirkan pasir kuarsa berkualitas tinggi dengan legalitas lengkap, harga langsung tambang, dan layanan profesional yang menjadikan kami mitra terbaik Anda.</p>
+            <div class="trust-row anim-up" style="animation-delay:.2s">
+                <div class="trust-badge"><i class="fas fa-shield-alt"></i> IUP Resmi</div>
+                <div class="trust-badge"><i class="fas fa-flask"></i> SiO₂ 97,24%</div>
+                <div class="trust-badge"><i class="fas fa-ruler-combined t-green"></i> 27,25 Ha</div>
+                <div class="trust-badge"><i class="fas fa-hand-holding-usd t-green"></i> Harga Tambang</div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="red-stripe"></div>
+
+<!-- ══════════════════════════
+     STATS BAR
+     ══════════════════════════ -->
+<div class="adv-stat-bar">
+    <div class="container">
+        <div class="adv-stat-grid">
+            <div class="adv-stat anim-up">
+                <div class="adv-stat-val">100<span>%</span></div>
+                <div class="adv-stat-label">IUP Resmi &amp; Legal</div>
+            </div>
+            <div class="adv-stat anim-up" style="animation-delay:.08s">
+                <div class="adv-stat-val">27,25<span>Ha</span></div>
+                <div class="adv-stat-label">Luas Area WIUP</div>
+            </div>
+            <div class="adv-stat anim-up" style="animation-delay:.16s">
+                <div class="adv-stat-val">97,24<span>%</span></div>
+                <div class="adv-stat-label">Kemurnian SiO₂</div>
+            </div>
+            <div class="adv-stat anim-up" style="animation-delay:.24s">
+                <div class="adv-stat-val">5.500<span>Ton</span></div>
+                <div class="adv-stat-label">Kapasitas / Bulan</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ══════════════════════════
+     6 KEUNGGULAN UTAMA
+     ══════════════════════════ -->
+<section class="sec" id="utama">
+    <div class="container">
+        <div class="text-center mb-5 anim-up">
+            <div class="sbadge">Mengapa Memilih Kami</div>
+            <h2 class="stitle">6 Keunggulan Utama</h2>
+            <div class="srule srule--center"></div>
+            <p class="stext mx-auto" style="max-width:540px">Kombinasi legalitas, kualitas material, dan layanan profesional yang menjadikan PT Nanda Jaya Silika mitra pertambangan terpercaya.</p>
+        </div>
+        <div class="adv-grid">
+            <div class="adv-card anim-up">
+                <div class="adv-card-icon adv-icon-blue"><i class="fas fa-shield-alt"></i></div>
+                <h4>Legalitas Resmi &amp; Lengkap</h4>
+                <p>IUP Operasi Produksi dari Pemerintah Provinsi Lampung, NIB terdaftar OSS, status CNC — berlaku hingga 2030.</p>
+            </div>
+            <div class="adv-card anim-up" style="animation-delay:.08s">
+                <div class="adv-card-icon adv-icon-red"><i class="fas fa-gem"></i></div>
+                <h4>Kualitas SiO₂ Tinggi</h4>
+                <p>Kandungan SiO₂ 97,24% terverifikasi lab SUCOFINDO, memenuhi standar industri kaca, keramik, dan fiberglass.</p>
+            </div>
+            <div class="adv-card anim-up" style="animation-delay:.16s">
+                <div class="adv-card-icon adv-icon-dark"><i class="fas fa-layer-group"></i></div>
+                <h4>Multi Grade Produk</h4>
+                <p>Tersedia mesh 4 hingga mesh 200 — grade halus, sedang, dan kasar yang dapat disesuaikan kebutuhan proyek.</p>
+            </div>
+            <div class="adv-card anim-up" style="animation-delay:.24s">
+                <div class="adv-card-icon adv-icon-blue"><i class="fas fa-map-marked-alt"></i></div>
+                <h4>Lokasi Strategis</h4>
+                <p>Lampung Timur, dekat pelabuhan Bakauheni &amp; jalur laut ke Jawa. Akses jalan keras untuk truk besar.</p>
+            </div>
+            <div class="adv-card anim-up" style="animation-delay:.32s">
+                <div class="adv-card-icon adv-icon-red"><i class="fas fa-truck-loading"></i></div>
+                <h4>Kapasitas Produksi Besar</h4>
+                <p>5.500 ton per bulan dengan area 27,25 Ha. Skalabilitas tinggi sesuai permintaan proyek skala besar.</p>
+            </div>
+            <div class="adv-card anim-up" style="animation-delay:.4s">
+                <div class="adv-card-icon adv-icon-dark"><i class="fas fa-hand-holding-usd"></i></div>
+                <h4>Harga Kompetitif</h4>
+                <p>Harga langsung dari tambang tanpa perantara. Sistem ritase, kontrak bulanan, atau tender proyek.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════
+     DETAIL FITUR (ALTERNATING)
+     ══════════════════════════ -->
+<section class="sec sec--gray" id="detail">
+    <div class="container">
+        <div class="text-center mb-5 anim-up">
+            <div class="sbadge sbadge--red">Detail Keunggulan</div>
+            <h2 class="stitle">Standar Tinggi di Setiap Aspek</h2>
+            <div class="srule srule--center srule--blue"></div>
+        </div>
+
+        <!-- Feature 1: Legalitas -->
+        <div class="feat-row anim-left">
+            <div class="feat-img-box">
+                <div class="feat-img-inner fig-1">
+                    <i class="fas fa-file-contract"></i>
+                    <span>IUP Dokumentasi</span>
+                </div>
+                <div class="feat-img-badge"><i class="fas fa-check-circle"></i> Terverifikasi</div>
+            </div>
+            <div class="feat-body">
+                <div class="sbadge">Legalitas</div>
+                <h3>IUP Resmi dari Pemerintah Provinsi Lampung</h3>
+                <p>Izin Usaha Pertambangan Tahap Operasi Produksi diterbitkan oleh DPMPTSP Provinsi Lampung dengan nomor SK 540/2442/V.16/2023, memberikan kepastian hukum bagi setiap mitra bisnis.</p>
+                <ul class="feat-list">
+                    <li><i class="fas fa-check"></i> Nomor IUP dapat diverifikasi di database resmi ESDM</li>
+                    <li><i class="fas fa-check"></i> Status <strong>Clear &amp; Clean (CNC)</strong> — tidak ada tumpang tindih wilayah</li>
+                    <li><i class="fas fa-check"></i> NIB terdaftar di sistem OSS Kementerian Investasi</li>
+                    <li><i class="fas fa-check"></i> <strong>Masa berlaku izin hingga 2030</strong> — kepastian jangka panjang</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Feature 2: Kualitas -->
+        <div class="feat-row feat-row--reverse anim-right">
+            <div class="feat-img-box">
+                <div class="feat-img-inner fig-2">
+                    <i class="fas fa-microscope"></i>
+                    <span>Quality Control</span>
+                </div>
+                <div class="feat-img-badge"><i class="fas fa-award"></i> Lab SUCOFINDO</div>
+            </div>
+            <div class="feat-body">
+                <div class="sbadge sbadge--red">Kualitas</div>
+                <h3>Quality Control Ketat — Terverifikasi SUCOFINDO</h3>
+                <p>Setiap batch material melewati proses pengujian untuk memastikan konsistensi kandungan SiO₂, gradasi ukuran partikel, dan kebersihan dari kontaminan berdasarkan Report No. 05482/CLACAD.</p>
+                <ul class="feat-list">
+                    <li><i class="fas fa-check"></i> Kandungan SiO₂ konsisten <strong>97,24%</strong> — sesuai standar industri kaca</li>
+                    <li><i class="fas fa-check"></i> Gradasi mesh tersedia: <strong>4-8, 8-16, 16-30, 30-60, hingga -200</strong></li>
+                    <li><i class="fas fa-check"></i> Melting point <strong>&gt;1.550°C</strong> — kemurnian mineral sangat tinggi</li>
+                    <li><i class="fas fa-check"></i> <strong>Sertifikat analisis</strong> tersedia untuk setiap pengiriman</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Feature 3: Distribusi -->
+        <div class="feat-row anim-left">
+            <div class="feat-img-box">
+                <div class="feat-img-inner fig-3">
+                    <i class="fas fa-route"></i>
+                    <span>Akses Distribusi</span>
+                </div>
+                <div class="feat-img-badge"><i class="fas fa-shipping-fast"></i> Distribusi Cepat</div>
+            </div>
+            <div class="feat-body">
+                <div class="sbadge">Distribusi</div>
+                <h3>Jaringan Logistik &amp; Distribusi Terintegrasi</h3>
+                <p>Lokasi di pesisir timur Lampung memberikan akses langsung ke jalur logistik utama. Armada dump truck internal memastikan material sampai tepat waktu tanpa keterlambatan.</p>
+                <ul class="feat-list">
+                    <li><i class="fas fa-check"></i> Dekat <strong>Pelabuhan Bakauheni</strong> — jalur laut cepat ke Jawa</li>
+                    <li><i class="fas fa-check"></i> Akses jalan keras, bisa dilalui <strong>truk besar &amp; alat berat</strong></li>
+                    <li><i class="fas fa-check"></i> Armada dump truck sendiri — <strong>tidak bergantung pihak ketiga</strong></li>
+                    <li><i class="fas fa-check"></i> Fleksibel: pengiriman <strong>harian, mingguan, atau kontrak bulanan</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Feature 4: Layanan -->
+        <div class="feat-row feat-row--reverse anim-right">
+            <div class="feat-img-box">
+                <div class="feat-img-inner fig-4">
+                    <i class="fas fa-headset"></i>
+                    <span>Layanan Pelanggan</span>
+                </div>
+                <div class="feat-img-badge"><i class="fas fa-comments"></i> Respon Cepat</div>
+            </div>
+            <div class="feat-body">
+                <div class="sbadge sbadge--red">Layanan</div>
+                <h3>Pendampingan &amp; Layanan Purna Jual</h3>
+                <p>Kami tidak hanya menjual material — kami menjadi mitra strategis. Tim siap membantu konsultasi spesifikasi teknis, pengambilan sampel, hingga penyesuaian grade sesuai kebutuhan proyek.</p>
+                <ul class="feat-list">
+                    <li><i class="fas fa-check"></i> Konsultasi gratis via <strong>WhatsApp &amp; telepon</strong></li>
+                    <li><i class="fas fa-check"></i> <strong>Pengiriman sampel material</strong> sebelum order besar</li>
+                    <li><i class="fas fa-check"></i> Laporan produksi berkala untuk kontrak jangka panjang</li>
+                    <li><i class="fas fa-check"></i> <strong>Garansi konsistensi</strong> kualitas antar pengiriman</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════
+     PERBANDINGAN
+     ══════════════════════════ -->
+<section class="sec" id="perbandingan">
+    <div class="container">
+        <div class="text-center mb-5 anim-up">
+            <div class="sbadge">Perbandingan</div>
+            <h2 class="stitle">Kenapa Kami Berbeda?</h2>
+            <div class="srule srule--center"></div>
+            <p class="stext mx-auto" style="max-width:500px">Perbandingan langsung antara layanan PT Nanda Jaya Silika dengan supplier pasir kuarsa pada umumnya.</p>
+        </div>
+
+        <div class="data-card anim-up">
+            <div class="data-card-header">
+                <div class="data-card-icon"><i class="fas fa-balance-scale"></i></div>
+                <div>
+                    <h3>Tabel Perbandingan Supplier</h3>
+                    <p>PT Nanda Jaya Silika vs Supplier Umum</p>
+                </div>
+            </div>
+            <table class="cmp-table">
+                <thead>
+                    <tr>
+                        <th style="width:30%">Aspek</th>
+                        <th class="cmp-hl" style="width:35%">PT Nanda Jaya Silika</th>
+                        <th style="width:35%">Supplier Umum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Status IUP</td>
+                        <td class="cmp-hl"><i class="fas fa-check-circle cmp-check"></i> Resmi &amp; Terverifikasi</td>
+                        <td><i class="fas fa-times-circle cmp-cross"></i> Belum jelas</td>
+                    </tr>
+                    <tr>
+                        <td>Kandungan SiO₂</td>
+                        <td class="cmp-hl"><i class="fas fa-check-circle cmp-check"></i> 97,24% (Lab SUCOFINDO)</td>
+                        <td><i class="fas fa-minus-circle cmp-warn"></i> Bervariasi, tidak ada sertifikat</td>
+                    </tr>
+                    <tr>
+                        <td>Luas Konsesi</td>
+                        <td class="cmp-hl"><i class="fas fa-check-circle cmp-check"></i> 27,25 Hektar</td>
+                        <td><i class="fas fa-minus-circle cmp-warn"></i> Umumnya &lt; 5 Ha</td>
+                    </tr>
+                    <tr>
+                        <td>Grade Produk</td>
+                        <td class="cmp-hl"><i class="fas fa-check-circle cmp-check"></i> Multi-grade (mesh 4–200)</td>
+                        <td><i class="fas fa-minus-circle cmp-warn"></i> 1–2 grade saja</td>
+                    </tr>
+                    <tr>
+                        <td>Armada Pengiriman</td>
+                        <td class="cmp-hl"><i class="fas fa-check-circle cmp-check"></i> Dump truck internal</td>
+                        <td><i class="fas fa-times-circle cmp-cross"></i> Sewa pihak ketiga</td>
+                    </tr>
+                    <tr>
+                        <td>Sertifikat Analisis</td>
+                        <td class="cmp-hl"><i class="fas fa-check-circle cmp-check"></i> Setiap pengiriman</td>
+                        <td><i class="fas fa-times-circle cmp-cross"></i> Tidak tersedia</td>
+                    </tr>
+                    <tr>
+                        <td>Konsultasi Teknis</td>
+                        <td class="cmp-hl"><i class="fas fa-check-circle cmp-check"></i> Gratis &amp; responsif</td>
+                        <td><i class="fas fa-times-circle cmp-cross"></i> Tidak dilayani</td>
+                    </tr>
+                    <tr>
+                        <td>Masa Berlaku Izin</td>
+                        <td class="cmp-hl"><i class="fas fa-check-circle cmp-check"></i> Hingga 2030</td>
+                        <td><i class="fas fa-times-circle cmp-cross"></i> Tidak pasti</td>
+                    </tr>
+                    <tr>
+                        <td>Status CNC</td>
+                        <td class="cmp-hl"><i class="fas fa-check-circle cmp-check"></i> Clear &amp; Clean</td>
+                        <td><i class="fas fa-times-circle cmp-cross"></i> Tidak ada jaminan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container text-center position-relative" style="z-index:2">
+        <div class="sbadge sbadge--light anim-up"><i class="fas fa-handshake"></i> Mulai Bermitra</div>
+        <h2 class="stitle stitle--white anim-up" style="animation-delay:.05s">Siap Menjadi Mitra Tambang Anda?</h2>
+        <div class="srule srule--center anim-up" style="animation-delay:.1s"></div>
+        <p class="stext stext--light mx-auto mb-4 anim-up" style="max-width:480px;animation-delay:.15s">Dapatkan penawaran harga terbaik, sampel material gratis, dan konsultasi teknis langsung dari tim kami.</p>
+        <div class="d-flex justify-content-center flex-wrap cta-btn-row anim-up" style="gap:14px;animation-delay:.2s">
+            <a href="https://wa.me/6281296612892?text=Halo%2C%20saya%20tertarik%20dengan%20pasir%20kuarsa%20PT%20Nanda%20Jaya%20Silika.%20Mohon%20informasi%20harga%20dan%20sample." target="_blank" class="btn-cta-main"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
+            <a href="kontak.html" class="btn-cta-outline"><i class="fas fa-envelope"></i> Form Kontak</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-3" style="gap:12px">
+                    <img src="img/pt-njs.png" alt="NJS" class="footer-logo-img">
+                    <div><div class="footer-brand-name">PT Nanda Jaya Silika</div><div class="footer-brand-tag">Tambang Pasir Kuarsa</div></div>
+                </div>
+                <p class="footer-about">Perusahaan pertambangan pasir kuarsa berizin resmi di Lampung Timur. IUP resmi, lahan 27,25 Ha, berlaku hingga 2030.</p>
+            </div>
+            <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+                <h5 class="footer-heading">Navigasi</h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="legalitas.html">Legalitas</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="lokasi.html">Lokasi</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                <h5 class="footer-heading">Keunggulan</h5>
+                <ul class="footer-links">
+                    <li><a href="#utama">6 Keunggulan Utama</a></li>
+                    <li><a href="#detail">Detail Fitur</a></li>
+                    <li><a href="#perbandingan">Tabel Perbandingan</a></li>
+                    <li><a href="legalitas.html">Data Lab SUCOFINDO</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h5 class="footer-heading">Kontak</h5>
+                <ul class="footer-links footer-links--contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Desa Sukorahayu, Labuhan Maringgai, Lampung Timur</li>
+                    <li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li>
+                    <li><i class="far fa-envelope"></i> ptnandajayasilika@gmail.com</li>
+                    <li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <p>&copy; 2024 <strong>PT Nanda Jaya Silika</strong>. Hak cipta dilindungi undang-undang.</p>
+            <p class="footer-bottom-right">IUP Resmi · CNC · Lampung Timur</p>
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING -->
+<a href="https://wa.me/6281296612892" target="_blank" class="wa-float" id="waFloat" aria-label="WhatsApp">
+    <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
+    <span class="wa-float-tooltip">Hubungi Kami</span>
+</a>
+<a href="#" class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></a>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var nav  = document.getElementById('mainNav');
+  var tog  = document.getElementById('navToggler');
+  var menu = document.getElementById('navMenu');
+  var btt  = document.getElementById('backToTop');
+  var waF  = document.getElementById('waFloat');
+
+  window.addEventListener('scroll', function(){
+    var s = window.scrollY;
+    nav.classList.toggle('nav-scrolled', s > 80);
+    if(btt) btt.classList.toggle('visible', s > 300);
+    if(waF) waF.classList.toggle('visible', s > 200);
+  }, { passive: true });
+
+  if(tog && menu){
+    tog.addEventListener('click', function(){
+      menu.classList.toggle('is-open');
+      tog.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(l){
+      l.addEventListener('click', function(){
+        menu.classList.remove('is-open');
+        tog.classList.remove('open');
+      });
+    });
+  }
+
+  if(btt) btt.addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* Scroll reveal */
+  var obs = new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, {threshold:.1, rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.anim-up,.anim-left,.anim-right').forEach(function(el){ obs.observe(el); });
+
+  /* Hero immediate */
+  document.querySelectorAll('.page-hero-content .anim-up').forEach(function(el,i){
+    setTimeout(function(){ el.classList.add('visible'); }, i * 100);
+  });
+
+  /* Smooth scroll anchors */
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var href = this.getAttribute('href');
+      if(href === '#') return;
+      var target = document.querySelector(href);
+      if(!target) return;
+      e.preventDefault();
+      var navH = nav ? nav.offsetHeight : 64;
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - navH - 16, behavior: 'smooth' });
+    });
+  });
+})();
+</script>
+</body>
+</html>
