@@ -49,7 +49,6 @@ img { max-width: 100%; display: block; }
 .anim-right.visible { animation: fadeRight .7s ease forwards; }
 
 /* ===== NAVBAR ===== */
-/* ── NAVBAR ── */
 .main-nav{background:var(--blue-mid);position:sticky;top:0;z-index:1000;transition:background var(--tr),box-shadow var(--tr)}
 .main-nav.nav-scrolled{background:var(--blue-dark);box-shadow:0 4px 24px rgba(0,0,0,.25)}
 .nav-inner{height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
@@ -77,7 +76,6 @@ img { max-width: 100%; display: block; }
   .nav-inner{padding:0 16px}
 }
 
-
 /* ===== PAGE HERO ===== */
 .page-hero { background: var(--blue-dark); padding: 72px 0 56px; position: relative; overflow: hidden; }
 .page-hero::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(0,159,227,.06) 0, rgba(0,159,227,.06) 1px, transparent 0, transparent 48px), repeating-linear-gradient(90deg, rgba(0,159,227,.06) 0, rgba(0,159,227,.06) 1px, transparent 0, transparent 48px); }
@@ -93,7 +91,6 @@ img { max-width: 100%; display: block; }
 .page-hero-title .accent { color: var(--blue); }
 .page-hero-sub { font-size: 14px; color: rgba(255,255,255,.6); max-width: 580px; line-height: 1.8; }
 .page-hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,159,227,.15); border: 1px solid rgba(0,159,227,.35); color: #7DD4F5; font-family: var(--fh); font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 20px; margin-bottom: 18px; letter-spacing: .3px; }
-
 @media (max-width: 767px) { .page-hero { padding: 48px 0 36px; } }
 
 /* ===== SPECS BAR ===== */
@@ -105,7 +102,6 @@ img { max-width: 100%; display: block; }
 .spec-val { font-family: var(--fh); font-size: 18px; font-weight: 800; color: var(--blue-dark); line-height: 1; }
 .spec-val span { color: var(--blue); font-size: 13px; font-weight: 600; }
 .spec-label { font-size: 11px; color: var(--gray-text); margin-top: 4px; font-family: var(--fh); font-weight: 500; }
-
 @media (max-width: 767px) { .specs-bar-inner { flex-wrap: wrap; } .spec-item { flex: 0 0 50%; border-bottom: 1px solid var(--gray-mid); } }
 
 /* ===== SECTION COMMONS ===== */
@@ -120,7 +116,6 @@ img { max-width: 100%; display: block; }
 .srule--blue { background: var(--blue); }
 .stext { font-size: 14px; color: var(--gray-text); line-height: 1.8; }
 .stext--light { color: rgba(255,255,255,.7); }
-
 @media (max-width: 767px) { .sec { padding: 48px 0; } }
 
 /* ===== PRODUCT OVERVIEW GRID ===== */
@@ -143,7 +138,6 @@ img { max-width: 100%; display: block; }
 .tag-coarse { background: rgba(245,159,0,.12); color: #e67700; }
 .tag-xcoarse { background: rgba(229,57,53,.12); color: var(--red); }
 .prod-desc { font-size: 11px; color: var(--gray-text); line-height: 1.5; margin: 0; }
-
 .pg-1 { background: url('img/2-4up.png') center/cover no-repeat; }
 .pg-2 { background: url('img/4-8up.png') center/cover no-repeat; }
 .pg-3 { background: url('img/5-10up.png') center/cover no-repeat; }
@@ -152,7 +146,6 @@ img { max-width: 100%; display: block; }
 .pg-6 { background: url('img/16-30up.png') center/cover no-repeat; }
 .pg-7 { background: url('img/20-30up.png') center/cover no-repeat; }
 .pg-8 { background: url('img/30up.png') center/cover no-repeat; }
-
 @media (max-width: 991px) { .prod-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 575px) { .prod-grid { grid-template-columns: 1fr 1fr; gap: 10px; } .prod-card-img { height: 110px; } .prod-card-img i { font-size: 28px; } }
 
@@ -168,7 +161,16 @@ img { max-width: 100%; display: block; }
 .prod-group-head h3 { font-family: var(--fh); font-size: clamp(18px, 3vw, 24px); font-weight: 800; margin: 0; line-height: 1.2; }
 .prod-group-head p { font-size: 13px; color: var(--gray-text); margin: 3px 0 0; }
 
-/* ===== PRODUCT DETAIL ROW — FIXED ===== */
+/* ============================================================
+   FIX #1 — Bootstrap kolom jadi flex column, supaya prod-row
+   bisa mengisi tinggi penuh dan semua card sejajar
+   ============================================================ */
+.prod-group .row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== PRODUCT DETAIL ROW — FIXED HEIGHT ===== */
 .prod-row {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -183,6 +185,7 @@ img { max-width: 100%; display: block; }
     transition: box-shadow .3s;
     width: 100%;
     box-sizing: border-box;
+    height: 100%;          /* FIX #2 — isi penuh tinggi kolom */
 }
 .prod-row:hover { box-shadow: var(--sm); }
 
@@ -192,15 +195,13 @@ img { max-width: 100%; display: block; }
     box-shadow: var(--ss);
     position: relative;
     background: var(--blue-dark);
-    min-height: 200px;
-    height: 100%;
+    height: 220px;          /* FIX #3 — fixed height, bukan 100% */
     width: 100%;
     flex-shrink: 0;
 }
 .prod-photo-img {
     width: 100%;
     height: 100%;
-    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,16 +235,15 @@ img { max-width: 100%; display: block; }
     flex-direction: column;
 }
 
-/* ===== SIZE TABLE — FIXED ===== */
+/* ===== SIZE TABLE ===== */
 .size-tbl {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 12px;
-    table-layout: fixed;   /* kunci: fixed agar kolom terkontrol */
+    table-layout: fixed;
 }
-.size-tbl colgroup col:first-child { width: 80px; }   /* kolom ukuran */
-.size-tbl colgroup col:last-child  { width: auto; }   /* kolom keterangan */
-
+.size-tbl colgroup col:first-child { width: 80px; }
+.size-tbl colgroup col:last-child  { width: auto; }
 .size-tbl thead th {
     background: var(--blue-dark);
     color: rgba(255,255,255,.8);
@@ -264,7 +264,6 @@ img { max-width: 100%; display: block; }
 .size-tbl tbody tr:hover { background: rgba(0,159,227,.04); }
 .size-tbl td { padding: 10px 12px; font-size: 13px; vertical-align: middle; word-wrap: break-word; overflow-wrap: break-word; }
 .size-tbl td:first-child { white-space: nowrap; }
-
 .mesh-bdg { display: inline-block; background: var(--blue-dark); color: #fff; font-family: var(--fh); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 6px; letter-spacing: .2px; }
 .up-val { font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--blue); }
 .func-text { font-size: 12px; color: var(--gray-text); line-height: 1.6; }
@@ -289,15 +288,8 @@ img { max-width: 100%; display: block; }
         gap: 14px;
     }
     .prod-photo {
-        height: 180px;
-        min-height: unset;
-        width: 100%;
+        height: 180px;        /* FIX #4 — fixed height tablet */
     }
-    .prod-photo-img {
-        height: 100%;
-        min-height: unset;
-    }
-    /* Hapus gutter Bootstrap agar card full-width tanpa sisa space */
     .prod-group .row {
         margin-left: -8px;
         margin-right: -8px;
@@ -315,15 +307,13 @@ img { max-width: 100%; display: block; }
         margin-bottom: 16px;
     }
     .prod-photo {
-        height: 150px;
+        height: 150px;        /* FIX #5 — fixed height mobile */
     }
     .size-tbl { table-layout: fixed; }
     .size-tbl colgroup col:first-child { width: 65px; }
     .size-tbl thead th,
     .size-tbl td { padding: 8px 8px; font-size: 11px; }
     .func-text { font-size: 11px; }
-
-    /* Hilangkan gutter Bootstrap sepenuhnya di mobile */
     .prod-group .row {
         margin-left: 0;
         margin-right: 0;
@@ -341,7 +331,6 @@ img { max-width: 100%; display: block; }
 .app-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(0,159,227,.1); border: 1px solid rgba(0,159,227,.2); display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--blue); margin: 0 auto 10px; }
 .app-title { font-family: var(--fh); font-size: 11px; font-weight: 700; color: var(--blue-dark); margin-bottom: 4px; }
 .app-desc { font-size: 10px; color: var(--gray-text); line-height: 1.5; }
-
 @media (max-width: 991px) { .app-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 575px) { .app-grid { grid-template-columns: repeat(2, 1fr); } }
 
@@ -381,7 +370,6 @@ img { max-width: 100%; display: block; }
 .back-to-top { position: fixed; right: 24px; bottom: 32px; z-index: 9999; width: 46px; height: 46px; border-radius: 12px; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 16px; opacity: 0; pointer-events: none; transition: all var(--tr); box-shadow: 0 4px 16px rgba(0,159,227,.4); }
 .back-to-top.visible { opacity: 1; pointer-events: auto; }
 .back-to-top:hover { background: var(--red); color: #fff; transform: translateY(-3px); }
-
 @media (max-width: 767px) {
     .wa-float { left: 16px; bottom: 24px; }
     .wa-float-icon { width: 48px; height: 48px; font-size: 22px; }
@@ -449,42 +437,34 @@ img { max-width: 100%; display: block; }
             <p class="stext mx-auto" style="max-width:540px">Klik produk untuk melihat detail ukuran, spesifikasi teknis, dan aplikasi industri.</p>
         </div>
         <div class="prod-grid anim-up" id="prodGrid">
-            <!-- 1. 2–4 up Aggregate -->
             <div class="prod-card" onclick="document.getElementById('g1').scrollIntoView({behavior:'smooth',block:'start'})">
                 <div class="prod-card-img pg-1"><i class="fas fa-mountain"></i><div class="prod-card-label"><h4>2 – 4 up</h4><div class="size-range">Kasar / Aggregate</div></div></div>
                 <div class="prod-card-body"><span class="prod-tag tag-xcoarse">Aggregate</span><p class="prod-desc">Reklamasi, landfill, drainase kasar, hiasan taman.</p></div>
             </div>
-            <!-- 2. 4–8 up Extra Coarse -->
             <div class="prod-card" onclick="document.getElementById('g1').scrollIntoView({behavior:'smooth',block:'start'})">
                 <div class="prod-card-img pg-2"><i class="fas fa-road"></i><div class="prod-card-label"><h4>4 – 8 up</h4><div class="size-range">Extra Coarse</div></div></div>
                 <div class="prod-card-body"><span class="prod-tag tag-xcoarse">Extra Coarse</span><p class="prod-desc">Hotmix aspal, infrastruktur besar, pondasi kasar.</p></div>
             </div>
-            <!-- 3. 5–10 up Extra Coarse - Coarse -->
             <div class="prod-card" onclick="document.getElementById('g2').scrollIntoView({behavior:'smooth',block:'start'})">
                 <div class="prod-card-img pg-3"><i class="fas fa-cubes"></i><div class="prod-card-label"><h4>5 – 10 up</h4><div class="size-range">Extra Coarse - Coarse</div></div></div>
                 <div class="prod-card-body"><span class="prod-tag tag-coarse">Extra Coarse - Coarse</span><p class="prod-desc">Beton precast besar, filter kasar.</p></div>
             </div>
-            <!-- 4. 8–14 up Coarse / Kasar -->
             <div class="prod-card" onclick="document.getElementById('g2').scrollIntoView({behavior:'smooth',block:'start'})">
                 <div class="prod-card-img pg-4"><i class="fas fa-layer-group"></i><div class="prod-card-label"><h4>8 – 14 up</h4><div class="size-range">Coarse / Kasar</div></div></div>
                 <div class="prod-card-body"><span class="prod-tag tag-coarse">Coarse</span><p class="prod-desc">Beton struktur, jalan, pondasi berat.</p></div>
             </div>
-            <!-- 5. 14–20 up Medium Coarse -->
             <div class="prod-card" onclick="document.getElementById('g3').scrollIntoView({behavior:'smooth',block:'start'})">
                 <div class="prod-card-img pg-5"><i class="fas fa-tint"></i><div class="prod-card-label"><h4>14 – 20 up</h4><div class="size-range">Medium Coarse</div></div></div>
                 <div class="prod-card-body"><span class="prod-tag tag-med">Medium Coarse</span><p class="prod-desc">Beton ready-mix, paving, adukan bangunan.</p></div>
             </div>
-            <!-- 6. 16–30 up Medium -->
             <div class="prod-card" onclick="document.getElementById('g3').scrollIntoView({behavior:'smooth',block:'start'})">
                 <div class="prod-card-img pg-6"><i class="fas fa-gem"></i><div class="prod-card-label"><h4>16 – 30 up</h4><div class="size-range">Medium</div></div></div>
                 <div class="prod-card-body"><span class="prod-tag tag-med">Medium</span><p class="prod-desc">Semen putih, sandblasting berat, beton K-350.</p></div>
             </div>
-            <!-- 7. 20–30 up Medium -->
             <div class="prod-card" onclick="document.getElementById('g4').scrollIntoView({behavior:'smooth',block:'start'})">
                 <div class="prod-card-img pg-7"><i class="fas fa-flask"></i><div class="prod-card-label"><h4>20 – 30 up</h4><div class="size-range">Medium</div></div></div>
                 <div class="prod-card-body"><span class="prod-tag tag-med">Medium</span><p class="prod-desc">Filter air (WTP), foundry, mortar, sandblasting.</p></div>
             </div>
-            <!-- 8. 30 up Fine / Halus -->
             <div class="prod-card" onclick="document.getElementById('g4').scrollIntoView({behavior:'smooth',block:'start'})">
                 <div class="prod-card-img pg-8"><i class="fas fa-microscope"></i><div class="prod-card-label"><h4>30 up</h4><div class="size-range">Fine / Halus</div></div></div>
                 <div class="prod-card-body"><span class="prod-tag tag-fine">Fine</span><p class="prod-desc">Industri kaca, fiberglass, keramik halus, coating.</p></div>
@@ -499,7 +479,7 @@ img { max-width: 100%; display: block; }
 
         <!-- GROUP 1 -->
         <div class="prod-group anim-up" id="g1">
-                <div class="prod-group-head">
+            <div class="prod-group-head">
                 <div class="prod-group-icon icon-g1"><i class="fas fa-mountain"></i></div>
                 <div><h3>Extra Coarse &amp; Aggregate</h3><p>Ukuran 2–8 up — volume besar untuk infrastruktur massal</p></div>
             </div>
@@ -508,7 +488,7 @@ img { max-width: 100%; display: block; }
                     <div class="prod-row">
                         <div class="prod-photo">
                             <span class="prod-photo-badge badge-fine">2–4 up</span>
-                            <div class="prod-photo-img ppi-1"><i class="fas fa-microscope"></i><span>2 – 4 up</span></div>
+                            <div class="prod-photo-img" style="background: url('img/2-4up.png') center/cover no-repeat;"><i class="fas fa-microscope"></i><span>2 – 4 up</span></div>
                         </div>
                         <div class="prod-info">
                             <table class="size-tbl">
@@ -526,7 +506,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Volume besar</p>
-                                <a href="https://wa.me/6281296612892" target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%202-4%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -535,7 +515,7 @@ img { max-width: 100%; display: block; }
                     <div class="prod-row">
                         <div class="prod-photo">
                             <span class="prod-photo-badge badge-fine">4–8 up</span>
-                            <div class="prod-photo-img ppi-2"><i class="fas fa-flask"></i><span>4 – 8 up</span></div>
+                            <div class="prod-photo-img" style="background: url('img/4-8up.png') center/cover no-repeat;"><i class="fas fa-flask"></i><span>4 – 8 up</span></div>
                         </div>
                         <div class="prod-info">
                             <table class="size-tbl">
@@ -554,7 +534,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Infrastruktur besar</p>
-                                <a href="https://wa.me/6281296612892" target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%204-8%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -564,7 +544,7 @@ img { max-width: 100%; display: block; }
 
         <!-- GROUP 2 -->
         <div class="prod-group anim-up" id="g2">
-                <div class="prod-group-head">
+            <div class="prod-group-head">
                 <div class="prod-group-icon icon-g2"><i class="fas fa-cubes"></i></div>
                 <div><h3>Coarse</h3><p>Ukuran 5–14 up — kekuatan untuk beton struktur &amp; jalan</p></div>
             </div>
@@ -573,7 +553,7 @@ img { max-width: 100%; display: block; }
                     <div class="prod-row">
                         <div class="prod-photo">
                             <span class="prod-photo-badge badge-med">5–10 up</span>
-                            <div class="prod-photo-img ppi-3"><i class="fas fa-gem"></i><span>5 – 10 up</span></div>
+                            <div class="prod-photo-img" style="background: url('img/5-10up.png') center/cover no-repeat;"><i class="fas fa-gem"></i><span>5 – 10 up</span></div>
                         </div>
                         <div class="prod-info">
                             <table class="size-tbl">
@@ -592,7 +572,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Bisa dicampur grade</p>
-                                <a href="https://wa.me/6281296612892" target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%205-10%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -601,7 +581,7 @@ img { max-width: 100%; display: block; }
                     <div class="prod-row">
                         <div class="prod-photo">
                             <span class="prod-photo-badge badge-med">8–14 up</span>
-                            <div class="prod-photo-img ppi-4"><i class="fas fa-tint"></i><span>8 – 14 up</span></div>
+                            <div class="prod-photo-img" style="background: url('img/8-14up.png') center/cover no-repeat;"><i class="fas fa-tint"></i><span>8 – 14 up</span></div>
                         </div>
                         <div class="prod-info">
                             <table class="size-tbl">
@@ -621,7 +601,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Stok terbatas</p>
-                                <a href="https://wa.me/6281296612892" target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%208-14%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -631,7 +611,7 @@ img { max-width: 100%; display: block; }
 
         <!-- GROUP 3 -->
         <div class="prod-group anim-up" id="g3">
-                <div class="prod-group-head">
+            <div class="prod-group-head">
                 <div class="prod-group-icon icon-g3"><i class="fas fa-road"></i></div>
                 <div><h3>Medium Coarse</h3><p>Ukuran 14–30 up — beton ready-mix dan struktur</p></div>
             </div>
@@ -640,7 +620,7 @@ img { max-width: 100%; display: block; }
                     <div class="prod-row">
                         <div class="prod-photo">
                             <span class="prod-photo-badge badge-coarse">14–20 up</span>
-                            <div class="prod-photo-img ppi-5"><i class="fas fa-layer-group"></i><span>14 – 20 up</span></div>
+                            <div class="prod-photo-img" style="background: url('img/14-20up.png') center/cover no-repeat;"><i class="fas fa-layer-group"></i><span>14 – 20 up</span></div>
                         </div>
                         <div class="prod-info">
                             <table class="size-tbl">
@@ -660,7 +640,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Volume besar</p>
-                                <a href="https://wa.me/6281296612892" target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%2014-20%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -669,7 +649,7 @@ img { max-width: 100%; display: block; }
                     <div class="prod-row">
                         <div class="prod-photo">
                             <span class="prod-photo-badge badge-coarse">16–30 up</span>
-                            <div class="prod-photo-img ppi-6"><i class="fas fa-cubes"></i><span>16 – 30 up</span></div>
+                            <div class="prod-photo-img" style="background: url('img/16-30up.png') center/cover no-repeat;"><i class="fas fa-cubes"></i><span>16 – 30 up</span></div>
                         </div>
                         <div class="prod-info">
                             <table class="size-tbl">
@@ -689,7 +669,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Custom grade</p>
-                                <a href="https://wa.me/6281296612892" target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%2016-30%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -699,7 +679,7 @@ img { max-width: 100%; display: block; }
 
         <!-- GROUP 4 -->
         <div class="prod-group anim-up" id="g4">
-                <div class="prod-group-head">
+            <div class="prod-group-head">
                 <div class="prod-group-icon icon-g4"><i class="fas fa-flask"></i></div>
                 <div><h3>Medium &amp; Fine</h3><p>Ukuran 20–30 up — aplikasi industri presisi</p></div>
             </div>
@@ -708,7 +688,7 @@ img { max-width: 100%; display: block; }
                     <div class="prod-row">
                         <div class="prod-photo">
                             <span class="prod-photo-badge badge-xcoarse">20–30 up</span>
-                            <div class="prod-photo-img ppi-7"><i class="fas fa-road"></i><span>20 – 30 up</span></div>
+                            <div class="prod-photo-img" style="background: url('img/20-30up.png') center/cover no-repeat;"><i class="fas fa-road"></i><span>20 – 30 up</span></div>
                         </div>
                         <div class="prod-info">
                             <table class="size-tbl">
@@ -728,7 +708,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Serbaguna</p>
-                                <a href="https://wa.me/6281296612892" target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%2020-30%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -737,7 +717,7 @@ img { max-width: 100%; display: block; }
                     <div class="prod-row">
                         <div class="prod-photo">
                             <span class="prod-photo-badge badge-xcoarse">30 up</span>
-                            <div class="prod-photo-img ppi-8"><i class="fas fa-mountain"></i><span>30 up</span></div>
+                            <div class="prod-photo-img" style="background: url('img/30up.png') center/cover no-repeat;"><i class="fas fa-mountain"></i><span>30 up</span></div>
                         </div>
                         <div class="prod-info">
                             <table class="size-tbl">
@@ -754,7 +734,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Presisi tinggi</p>
-                                <a href="https://wa.me/6281296612892" target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%2030%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -796,7 +776,7 @@ img { max-width: 100%; display: block; }
         <div class="srule srule--center srule--blue anim-up" style="animation-delay:.1s"></div>
         <p class="stext stext--light mx-auto mb-4 anim-up" style="max-width:480px;animation-delay:.15s">Butuh ukuran di luar katalog? Custom blending antar grade? Tim teknis kami siap konsultasi dan menyiapkan sampel gratis.</p>
         <div class="d-flex justify-content-center flex-wrap anim-up" style="gap:14px;animation-delay:.2s">
-            <a href="https://wa.me/6281296612892" target="_blank" class="btn-cta-main"><i class="fab fa-whatsapp"></i> Konsultasi Spesifikasi</a>
+            <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20tertarik%20dengan%20produk%20Anda.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-cta-main"><i class="fab fa-whatsapp"></i> Konsultasi Spesifikasi</a>
             <a href="kontak.html" class="btn-cta-outline"><i class="fas fa-envelope"></i> Form Kontak</a>
         </div>
     </div>
@@ -836,7 +816,7 @@ img { max-width: 100%; display: block; }
             <div class="col-lg-3">
                 <h5 class="footer-heading">Kontak</h5>
                 <ul class="footer-links footer-links--contact">
-                    <li><i class="fas fa-map-marker-alt"></i> Lampung Timur, Lampung</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Lampung Timur, Lampung</li>`
                     <li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li>
                     <li><i class="far fa-envelope"></i> ptnandajayasilika@gmail.com</li>
                     <li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li>
@@ -853,7 +833,7 @@ img { max-width: 100%; display: block; }
 </footer>
 
 <!-- FLOATING -->
-<a href="https://wa.me/6281296612892" target="_blank" class="wa-float" id="waFloat" aria-label="WhatsApp">
+<a href="https://wa.me/6281296612892?text=Halo%2C%20saya%20ingin%20bertanya%20seputar%20produk%20pasir%20kuarsa%20PT%20Nanda%20Jaya%20Silika." target="_blank" class="wa-float" id="waFloat" aria-label="WhatsApp">
     <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
     <span class="wa-float-tooltip">Hubungi Kami</span>
 </a>
