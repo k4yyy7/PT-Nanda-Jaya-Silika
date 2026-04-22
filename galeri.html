@@ -91,7 +91,7 @@ img{max-width:100%;display:block}
 .gal-stat-val span{font-size:clamp(12px,1.8vw,16px);color:var(--blue)}
 .gal-stat-label{font-size:10px;color:rgba(255,255,255,.5);margin-top:5px;font-family:var(--fh);font-weight:500}
 
-.gal-featured{border-radius:20px;overflow:hidden;position:relative;box-shadow:var(--sm);border:1px solid var(--gray-mid);cursor:pointer;transition:all .4s ease}
+.gal-featured{border-radius:20px;overflow:hidden;position:relative;box-shadow:var(--sm);border:1px solid var(--gray-mid);cursor:pointer;transition:opacity .3s ease,transform .4s ease,box-shadow .3s ease}
 .gal-featured:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(10,44,78,.2)}
 .gal-featured img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:center 42%;display:block;transition:transform .6s ease}
 .gal-featured:hover img{transform:scale(1.03)}
@@ -111,7 +111,7 @@ img{max-width:100%;display:block}
 .gal-filter-btn.active .gal-count{background:rgba(255,255,255,.25)}
 
 .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.gal-item{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;border:1px solid var(--gray-mid);box-shadow:var(--ss);transition:opacity .4s ease,transform .4s ease,box-shadow .3s ease,border-color .3s ease;aspect-ratio:4/3}
+.gal-item{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;border:1px solid var(--gray-mid);box-shadow:var(--ss);aspect-ratio:4/3}
 .gal-item:hover{transform:translateY(-4px);box-shadow:var(--sm);border-color:transparent}
 .gal-item img{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block;transition:transform .5s ease}
 .gal-item:hover img{transform:scale(1.06)}
@@ -279,7 +279,7 @@ img{max-width:100%;display:block}
             <p class="page-hero-sub anim-up" style="animation-delay:.15s">Dokumentasi visual area tambang pasir kuarsa 25,75 Ha, proses produksi, material, armada pengiriman, serta kegiatan dinas dan kunjungan resmi PT Nanda Jaya Silika.</p>
             <div class="trust-row anim-up" style="animation-delay:.2s">
                 <div class="trust-badge"><i class="fas fa-ruler-combined"></i> 25,75 Ha</div>
-                <div class="trust-badge"><i class="fas fa-images"></i> 16 Dokumentasi</div>
+                <div class="trust-badge"><i class="fas fa-images"></i> 14 Dokumentasi</div>
                 <div class="trust-badge"><i class="fas fa-filter"></i> 5 Kategori</div>
                 <div class="trust-badge"><i class="fas fa-search-plus t-green"></i> Lightbox</div>
             </div>
@@ -304,7 +304,7 @@ img{max-width:100%;display:block}
                 <div class="gal-stat-label">Jenis Dokumentasi</div>
             </div>
             <div class="gal-stat anim-up" style="animation-delay:.18s">
-                <div class="gal-stat-val">16<span>Foto</span></div>
+                <div class="gal-stat-val">14<span>Foto</span></div>
                 <div class="gal-stat-label">Galeri Dokumentasi</div>
             </div>
             <div class="gal-stat anim-up" style="animation-delay:.24s">
@@ -339,10 +339,10 @@ img{max-width:100%;display:block}
 
         <!-- Filter bar -->
         <div class="gal-filter-bar anim-up" id="galFilterBar">
-            <button class="gal-filter-btn active" data-filter="all"><i class="fas fa-th"></i> Semua <span class="gal-count">16</span></button>
+            <button class="gal-filter-btn active" data-filter="all"><i class="fas fa-th"></i> Semua <span class="gal-count">14</span></button>
             <button class="gal-filter-btn" data-filter="tambang"><i class="fas fa-mountain"></i> Area Tambang <span class="gal-count">3</span></button>
             <button class="gal-filter-btn" data-filter="produksi"><i class="fas fa-industry"></i> Produksi <span class="gal-count">2</span></button>
-            <button class="gal-filter-btn" data-filter="material"><i class="fas fa-gem"></i> Material <span class="gal-count">4</span></button>
+            <button class="gal-filter-btn" data-filter="material"><i class="fas fa-gem"></i> Material <span class="gal-count">3</span></button>
             <button class="gal-filter-btn" data-filter="pengiriman"><i class="fas fa-truck"></i> Pengiriman <span class="gal-count">3</span></button>
             <button class="gal-filter-btn" data-filter="dinas"><i class="fas fa-users"></i> Kegiatan & Dinas <span class="gal-count">3</span></button>
         </div>
@@ -374,20 +374,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- 3 - Material -->
-            <!-- <div class="gal-item" data-gal-idx="3" data-cat="material">
-                <img src="img/pasir.png" alt="Tumpukan Pasir Kuarsa Mentah" loading="lazy">
-                <div class="gal-wm-cover"></div>
-                <div class="gal-overlay">
-                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                    <div class="gal-overlay-cat"><i class="fas fa-gem"></i> Material</div>
-                    <h4>Tumpukan Pasir Kuarsa Mentah</h4>
-                    <p>Material segar dari area penambangan siap diproses</p>
-                </div>
-            </div> -->
-
-            <!-- 4 - Pengiriman -->
-            <div class="gal-item" data-gal-idx="4" data-cat="pengiriman">
+            <!-- 3 - Pengiriman -->
+            <div class="gal-item" data-gal-idx="3" data-cat="pengiriman">
                 <img src="img/image.png" alt="Armada Dump Truck Tambang" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -398,8 +386,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- 5 - Produksi -->
-            <div class="gal-item" data-gal-idx="5" data-cat="produksi">
+            <!-- 4 - Produksi -->
+            <div class="gal-item" data-gal-idx="4" data-cat="produksi">
                 <img src="img/lapangan.jpeg" alt="Area Penyaringan & Screening" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -410,8 +398,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- 6 - Pengiriman -->
-            <div class="gal-item" data-gal-idx="6" data-cat="pengiriman">
+            <!-- 5 - Pengiriman -->
+            <div class="gal-item" data-gal-idx="5" data-cat="pengiriman">
                 <img src="img/beko.jpeg" alt="Proses Loading Material" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -422,8 +410,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- 7 - Material -->
-            <div class="gal-item" data-gal-idx="7" data-cat="material">
+            <!-- 6 - Material -->
+            <div class="gal-item" data-gal-idx="6" data-cat="material">
                 <img src="img/stokzoom.jpeg" alt="Material Kemas Karung di Gudang" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -434,8 +422,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- 8 - Material -->
-            <div class="gal-item" data-gal-idx="8" data-cat="material">
+            <!-- 7 - Material -->
+            <div class="gal-item" data-gal-idx="7" data-cat="material">
                 <img src="img/stok.jpeg" alt="Area Gudang Penyimpanan" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -446,8 +434,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- 9 - Pengiriman -->
-            <div class="gal-item" data-gal-idx="9" data-cat="pengiriman">
+            <!-- 8 - Pengiriman -->
+            <div class="gal-item" data-gal-idx="8" data-cat="pengiriman">
                 <img src="img/logistik.jpeg" alt="Proses Pengangkutan Material" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -458,8 +446,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- 10 - Area Tambang -->
-            <div class="gal-item" data-gal-idx="10" data-cat="tambang">
+            <!-- 9 - Area Tambang -->
+            <div class="gal-item" data-gal-idx="9" data-cat="tambang">
                 <img src="img/beko.jpeg" alt="Kendaraan Operasional Tambang" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -470,8 +458,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- 11 - Material -->
-            <div class="gal-item" data-gal-idx="11" data-cat="material">
+            <!-- 10 - Material -->
+            <div class="gal-item" data-gal-idx="10" data-cat="material">
                 <img src="img/pasir.png" alt="Tumpukan Pasir Kuarsa Hasil Tambang" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -482,8 +470,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- ═══ 12 - KEGIATAN & DINAS ═══ -->
-            <div class="gal-item" data-gal-idx="12" data-cat="dinas">
+            <!-- 11 - KEGIATAN & DINAS -->
+            <div class="gal-item" data-gal-idx="11" data-cat="dinas">
                 <img src="img/fotobersama.jpeg" alt="Kunjungan Dinas & Inspeksi Lapangan" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -494,8 +482,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- ═══ 13 - KEGIATAN & DINAS ═══ -->
-            <div class="gal-item" data-gal-idx="13" data-cat="dinas">
+            <!-- 12 - KEGIATAN & DINAS -->
+            <div class="gal-item" data-gal-idx="12" data-cat="dinas">
                 <img src="img/ugm.png" alt="Peninjauan Area Tambang Bersama Tim" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -506,8 +494,8 @@ img{max-width:100%;display:block}
                 </div>
             </div>
 
-            <!-- ═══ 14 - KEGIATAN & DINAS ═══ -->
-            <div class="gal-item" data-gal-idx="14" data-cat="dinas">
+            <!-- 13 - KEGIATAN & DINAS -->
+            <div class="gal-item" data-gal-idx="13" data-cat="dinas">
                 <img src="img/fotober3(2).png" alt="Rapat Koordinasi di Lokasi Tambang" loading="lazy">
                 <div class="gal-wm-cover"></div>
                 <div class="gal-overlay">
@@ -626,7 +614,7 @@ img{max-width:100%;display:block}
         <div class="lb-cat-badge" id="lbCat"></div>
         <h4 id="lbTitle"></h4>
         <p id="lbDesc"></p>
-        <div class="lb-counter" id="lbCounter"><span>1</span> / 16</div>
+        <div class="lb-counter" id="lbCounter"><span>1</span> / 14</div>
     </div>
 </div>
 
@@ -642,26 +630,36 @@ img{max-width:100%;display:block}
 (function(){
 "use strict";
 
-/* ===== DATA GALERI (SINKRON DENGAN HTML) ===== */
+/* ===== DATA GALERI — PATH SINKRON PERSIS DENGAN HTML <img src> ===== */
 var galData = [
     /* 0 - Featured */
     { src:'img/pasiralatberat.jpeg', cat:'tambang', title:'Area Penambangan dengan Alat Berat', desc:'Pengerjaan material pasir kuarsa menggunakan bulldozer di area tambang utama seluas 25,75 Ha' },
-    /* 1-11 Grid existing */
-    { src:'img/lapangan.jpeg', cat:'tambang', title:'Area Stockpile Material', desc:'Penumpukan material pasir kuarsa skala besar sebelum proses distribusi' },
-    { src:'img/tumpukan-pasir.jpeg', cat:'produksi', title:'Proses Pemecahan Material', desc:'Pemecahan dan penghalusan material pasir kuarsa di area produksi' },
-    { src:'img/stok-pasir-mentah.jpeg', cat:'material', title:'Tumpukan Pasir Kuarsa Mentah', desc:'Material segar dari area penambangan yang siap diproses lebih lanjut' },
-    { src:'img/dump-truck-tambang.jpeg', cat:'pengiriman', title:'Armada Dump Truck Tambang', desc:'Kendaraan pengangkut material untuk distribusi internal di area tambang' },
-    { src:'img/pasir-halus-produksi.jpeg', cat:'produksi', title:'Area Penyaringan & Screening', desc:'Proses ayakan material pasir kuarsa sesuai ukuran mesh yang ditentukan' },
-    { src:'img/loading-beko.jpeg', cat:'pengiriman', title:'Proses Loading Material', desc:'Pemuatan pasir kuarsa ke kendaraan pengangkut untuk dikirim ke pelanggan' },
-    { src:'img/stok-karung-gudang.jpeg', cat:'material', title:'Material Kemas Karung di Gudang', desc:'Pasir kuarsa dikemas dalam karung siap distribusi ke pelanggan' },
-    { src:'img/stokgudang.jpeg', cat:'material', title:'Area Gudang Penyimpanan', desc:'Penyimpanan material dalam jumlah besar sebelum dikirim ke pelanggan' },
-    { src:'img/logistik-pengiriman.jpeg', cat:'pengiriman', title:'Proses Pengangkutan Material', desc:'Pemuatan pasir kuarsa ke truk pengangkut untuk pengiriman ke lokasi proyek' },
-    { src:'img/kendaraan-operasional.jpeg', cat:'tambang', title:'Kendaraan Operasional Tambang', desc:'Armada operasional yang mendukung kegiatan penambangan harian' },
-    { src:'img/tumpukan-pasir-terbuka.jpeg', cat:'material', title:'Tumpukan Pasir Kuarsa Hasil Tambang', desc:'Material pasir kuarsa segar dari area penambangan ditumpukan terbuka' },
-    /* 12-14 KEGIATAN & DINAS (BARU) */
-    { src:'img/kunjungan-dinas-inspeksi.jpeg', cat:'dinas', title:'Kunjungan Dinas & Inspeksi Lapangan', desc:'Tim instansi terkait melakukan inspeksi langsung ke area operasional tambang pasir kuarsa' },
-    { src:'img/peninjauan-area-tambang.jpeg', cat:'dinas', title:'Peninjauan Area Tambang Bersama Tim', desc:'Rombongan melakukan peninjauan langsung ke lokasi penambangan pasir kuarsa di Lampung Timur' },
-    { src:'img/rapat-koordinasi-tambang.jpeg', cat:'dinas', title:'Rapat Koordinasi di Lokasi Tambang', desc:'Diskusi dan koordinasi operasional bersama tim lapangan dan manajemen di lokasi tambang' }
+    /* 1 - Grid: stokgudang.jpeg */
+    { src:'img/stokgudang.jpeg', cat:'tambang', title:'Area Stockpile Material', desc:'Penumpukan material pasir kuarsa skala besar sebelum distribusi' },
+    /* 2 - Grid: pasiralatberat.jpeg */
+    { src:'img/pasiralatberat.jpeg', cat:'produksi', title:'Proses Pemecahan Material', desc:'Pemecahan dan penghalusan material pasir kuarsa di area produksi' },
+    /* 3 - Grid: image.png */
+    { src:'img/image.png', cat:'pengiriman', title:'Armada Dump Truck Tambang', desc:'Kendaraan pengangkut material untuk distribusi internal' },
+    /* 4 - Grid: lapangan.jpeg */
+    { src:'img/lapangan.jpeg', cat:'produksi', title:'Area Penyaringan & Screening', desc:'Proses ayakan material sesuai ukuran mesh' },
+    /* 5 - Grid: beko.jpeg */
+    { src:'img/beko.jpeg', cat:'pengiriman', title:'Proses Loading Material', desc:'Pemuatan pasir kuarsa ke kendaraan pengangkut' },
+    /* 6 - Grid: stokzoom.jpeg */
+    { src:'img/stokzoom.jpeg', cat:'material', title:'Material Kemas Karung di Gudang', desc:'Pasir kuarsa dikemas dalam karung siap distribusi' },
+    /* 7 - Grid: stok.jpeg */
+    { src:'img/stok.jpeg', cat:'material', title:'Area Gudang Penyimpanan', desc:'Penyimpanan material dalam jumlah besar sebelum dikirim' },
+    /* 8 - Grid: logistik.jpeg */
+    { src:'img/logistik.jpeg', cat:'pengiriman', title:'Proses Pengangkutan Material', desc:'Pemuatan pasir kuarsa ke truk untuk pengiriman ke pelanggan' },
+    /* 9 - Grid: beko.jpeg */
+    { src:'img/beko.jpeg', cat:'tambang', title:'Kendaraan Operasional Tambang', desc:'Armada pendukung kegiatan penambangan harian' },
+    /* 10 - Grid: pasir.png */
+    { src:'img/pasir.png', cat:'material', title:'Tumpukan Pasir Kuarsa Hasil Tambang', desc:'Material segar dari area penambangan ditumpukan terbuka' },
+    /* 11 - Grid: fotobersama.jpeg */
+    { src:'img/fotobersama.jpeg', cat:'dinas', title:'Kunjungan Dinas & Inspeksi Lapangan', desc:'Tim instansi terkait melakukan inspeksi langsung ke area operasional tambang' },
+    /* 12 - Grid: ugm.png */
+    { src:'img/ugm.png', cat:'dinas', title:'Peninjauan Area Tambang Bersama Tim', desc:'Rombongan melakukan peninjauan langsung ke lokasi penambangan pasir kuarsa' },
+    /* 13 - Grid: fotober3(2).png */
+    { src:'img/fotober3(2).png', cat:'dinas', title:'Rapat Koordinasi di Lokasi Tambang', desc:'Diskusi dan koordinasi operasional bersama tim lapangan dan manajemen' }
 ];
 
 var catLabels = { tambang:'Area Tambang', produksi:'Proses Produksi', material:'Material', pengiriman:'Pengiriman', dinas:'Kegiatan & Dinas' };
@@ -732,50 +730,82 @@ function initFloatingButtons(){
     if(btt)btt.addEventListener("click",function(e){e.preventDefault();window.scrollTo({top:0,behavior:"smooth"});});
 }
 
-/* ===== GALLERY FILTER (SMOOTH) ===== */
+/* ===== GALLERY FILTER (SMOOTH — tanpa layout jump) ===== */
 function initGalleryFilter(){
-    var filterBtns=document.querySelectorAll(".gal-filter-btn");
-    var galItems=document.querySelectorAll("#galGrid .gal-item");
-    var featuredEl=document.getElementById("galFeatured");
-    var isFiltering=false;
+    var filterBtns = document.querySelectorAll(".gal-filter-btn");
+    var galItems = document.querySelectorAll("#galGrid .gal-item");
+    var featuredEl = document.getElementById("galFeatured");
+    var galGrid = document.getElementById("galGrid");
+    var isFiltering = false;
 
     function updateCounts(){
-        var c={all:galData.length};
-        galData.forEach(function(d){c[d.cat]=(c[d.cat]||0)+1;});
+        var c = { all: galData.length };
+        galData.forEach(function(d){ c[d.cat] = (c[d.cat]||0) + 1; });
         filterBtns.forEach(function(b){
-            var f=b.dataset.filter,el=b.querySelector(".gal-count");
-            if(el)el.textContent=c[f]||0;
+            var f = b.dataset.filter, el = b.querySelector(".gal-count");
+            if(el) el.textContent = c[f] || 0;
         });
     }
     updateCounts();
 
     filterBtns.forEach(function(btn){
-        btn.addEventListener("click",function(){
-            if(isFiltering)return;isFiltering=true;
-            filterBtns.forEach(function(b){b.classList.remove("active");});
+        btn.addEventListener("click", function(){
+            if(isFiltering) return;
+            isFiltering = true;
+            filterBtns.forEach(function(b){ b.classList.remove("active"); });
             btn.classList.add("active");
-            var filter=btn.dataset.filter;
+            var filter = btn.dataset.filter;
 
+            /* --- FASE 1: Fade out SEMUA item sekaligus (tanpa stagger) --- */
             galItems.forEach(function(item){
-                var m=(filter==="all"||item.dataset.cat===filter);
-                if(!m){item.style.opacity="0";item.style.transform="scale(0.92) translateY(12px)";}
+                item.style.transition = 'opacity .18s ease, transform .18s ease';
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.96)';
             });
             if(featuredEl){
-                var fm=(filter==="all"||featuredEl.dataset.cat===filter);
-                if(!fm){featuredEl.style.opacity="0";featuredEl.style.transform="translateY(-8px)";featuredEl.style.transition="opacity .3s ease,transform .3s ease";}
-                else{featuredEl.style.opacity="1";featuredEl.style.transform="";featuredEl.style.transition="opacity .4s ease,transform .4s ease";}
+                featuredEl.style.transition = 'opacity .18s ease';
+                featuredEl.style.opacity = '0';
             }
+
+            /* --- FASE 2: Setelah fade out selesai, ubah display --- */
             setTimeout(function(){
                 galItems.forEach(function(item){
-                    var m=(filter==="all"||item.dataset.cat===filter);
-                    if(!m){item.style.display="none";}
-                    else{item.style.display="";item.style.opacity="0";item.style.transform="translateY(20px) scale(0.97)";}
+                    var match = (filter === "all" || item.dataset.cat === filter);
+                    item.style.display = match ? '' : 'none';
+                    /* Reset transform tapi tetap opacity 0 supaya bisa animate masuk */
+                    if(match){
+                        item.style.transform = 'translateY(12px) scale(0.97)';
+                    }
                 });
-                if(featuredEl){featuredEl.style.display=(filter==="all"||featuredEl.dataset.cat===filter)?"":"none";}
-                var vis=[];galItems.forEach(function(item){if(item.style.display!=="none")vis.push(item);});
-                vis.forEach(function(item,i){setTimeout(function(){item.style.opacity="1";item.style.transform="translateY(0) scale(1)";},i*55);});
-                setTimeout(function(){isFiltering=false;},vis.length*55+400);
-            },320);
+                if(featuredEl){
+                    var fm = (filter === "all" || featuredEl.dataset.cat === filter);
+                    featuredEl.style.display = fm ? '' : 'none';
+                }
+
+                /* Force reflow: browser hitung layout baru SEBELUM animate masuk */
+                void galGrid.offsetHeight;
+
+                /* --- FASE 3: Animate masuk dengan stagger halus --- */
+                var visible = [];
+                galItems.forEach(function(item){
+                    if(item.style.display !== 'none') visible.push(item);
+                });
+
+                visible.forEach(function(item, i){
+                    setTimeout(function(){
+                        item.style.transition = 'opacity .32s ease, transform .32s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0) scale(1)';
+                    }, i * 30);
+                });
+
+                if(featuredEl && featuredEl.style.display !== 'none'){
+                    featuredEl.style.transition = 'opacity .32s ease';
+                    featuredEl.style.opacity = '1';
+                }
+
+                setTimeout(function(){ isFiltering = false; }, visible.length * 30 + 380);
+            }, 200);
         });
     });
 }
