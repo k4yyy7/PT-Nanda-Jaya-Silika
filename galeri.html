@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Galeri – PT Nanda Jaya Silika</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Galeri dokumentasi tambang pasir kuarsa PT Nanda Jaya Silika — area tambang, proses produksi, material, dan armada pengiriman di Lampung Timur.">
+    <meta name="description" content="Galeri dokumentasi tambang pasir kuarsa PT Nanda Jaya Silika — area tambang, proses produksi, material, armada pengiriman, dan kegiatan dinas di Lampung Timur.">
     <link rel="icon" href="img/logo PT Nanda Jaya Silika.jpeg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -12,7 +12,7 @@
 <style>
 :root{
   --blue:#009FE3;--blue-dark:#0A2C4E;--blue-mid:#0D3A63;
-  --red:#E53935;--red-dark:#C62828;--green:#12b886;
+  --red:#E53935;--red-dark:#C62828;--green:#12b886;--amber:#F59F00;
   --white:#FFF;--gray-light:#F5F7FA;--gray-mid:#E0E6ED;--gray-text:#3D5A73;
   --fh:'Poppins',sans-serif;--fb:'Inter',sans-serif;
   --tr:.3s ease;--ss:0 4px 16px rgba(10,44,78,.08);--sm:0 8px 32px rgba(10,44,78,.14)
@@ -25,15 +25,10 @@ a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 .red-stripe{height:4px;background:var(--red)}
 
-@keyframes fadeUp  {from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
-@keyframes fadeRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
-.anim-up{opacity:0}.anim-left{opacity:0}.anim-right{opacity:0}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.anim-up{opacity:0}
 .anim-up.visible{animation:fadeUp .7s ease forwards}
-.anim-left.visible{animation:fadeLeft .7s ease forwards}
-.anim-right.visible{animation:fadeRight .7s ease forwards}
 
-/* ── NAVBAR ── */
 .main-nav{background:var(--blue-mid);position:sticky;top:0;z-index:1000;transition:background var(--tr),box-shadow var(--tr)}
 .main-nav.nav-scrolled{background:var(--blue-dark);box-shadow:0 4px 24px rgba(0,0,0,.25)}
 .nav-inner{height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
@@ -61,7 +56,6 @@ img{max-width:100%;display:block}
   .nav-inner{padding:0 16px}
 }
 
-/* ── PAGE HERO ── */
 .page-hero{background:var(--blue-dark);padding:72px 0 56px;position:relative;overflow:hidden}
 .page-hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px),repeating-linear-gradient(90deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px)}
 .page-hero-content{position:relative;z-index:2}
@@ -78,51 +72,37 @@ img{max-width:100%;display:block}
 .trust-badge i{color:var(--blue)}
 .trust-badge .t-green{color:#4DE89C}
 
-/* ── SECTION ── */
 .sec{padding:72px 0}
-.sec--gray{background:var(--gray-light)}
-.sec--dark{background:var(--blue-dark)}
 .sbadge{display:inline-block;background:rgba(0,159,227,.1);color:var(--blue);font-family:var(--fh);font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
-.sbadge--red{background:rgba(229,57,53,.1);color:var(--red)}
 .sbadge--light{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9)}
 .stitle{font-size:clamp(20px,3.5vw,32px);font-weight:800;line-height:1.3;margin-bottom:4px}
 .stitle--white{color:#fff}
 .srule{width:48px;height:4px;background:var(--red);border-radius:2px;margin:16px 0 28px}
 .srule--center{margin-left:auto;margin-right:auto}
-.srule--blue{background:var(--blue)}
 .stext{font-size:14px;color:var(--gray-text);line-height:1.8}
 .stext--light{color:rgba(255,255,255,.7)}
 
-/* ══════════════════════════════
-   STATS BAR
-   ══════════════════════════════ */
 .gal-stat-bar{background:var(--blue-dark);padding:48px 0;position:relative;overflow:hidden}
 .gal-stat-bar::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px),repeating-linear-gradient(90deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px)}
-.gal-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:2}
-.gal-stat{background:rgba(0,159,227,.08);border:1px solid rgba(0,159,227,.15);border-radius:14px;padding:24px 16px;text-align:center;transition:all var(--tr)}
+.gal-stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative;z-index:2}
+.gal-stat{background:rgba(0,159,227,.08);border:1px solid rgba(0,159,227,.15);border-radius:14px;padding:22px 14px;text-align:center;transition:all var(--tr)}
 .gal-stat:hover{background:rgba(0,159,227,.14);border-color:rgba(0,159,227,.3);transform:translateY(-2px)}
-.gal-stat-val{font-family:var(--fh);font-size:clamp(22px,3vw,32px);font-weight:800;color:#fff;line-height:1}
-.gal-stat-val span{font-size:clamp(14px,2vw,18px);color:var(--blue)}
-.gal-stat-label{font-size:11px;color:rgba(255,255,255,.5);margin-top:6px;font-family:var(--fh);font-weight:500}
+.gal-stat-val{font-family:var(--fh);font-size:clamp(20px,2.8vw,30px);font-weight:800;color:#fff;line-height:1}
+.gal-stat-val span{font-size:clamp(12px,1.8vw,16px);color:var(--blue)}
+.gal-stat-label{font-size:10px;color:rgba(255,255,255,.5);margin-top:5px;font-family:var(--fh);font-weight:500}
 
-/* ══════════════════════════════
-   FEATURED IMAGE
-   ══════════════════════════════ */
-.gal-featured{border-radius:20px;overflow:hidden;position:relative;box-shadow:var(--sm);border:1px solid var(--gray-mid);cursor:pointer;transition:all var(--tr)}
+.gal-featured{border-radius:20px;overflow:hidden;position:relative;box-shadow:var(--sm);border:1px solid var(--gray-mid);cursor:pointer;transition:all .4s ease}
 .gal-featured:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(10,44,78,.2)}
-.gal-featured-inner{width:100%;aspect-ratio:21/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;position:relative;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid))}
-.gal-featured-inner::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 28px)}
-.gal-featured-inner i{font-size:56px;color:rgba(255,255,255,.12);position:relative;z-index:1}
-.gal-featured-inner span{font-family:var(--fh);font-size:14px;font-weight:600;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:2px;position:relative;z-index:1}
-.gal-featured-overlay{position:absolute;bottom:0;left:0;right:0;padding:28px 32px;background:linear-gradient(to top,rgba(10,44,78,.9),transparent);display:flex;align-items:flex-end;justify-content:space-between;z-index:2}
+.gal-featured img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:center 42%;display:block;transition:transform .6s ease}
+.gal-featured:hover img{transform:scale(1.03)}
+.gal-wm-cover{position:absolute;bottom:0;left:0;right:0;height:10%;background:linear-gradient(to top,rgba(180,175,160,.85) 0%,rgba(180,175,160,.35) 45%,transparent 100%);z-index:1;pointer-events:none}
+.gal-featured-overlay{position:absolute;bottom:0;left:0;right:0;padding:28px 32px;background:linear-gradient(to top,rgba(10,44,78,.92) 0%,rgba(10,44,78,.4) 60%,transparent 100%);display:flex;align-items:flex-end;justify-content:space-between;z-index:2}
 .gal-featured-text h3{font-family:var(--fh);font-size:clamp(16px,2.5vw,22px);font-weight:800;color:#fff;margin-bottom:4px}
 .gal-featured-text p{font-size:13px;color:rgba(255,255,255,.6);margin:0}
-.gal-featured-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,159,227,.85);backdrop-filter:blur(8px);color:#fff;font-family:var(--fh);font-size:11px;font-weight:700;padding:8px 16px;border-radius:50px;letter-spacing:.5px;flex-shrink:0;white-space:nowrap}
+.gal-featured-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,159,227,.85);backdrop-filter:blur(8px);color:#fff;font-family:var(--fh);font-size:11px;font-weight:700;padding:8px 16px;border-radius:50px;letter-spacing:.5px;flex-shrink:0;white-space:nowrap;transition:background var(--tr)}
+.gal-featured-badge:hover{background:var(--blue)}
 .gal-featured-badge i{font-size:12px}
 
-/* ══════════════════════════════
-   GALLERY FILTER
-   ══════════════════════════════ */
 .gal-filter-bar{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:32px}
 .gal-filter-btn{font-family:var(--fh);font-size:12px;font-weight:600;color:var(--gray-text);background:var(--white);border:1px solid var(--gray-mid);padding:8px 20px;border-radius:50px;cursor:pointer;transition:all var(--tr);display:inline-flex;align-items:center;gap:6px}
 .gal-filter-btn:hover{color:var(--blue-dark);border-color:rgba(0,159,227,.3);background:rgba(0,159,227,.05)}
@@ -130,73 +110,45 @@ img{max-width:100%;display:block}
 .gal-filter-btn .gal-count{font-size:10px;background:rgba(0,0,0,.08);padding:1px 7px;border-radius:20px;font-weight:700}
 .gal-filter-btn.active .gal-count{background:rgba(255,255,255,.25)}
 
-/* ══════════════════════════════
-   GALLERY GRID
-   ══════════════════════════════ */
 .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.gal-item{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;border:1px solid var(--gray-mid);box-shadow:var(--ss);transition:all var(--tr);aspect-ratio:4/3}
-.gal-item--tall{grid-row:span 2;aspect-ratio:auto}
+.gal-item{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;border:1px solid var(--gray-mid);box-shadow:var(--ss);transition:opacity .4s ease,transform .4s ease,box-shadow .3s ease,border-color .3s ease;aspect-ratio:4/3}
 .gal-item:hover{transform:translateY(-4px);box-shadow:var(--sm);border-color:transparent}
-.gal-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;transition:transform .5s ease}
-.gal-placeholder i{font-size:32px;color:rgba(255,255,255,.2);transition:all var(--tr)}
-.gal-placeholder span{font-family:var(--fh);font-size:11px;font-weight:600;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:1px;text-align:center;padding:0 14px}
-.gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,44,78,.9) 0%,rgba(10,44,78,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;opacity:0;transition:opacity var(--tr)}
+.gal-item img{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block;transition:transform .5s ease}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,44,78,.9) 0%,rgba(10,44,78,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;opacity:0;transition:opacity var(--tr);z-index:3}
 .gal-overlay-cat{display:inline-flex;align-items:center;gap:5px;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--blue);background:rgba(0,159,227,.15);padding:3px 10px;border-radius:20px;margin-bottom:8px;width:fit-content}
+.gal-overlay-cat.cat-dinas{color:var(--amber);background:rgba(245,159,0,.15)}
 .gal-overlay h4{font-family:var(--fh);font-size:14px;font-weight:700;color:#fff;margin-bottom:3px;line-height:1.3}
 .gal-overlay p{font-size:12px;color:rgba(255,255,255,.6);margin:0;line-height:1.5}
-.gal-zoom{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;background:rgba(0,159,227,.8);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;transform:scale(0);transition:transform .3s cubic-bezier(.4,0,.2,1)}
+.gal-zoom{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;background:rgba(0,159,227,.8);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;transform:scale(0);transition:transform .3s cubic-bezier(.4,0,.2,1);z-index:4}
+.gal-zoom:hover{background:var(--blue);transform:scale(1.1)!important}
 .gal-item:hover .gal-overlay{opacity:1}
 .gal-item:hover .gal-zoom{transform:scale(1)}
-.gal-item:hover .gal-placeholder{transform:scale(1.06)}
-.gal-item:hover .gal-placeholder i{color:rgba(255,255,255,.35)}
 
-/* Placeholder gradients */
-.gp-1{background:linear-gradient(135deg,#0A3550,#164E6E)}
-.gp-2{background:linear-gradient(135deg,#12374E,#1A5276)}
-.gp-3{background:linear-gradient(135deg,#0E3350,#1C5570)}
-.gp-4{background:linear-gradient(135deg,#0C2F48,#194A65)}
-.gp-5{background:linear-gradient(135deg,#102A42,#1B4660)}
-.gp-6{background:linear-gradient(135deg,#0A3550,#154060)}
-.gp-7{background:linear-gradient(135deg,#0E2A40,#1A3858)}
-.gp-8{background:linear-gradient(135deg,#102838,#1C3C54)}
-.gp-9{background:linear-gradient(135deg,#0C2640,#183650)}
-.gp-10{background:linear-gradient(135deg,#0D3048,#1A4862)}
-.gp-11{background:linear-gradient(135deg,#0B2E45,#173F5C)}
-.gp-12{background:linear-gradient(135deg,#0F3348,#1C4F6A)}
-
-/* ══════════════════════════════
-   INFO NOTE
-   ══════════════════════════════ */
 .gal-note{display:flex;align-items:flex-start;gap:12px;background:rgba(0,159,227,.06);border:1px solid rgba(0,159,227,.15);border-radius:12px;padding:16px 20px;margin-top:32px}
 .gal-note i{color:var(--blue);margin-top:2px;font-size:16px;flex-shrink:0}
 .gal-note p{margin:0;font-size:13px;color:var(--gray-text);line-height:1.7}
 .gal-note a{color:var(--blue);font-weight:600;text-decoration:underline}
 
-/* ══════════════════════════════
-   LIGHTBOX
-   ══════════════════════════════ */
-.lb-overlay{position:fixed;inset:0;background:rgba(5,15,28,.96);z-index:10000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(4px)}
+.lb-overlay{position:fixed;inset:0;background:rgba(5,15,28,.96);z-index:20000;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s ease;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:20px}
 .lb-overlay.open{opacity:1;pointer-events:auto}
-.lb-close{position:absolute;top:20px;right:24px;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:#fff;font-size:18px;cursor:pointer;transition:all var(--tr);display:flex;align-items:center;justify-content:center}
-.lb-close:hover{background:rgba(229,57,53,.6);border-color:rgba(229,57,53,.4)}
-.lb-card{text-align:center;max-width:560px;width:90vw;position:relative}
-.lb-card-bg{width:100%;aspect-ratio:16/10;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;margin-bottom:24px;border:1px solid rgba(255,255,255,.08);overflow:hidden}
-.lb-card-bg::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.03) 0,rgba(0,159,227,.03) 1px,transparent 0,transparent 28px)}
-.lb-card-bg i{font-size:52px;color:rgba(255,255,255,.15);position:relative;z-index:1}
-.lb-card-bg span{font-family:var(--fh);font-size:13px;font-weight:600;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:1.5px;position:relative;z-index:1}
-.lb-cat-badge{display:inline-flex;align-items:center;gap:5px;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--blue);background:rgba(0,159,227,.15);padding:4px 12px;border-radius:20px;margin-bottom:10px}
-.lb-card h4{font-family:var(--fh);font-size:20px;font-weight:800;color:#fff;margin-bottom:6px}
-.lb-card p{font-size:14px;color:rgba(255,255,255,.45);line-height:1.6}
-.lb-counter{font-family:var(--fh);font-size:12px;color:rgba(255,255,255,.3);margin-top:16px;font-weight:500}
+.lb-close{position:fixed;top:20px;right:24px;width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:#fff;font-size:18px;cursor:pointer;transition:all var(--tr);display:flex;align-items:center;justify-content:center;z-index:20002}
+.lb-close:hover{background:rgba(229,57,53,.7);border-color:rgba(229,57,53,.5);transform:rotate(90deg)}
+.lb-img-wrap{max-width:90vw;max-height:75vh;display:flex;align-items:center;justify-content:center;position:relative}
+.lb-img-wrap img{max-width:90vw;max-height:75vh;border-radius:14px;box-shadow:0 16px 64px rgba(0,0,0,.6);object-fit:contain;transform:scale(.9);transition:transform .4s cubic-bezier(.22,.61,.36,1);user-select:none;-webkit-user-drag:none}
+.lb-overlay.open .lb-img-wrap img{transform:scale(1)}
+.lb-info{text-align:center;margin-top:20px;max-width:600px}
+.lb-cat-badge{display:inline-flex;align-items:center;gap:5px;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--blue);background:rgba(0,159,227,.15);padding:4px 12px;border-radius:20px;margin-bottom:8px}
+.lb-cat-badge.cat-dinas{color:var(--amber);background:rgba(245,159,0,.15)}
+.lb-info h4{font-family:var(--fh);font-size:18px;font-weight:800;color:#fff;margin-bottom:4px}
+.lb-info p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6}
+.lb-counter{font-family:var(--fh);font-size:13px;color:rgba(255,255,255,.3);margin-top:12px;font-weight:500}
 .lb-counter span{color:var(--blue);font-weight:700}
-.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:#fff;font-size:16px;cursor:pointer;transition:all var(--tr);display:flex;align-items:center;justify-content:center}
-.lb-nav:hover{background:rgba(0,159,227,.3);border-color:rgba(0,159,227,.4)}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:16px;cursor:pointer;transition:all var(--tr);display:flex;align-items:center;justify-content:center;z-index:20001}
+.lb-nav:hover{background:rgba(0,159,227,.3);border-color:rgba(0,159,227,.5);color:#fff;transform:translateY(-50%) scale(1.08)}
 .lb-prev{left:20px}
 .lb-next{right:20px}
 
-/* ══════════════════════════════
-   CTA & FOOTER
-   ══════════════════════════════ */
 .cta-section{background:var(--blue-dark);padding:64px 0;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 40px)}
 .btn-cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:14px;padding:14px 32px;border-radius:10px;transition:all var(--tr);border:2px solid var(--red)}
@@ -220,7 +172,6 @@ img{max-width:100%;display:block}
 .footer-bottom strong{color:rgba(255,255,255,.6)}
 .footer-bottom-right{color:rgba(0,159,227,.5)!important}
 
-/* WA Float */
 .wa-float{position:fixed;left:24px;bottom:32px;z-index:9998;display:flex;align-items:center;opacity:0;pointer-events:none;transform:translateY(16px);transition:opacity .4s ease,transform .4s ease}
 .wa-float.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
 .wa-float-icon{width:52px;height:52px;border-radius:16px;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;box-shadow:0 4px 20px rgba(37,211,102,.45);border:2px solid rgba(255,255,255,.2);position:relative;z-index:2;transition:transform .3s,box-shadow .3s,background .3s}
@@ -233,38 +184,6 @@ img{max-width:100%;display:block}
 .back-to-top.visible{opacity:1;pointer-events:auto}
 .back-to-top:hover{background:var(--red);color:#fff;transform:translateY(-3px)}
 
-/* ── RESPONSIVE ── */
-@media(max-width:991px){
-  .gal-stat-grid{grid-template-columns:repeat(2,1fr)}
-  .gal-grid{grid-template-columns:repeat(2,1fr)}
-  .gal-item--tall{grid-row:span 1;aspect-ratio:4/3}
-  .gal-featured-inner{aspect-ratio:16/9}
-}
-@media(max-width:767px){
-  .sec{padding:48px 0}
-  .page-hero{padding:48px 0 36px}
-  .gal-stat-bar{padding:32px 0}
-  .gal-stat-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .gal-stat-val{font-size:22px}
-  .gal-grid{grid-template-columns:1fr 1fr;gap:14px}
-  .gal-filter-btn{padding:7px 16px;font-size:11px}
-  .gal-featured-overlay{flex-direction:column;align-items:flex-start;gap:10px;padding:20px}
-  .footer-bottom .d-flex{flex-direction:column;text-align:center;gap:6px}
-  .wa-float{left:16px;bottom:24px}
-  .wa-float-icon{width:46px;height:46px;font-size:22px}
-  .back-to-top{right:16px;bottom:24px;width:44px;height:44px}
-  .btn-cta-main,.btn-cta-outline{width:100%;justify-content:center}
-  .cta-btn-row{flex-direction:column;align-items:center!important}
-  .lb-nav{width:40px;height:40px;font-size:14px}
-  .lb-prev{left:10px}
-  .lb-next{right:10px}
-}
-@media(max-width:480px){
-  .gal-grid{grid-template-columns:1fr;gap:12px}
-  .gal-item{aspect-ratio:16/10}
-  .lb-card{width:95vw}
-}
-/* * WA POPUP */ 
 .wa-popup-overlay{position:fixed;inset:0;background:rgba(5,15,28,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .wa-popup-overlay.is-open{opacity:1;pointer-events:auto}
 .wa-popup-card{background:#fff;border-radius:20px;width:100%;max-width:380px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);transform:scale(.88) translateY(24px);transition:transform .35s cubic-bezier(.22,.61,.36,1);position:relative}
@@ -288,37 +207,49 @@ img{max-width:100%;display:block}
 .wa-popup-option:hover .wa-popup-option-arrow{color:#25D366;transform:translateX(3px)}
 .wa-popup-footer{text-align:center;padding:0 16px 16px;font-size:11px;color:var(--gray-text);font-family:var(--fh)}
 
-@media(max-width:767px){
-.section-pad{padding:56px 0}.legalitas-section,.visi-misi-section{padding:56px 0}
-.hero-section{min-height:480px}.hero-title{font-size:clamp(20px,5vw,28px)}.hero-desc{font-size:13px}
-.hero-arrow{width:42px;height:42px}.hero-arrow--left{left:12px}.hero-arrow--right{right:12px}
-.hero-scroll-indicator{display:none}.hero-actions{flex-direction:column}
-.btn-hero-primary,.btn-hero-outline{justify-content:center;width:100%;max-width:280px}
-.cta-contact-row{flex-direction:column;align-items:stretch;padding:0 16px}.cta-contact-card{width:100%}
-.btn-cta-main{width:100%;justify-content:center}
-.wa-float{left:16px;bottom:24px}.wa-float-icon{width:48px;height:48px;font-size:22px}
-.back-to-top{right:16px;bottom:24px}
-.footer-bottom .d-flex{flex-direction:column;text-align:center;gap:6px}
-.wa-popup-card{max-width:340px}
+@media(max-width:991px){
+  .gal-stat-grid{grid-template-columns:repeat(3,1fr)}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .gal-featured img{aspect-ratio:16/9}
 }
-@media(max-width:480px){.hstat-sep{display:none}.section-pad{padding:44px 0}}
+@media(max-width:767px){
+  .sec{padding:48px 0}
+  .page-hero{padding:48px 0 36px}
+  .gal-stat-bar{padding:32px 0}
+  .gal-stat-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .gal-stat-val{font-size:22px}
+  .gal-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .gal-filter-btn{padding:7px 16px;font-size:11px}
+  .gal-featured-overlay{flex-direction:column;align-items:flex-start;gap:10px;padding:20px}
+  .footer-bottom .d-flex{flex-direction:column;text-align:center;gap:6px}
+  .wa-float{left:16px;bottom:24px}
+  .wa-float-icon{width:46px;height:46px;font-size:22px}
+  .back-to-top{right:16px;bottom:24px;width:44px;height:44px}
+  .btn-cta-main,.btn-cta-outline{width:100%;justify-content:center}
+  .cta-btn-row{flex-direction:column;align-items:center!important}
+  .lb-nav{width:42px;height:42px;font-size:14px}
+  .lb-prev{left:10px}
+  .lb-next{right:10px}
+  .lb-img-wrap{max-width:95vw;max-height:65vh}
+  .lb-img-wrap img{max-width:95vw;max-height:65vh}
+  .wa-popup-card{max-width:340px}
+}
+@media(max-width:480px){
+  .gal-grid{grid-template-columns:1fr;gap:12px}
+  .gal-item{aspect-ratio:16/10}
+}
 </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="main-nav" id="mainNav">
     <div class="container-fluid">
         <div class="nav-inner">
             <a class="nav-logo-compact d-flex align-items-center" href="index.html">
-                <div class="nav-logo-container">
-                    <img src="img/pt-njs.png" alt="NJS" class="nav-logo-img">
-                </div>
+                <div class="nav-logo-container"><img src="img/pt-njs.png" alt="NJS" class="nav-logo-img"></div>
                 <span class="nav-brand-name d-none d-lg-inline">PT Nanda Jaya Silika</span>
             </a>
-            <button class="nav-toggler d-lg-none" id="navToggler" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+            <button class="nav-toggler d-lg-none" id="navToggler" aria-label="Toggle menu"><span></span><span></span><span></span></button>
             <div class="nav-menu" id="navMenu">
                 <a href="index.html"       class="nav-link-item">Beranda</a>
                 <a href="tentang.html"     class="nav-link-item">Tentang</a>
@@ -334,7 +265,6 @@ img{max-width:100%;display:block}
     </div>
 </nav>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
     <div class="container">
         <div class="page-hero-content">
@@ -346,11 +276,11 @@ img{max-width:100%;display:block}
                 <i class="fas fa-camera"></i> Dokumentasi Visual
             </div>
             <h1 class="page-hero-title anim-up" style="animation-delay:.1s">Galeri Tambang &amp; Operasional</h1>
-            <p class="page-hero-sub anim-up" style="animation-delay:.15s">Dokumentasi visual area tambang pasir kuarsa 27,25 Ha, proses produksi, material berkualitas, dan armada pengiriman PT Nanda Jaya Silika.</p>
+            <p class="page-hero-sub anim-up" style="animation-delay:.15s">Dokumentasi visual area tambang pasir kuarsa 25,75 Ha, proses produksi, material, armada pengiriman, serta kegiatan dinas dan kunjungan resmi PT Nanda Jaya Silika.</p>
             <div class="trust-row anim-up" style="animation-delay:.2s">
-                <div class="trust-badge"><i class="fas fa-ruler-combined"></i> 27,25 Ha</div>
-                <div class="trust-badge"><i class="fas fa-images"></i> 12+ Dokumentasi</div>
-                <div class="trust-badge"><i class="fas fa-filter"></i> 4 Kategori</div>
+                <div class="trust-badge"><i class="fas fa-ruler-combined"></i> 25,75 Ha</div>
+                <div class="trust-badge"><i class="fas fa-images"></i> 16 Dokumentasi</div>
+                <div class="trust-badge"><i class="fas fa-filter"></i> 5 Kategori</div>
                 <div class="trust-badge"><i class="fas fa-search-plus t-green"></i> Lightbox</div>
             </div>
         </div>
@@ -358,190 +288,245 @@ img{max-width:100%;display:block}
 </section>
 <div class="red-stripe"></div>
 
-<!-- ══════════════════════════
-     STATS BAR
-     ══════════════════════════ -->
 <div class="gal-stat-bar">
     <div class="container">
         <div class="gal-stat-grid">
             <div class="gal-stat anim-up">
-                <div class="gal-stat-val">27,25<span>Ha</span></div>
+                <div class="gal-stat-val">25,75<span>Ha</span></div>
                 <div class="gal-stat-label">Luas WIUP Tambang</div>
             </div>
-            <div class="gal-stat anim-up" style="animation-delay:.08s">
+            <div class="gal-stat anim-up" style="animation-delay:.06s">
                 <div class="gal-stat-val">5.500<span>Ton</span></div>
                 <div class="gal-stat-label">Kapasitas / Bulan</div>
             </div>
-            <div class="gal-stat anim-up" style="animation-delay:.16s">
-                <div class="gal-stat-val">4<span>Kategori</span></div>
+            <div class="gal-stat anim-up" style="animation-delay:.12s">
+                <div class="gal-stat-val">5<span>Kategori</span></div>
                 <div class="gal-stat-label">Jenis Dokumentasi</div>
             </div>
-            <div class="gal-stat anim-up" style="animation-delay:.24s">
-                <div class="gal-stat-val">12<span>Foto</span></div>
+            <div class="gal-stat anim-up" style="animation-delay:.18s">
+                <div class="gal-stat-val">16<span>Foto</span></div>
                 <div class="gal-stat-label">Galeri Dokumentasi</div>
+            </div>
+            <div class="gal-stat anim-up" style="animation-delay:.24s">
+                <div class="gal-stat-val">IUP<span>Resmi</span></div>
+                <div class="gal-stat-label">Status Legalitas</div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- ══════════════════════════
-     FEATURED IMAGE
-     ══════════════════════════ -->
 <section class="sec" id="galeri">
     <div class="container">
         <div class="text-center mb-5 anim-up">
             <div class="sbadge">Dokumentasi</div>
             <h2 class="stitle">Galeri Foto Tambang &amp; Operasional</h2>
             <div class="srule srule--center"></div>
-            <p class="stext mx-auto" style="max-width:540px">Koleksi dokumentasi visual dari area tambang, proses penambangan, material pasir kuarsa, hingga armada pengiriman — bukti nyata operasional kami.</p>
+            <p class="stext mx-auto" style="max-width:560px">Koleksi dokumentasi visual dari area tambang, proses penambangan, material, armada pengiriman, hingga kegiatan dinas dan kunjungan resmi — bukti nyata operasional kami.</p>
         </div>
 
-        <!-- Featured hero image -->
-        <div class="gal-featured anim-up mb-4" data-cat="tambang" data-idx="0">
-            <img src="img/produk4.jpeg" alt="Pemandangan Area Tambang" style="width:100%;aspect-ratio:21/9;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 8px 32px rgba(10,44,78,0.18));border-radius:20px 20px 0 0;">
+        <!-- Featured -->
+        <div class="gal-featured anim-up mb-4" id="galFeatured" data-gal-idx="0" data-cat="tambang">
+            <img src="img/pasiralatberat.jpeg" alt="Area Penambangan dengan Alat Berat">
+            <div class="gal-wm-cover"></div>
             <div class="gal-featured-overlay">
                 <div class="gal-featured-text">
-                    <h3>Pemandangan Keseluruhan Area Tambang Utama</h3>
-                    <p>Area penambangan pasir kuarsa seluas 27,25 hektar di Desa Sukorahayu, Lampung Timur</p>
+                    <h3>Area Penambangan dengan Alat Berat</h3>
+                    <p>Pengerjaan material pasir kuarsa menggunakan bulldozer di area tambang utama seluas 25,75 Ha</p>
                 </div>
                 <div class="gal-featured-badge"><i class="fas fa-search-plus"></i> Lihat Detail</div>
             </div>
         </div>
 
         <!-- Filter bar -->
-        <div class="gal-filter-bar anim-up">
-            <button class="gal-filter-btn active" data-filter="all"><i class="fas fa-th"></i> Semua <span class="gal-count">12</span></button>
+        <div class="gal-filter-bar anim-up" id="galFilterBar">
+            <button class="gal-filter-btn active" data-filter="all"><i class="fas fa-th"></i> Semua <span class="gal-count">16</span></button>
             <button class="gal-filter-btn" data-filter="tambang"><i class="fas fa-mountain"></i> Area Tambang <span class="gal-count">3</span></button>
-            <button class="gal-filter-btn" data-filter="produksi"><i class="fas fa-industry"></i> Produksi <span class="gal-count">3</span></button>
-            <button class="gal-filter-btn" data-filter="material"><i class="fas fa-gem"></i> Material <span class="gal-count">3</span></button>
+            <button class="gal-filter-btn" data-filter="produksi"><i class="fas fa-industry"></i> Produksi <span class="gal-count">2</span></button>
+            <button class="gal-filter-btn" data-filter="material"><i class="fas fa-gem"></i> Material <span class="gal-count">4</span></button>
             <button class="gal-filter-btn" data-filter="pengiriman"><i class="fas fa-truck"></i> Pengiriman <span class="gal-count">3</span></button>
+            <button class="gal-filter-btn" data-filter="dinas"><i class="fas fa-users"></i> Kegiatan & Dinas <span class="gal-count">3</span></button>
         </div>
 
         <!-- Gallery grid -->
         <div class="gal-grid anim-up" id="galGrid">
-            <!-- 1 - Area Tambang (tall) -->
-          
+
+            <!-- 1 - Area Tambang -->
+            <div class="gal-item" data-gal-idx="1" data-cat="tambang">
+                <img src="img/stokgudang.jpeg" alt="Area Stockpile Material Tambang" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-mountain"></i> Area Tambang</div>
+                    <h4>Area Stockpile Material</h4>
+                    <p>Penumpukan material pasir kuarsa skala besar sebelum distribusi</p>
+                </div>
+            </div>
+
             <!-- 2 - Produksi -->
-            <div class="gal-item" data-cat="produksi" data-idx="2">
-              <img src="img/galeri2.png" alt="Proses Crushing" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-industry"></i> Produksi</div>
-                <h4>Proses Crushing</h4>
-                <p>Pemecahan material pasir kuarsa</p>
-              </div>
+            <div class="gal-item" data-gal-idx="2" data-cat="produksi">
+                <img src="img/pasiralatberat.jpeg" alt="Proses Pemecahan Material" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-industry"></i> Produksi</div>
+                    <h4>Proses Pemecahan Material</h4>
+                    <p>Pemecahan dan penghalusan material pasir kuarsa di area produksi</p>
+                </div>
             </div>
+
             <!-- 3 - Material -->
-            <div class="gal-item" data-cat="material" data-idx="3">
-              <img src="img/galeri3.png" alt="Pasir Kuarsa Mentah" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-gem"></i> Material</div>
-                <h4>Pasir Kuarsa Mentah</h4>
-                <p>Material hasil tambang sebelum proses</p>
-              </div>
-            </div>
+            <!-- <div class="gal-item" data-gal-idx="3" data-cat="material">
+                <img src="img/pasir.png" alt="Tumpukan Pasir Kuarsa Mentah" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-gem"></i> Material</div>
+                    <h4>Tumpukan Pasir Kuarsa Mentah</h4>
+                    <p>Material segar dari area penambangan siap diproses</p>
+                </div>
+            </div> -->
+
             <!-- 4 - Pengiriman -->
-            <div class="gal-item" data-cat="pengiriman" data-idx="4">
-              <img src="img/galeri4.png" alt="Armada Dump Truck" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-truck"></i> Pengiriman</div>
-                <h4>Armada Dump Truck</h4>
-                <p>Kendaraan pengiriman material internal</p>
-              </div>
+            <div class="gal-item" data-gal-idx="4" data-cat="pengiriman">
+                <img src="img/image.png" alt="Armada Dump Truck Tambang" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-truck"></i> Pengiriman</div>
+                    <h4>Armada Dump Truck Tambang</h4>
+                    <p>Kendaraan pengangkut material untuk distribusi internal</p>
+                </div>
             </div>
+
             <!-- 5 - Produksi -->
-            <div class="gal-item" data-cat="produksi" data-idx="5">
-              <img src="img/produk6.jpeg" alt="Proses Screening" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-industry"></i> Produksi</div>
-                <h4>Proses Screening</h4>
-                <p>Ayakan material sesuai ukuran mesh</p>
-              </div>
+            <div class="gal-item" data-gal-idx="5" data-cat="produksi">
+                <img src="img/lapangan.jpeg" alt="Area Penyaringan & Screening" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-industry"></i> Produksi</div>
+                    <h4>Area Penyaringan &amp; Screening</h4>
+                    <p>Proses ayakan material sesuai ukuran mesh</p>
+                </div>
             </div>
-            <!-- 6 - Material -->
-            <div class="gal-item" data-cat="material" data-idx="6">
-              <img src="img/galeri6.png" alt="Multi Grade Siap Kirim" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-gem"></i> Material</div>
-                <h4>Multi Grade Siap Kirim</h4>
-                <p>Berbagai grade mesh 4–200</p>
-              </div>
+
+            <!-- 6 - Pengiriman -->
+            <div class="gal-item" data-gal-idx="6" data-cat="pengiriman">
+                <img src="img/beko.jpeg" alt="Proses Loading Material" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-truck"></i> Pengiriman</div>
+                    <h4>Proses Loading Material</h4>
+                    <p>Pemuatan pasir kuarsa ke kendaraan pengangkut</p>
+                </div>
             </div>
-            <!-- 7 - Pengiriman -->
-            <div class="gal-item" data-cat="pengiriman" data-idx="7">
-              <img src="img/galeri7.png" alt="Loading Material" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-truck"></i> Pengiriman</div>
-                <h4>Loading Material</h4>
-                <p>Proses pemuatan ke kendaraan</p>
-              </div>
+
+            <!-- 7 - Material -->
+            <div class="gal-item" data-gal-idx="7" data-cat="material">
+                <img src="img/stokzoom.jpeg" alt="Material Kemas Karung di Gudang" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-gem"></i> Material</div>
+                    <h4>Material Kemas Karung di Gudang</h4>
+                    <p>Pasir kuarsa dikemas dalam karung siap distribusi</p>
+                </div>
             </div>
-            <!-- 8 - Area Tambang -->
-            <div class="gal-item" data-cat="tambang" data-idx="8">
-              <img src="img/produk2.jpeg" alt="Tim Lapangan" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-mountain"></i> Area Tambang</div>
-                <h4>Tim Lapangan</h4>
-                <p>Tenaga kerja profesional berpengalaman</p>
-              </div>
+
+            <!-- 8 - Material -->
+            <div class="gal-item" data-gal-idx="8" data-cat="material">
+                <img src="img/stok.jpeg" alt="Area Gudang Penyimpanan" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-gem"></i> Material</div>
+                    <h4>Area Gudang Penyimpanan</h4>
+                    <p>Penyimpanan material dalam jumlah besar sebelum dikirim</p>
+                </div>
             </div>
-            <!-- 9 - Material -->
-            <div class="gal-item" data-cat="tambang" data-idx="9">
-              <img src="img/produk1.jpeg" alt="Sampel QC Lab" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-gem"></i> Material</div>
-                <h4>Sampel QC Lab SUCOFINDO</h4>
-                <p>Pengambilan sampel untuk uji analisis</p>
-              </div>
+
+            <!-- 9 - Pengiriman -->
+            <div class="gal-item" data-gal-idx="9" data-cat="pengiriman">
+                <img src="img/logistik.jpeg" alt="Proses Pengangkutan Material" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-truck"></i> Pengiriman</div>
+                    <h4>Proses Pengangkutan Material</h4>
+                    <p>Pemuatan pasir kuarsa ke truk untuk pengiriman ke pelanggan</p>
+                </div>
             </div>
-            <!-- 10 - Produksi -->
-            <div class="gal-item" data-cat="produksi" data-idx="10">
-              <img src="img/produk5.jpeg" alt="Alat Berat Operasi" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-industry"></i> Produksi</div>
-                <h4>Alat Berat Operasi</h4>
-                <p>Excavator & loader di area tambang</p>
-              </div>
+
+            <!-- 10 - Area Tambang -->
+            <div class="gal-item" data-gal-idx="10" data-cat="tambang">
+                <img src="img/beko.jpeg" alt="Kendaraan Operasional Tambang" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-mountain"></i> Area Tambang</div>
+                    <h4>Kendaraan Operasional Tambang</h4>
+                    <p>Armada pendukung kegiatan penambangan harian</p>
+                </div>
             </div>
-            <!-- 11 - Pengiriman -->
-            <div class="gal-item" data-cat="pengiriman" data-idx="11">
-              <img src="img/produk7.jpeg" alt="Akses Jalan Tambang" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-truck"></i> Pengiriman</div>
-                <h4>Akses Jalan Tambang</h4>
-                <p>Jalan keras untuk truk besar</p>
-              </div>
+
+            <!-- 11 - Material -->
+            <div class="gal-item" data-gal-idx="11" data-cat="material">
+                <img src="img/pasir.png" alt="Tumpukan Pasir Kuarsa Hasil Tambang" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat"><i class="fas fa-gem"></i> Material</div>
+                    <h4>Tumpukan Pasir Kuarsa Hasil Tambang</h4>
+                    <p>Material segar dari area penambangan ditumpukan terbuka</p>
+                </div>
             </div>
-            <!-- 12 - Area Tambang -->
-            <div class="gal-item" data-cat="tambang" data-idx="12">
-              <img src="img/produk6.jpeg" alt="Pemandangan Pesisir Timur" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-              <div class="gal-overlay">
-                <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
-                <div class="gal-overlay-cat"><i class="fas fa-mountain"></i> Area Tambang</div>
-                <h4>Pesisir Timur Lampung</h4>
-                <p>Lokasi strategis dekat jalur laut</p>
-              </div>
+
+            <!-- ═══ 12 - KEGIATAN & DINAS ═══ -->
+            <div class="gal-item" data-gal-idx="12" data-cat="dinas">
+                <img src="img/fotobersama.jpeg" alt="Kunjungan Dinas & Inspeksi Lapangan" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat cat-dinas"><i class="fas fa-users"></i> Kegiatan & Dinas</div>
+                    <h4>Kunjungan Dinas &amp; Inspeksi Lapangan</h4>
+                    <p>Tim instansi terkait melakukan inspeksi langsung ke area operasional tambang</p>
+                </div>
             </div>
+
+            <!-- ═══ 13 - KEGIATAN & DINAS ═══ -->
+            <div class="gal-item" data-gal-idx="13" data-cat="dinas">
+                <img src="img/ugm.png" alt="Peninjauan Area Tambang Bersama Tim" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat cat-dinas"><i class="fas fa-users"></i> Kegiatan & Dinas</div>
+                    <h4>Peninjauan Area Tambang Bersama Tim</h4>
+                    <p>Rombongan melakukan peninjauan langsung ke lokasi penambangan pasir kuarsa</p>
+                </div>
+            </div>
+
+            <!-- ═══ 14 - KEGIATAN & DINAS ═══ -->
+            <div class="gal-item" data-gal-idx="14" data-cat="dinas">
+                <img src="img/fotober3(2).png" alt="Rapat Koordinasi di Lokasi Tambang" loading="lazy">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom"><i class="fas fa-search-plus"></i></div>
+                    <div class="gal-overlay-cat cat-dinas"><i class="fas fa-users"></i> Kegiatan & Dinas</div>
+                    <h4>Rapat Koordinasi di Lokasi Tambang</h4>
+                    <p>Diskusi dan koordinasi operasional bersama tim lapangan dan manajemen</p>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Info note -->
         <div class="gal-note anim-up">
             <i class="fas fa-info-circle"></i>
-            <p>Foto aktual akan ditampilkan menggantikan placeholder di atas. <a href="#" data-wa-trigger>Hubungi kami via WhatsApp</a> untuk mendapatkan dokumentasi lengkap dalam resolusi tinggi.</p>
+            <p>Klik foto atau ikon perbesar untuk melihat gambar ukuran penuh. <a href="#" data-wa-trigger>Hubungi kami via WhatsApp</a> untuk mendapatkan dokumentasi lengkap dalam resolusi tinggi.</p>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-section">
     <div class="container text-center position-relative" style="z-index:2">
         <div class="sbadge sbadge--light anim-up"><i class="fas fa-handshake"></i> Kunjungi Langsung</div>
@@ -555,7 +540,6 @@ img{max-width:100%;display:block}
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="site-footer">
     <div class="container">
         <div class="row">
@@ -564,7 +548,7 @@ img{max-width:100%;display:block}
                     <img src="img/pt-njs.png" alt="NJS" class="footer-logo-img">
                     <div><div class="footer-brand-name">PT Nanda Jaya Silika</div><div class="footer-brand-tag">Tambang Pasir Kuarsa</div></div>
                 </div>
-                <p class="footer-about">Perusahaan pertambangan pasir kuarsa berizin resmi di Lampung Timur. IUP resmi, lahan 27,25 Ha, berlaku hingga 2030.</p>
+                <p class="footer-about">Perusahaan pertambangan pasir kuarsa berizin resmi di Lampung Timur. IUP resmi, lahan 25,75 Ha, berlaku hingga 2030.</p>
             </div>
             <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                 <h5 class="footer-heading">Navigasi</h5>
@@ -585,6 +569,7 @@ img{max-width:100%;display:block}
                     <li><a href="#galeri">Proses Produksi</a></li>
                     <li><a href="#galeri">Material Kuarsa</a></li>
                     <li><a href="#galeri">Armada Pengiriman</a></li>
+                    <li><a href="#galeri">Kegiatan & Dinas</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
@@ -606,81 +591,6 @@ img{max-width:100%;display:block}
     </div>
 </footer>
 
-<!-- WA POPUP -->
-<div class="wa-popup-overlay" id="waPopup">
-  <div class="wa-popup-card">
-    <button class="wa-popup-close" id="waPopupClose"><i class="fas fa-times"></i></button>
-    <div class="wa-popup-header">
-      <div class="wa-popup-header-icon"><i class="fab fa-whatsapp"></i></div>
-      <h4>Konsultasi Kebutuhan Pasir Anda</h4>
-      <p>Pilih admin yang ingin Anda hubungi via WhatsApp:</p>
-    </div>
-    <div class="wa-popup-options">
-      <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20tertarik%20dengan%20produk%20Anda.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="wa-popup-option" id="waLinkAdmin1">
-        <span class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></span>
-        <span class="wa-popup-option-info">
-          <span class="wa-popup-option-label">Admin 1</span>
-          <span class="wa-popup-option-number">+62 812-9661-2892</span>
-        </span>
-        <span class="wa-popup-option-arrow"><i class="fas fa-chevron-right"></i></span>
-      </a>
-      <a href="https://wa.me/6281367213538?text=Halo%20Admin%202%2C%20saya%20tertarik%20dengan%20produk%20Anda." target="_blank" class="wa-popup-option" id="waLinkAdmin2">
-        <span class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></span>
-        <span class="wa-popup-option-info">
-          <span class="wa-popup-option-label">Admin 2</span>
-          <span class="wa-popup-option-number">+62 813-6721-3538</span>
-        </span>
-        <span class="wa-popup-option-arrow"><i class="fas fa-chevron-right"></i></span>
-      </a>
-    </div>
-    <div class="wa-popup-footer">Klik salah satu untuk langsung chat via WhatsApp</div>
-  </div>
-</div>
-
-<script>
-// WA POPUP LOGIC
-document.addEventListener('DOMContentLoaded', function() {
-  var popup = document.getElementById('waPopup');
-  var closeBtn = document.getElementById('waPopupClose');
-  function openPopup(e) {
-    e.preventDefault();
-    popup.classList.add('is-open');
-  }
-  function closePopup() {
-    popup.classList.remove('is-open');
-  }
-  document.querySelectorAll('[data-wa-trigger]').forEach(function(btn) {
-    btn.addEventListener('click', openPopup);
-  });
-  if(closeBtn) closeBtn.addEventListener('click', closePopup);
-  popup.addEventListener('click', function(e) {
-    if(e.target === popup) closePopup();
-  });
-  document.addEventListener('keydown', function(e) {
-    if(e.key === 'Escape' && popup.classList.contains('is-open')) closePopup();
-  });
-});
-</script>
-
-<!-- LIGHTBOX -->
-<div class="lb-overlay" id="lbOverlay">
-    <button class="lb-close" id="lbClose" aria-label="Tutup"><i class="fas fa-times"></i></button>
-    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Sebelumnya"><i class="fas fa-chevron-left"></i></button>
-    <button class="lb-nav lb-next" id="lbNext" aria-label="Selanjutnya"><i class="fas fa-chevron-right"></i></button>
-    <div class="lb-card">
-        <div class="lb-card-bg" id="lbBg">
-            <i class="fas fa-mountain"></i>
-            <span>Placeholder</span>
-        </div>
-        <div class="lb-cat-badge" id="lbCat"><i class="fas fa-mountain"></i> Kategori</div>
-        <h4 id="lbTitle">Judul</h4>
-        <p id="lbDesc">Deskripsi</p>
-        <div class="lb-counter" id="lbCounter"><span>1</span> / 12</div>
-    </div>
-</div>
-
-
-<!-- WA POPUP -->
 <div class="wa-popup-overlay" id="waPopup">
     <div class="wa-popup-card">
         <button class="wa-popup-close" id="waPopupClose"><i class="fas fa-times"></i></button>
@@ -705,7 +615,21 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 </div>
 
-<!-- FLOATING -->
+<div class="lb-overlay" id="lbOverlay">
+    <button class="lb-close" id="lbClose" aria-label="Tutup"><i class="fas fa-times"></i></button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Sebelumnya"><i class="fas fa-chevron-left"></i></button>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Selanjutnya"><i class="fas fa-chevron-right"></i></button>
+    <div class="lb-img-wrap">
+        <img id="lbImg" src="" alt="">
+    </div>
+    <div class="lb-info">
+        <div class="lb-cat-badge" id="lbCat"></div>
+        <h4 id="lbTitle"></h4>
+        <p id="lbDesc"></p>
+        <div class="lb-counter" id="lbCounter"><span>1</span> / 16</div>
+    </div>
+</div>
+
 <a href="#" data-wa-trigger class="wa-float" id="waFloat" aria-label="WhatsApp">
     <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
     <span class="wa-float-tooltip">Hubungi Kami</span>
@@ -716,483 +640,207 @@ document.addEventListener('DOMContentLoaded', function() {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 <script>
 (function(){
-  "use strict";
+"use strict";
 
-  // WA POP UP
-  
+/* ===== DATA GALERI (SINKRON DENGAN HTML) ===== */
+var galData = [
+    /* 0 - Featured */
+    { src:'img/pasiralatberat.jpeg', cat:'tambang', title:'Area Penambangan dengan Alat Berat', desc:'Pengerjaan material pasir kuarsa menggunakan bulldozer di area tambang utama seluas 25,75 Ha' },
+    /* 1-11 Grid existing */
+    { src:'img/lapangan.jpeg', cat:'tambang', title:'Area Stockpile Material', desc:'Penumpukan material pasir kuarsa skala besar sebelum proses distribusi' },
+    { src:'img/tumpukan-pasir.jpeg', cat:'produksi', title:'Proses Pemecahan Material', desc:'Pemecahan dan penghalusan material pasir kuarsa di area produksi' },
+    { src:'img/stok-pasir-mentah.jpeg', cat:'material', title:'Tumpukan Pasir Kuarsa Mentah', desc:'Material segar dari area penambangan yang siap diproses lebih lanjut' },
+    { src:'img/dump-truck-tambang.jpeg', cat:'pengiriman', title:'Armada Dump Truck Tambang', desc:'Kendaraan pengangkut material untuk distribusi internal di area tambang' },
+    { src:'img/pasir-halus-produksi.jpeg', cat:'produksi', title:'Area Penyaringan & Screening', desc:'Proses ayakan material pasir kuarsa sesuai ukuran mesh yang ditentukan' },
+    { src:'img/loading-beko.jpeg', cat:'pengiriman', title:'Proses Loading Material', desc:'Pemuatan pasir kuarsa ke kendaraan pengangkut untuk dikirim ke pelanggan' },
+    { src:'img/stok-karung-gudang.jpeg', cat:'material', title:'Material Kemas Karung di Gudang', desc:'Pasir kuarsa dikemas dalam karung siap distribusi ke pelanggan' },
+    { src:'img/stokgudang.jpeg', cat:'material', title:'Area Gudang Penyimpanan', desc:'Penyimpanan material dalam jumlah besar sebelum dikirim ke pelanggan' },
+    { src:'img/logistik-pengiriman.jpeg', cat:'pengiriman', title:'Proses Pengangkutan Material', desc:'Pemuatan pasir kuarsa ke truk pengangkut untuk pengiriman ke lokasi proyek' },
+    { src:'img/kendaraan-operasional.jpeg', cat:'tambang', title:'Kendaraan Operasional Tambang', desc:'Armada operasional yang mendukung kegiatan penambangan harian' },
+    { src:'img/tumpukan-pasir-terbuka.jpeg', cat:'material', title:'Tumpukan Pasir Kuarsa Hasil Tambang', desc:'Material pasir kuarsa segar dari area penambangan ditumpukan terbuka' },
+    /* 12-14 KEGIATAN & DINAS (BARU) */
+    { src:'img/kunjungan-dinas-inspeksi.jpeg', cat:'dinas', title:'Kunjungan Dinas & Inspeksi Lapangan', desc:'Tim instansi terkait melakukan inspeksi langsung ke area operasional tambang pasir kuarsa' },
+    { src:'img/peninjauan-area-tambang.jpeg', cat:'dinas', title:'Peninjauan Area Tambang Bersama Tim', desc:'Rombongan melakukan peninjauan langsung ke lokasi penambangan pasir kuarsa di Lampung Timur' },
+    { src:'img/rapat-koordinasi-tambang.jpeg', cat:'dinas', title:'Rapat Koordinasi di Lokasi Tambang', desc:'Diskusi dan koordinasi operasional bersama tim lapangan dan manajemen di lokasi tambang' }
+];
+
+var catLabels = { tambang:'Area Tambang', produksi:'Proses Produksi', material:'Material', pengiriman:'Pengiriman', dinas:'Kegiatan & Dinas' };
+var catIcons  = { tambang:'fas fa-mountain', produksi:'fas fa-industry', material:'fas fa-gem', pengiriman:'fas fa-truck', dinas:'fas fa-users' };
+var catIsDinas = { tambang:false, produksi:false, material:false, pengiriman:false, dinas:true };
+
 /* ===== WA POPUP ===== */
-var WA_ADMIN1 = "6281296612892";
-var WA_ADMIN2 = "6281367213538";
-var WA_DEFAULT_MSG = "Halo PT Nanda Jaya Silika, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut.";
-
 function initWaPopup(){
     var popup = document.getElementById("waPopup");
     var closeBtn = document.getElementById("waPopupClose");
     var linkA1 = document.getElementById("waLinkAdmin1");
     var linkA2 = document.getElementById("waLinkAdmin2");
-    if(!popup || !linkA1 || !linkA2) return;
-
-    function setMsg(msg){
-        linkA1.href = "https://wa.me/" + WA_ADMIN1 + "?text=" + encodeURIComponent(msg);
-        linkA2.href = "https://wa.me/" + WA_ADMIN2 + "?text=" + encodeURIComponent(msg);
+    if(!popup||!linkA1||!linkA2) return;
+    function setMsg(m){
+        linkA1.href="https://wa.me/6281296612892?text="+encodeURIComponent(m);
+        linkA2.href="https://wa.me/6281367213538?text="+encodeURIComponent(m);
     }
-
-    function openPopup(e, customMsg){
-        if(e) e.preventDefault();
-        setMsg(customMsg || WA_DEFAULT_MSG);
-        popup.classList.add("is-open");
-        document.body.style.overflow = "hidden";
+    function open(e,m){
+        if(e)e.preventDefault();
+        setMsg(m||"Halo PT Nanda Jaya Silika, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut.");
+        popup.classList.add("is-open");document.body.style.overflow="hidden";
     }
-
-    function closePopup(){
-        popup.classList.remove("is-open");
-        document.body.style.overflow = "";
-    }
-
-    if(closeBtn) closeBtn.addEventListener("click", closePopup);
-    popup.addEventListener("click", function(e){ if(e.target === popup) closePopup(); });
-    document.addEventListener("keydown", function(e){
-        if(e.key === "Escape" && popup.classList.contains("is-open")) closePopup();
+    function close(){popup.classList.remove("is-open");document.body.style.overflow="";}
+    if(closeBtn)closeBtn.addEventListener("click",close);
+    popup.addEventListener("click",function(e){if(e.target===popup)close();});
+    document.addEventListener("keydown",function(e){if(e.key==="Escape"&&popup.classList.contains("is-open"))close();});
+    document.querySelectorAll("[data-wa-trigger]").forEach(function(b){
+        b.addEventListener("click",function(e){open(e,this.getAttribute("data-wa-msg")||null);});
     });
+}
 
-    document.querySelectorAll("[data-wa-trigger]").forEach(function(btn){
-        btn.addEventListener("click", function(e){
-            var msg = this.getAttribute("data-wa-msg") || null;
-            openPopup(e, msg);
+/* ===== NAVBAR ===== */
+function initNav(){
+    var nav=document.getElementById("mainNav"),tog=document.getElementById("navToggler"),menu=document.getElementById("navMenu");
+    if(!nav)return;
+    window.addEventListener("scroll",function(){nav.classList.toggle("nav-scrolled",window.scrollY>80);},{passive:true});
+    if(tog&&menu){
+        tog.addEventListener("click",function(){menu.classList.toggle("is-open");tog.classList.toggle("open");});
+        menu.querySelectorAll("a").forEach(function(l){l.addEventListener("click",function(){menu.classList.remove("is-open");tog.classList.remove("open");});});
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(function(link){
+        link.addEventListener("click",function(e){
+            if(this.hasAttribute("data-wa-trigger"))return;
+            var h=this.getAttribute("href");if(h==="#")return;
+            var t=document.querySelector(h);if(!t)return;
+            e.preventDefault();
+            window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-nav.offsetHeight-16,behavior:"smooth"});
         });
     });
 }
 
 /* ===== SCROLL REVEAL ===== */
 function initScrollReveal(){
-    var els = document.querySelectorAll(".njs-reveal,.njs-fade-up,.njs-slide-right,.njs-slide-left");
-    if(!els.length) return;
-    var obs = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-            if(e.isIntersecting){ e.target.classList.add("is-visible"); obs.unobserve(e.target); }
-        });
-    }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
-    els.forEach(function(el){ obs.observe(el); });
-}
-
-/* ===== NAVBAR ===== */
-function closeNavMenu(){
-    var btn = document.getElementById("navToggler");
-    var menu = document.getElementById("navMenu");
-    if(menu) menu.classList.remove("is-open");
-    if(btn) btn.classList.remove("open");
-}
-
-function initNav(){
-    var nav = document.getElementById("mainNav");
-    if(!nav) return;
-    window.addEventListener("scroll", function(){
-        nav.classList.toggle("nav-scrolled", window.scrollY > 80);
-        updateActiveLink();
-    });
-    document.querySelectorAll('a[href^="#"]').forEach(function(link){
-        link.addEventListener("click", function(e){
-            if(this.hasAttribute("data-wa-trigger")) return;
-            var href = this.getAttribute("href");
-            if(href === "#") return;
-            var target = document.querySelector(href);
-            if(!target) return;
-            e.preventDefault();
-            var offset = nav.offsetHeight;
-            window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - offset, behavior: "smooth" });
-            closeNavMenu();
-        });
+    var obs=new IntersectionObserver(function(en){
+        en.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});
+    },{threshold:.1,rootMargin:"0px 0px -30px 0px"});
+    document.querySelectorAll(".anim-up").forEach(function(el){obs.observe(el);});
+    document.querySelectorAll(".page-hero-content .anim-up").forEach(function(el,i){
+        setTimeout(function(){el.classList.add("visible");},i*100);
     });
 }
 
-function updateActiveLink(){
-    var sections = document.querySelectorAll("section[id]");
-    var links = document.querySelectorAll(".nav-link-item");
-    var pos = window.scrollY + 120;
-    sections.forEach(function(sec){
-        if(sec.offsetTop <= pos && sec.offsetTop + sec.offsetHeight > pos){
-            links.forEach(function(l){ l.classList.remove("active"); });
-            var a = document.querySelector('.nav-link-item[href="#' + sec.id + '"]');
-            if(a) a.classList.add("active");
-        }
-    });
-}
-
-function initMobileNav(){
-    var btn = document.getElementById("navToggler");
-    var menu = document.getElementById("navMenu");
-    if(!btn || !menu) return;
-    btn.addEventListener("click", function(){
-        var isOpen = menu.classList.toggle("is-open");
-        btn.classList.toggle("open", isOpen);
-    });
-}
-
-/* ===== FLOATING BUTTONS ===== */
+/* ===== FLOATING ===== */
 function initFloatingButtons(){
-    var btt = document.getElementById("backToTop");
-    var waBtn = document.getElementById("waFloat");
-    var heroSec = document.getElementById("hero");
-
-    function onScroll(){
-        var sy = window.scrollY;
-        var heroH = heroSec ? (heroSec.offsetTop + heroSec.offsetHeight - 100) : 500;
-        if(btt) btt.classList.toggle("visible", sy > 300);
-        if(waBtn) waBtn.classList.toggle("visible", sy > heroH);
-    }
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    if(btt) btt.addEventListener("click", function(e){
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    var btt=document.getElementById("backToTop"),waF=document.getElementById("waFloat");
+    function onScroll(){var s=window.scrollY;if(btt)btt.classList.toggle("visible",s>300);if(waF)waF.classList.toggle("visible",s>200);}
+    window.addEventListener("scroll",onScroll,{passive:true});
+    if(btt)btt.addEventListener("click",function(e){e.preventDefault();window.scrollTo({top:0,behavior:"smooth"});});
 }
 
-/* ===== HERO SLIDER ===== */
-function initHeroSlider(){
-    var track = document.getElementById("heroTrack");
-    var btnL = document.getElementById("heroArrowLeft");
-    var btnR = document.getElementById("heroArrowRight");
-    var curEl = document.querySelector(".hero-counter-current");
-    var totEl = document.querySelector(".hero-counter-total");
-    var progEl = document.getElementById("heroProgress");
-    var timerEl = document.getElementById("heroTimer");
-    if(!track) return;
+/* ===== GALLERY FILTER (SMOOTH) ===== */
+function initGalleryFilter(){
+    var filterBtns=document.querySelectorAll(".gal-filter-btn");
+    var galItems=document.querySelectorAll("#galGrid .gal-item");
+    var featuredEl=document.getElementById("galFeatured");
+    var isFiltering=false;
 
-    var slides = track.querySelectorAll(".hero-slide");
-    var texts = track.closest(".hero-section").querySelectorAll(".hero-text-item");
-    var total = slides.length;
-    var cur = 0;
-    var dragging = false;
-    var startX = 0;
-    var curX = 0;
-    var prevX = 0;
-    var autoT = null;
-    var heroVis = true;
-    var DELAY = 5000;
-
-    if(totEl) totEl.textContent = String(total).padStart(2, "0");
-
-    function go(idx){
-        if(idx < 0) idx = total - 1;
-        if(idx >= total) idx = 0;
-        var same = idx === cur;
-        if(!same) texts.forEach(function(t){ t.classList.remove("is-active"); });
-        cur = idx;
-        curX = -cur * window.innerWidth;
-        prevX = curX;
-        track.classList.remove("dragging");
-        track.style.transform = "translateX(" + curX + "px)";
-        slides.forEach(function(s, i){ s.classList.toggle("is-active", i === cur); });
-        if(!same) setTimeout(function(){ if(texts[cur]) texts[cur].classList.add("is-active"); }, 150);
-        if(curEl) curEl.textContent = String(cur + 1).padStart(2, "0");
-        if(progEl) progEl.style.width = ((cur + 1) / total * 100) + "%";
-        restartTimer();
+    function updateCounts(){
+        var c={all:galData.length};
+        galData.forEach(function(d){c[d.cat]=(c[d.cat]||0)+1;});
+        filterBtns.forEach(function(b){
+            var f=b.dataset.filter,el=b.querySelector(".gal-count");
+            if(el)el.textContent=c[f]||0;
+        });
     }
+    updateCounts();
 
-    function restartTimer(){
-        if(!timerEl) return;
-        timerEl.classList.remove("running");
-        void timerEl.offsetWidth;
-        if(heroVis) timerEl.classList.add("running");
-    }
+    filterBtns.forEach(function(btn){
+        btn.addEventListener("click",function(){
+            if(isFiltering)return;isFiltering=true;
+            filterBtns.forEach(function(b){b.classList.remove("active");});
+            btn.classList.add("active");
+            var filter=btn.dataset.filter;
 
-    function startAuto(){ stopAuto(); autoT = setInterval(function(){ if(heroVis) go(cur + 1); }, DELAY); }
-    function stopAuto(){ if(autoT){ clearInterval(autoT); autoT = null; } }
-    function resetAuto(){ stopAuto(); startAuto(); restartTimer(); }
-
-    if(btnR) btnR.addEventListener("click", function(){ go(cur + 1); resetAuto(); });
-    if(btnL) btnL.addEventListener("click", function(){ go(cur - 1); resetAuto(); });
-
-    function gx(e){ return e.type.indexOf("mouse") > -1 ? e.pageX : e.touches[0].clientX; }
-    function endDrag(){
-        if(!dragging) return;
-        dragging = false;
-        track.classList.remove("dragging");
-        var moved = curX - prevX;
-        var th = window.innerWidth * 0.18;
-        if(moved < -th) go(cur + 1);
-        else if(moved > th) go(cur - 1);
-        else go(cur);
-        resetAuto();
-    }
-
-    track.addEventListener("mousedown", function(e){ dragging = true; startX = gx(e); track.classList.add("dragging"); });
-    track.addEventListener("mousemove", function(e){ if(!dragging) return; curX = prevX + (gx(e) - startX); track.style.transform = "translateX(" + curX + "px)"; });
-    track.addEventListener("mouseup", endDrag);
-    track.addEventListener("mouseleave", endDrag);
-    track.addEventListener("touchstart", function(e){ dragging = true; startX = gx(e); track.classList.add("dragging"); }, { passive: true });
-    track.addEventListener("touchmove", function(e){ if(!dragging) return; e.preventDefault(); curX = prevX + (gx(e) - startX); track.style.transform = "translateX(" + curX + "px)"; }, { passive: false });
-    track.addEventListener("touchend", endDrag);
-
-    var wLock = false;
-    track.addEventListener("wheel", function(e){
-        if(wLock) return;
-        if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){
-            e.preventDefault();
-            wLock = true;
-            if(e.deltaY > 20) go(cur + 1);
-            else if(e.deltaY < -20) go(cur - 1);
-            resetAuto();
-            setTimeout(function(){ wLock = false; }, 1000);
-        }
-    }, { passive: false });
-
-    document.addEventListener("keydown", function(e){
-        if(e.key === "ArrowRight"){ go(cur + 1); resetAuto(); }
-        if(e.key === "ArrowLeft"){ go(cur - 1); resetAuto(); }
-    });
-
-    var hSec = document.getElementById("hero");
-    if(hSec){
-        var hObs = new IntersectionObserver(function(entries){
-            entries.forEach(function(e){
-                heroVis = e.isIntersecting;
-                if(!heroVis && timerEl) timerEl.classList.remove("running");
-                else if(heroVis) restartTimer();
+            galItems.forEach(function(item){
+                var m=(filter==="all"||item.dataset.cat===filter);
+                if(!m){item.style.opacity="0";item.style.transform="scale(0.92) translateY(12px)";}
             });
-        }, { threshold: 0.1 });
-        hObs.observe(hSec);
-    }
-
-    var rT;
-    window.addEventListener("resize", function(){
-        clearTimeout(rT);
-        rT = setTimeout(function(){
-            curX = -cur * window.innerWidth;
-            prevX = curX;
-            track.classList.remove("dragging");
-            track.style.transform = "translateX(" + curX + "px)";
-        }, 100);
+            if(featuredEl){
+                var fm=(filter==="all"||featuredEl.dataset.cat===filter);
+                if(!fm){featuredEl.style.opacity="0";featuredEl.style.transform="translateY(-8px)";featuredEl.style.transition="opacity .3s ease,transform .3s ease";}
+                else{featuredEl.style.opacity="1";featuredEl.style.transform="";featuredEl.style.transition="opacity .4s ease,transform .4s ease";}
+            }
+            setTimeout(function(){
+                galItems.forEach(function(item){
+                    var m=(filter==="all"||item.dataset.cat===filter);
+                    if(!m){item.style.display="none";}
+                    else{item.style.display="";item.style.opacity="0";item.style.transform="translateY(20px) scale(0.97)";}
+                });
+                if(featuredEl){featuredEl.style.display=(filter==="all"||featuredEl.dataset.cat===filter)?"":"none";}
+                var vis=[];galItems.forEach(function(item){if(item.style.display!=="none")vis.push(item);});
+                vis.forEach(function(item,i){setTimeout(function(){item.style.opacity="1";item.style.transform="translateY(0) scale(1)";},i*55);});
+                setTimeout(function(){isFiltering=false;},vis.length*55+400);
+            },320);
+        });
     });
-
-    go(0);
-    startAuto();
 }
 
-/* ===== INIT ===== */
-document.addEventListener("DOMContentLoaded", function(){
-    initHeroSlider();
-    initScrollReveal();
-    initNav();
-    initMobileNav();
-    initFloatingButtons();
-    initWaPopup();
+/* ===== LIGHTBOX ===== */
+function initLightbox(){
+    var overlay=document.getElementById("lbOverlay"),lbImg=document.getElementById("lbImg"),
+        lbCat=document.getElementById("lbCat"),lbTitle=document.getElementById("lbTitle"),
+        lbDesc=document.getElementById("lbDesc"),lbCounter=document.getElementById("lbCounter");
+    if(!overlay||!lbImg)return;
+    var lbIdx=0;
+
+    function getVis(){
+        var a=document.querySelector(".gal-filter-btn.active");
+        var f=a?a.dataset.filter:"all",idx=[];
+        galData.forEach(function(d,i){if(f==="all"||d.cat===f)idx.push(i);});
+        return idx;
+    }
+    function findPos(di){var v=getVis();for(var i=0;i<v.length;i++){if(v[i]===di)return i;}return 0;}
+
+    function show(){
+        var v=getVis();if(!v.length)return;
+        var d=galData[v[lbIdx]];if(!d)return;
+        lbImg.src=d.src;lbImg.alt=d.title;
+        var isD=catIsDinas[d.cat]||false;
+        lbCat.className="lb-cat-badge"+(isD?" cat-dinas":"");
+        lbCat.innerHTML='<i class="'+catIcons[d.cat]+'"></i> '+catLabels[d.cat];
+        lbTitle.textContent=d.title;lbDesc.textContent=d.desc;
+        lbCounter.innerHTML='<span>'+(lbIdx+1)+'</span> / '+v.length;
+        document.getElementById("lbPrev").style.display=v.length>1?"":"none";
+        document.getElementById("lbNext").style.display=v.length>1?"":"none";
+    }
+    function open(di){lbIdx=findPos(di);show();overlay.classList.add("open");document.body.style.overflow="hidden";}
+    function close(){overlay.classList.remove("open");document.body.style.overflow="";setTimeout(function(){lbImg.src="";},350);}
+    function prev(){var v=getVis();lbIdx=(lbIdx-1+v.length)%v.length;show();}
+    function next(){var v=getVis();lbIdx=(lbIdx+1)%v.length;show();}
+
+    document.getElementById("lbClose").addEventListener("click",close);
+    document.getElementById("lbPrev").addEventListener("click",prev);
+    document.getElementById("lbNext").addEventListener("click",next);
+    overlay.addEventListener("click",function(e){if(e.target===overlay)close();});
+    document.addEventListener("keydown",function(e){
+        if(!overlay.classList.contains("open"))return;
+        if(e.key==="Escape")close();if(e.key==="ArrowLeft")prev();if(e.key==="ArrowRight")next();
+    });
+
+    var fe=document.getElementById("galFeatured");
+    if(fe)fe.addEventListener("click",function(){open(0);});
+
+    document.getElementById("galGrid").addEventListener("click",function(e){
+        var item=e.target.closest(".gal-item[data-gal-idx]");
+        if(!item)return;e.preventDefault();open(parseInt(item.dataset.galIdx));
+    });
+
+    var tx=0;
+    overlay.addEventListener("touchstart",function(e){tx=e.changedTouches[0].screenX;},{passive:true});
+    overlay.addEventListener("touchend",function(e){
+        var d=tx-e.changedTouches[0].screenX;
+        if(Math.abs(d)>50){if(d>0)next();else prev();}
+    },{passive:true});
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+    initNav();initScrollReveal();initFloatingButtons();initWaPopup();initGalleryFilter();initLightbox();
 });
-
-
-  /* === Data galeri === */
-  var galData = [
-    { cat:'tambang', icon:'fas fa-mountain', label:'Area Tambang Utama', title:'Pemandangan Keseluruhan Area Tambang Utama', desc:'Area penambangan pasir kuarsa seluas 27,25 hektar di Desa Sukorahayu, Lampung Timur', gp:'gp-1' },
-    { cat:'tambang', icon:'fas fa-map-marked-alt', label:'Batas Konsesi WIUP', title:'Batas Konsesi WIUP', desc:'Titik patok batas area IUP resmi 27,25 Ha', gp:'gp-1' },
-    { cat:'produksi', icon:'fas fa-industry', label:'Proses Crushing', title:'Proses Crushing', desc:'Pemecahan material pasir kuarsa', gp:'gp-2' },
-    { cat:'material', icon:'fas fa-gem', label:'Pasir Kuarsa Mentah', title:'Pasir Kuarsa Mentah', desc:'Material hasil tambang sebelum proses', gp:'gp-3' },
-    { cat:'pengiriman', icon:'fas fa-truck', label:'Armada Dump Truck', title:'Armada Dump Truck', desc:'Kendaraan pengiriman material internal', gp:'gp-4' },
-    { cat:'produksi', icon:'fas fa-filter', label:'Proses Screening', title:'Proses Screening', desc:'Ayakan material sesuai ukuran mesh', gp:'gp-5' },
-    { cat:'material', icon:'fas fa-cubes', label:'Multi Grade Siap Kirim', title:'Multi Grade Siap Kirim', desc:'Berbagai grade mesh 4–200', gp:'gp-6' },
-    { cat:'pengiriman', icon:'fas fa-shipping-fast', label:'Loading Material', title:'Loading Material', desc:'Proses pemuatan ke kendaraan', gp:'gp-7' },
-    { cat:'tambang', icon:'fas fa-hard-hat', label:'Tim Lapangan', title:'Tim Lapangan', desc:'Tenaga kerja profesional berpengalaman', gp:'gp-8' },
-    { cat:'material', icon:'fas fa-flask', label:'Sampel QC Lab', title:'Sampel QC Lab SUCOFINDO', desc:'Pengambilan sampel untuk uji analisis', gp:'gp-9' },
-    { cat:'produksi', icon:'fas fa-conveyor-belt', label:'Alat Berat Operasi', title:'Alat Berat Operasi', desc:'Excavator & loader di area tambang', gp:'gp-10' },
-    { cat:'pengiriman', icon:'fas fa-road', label:'Akses Jalan Tambang', title:'Akses Jalan Tambang', desc:'Jalan keras untuk truk besar', gp:'gp-11' },
-    { cat:'tambang', icon:'fas fa-sun', label:'Pesisir Timur', title:'Pesisir Timur Lampung', desc:'Lokasi strategis dekat jalur laut', gp:'gp-12' }
-  ];
-
-  var catLabels = { tambang:'Area Tambang', produksi:'Proses Produksi', material:'Material', pengiriman:'Pengiriman' };
-  var catIcons = { tambang:'fas fa-mountain', produksi:'fas fa-industry', material:'fas fa-gem', pengiriman:'fas fa-truck' };
-
-  /* === NAVBAR === */
-  var nav = document.getElementById('mainNav');
-  var tog = document.getElementById('navToggler');
-  var menu = document.getElementById('navMenu');
-
-  window.addEventListener('scroll', function(){
-    var s = window.scrollY;
-    nav.classList.toggle('nav-scrolled', s > 80);
-    if(btt) btt.classList.toggle('visible', s > 300);
-    if(waF) waF.classList.toggle('visible', s > 200);
-  }, { passive: true });
-
-  if(tog && menu){
-    tog.addEventListener('click', function(){
-      menu.classList.toggle('is-open');
-      tog.classList.toggle('open');
-    });
-    menu.querySelectorAll('a').forEach(function(l){
-      l.addEventListener('click', function(){
-        menu.classList.remove('is-open');
-        tog.classList.remove('open');
-      });
-    });
-  }
-
-  /* === SCROLL REVEAL === */
-  var obs = new IntersectionObserver(function(en){
-    en.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
-    });
-  }, {threshold:.1, rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.anim-up,.anim-left,.anim-right').forEach(function(el){ obs.observe(el); });
-
-  /* Hero immediate */
-  document.querySelectorAll('.page-hero-content .anim-up').forEach(function(el,i){
-    setTimeout(function(){ el.classList.add('visible'); }, i * 100);
-  });
-
-  /* === GALLERY FILTER === */
-  var filterBtns = document.querySelectorAll('.gal-filter-btn');
-  var galItems = document.querySelectorAll('.gal-item');
-  var featuredEl = document.querySelector('.gal-featured');
-
-  filterBtns.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      filterBtns.forEach(function(b){ b.classList.remove('active'); });
-      btn.classList.add('active');
-      var filter = btn.dataset.filter;
-
-      /* Show/hide featured */
-      if(featuredEl){
-        var fMatch = (filter === 'all' || featuredEl.dataset.cat === filter);
-        featuredEl.style.display = fMatch ? '' : 'none';
-      }
-
-      galItems.forEach(function(item){
-        var match = (filter === 'all' || item.dataset.cat === filter);
-        if(match){
-          item.style.display = '';
-          item.style.opacity = '0';
-          item.style.transform = 'translateY(16px)';
-          requestAnimationFrame(function(){
-            requestAnimationFrame(function(){
-              item.style.transition = 'opacity .4s ease, transform .4s ease';
-              item.style.opacity = '1';
-              item.style.transform = 'translateY(0)';
-            });
-          });
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  /* === LIGHTBOX === */
-  var overlay = document.getElementById('lbOverlay');
-  var lbBg = document.getElementById('lbBg');
-  var lbCat = document.getElementById('lbCat');
-  var lbTitle = document.getElementById('lbTitle');
-  var lbDesc = document.getElementById('lbDesc');
-  var lbCounter = document.getElementById('lbCounter');
-  var lbIdx = 0;
-
-  function getVisibleData(){
-    var activeFilter = document.querySelector('.gal-filter-btn.active');
-    var f = activeFilter ? activeFilter.dataset.filter : 'all';
-    var arr = [];
-    galData.forEach(function(d){
-      if(f === 'all' || d.cat === f) arr.push(d);
-    });
-    return arr;
-  }
-
-  function showLB(){
-    var vis = getVisibleData();
-    if(!vis.length) return;
-    var d = vis[lbIdx];
-    if(!d) return;
-
-    lbBg.className = 'lb-card-bg ' + d.gp;
-    lbBg.querySelector('i').className = d.icon;
-    lbBg.querySelector('span').textContent = d.label;
-    lbCat.innerHTML = '<i class="' + catIcons[d.cat] + '"></i> ' + catLabels[d.cat];
-    lbTitle.textContent = d.title;
-    lbDesc.textContent = d.desc;
-    lbCounter.innerHTML = '<span>' + (lbIdx + 1) + '</span> / ' + vis.length;
-  }
-
-  function openLB(idx){
-    var vis = getVisibleData();
-    lbIdx = idx || 0;
-    showLB();
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLB(){
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  function prevLB(){
-    var vis = getVisibleData();
-    lbIdx = (lbIdx - 1 + vis.length) % vis.length;
-    showLB();
-  }
-
-  function nextLB(){
-    var vis = getVisibleData();
-    lbIdx = (lbIdx + 1) % vis.length;
-    showLB();
-  }
-
-  document.getElementById('lbClose').addEventListener('click', closeLB);
-  document.getElementById('lbPrev').addEventListener('click', prevLB);
-  document.getElementById('lbNext').addEventListener('click', nextLB);
-
-  overlay.addEventListener('click', function(e){
-    if(e.target === overlay) closeLB();
-  });
-
-  document.addEventListener('keydown', function(e){
-    if(!overlay.classList.contains('open')) return;
-    if(e.key === 'Escape') closeLB();
-    if(e.key === 'ArrowLeft') prevLB();
-    if(e.key === 'ArrowRight') nextLB();
-  });
-
-  /* Featured click */
-  if(featuredEl){
-    featuredEl.addEventListener('click', function(){
-      openLB(0);
-    });
-  }
-
-  /* Grid items click */
-  galItems.forEach(function(item){
-    item.addEventListener('click', function(){
-      var vis = getVisibleData();
-      var itemIdx = parseInt(item.dataset.idx);
-      for(var i = 0; i < vis.length; i++){
-        if(galData.indexOf(vis[i]) === itemIdx){
-          openLB(i);
-          return;
-        }
-      }
-      openLB(0);
-    });
-  });
-
-  /* === BACK TO TOP === */
-  var btt = document.getElementById('backToTop');
-  var waF = document.getElementById('waFloat');
-
-  if(btt) btt.addEventListener('click', function(e){
-    e.preventDefault();
-    window.scrollTo({top:0, behavior:'smooth'});
-  });
-
-  /* === SMOOTH SCROLL === */
-  document.querySelectorAll('a[href^="#"]').forEach(function(link){
-    link.addEventListener('click', function(e){
-      var href = this.getAttribute('href');
-      if(href === '#') return;
-      var target = document.querySelector(href);
-      if(!target) return;
-      e.preventDefault();
-      var navH = nav ? nav.offsetHeight : 64;
-      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - navH - 16, behavior: 'smooth' });
-    });
-  });
 })();
 </script>
 </body>

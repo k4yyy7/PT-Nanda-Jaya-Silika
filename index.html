@@ -226,15 +226,44 @@ img{max-width:100%;display:block}
 .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .gal-item{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;aspect-ratio:4/3}
 .gal-item--featured{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-.gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,44,78,.85) 0%,rgba(10,44,78,.3) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;opacity:0;transition:opacity var(--tr)}
+.gal-item img{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block;transition:transform .5s ease}
+.gal-item:hover img{transform:scale(1.05)}
+.gal-wm-cover{position:absolute;bottom:0;left:0;right:0;height:12%;background:linear-gradient(to top,rgba(180,175,160,.85) 0%,rgba(180,175,160,.4) 40%,transparent 100%);z-index:2;pointer-events:none}
+.gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,44,78,.85) 0%,rgba(10,44,78,.3) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;opacity:0;transition:opacity var(--tr);z-index:3}
 .gal-overlay h4{font-family:var(--fh);font-size:14px;font-weight:700;color:#fff;margin-bottom:3px}
 .gal-overlay p{font-size:12px;color:rgba(255,255,255,.6);margin:0}
-.gal-zoom{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(0,159,227,.7);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;transform:scale(0);transition:transform var(--tr)}
+.gal-zoom{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(0,159,227,.7);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;transform:scale(0);transition:transform var(--tr);z-index:4;cursor:pointer}
+.gal-zoom:hover{background:var(--blue);transform:scale(1.1)!important}
 .gal-item:hover .gal-overlay{opacity:1}.gal-item:hover .gal-zoom{transform:scale(1)}
 .gal-note{font-size:13px;color:var(--gray-text);background:var(--gray-light);border-radius:8px;padding:10px 20px;display:inline-block}
 @media(max-width:991px){.gal-grid{grid-template-columns:repeat(3,1fr)}.gal-item--featured{grid-column:span 2;grid-row:span 1;aspect-ratio:16/9}}
 @media(max-width:767px){.gal-grid{grid-template-columns:repeat(2,1fr)}.gal-item--featured{grid-column:span 2}}
 @media(max-width:480px){.gal-grid{grid-template-columns:1fr;gap:12px}.gal-item--featured{grid-column:span 1;aspect-ratio:16/10}.gal-item{aspect-ratio:16/10}}
+
+/* ===== LIGHTBOX ===== */
+.lb-overlay{position:fixed;inset:0;background:rgba(5,10,20,.92);z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .35s ease;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.lb-overlay.is-open{opacity:1;pointer-events:auto}
+.lb-img-wrap{position:relative;max-width:90vw;max-height:88vh;display:flex;align-items:center;justify-content:center}
+.lb-img-wrap img{max-width:100%;max-height:88vh;border-radius:12px;box-shadow:0 16px 64px rgba(0,0,0,.6);transform:scale(.92);transition:transform .4s cubic-bezier(.22,.61,.36,1);object-fit:contain}
+.lb-overlay.is-open .lb-img-wrap img{transform:scale(1)}
+.lb-close{position:fixed;top:20px;right:24px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr);z-index:20002;backdrop-filter:blur(8px)}
+.lb-close:hover{background:rgba(229,57,53,.7);border-color:rgba(229,57,53,.9);transform:rotate(90deg)}
+.lb-arrow{position:fixed;top:50%;transform:translateY(-50%);z-index:20001;width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(255,255,255,.15);background:rgba(0,0,0,.4);backdrop-filter:blur(8px);color:rgba(255,255,255,.7);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr)}
+.lb-arrow:hover{background:rgba(0,159,227,.3);border-color:rgba(0,159,227,.6);color:#fff;transform:translateY(-50%) scale(1.08)}
+.lb-arrow--left{left:20px}
+.lb-arrow--right{right:20px}
+.lb-counter{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:20001;font-family:var(--fh);font-size:14px;font-weight:600;color:rgba(255,255,255,.5);background:rgba(0,0,0,.4);padding:8px 18px;border-radius:20px;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.08)}
+.lb-counter span{color:#fff;font-weight:700}
+.lb-caption{position:fixed;bottom:64px;left:50%;transform:translateX(-50%);z-index:20001;font-family:var(--fh);font-size:13px;color:rgba(255,255,255,.45);text-align:center;max-width:500px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:767px){
+.lb-arrow{width:42px;height:42px;font-size:14px}
+.lb-arrow--left{left:10px}
+.lb-arrow--right{right:10px}
+.lb-close{top:14px;right:14px;width:40px;height:40px}
+.lb-img-wrap{max-width:96vw}
+.lb-caption{max-width:85vw;font-size:12px;bottom:58px}
+.lb-counter{font-size:12px;padding:6px 14px;bottom:18px}
+}
 
 .unggulan-card{background:#fff;border-radius:14px;padding:26px 20px;text-align:center;border:1px solid var(--gray-mid);height:100%;transition:all var(--tr)}
 .unggulan-card:hover{border-color:var(--blue);box-shadow:var(--ss);transform:translateY(-3px)}
@@ -360,11 +389,11 @@ img{max-width:100%;display:block}
 <!-- HERO -->
 <section class="hero-section" id="hero">
     <div class="hero-scroll-track" id="heroTrack">
-        <div class="hero-slide is-active"><img src="img/produk7.jpeg" alt="Area Tambang" class="hero-slide-img"><div class="hero-slide-overlay"></div></div>
-        <div class="hero-slide"><img src="img/produk3.jpeg" alt="Armada Pengiriman" class="hero-slide-img"><div class="hero-slide-overlay"></div></div>
-        <div class="hero-slide"><img src="img/produk2.jpeg" alt="Material Pasir Kuarsa" class="hero-slide-img"><div class="hero-slide-overlay"></div></div>
-        <div class="hero-slide"><img src="img/produk4.jpeg" alt="Alat Berat" class="hero-slide-img"><div class="hero-slide-overlay"></div></div>
-        <div class="hero-slide"><img src="img/produk1.jpeg" alt="Proyek Infrastruktur" class="hero-slide-img"><div class="hero-slide-overlay"></div></div>
+        <div class="hero-slide is-active"><img src="img/fotobersama.jpeg" alt="Area Tambang" class="hero-slide-img"><div class="hero-slide-overlay"></div></div>
+        <div class="hero-slide"><img src="img/stokgudang.jpeg" alt="Armada Pengiriman" class="hero-slide-img"><div class="hero-slide-overlay"></div></div>
+        <div class="hero-slide"><img src="img/pasiralatberat.jpeg" alt="Material Pasir Kuarsa" class="hero-slide-img"><div class="hero-slide-overlay"></div></div>
+        <div class="hero-slide"><img src="img/beko.jpeg" alt="Alat Berat" class="hero-slide-img"><div class="hero-slide-overlay"></div></div>
+        <div class="hero-slide"><img src="img/tumpukan pasir.jpeg" alt="Proyek Infrastruktur" class="hero-slide-img"><div class="hero-slide-overlay"></div></div>
     </div>
     <div class="hero-grain"></div>
     <div class="hero-content-wrapper">
@@ -601,21 +630,103 @@ img{max-width:100%;display:block}
     <div class="container">
         <div class="text-center mb-4 njs-fade-up">
             <div class="section-badge">Dokumentasi</div>
-            <h2 class="section-title">Galeri Tambang &amp; Produk</h2>
+            <h2 class="section-title">Galeri Tambang &amp; Operasional</h2>
             <div class="section-rule section-rule--center"></div>
         </div>
-        <div class="gal-grid njs-fade-up">
-            <div class="gal-item gal-item--featured"><img src="img/produk4.jpeg" alt="Area Tambang" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Area Tambang Utama</h4><p>Pemandangan keseluruhan 25,75 Ha</p></div></div>
-            <div class="gal-item"><img src="img/produk1.jpeg" alt="Crushing" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Proses Crushing</h4><p>Pemecahan material kuarsa</p></div></div>
-            <div class="gal-item"><img src="img/produk2.jpeg" alt="Mentah" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Pasir Kuarsa Mentah</h4><p>Material hasil tambang</p></div></div>
-            <div class="gal-item"><img src="img/produk3.jpeg" alt="Konsesi" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Batas Konsesi</h4><p>Patok batas IUP resmi</p></div></div>
-            <div class="gal-item"><img src="img/produk4.jpeg" alt="Dump Truck" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Armada Dump Truck</h4><p>Kendaraan pengiriman</p></div></div>
-            <div class="gal-item"><img src="img/produk5.jpeg" alt="Screening" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Proses Screening</h4><p>Ayakan sesuai ukuran mesh</p></div></div>
-            <div class="gal-item"><img src="img/produk6.jpeg" alt="Siap Kirim" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Pasir Siap Kirim</h4><p>Material melewati QC</p></div></div>
-            <div class="gal-item"><img src="img/produk5.jpeg" alt="Screening 2" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Proses Screening</h4><p>Ayakan sesuai ukuran mesh</p></div></div>
-            <div class="gal-item"><img src="img/produk6.jpeg" alt="Siap Kirim 2" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Pasir Siap Kirim</h4><p>Material melewati QC</p></div></div>
+        <div class="gal-grid njs-fade-up" id="galGrid">
+
+            <div class="gal-item gal-item--featured" data-lb-src="img/produk4.jpeg" data-lb-title="Area Penambangan &amp; Alat Berat" data-lb-desc="Pengerjaan material dengan bulldozer di area tambang utama">
+                <img src="img/pasiralatberat.jpeg" alt="Area Penambangan & Alat Berat">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom" data-lb-open><i class="fas fa-search-plus"></i></div>
+                    <h4>Area Penambangan &amp; Alat Berat</h4>
+                    <p>Pengerjaan material dengan bulldozer di area tambang utama</p>
+                </div>
+            </div>
+
+            <div class="gal-item" data-lb-src="img/produk1.jpeg" data-lb-title="Material Kemas Karung di Gudang" data-lb-desc="Pasir kuarsa dikemas dalam karung siap distribusi ke pelanggan">
+                <img src="img/stok.jpeg" alt="Material Kemas Karung di Gudang">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom" data-lb-open><i class="fas fa-search-plus"></i></div>
+                    <h4>Material Kemas Karung di Gudang</h4>
+                    <p>Pasir kuarsa dikemas dalam karung siap distribusi</p>
+                </div>
+            </div>
+
+            <div class="gal-item" data-lb-src="img/produk2.jpeg" data-lb-title="Tumpukan Pasir Kuarsa Hasil Tambang" data-lb-desc="Material pasir kuarsa segar dari area penambangan ditumpukan terbuka">
+                <img src="img/tumpukan pasir.jpeg" alt="Tumpukan Pasir Kuarsa Hasil Tambang">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom" data-lb-open><i class="fas fa-search-plus"></i></div>
+                    <h4>Tumpukan Pasir Kuarsa Hasil Tambang</h4>
+                    <p>Material segar dari area penambangan</p>
+                </div>
+            </div>
+
+            <div class="gal-item" data-lb-src="img/galeri.jpeg" data-lb-title="Area Stockpile Material" data-lb-desc="Penumpukan material pasir kuarsa skala besar sebelum proses penyaringan dan pengiriman">
+                <img src="img/stokzoom.jpeg" alt="Area Stockpile Material">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom" data-lb-open><i class="fas fa-search-plus"></i></div>
+                    <h4>Area Stockpile Material</h4>
+                    <p>Penumpukan material skala besar sebelum distribusi</p>
+                </div>
+            </div>
+
+            <div class="gal-item" data-lb-src="img/logistik.jpeg" data-lb-title="Proses Loading ke Kendaraan" data-lb-desc="Pemuatan pasir kuarsa ke truk pengangkut untuk pengiriman ke lokasi proyek">
+                <img src="img/logistik.jpeg" alt="Proses Loading ke Kendaraan">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom" data-lb-open><i class="fas fa-search-plus"></i></div>
+                    <h4>Proses Loading ke Kendaraan</h4>
+                    <p>Pemuatan material ke truk pengangkut</p>
+                </div>
+            </div>
+
+            <div class="gal-item" data-lb-src="img/produk5.jpeg" data-lb-title="Area Gudang &amp; Pengepakan" data-lb-desc="Fasilitas gudang untuk penyimpanan dan pengepakan pasir kuarsa dalam karung">
+                <img src="img/lapangan.jpeg" alt="Area Gudang & Pengepakan">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom" data-lb-open><i class="fas fa-search-plus"></i></div>
+                    <h4>Area Gudang &amp; Pengepakan</h4>
+                    <p>Penyimpanan dan pengepakan material dalam karung</p>
+                </div>
+            </div>
+
+            <div class="gal-item" data-lb-src="img/produk6.jpeg" data-lb-title="Stok Material Siap Kirim" data-lb-desc="Pasir kuarsa yang telah melewati quality control dan siap dikirim ke pelanggan">
+                <img src="img/stokgudang.jpeg" alt="Stok Material Siap Kirim">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom" data-lb-open><i class="fas fa-search-plus"></i></div>
+                    <h4>Stok Material Siap Kirim</h4>
+                    <p>Material yang telah melewati quality control</p>
+                </div>
+            </div>
+
+            <div class="gal-item" data-lb-src="img/galeri1.jpeg" data-lb-title="Armada Pengangkut Material" data-lb-desc="Kendaraan pengangkut yang siap mengirim pasir kuarsa ke berbagai lokasi proyek">
+                <img src="img/image.png" alt="Armada Pengangkut Material">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom" data-lb-open><i class="fas fa-search-plus"></i></div>
+                    <h4>Armada Pengangkut Material</h4>
+                    <p>Kendaraan siap mengirim ke berbagai lokasi proyek</p>
+                </div>
+            </div>
+
+            <div class="gal-item" data-lb-src="img/produk3.jpeg" data-lb-title="Kendaraan Operasional Tambang" data-lb-desc="Armada operasional yang digunakan untuk mendukung kegiatan penambangan harian">
+                <img src="img/beko.jpeg" alt="Kendaraan Operasional Tambang">
+                <div class="gal-wm-cover"></div>
+                <div class="gal-overlay">
+                    <div class="gal-zoom" data-lb-open><i class="fas fa-search-plus"></i></div>
+                    <h4>Kendaraan Operasional Tambang</h4>
+                    <p>Armada pendukung kegiatan penambangan harian</p>
+                </div>
+            </div>
+
         </div>
-        <div class="text-center mt-4"><p class="gal-note"><i class="fas fa-info-circle"></i> Foto aktual akan ditampilkan. Hubungi kami untuk dokumentasi lengkap.</p></div>
+        <div class="text-center mt-4"><p class="gal-note"><i class="fas fa-info-circle"></i> Klik foto atau ikon perbesar untuk melihat gambar ukuran penuh.</p></div>
     </div>
 </section>
 
@@ -733,6 +844,18 @@ img{max-width:100%;display:block}
     </div>
 </div>
 
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lbOverlay">
+    <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+    <button class="lb-arrow lb-arrow--left" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+    <button class="lb-arrow lb-arrow--right" id="lbNext"><i class="fas fa-chevron-right"></i></button>
+    <div class="lb-img-wrap">
+        <img id="lbImg" src="" alt="">
+    </div>
+    <div class="lb-caption" id="lbCaption"></div>
+    <div class="lb-counter"><span id="lbCur">1</span> / <span id="lbTot">9</span></div>
+</div>
+
 <!-- FLOATING WA -->
 <a href="#" data-wa-trigger class="wa-float" id="waFloat" aria-label="WhatsApp">
     <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
@@ -745,6 +868,122 @@ img{max-width:100%;display:block}
 <script>
 (function(){
 "use strict";
+
+/* ===== LIGHTBOX ===== */
+function initLightbox(){
+    var overlay = document.getElementById("lbOverlay");
+    var img = document.getElementById("lbImg");
+    var caption = document.getElementById("lbCaption");
+    var curEl = document.getElementById("lbCur");
+    var totEl = document.getElementById("lbTot");
+    var closeBtn = document.getElementById("lbClose");
+    var prevBtn = document.getElementById("lbPrev");
+    var nextBtn = document.getElementById("lbNext");
+    if(!overlay || !img) return;
+
+    var items = [];
+    var idx = 0;
+
+    function collectItems(){
+        items = [];
+        var galItems = document.querySelectorAll("#galGrid .gal-item[data-lb-src]");
+        galItems.forEach(function(el){
+            items.push({
+                src: el.getAttribute("data-lb-src"),
+                title: el.getAttribute("data-lb-title") || "",
+                desc: el.getAttribute("data-lb-desc") || ""
+            });
+        });
+        if(totEl) totEl.textContent = items.length;
+    }
+
+    function open(index){
+        collectItems();
+        if(index < 0) index = 0;
+        if(index >= items.length) index = items.length - 1;
+        idx = index;
+        show();
+        overlay.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+    }
+
+    function show(){
+        var item = items[idx];
+        if(!item) return;
+        img.src = item.src;
+        img.alt = item.title;
+        caption.textContent = item.title + (item.desc ? " — " + item.desc : "");
+        if(curEl) curEl.textContent = idx + 1;
+        prevBtn.style.display = items.length > 1 ? "" : "none";
+        nextBtn.style.display = items.length > 1 ? "" : "none";
+    }
+
+    function close(){
+        overlay.classList.remove("is-open");
+        document.body.style.overflow = "";
+        setTimeout(function(){ img.src = ""; }, 350);
+    }
+
+    function goPrev(){
+        if(items.length <= 1) return;
+        idx = (idx - 1 + items.length) % items.length;
+        show();
+    }
+
+    function goNext(){
+        if(items.length <= 1) return;
+        idx = (idx + 1) % items.length;
+        show();
+    }
+
+    closeBtn.addEventListener("click", close);
+    prevBtn.addEventListener("click", goPrev);
+    nextBtn.addEventListener("click", goNext);
+    overlay.addEventListener("click", function(e){
+        if(e.target === overlay || e.target.classList.contains("lb-img-wrap")) close();
+    });
+    document.addEventListener("keydown", function(e){
+        if(!overlay.classList.contains("is-open")) return;
+        if(e.key === "Escape") close();
+        if(e.key === "ArrowLeft") goPrev();
+        if(e.key === "ArrowRight") goNext();
+    });
+
+    /* Delegate klik pada gal-item dan ikon zoom */
+    document.getElementById("galGrid").addEventListener("click", function(e){
+        var zoomBtn = e.target.closest("[data-lb-open]");
+        var galItem = e.target.closest(".gal-item[data-lb-src]");
+        if(!galItem) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        collectItems();
+        var targetIdx = 0;
+        for(var i = 0; i < items.length; i++){
+            if(items[i].src === galItem.getAttribute("data-lb-src")){
+                targetIdx = i;
+                break;
+            }
+        }
+        open(targetIdx);
+    });
+
+    /* Swipe support untuk mobile */
+    var touchStartX = 0;
+    var touchEndX = 0;
+    overlay.addEventListener("touchstart", function(e){
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    overlay.addEventListener("touchend", function(e){
+        touchEndX = e.changedTouches[0].screenX;
+        var diff = touchStartX - touchEndX;
+        if(Math.abs(diff) > 50){
+            if(diff > 0) goNext();
+            else goPrev();
+        }
+    }, { passive: true });
+}
 
 /* ===== WA POPUP ===== */
 var WA_ADMIN1 = "6281296612892";
@@ -818,7 +1057,7 @@ function initNav(){
     });
     document.querySelectorAll('a[href^="#"]').forEach(function(link){
         link.addEventListener("click", function(e){
-            if(this.hasAttribute("data-wa-trigger")) return;
+            if(this.hasAttribute("data-wa-trigger") || this.hasAttribute("data-lb-open")) return;
             var href = this.getAttribute("href");
             if(href === "#") return;
             var target = document.querySelector(href);
@@ -965,6 +1204,7 @@ function initHeroSlider(){
     }, { passive: false });
 
     document.addEventListener("keydown", function(e){
+        if(document.getElementById("lbOverlay") && document.getElementById("lbOverlay").classList.contains("is-open")) return;
         if(e.key === "ArrowRight"){ go(cur + 1); resetAuto(); }
         if(e.key === "ArrowLeft"){ go(cur - 1); resetAuto(); }
     });
@@ -1004,6 +1244,7 @@ document.addEventListener("DOMContentLoaded", function(){
     initMobileNav();
     initFloatingButtons();
     initWaPopup();
+    initLightbox();
 });
 
 })();
