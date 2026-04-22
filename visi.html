@@ -278,7 +278,7 @@
     .vm-cta-strip { background: linear-gradient(135deg, var(--blue-dark) 0%, #061523 100%); padding: 56px 0; border-top: 1px solid rgba(0,159,227,0.12); }
     .vm-cta-strip .section-title--white { margin-bottom: 12px; }
     .vm-cta-strip p { color: rgba(255,255,255,0.6); font-size: 15px; margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
-    .btn-cta-main { display: inline-flex; align-items: center; gap: 10px; background: var(--red); color: var(--white); font-family: var(--fh); font-weight: 700; font-size: 15px; padding: 16px 36px; border-radius: 10px; transition: all var(--tr); border: 2px solid var(--red); }
+    .btn-cta-main { display: inline-flex; align-items: center; gap: 10px; background: var(--red); color: var(--white); font-family: var(--fh); font-weight: 700; font-size: 15px; padding: 16px 36px; border-radius: 10px; transition: all var(--tr); border: 2px solid var(--red); cursor:pointer; }
     .btn-cta-main:hover { background: var(--red-dark); border-color: var(--red-dark); color: var(--white); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(229,57,53,0.4); }
     .btn-cta-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: rgba(255,255,255,0.7); font-family: var(--fh); font-weight: 500; font-size: 14px; padding: 16px 28px; border-radius: 10px; border: 1.5px solid rgba(255,255,255,0.2); transition: all var(--tr); margin-left: 12px; }
     .btn-cta-secondary:hover { color: var(--white); border-color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.05); }
@@ -317,6 +317,32 @@
     .wa-float:hover .wa-float-tooltip { opacity: 1; transform: translateX(0); }
 
     /* ============================================
+       WA POPUP (2 Admin)
+       ============================================ */
+    .wa-popup-overlay{position:fixed;inset:0;background:rgba(5,15,28,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+    .wa-popup-overlay.is-open{opacity:1;pointer-events:auto}
+    .wa-popup-card{background:#fff;border-radius:20px;width:100%;max-width:380px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);transform:scale(.88) translateY(24px);transition:transform .35s cubic-bezier(.22,.61,.36,1);position:relative}
+    .wa-popup-overlay.is-open .wa-popup-card{transform:scale(1) translateY(0)}
+    .wa-popup-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:rgba(255,255,255,.8);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr);z-index:2;backdrop-filter:blur(4px)}
+    .wa-popup-close:hover{background:rgba(255,255,255,.3);color:#fff}
+    .wa-popup-header{background:linear-gradient(135deg,#075E54 0%,#128C7E 100%);padding:30px 24px 24px;text-align:center;position:relative}
+    .wa-popup-header::after{content:'';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);width:24px;height:12px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%)}
+    .wa-popup-header-icon{width:56px;height:56px;border-radius:50%;background:rgba(37,211,102,.2);border:2px solid rgba(37,211,102,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#25D366;filter:drop-shadow(0 4px 12px rgba(37,211,102,.35))}
+    .wa-popup-header h4{font-family:var(--fh);font-size:18px;font-weight:800;color:#fff;margin:0 0 4px}
+    .wa-popup-header p{font-size:13px;color:rgba(255,255,255,.65);margin:0;line-height:1.5}
+    .wa-popup-options{padding:20px 16px 16px}
+    .wa-popup-option{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:#fff;border:1.5px solid var(--gray-mid);transition:all var(--tr);margin-bottom:10px;color:inherit;text-decoration:none;cursor:pointer;position:relative;overflow:hidden}
+    .wa-popup-option:last-child{margin-bottom:0}
+    .wa-popup-option:hover{border-color:#25D366;transform:translateX(4px);box-shadow:0 4px 20px rgba(37,211,102,.18)}
+    .wa-popup-option-icon{width:46px;height:46px;border-radius:12px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);display:flex;align-items:center;justify-content:center;font-size:22px;color:#25D366;flex-shrink:0}
+    .wa-popup-option-info{flex:1;display:flex;flex-direction:column;gap:2px}
+    .wa-popup-option-label{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--blue-dark)}
+    .wa-popup-option-number{font-size:13px;color:var(--gray-text);font-family:var(--fb)}
+    .wa-popup-option-arrow{color:var(--gray-mid);font-size:12px;transition:color var(--tr),transform var(--tr)}
+    .wa-popup-option:hover .wa-popup-option-arrow{color:#25D366;transform:translateX(3px)}
+    .wa-popup-footer{text-align:center;padding:0 16px 16px;font-size:11px;color:var(--gray-text);font-family:var(--fh)}
+
+    /* ============================================
        RESPONSIVE
        ============================================ */
     @media (max-width:767px) {
@@ -334,6 +360,7 @@
       .wa-float-tooltip { font-size: 12px; padding: 7px 12px; }
       .back-to-top { right: 16px; bottom: 24px; }
       .footer-bottom .d-flex { flex-direction: column; text-align: center; gap: 6px; }
+      .wa-popup-card{max-width:340px}
     }
     @media (max-width:480px) {
       .vm-value-item { flex: 0 0 50%; }
@@ -541,7 +568,7 @@
             <div class="section-rule section-rule--center" style="background:var(--blue);"></div>
             <p>Wujudkan visi industri Anda bersama PT Nanda Jaya Silika — mitra pasir kuarsa terpercaya dari Lampung Timur.</p>
             <div class="d-flex justify-content-center flex-wrap" style="gap:12px">
-            <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20tertarik%20dengan%20produk%20Anda.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-cta"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
+            <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut." class="btn-cta-main"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
                 <a href="index.html" class="btn-cta-secondary"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
             </div>
         </div>
@@ -585,6 +612,7 @@
                 <ul class="footer-links footer-links--contact">
                     <li><i class="fas fa-map-marker-alt"></i> Lampung Timur, Lampung</li>
                     <li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li>
+                    <li><i class="fab fa-whatsapp"></i> +62 813-6721-3538</li>
                     <li><i class="far fa-envelope"></i> silikanandajaya@gmail.com</li>
                     <li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li>
                 </ul>
@@ -599,8 +627,41 @@
     </div>
 </footer>
 
-<!-- FLOATING BUTTONS -->
-<a href="https://wa.me/6281296612892?text=Halo%2C%20saya%20ingin%20bertanya%20seputar%20produk%20pasir%20kuarsa%20PT%20Nanda%20Jaya%20Silika." target="_blank" class="wa-float" id="waFloat" aria-label="Chat WhatsApp">
+<!-- ════════════════════════════════════════════════════════════════
+     WA POPUP (2 Admin)
+     ════════════════════════════════════════════════════════════════ -->
+<div class="wa-popup-overlay" id="waPopup">
+    <div class="wa-popup-card">
+        <button class="wa-popup-close" id="waPopupClose"><i class="fas fa-times"></i></button>
+        <div class="wa-popup-header">
+            <div class="wa-popup-header-icon"><i class="fab fa-whatsapp"></i></div>
+            <h4>Hubungi Kami</h4>
+            <p>Pilih nomor admin yang ingin dihubungi</p>
+        </div>
+        <div class="wa-popup-options">
+            <a href="#" id="waLinkAdmin1" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info">
+                    <span class="wa-popup-option-label">Admin 1</span>
+                    <span class="wa-popup-option-number">+62 812-9661-2892</span>
+                </div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+            <a href="#" id="waLinkAdmin2" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info">
+                    <span class="wa-popup-option-label">Admin 2</span>
+                    <span class="wa-popup-option-number">+62 813-6721-3538</span>
+                </div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+        </div>
+        <div class="wa-popup-footer">Klik salah satu untuk langsung chat via WhatsApp</div>
+    </div>
+</div>
+
+<!-- FLOATING WA (trigger popup) -->
+<a href="#" data-wa-trigger class="wa-float" id="waFloat" aria-label="Chat WhatsApp">
     <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
     <span class="wa-float-tooltip">Hubungi Kami</span>
 </a>
@@ -614,6 +675,52 @@
 <script>
 (function() {
     "use strict";
+
+    /* ===== CONFIG WA ===== */
+    var WA_ADMIN1 = "6281296612892";
+    var WA_ADMIN2 = "6281367213538";
+    var WA_DEFAULT_MSG = "Halo PT Nanda Jaya Silika, saya ingin bertanya seputar visi misi dan kerjasama perusahaan. Mohon informasi lebih lanjut.";
+
+    /* ===== WA POPUP ===== */
+    function initWaPopup(){
+        var popup   = document.getElementById("waPopup");
+        var closeBtn = document.getElementById("waPopupClose");
+        var linkA1   = document.getElementById("waLinkAdmin1");
+        var linkA2   = document.getElementById("waLinkAdmin2");
+        if(!popup || !linkA1 || !linkA2) return;
+
+        function setMsg(msg){
+            linkA1.href = "https://wa.me/" + WA_ADMIN1 + "?text=" + encodeURIComponent(msg);
+            linkA2.href = "https://wa.me/" + WA_ADMIN2 + "?text=" + encodeURIComponent(msg);
+        }
+
+        function openPopup(e, customMsg){
+            if(e) e.preventDefault();
+            setMsg(customMsg || WA_DEFAULT_MSG);
+            popup.classList.add("is-open");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closePopup(){
+            popup.classList.remove("is-open");
+            document.body.style.overflow = "";
+        }
+
+        if(closeBtn) closeBtn.addEventListener("click", closePopup);
+        popup.addEventListener("click", function(e){
+            if(e.target === popup) closePopup();
+        });
+        document.addEventListener("keydown", function(e){
+            if(e.key === "Escape" && popup.classList.contains("is-open")) closePopup();
+        });
+
+        document.querySelectorAll("[data-wa-trigger]").forEach(function(btn){
+            btn.addEventListener("click", function(e){
+                var msg = this.getAttribute("data-wa-msg") || null;
+                openPopup(e, msg);
+            });
+        });
+    }
 
     /* ── Navbar scroll & toggle ── */
     var nav = document.getElementById('mainNav');
@@ -705,10 +812,14 @@
     /* ── Smooth anchor ── */
     document.querySelectorAll('a[href^="#"]').forEach(function(a) {
         a.addEventListener('click', function(e) {
+            if(this.hasAttribute('data-wa-trigger')) return;
             var t = document.querySelector(this.getAttribute('href'));
             if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
         });
     });
+
+    /* ===== Init ===== */
+    initWaPopup();
 
 })();
 </script>

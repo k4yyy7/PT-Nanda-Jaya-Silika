@@ -55,7 +55,7 @@ img { max-width: 100%; display: block; }
 .anim-right.visible { animation: fadeRight .7s ease forwards; }
 
 /* ══════════════════════════════════════════════════
-   NAVBAR  (tidak diubah dari versi asli)
+   NAVBAR
    ══════════════════════════════════════════════════ */
 .main-nav{background:var(--blue-mid);position:sticky;top:0;z-index:1000;transition:background var(--tr),box-shadow var(--tr)}
 .main-nav.nav-scrolled{background:var(--blue-dark);box-shadow:0 4px 24px rgba(0,0,0,.25)}
@@ -100,7 +100,6 @@ img { max-width: 100%; display: block; }
         repeating-linear-gradient(0deg,  rgba(0,159,227,.06) 0, rgba(0,159,227,.06) 1px, transparent 0, transparent 48px),
         repeating-linear-gradient(90deg, rgba(0,159,227,.06) 0, rgba(0,159,227,.06) 1px, transparent 0, transparent 48px);
 }
-/* Diagonal aksen di kanan */
 .page-hero::after {
     content: '';
     position: absolute; top: 0; right: 0; bottom: 0;
@@ -129,7 +128,6 @@ img { max-width: 100%; display: block; }
 .page-hero-title .accent { color: var(--blue); }
 .page-hero-sub { font-size: 15px; color: rgba(255,255,255,.6); max-width: 520px; line-height: 1.8; margin-bottom: 40px; }
 
-/* Stat strip */
 .hero-stats-strip {
     display: flex; gap: 0;
     background: rgba(255,255,255,.05);
@@ -195,25 +193,22 @@ img { max-width: 100%; display: block; }
 }
 .ctc-strip-label { font-family: var(--fh); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--gray-text); margin-bottom: 3px; }
 .ctc-strip-val { font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--blue-dark); line-height: 1.4; }
-.ctc-strip-val a { color: var(--blue); transition: color var(--tr); }
+.ctc-strip-val a { color: var(--blue); transition: color var(--tr); cursor: pointer; }
 .ctc-strip-val a:hover { color: var(--red); }
 
 /* ══════════════════════════════════════════════════
    MAIN SECTION: FORM + MAP
    ══════════════════════════════════════════════════ */
-
-/* Section intro */
 .sec-intro-label { font-family: var(--fh); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--blue); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
 .sec-intro-label::after { content: ''; flex: 1; height: 1px; background: var(--gray-mid); }
 
-/* ── FORM CARD ── */
 .form-card {
     background: var(--white);
     border: 1px solid var(--gray-mid);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--sm);
-        height: auto;
+    height: auto;
 }
 .form-card-header {
     background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
@@ -238,7 +233,6 @@ img { max-width: 100%; display: block; }
 
 .form-card-body { padding: 32px; }
 
-/* Form elements */
 .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-group { margin-bottom: 18px; }
 .form-group label {
@@ -257,7 +251,6 @@ img { max-width: 100%; display: block; }
 .form-ctrl::placeholder { color: #b0bec5; }
 textarea.form-ctrl { min-height: 120px; resize: vertical; }
 
-/* Grade selector */
 .grade-selector { display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; }
 .grade-option { position: relative; }
 .grade-option input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
@@ -276,7 +269,6 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
 .grade-option input:checked + label i { color: var(--blue); }
 .grade-option label:hover { border-color: var(--blue); }
 
-/* Submit button */
 .btn-submit {
     display: flex; align-items: center; justify-content: center; gap: 10px;
     width: 100%; background: var(--blue); color: #fff;
@@ -286,7 +278,6 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
 }
 .btn-submit:hover { background: #0090D0; border-color: #0090D0; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,159,227,.35); }
 
-/* WA shortcut */
 .wa-shortcut {
     display: flex; align-items: center; gap: 12px;
     background: rgba(37,211,102,.07); border: 1px solid rgba(37,211,102,.2);
@@ -305,7 +296,6 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
 }
 .wa-shortcut-btn:hover { background: #20BD5A; color: #fff; transform: translateY(-1px); }
 
-/* Form success */
 .form-success { display: none; text-align: center; padding: 48px 24px; }
 .form-success-icon { width: 72px; height: 72px; border-radius: 50%; background: rgba(0,200,120,.12); border: 2px solid rgba(0,200,120,.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 32px; color: #27AE60; animation: successPop .5s ease; }
 .form-success h3 { font-family: var(--fh); font-size: 20px; font-weight: 700; color: var(--blue-dark); margin-bottom: 8px; }
@@ -395,7 +385,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
     background: #25D366; color: #fff;
     font-family: var(--fh); font-weight: 700; font-size: 15px;
     padding: 14px 32px; border-radius: 10px; border: 2px solid #25D366;
-    transition: all var(--tr);
+    transition: all var(--tr); cursor: pointer;
 }
 .btn-cta-wa:hover { background: #20BD5A; border-color: #20BD5A; color: #fff; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,.35); }
 .btn-cta-wa i { font-size: 20px; }
@@ -409,7 +399,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
 .btn-cta-secondary:hover { color: #fff; border-color: rgba(255,255,255,.45); background: rgba(255,255,255,.06); }
 
 /* ══════════════════════════════════════════════════
-   FOOTER  (tidak diubah dari versi asli)
+   FOOTER
    ══════════════════════════════════════════════════ */
 .site-footer{background:#050F1C;padding:56px 0 0;color:rgba(255,255,255,.6)}
 .footer-logo-img{width:42px;height:42px;object-fit:contain}
@@ -440,6 +430,32 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
 .back-to-top{position:fixed;right:24px;bottom:32px;z-index:9999;width:46px;height:46px;border-radius:12px;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:16px;opacity:0;pointer-events:none;transition:all var(--tr);box-shadow:0 4px 16px rgba(0,159,227,.4)}
 .back-to-top.visible{opacity:1;pointer-events:auto}
 .back-to-top:hover{background:var(--red);color:var(--white);transform:translateY(-3px)}
+
+/* ══════════════════════════════════════════════════
+   WA POPUP (2 Admin)
+   ══════════════════════════════════════════════════ */
+.wa-popup-overlay{position:fixed;inset:0;background:rgba(5,15,28,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.wa-popup-overlay.is-open{opacity:1;pointer-events:auto}
+.wa-popup-card{background:#fff;border-radius:20px;width:100%;max-width:380px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);transform:scale(.88) translateY(24px);transition:transform .35s cubic-bezier(.22,.61,.36,1);position:relative}
+.wa-popup-overlay.is-open .wa-popup-card{transform:scale(1) translateY(0)}
+.wa-popup-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:rgba(255,255,255,.8);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr);z-index:2;backdrop-filter:blur(4px)}
+.wa-popup-close:hover{background:rgba(255,255,255,.3);color:#fff}
+.wa-popup-header{background:linear-gradient(135deg,#075E54 0%,#128C7E 100%);padding:30px 24px 24px;text-align:center;position:relative}
+.wa-popup-header::after{content:'';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);width:24px;height:12px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%)}
+.wa-popup-header-icon{width:56px;height:56px;border-radius:50%;background:rgba(37,211,102,.2);border:2px solid rgba(37,211,102,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#25D366;filter:drop-shadow(0 4px 12px rgba(37,211,102,.35))}
+.wa-popup-header h4{font-family:var(--fh);font-size:18px;font-weight:800;color:#fff;margin:0 0 4px}
+.wa-popup-header p{font-size:13px;color:rgba(255,255,255,.65);margin:0;line-height:1.5}
+.wa-popup-options{padding:20px 16px 16px}
+.wa-popup-option{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:#fff;border:1.5px solid var(--gray-mid);transition:all var(--tr);margin-bottom:10px;color:inherit;text-decoration:none;cursor:pointer;position:relative;overflow:hidden}
+.wa-popup-option:last-child{margin-bottom:0}
+.wa-popup-option:hover{border-color:#25D366;transform:translateX(4px);box-shadow:0 4px 20px rgba(37,211,102,.18)}
+.wa-popup-option-icon{width:46px;height:46px;border-radius:12px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);display:flex;align-items:center;justify-content:center;font-size:22px;color:#25D366;flex-shrink:0}
+.wa-popup-option-info{flex:1;display:flex;flex-direction:column;gap:2px}
+.wa-popup-option-label{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--blue-dark)}
+.wa-popup-option-number{font-size:13px;color:var(--gray-text);font-family:var(--fb)}
+.wa-popup-option-arrow{color:var(--gray-mid);font-size:12px;transition:color var(--tr),transform var(--tr)}
+.wa-popup-option:hover .wa-popup-option-arrow{color:#25D366;transform:translateX(3px)}
+.wa-popup-footer{text-align:center;padding:0 16px 16px;font-size:11px;color:var(--gray-text);font-family:var(--fh)}
 
 /* ══════════════════════════════════════════════════
    RESPONSIVE
@@ -473,6 +489,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
     .wa-float-icon { width: 46px; height: 46px; font-size: 22px; }
     .back-to-top { right: 16px; bottom: 24px; width: 44px; height: 44px; }
     .map-card-info { padding: 20px; }
+    .wa-popup-card { max-width: 340px; }
 }
 @media(max-width:480px){
     .sec { padding: 44px 0; }
@@ -502,7 +519,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
                 <a href="galeri.html"    class="nav-link-item">Galeri</a>
                 <a href="keunggulan.html" class="nav-link-item">Keunggulan</a>
                 <a href="lokasi.html"    class="nav-link-item">Lokasi</a>
-                <a href="kontak.html"    class="btn-nav-cta"><i class="fab fa-whatsapp"></i> Hubungi</a>
+                <a href="kontak.html"    class="btn-nav-cta active"><i class="fab fa-whatsapp"></i> Hubungi</a>
             </div>
         </div>
     </div>
@@ -560,7 +577,9 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
                 <div class="ctc-strip-icon"><i class="fab fa-whatsapp"></i></div>
                 <div>
                     <div class="ctc-strip-label">WhatsApp</div>
-                    <div class="ctc-strip-val"><a href="https://wa.me/6281296612892">+62 812-9661-2892</a></div>
+                    <div class="ctc-strip-val">
+                        <a href="#" data-wa-trigger data-wa-msg="Halo, saya ingin bertanya seputar produk pasir kuarsa PT Nanda Jaya Silika.">+62 812-9661-2892 / +62 813-6721-3538</a>
+                    </div>
                 </div>
             </div>
             <div class="ctc-strip-item">
@@ -662,21 +681,14 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
 
                         <!-- WA shortcut -->
                         <div class="wa-shortcut">
-                            <div class="wa-float-icon wa-shortcut-icon" style="position:relative;width:40px;height:40px;font-size:20px;border-radius:12px;flex-shrink:0">
+                            <div style="width:40px;height:40px;border-radius:12px;background:rgba(37,211,102,.15);display:flex;align-items:center;justify-content:center;font-size:20px;color:#25D366;flex-shrink:0">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
                             <div class="wa-shortcut-text">
                                 <p><strong>Lebih cepat via WhatsApp</strong><br>Langsung terhubung dengan tim sales kami tanpa antri.</p>
                             </div>
-                            <a href="https://wa.me/6281296612892" target="_blank" class="wa-shortcut-btn">
-                                                                <i class="fab fa-whatsapp"></i> Chat
-                                                        </a>
-                                                        <!-- Update link WhatsApp dengan pesan otomatis -->
-                                                        <script>
-                                                        document.querySelectorAll('.wa-shortcut-btn').forEach(function(btn){
-                                                            btn.setAttribute('href', 'https://wa.me/6281296612892?text=' + encodeURIComponent('Halo, saya ingin bertanya seputar produk pasir kuarsa PT Nanda Jaya Silika.'));
-                                                        });
-                                                        </script>
+                            <a href="#" data-wa-trigger data-wa-msg="Halo, saya ingin bertanya seputar produk pasir kuarsa PT Nanda Jaya Silika." class="wa-shortcut-btn">
+                                <i class="fab fa-whatsapp"></i> Chat
                             </a>
                         </div>
 
@@ -685,7 +697,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
                             <div class="form-success-icon"><i class="fas fa-check"></i></div>
                             <h3>Pesan Berhasil Dikirim!</h3>
                             <p>Terima kasih telah menghubungi kami.<br>Tim PT Nanda Jaya Silika akan merespons dalam 1×24 jam kerja.</p>
-                            <a href="https://wa.me/6281296612892" target="_blank" class="form-success-wa">
+                            <a href="#" data-wa-trigger data-wa-msg="Halo, saya baru saja mengirim formulir di website. Saya ingin melanjutkan konsultasi via WhatsApp." class="form-success-wa">
                                 <i class="fab fa-whatsapp" style="font-size:18px"></i> Chat Langsung via WhatsApp
                             </a>
                         </div>
@@ -699,8 +711,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
                     <div class="sbadge">Lokasi</div>
                     <h2 class="stitle">Temukan Kami</h2>
                     <div class="srule"></div>
-                                        <p class="stext">Kunjungi kantor kami untuk konsultasi lebih lanjut. Temukan lokasi presisi PT Nanda Jaya Silika melalui peta di bawah ini.</p>
-
+                    <p class="stext">Kunjungi kantor kami untuk konsultasi lebih lanjut. Temukan lokasi presisi PT Nanda Jaya Silika melalui peta di bawah ini.</p>
                 </div>
                 <div class="map-card">
                     <iframe
@@ -805,7 +816,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
             <div class="srule srule--center srule--blue" style="margin:0 auto 24px"></div>
             <p class="stext--light mx-auto" style="max-width:460px;margin-bottom:32px">Klik tombol di bawah untuk langsung terhubung dengan tim sales kami. Konsultasi tanpa antri, jawaban cepat dan tepat.</p>
             <div class="d-flex justify-content-center flex-wrap cta-btns" style="gap:12px">
-                <a href="https://wa.me/6281296612892?text=Halo%2C%20saya%20ingin%20bertanya%20seputar%20produk%20pasir%20kuarsa%20PT%20Nanda%20Jaya%20Silika." target="_blank" class="btn-cta-wa"><i class="fab fa-whatsapp"></i> Chat WhatsApp Sekarang</a>
+                <a href="#" data-wa-trigger data-wa-msg="Halo, saya ingin bertanya seputar produk pasir kuarsa PT Nanda Jaya Silika." class="btn-cta-wa"><i class="fab fa-whatsapp"></i> Chat WhatsApp Sekarang</a>
                 <a href="index.html" class="btn-cta-secondary"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
             </div>
         </div>
@@ -850,6 +861,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
                 <ul class="footer-links footer-links--contact">
                     <li><i class="fas fa-map-marker-alt"></i> Lampung Timur, Lampung</li>
                     <li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li>
+                    <li><i class="fab fa-whatsapp"></i> +62 813-6721-3538</li>
                     <li><i class="far fa-envelope"></i> silikanandajaya@gmail.com</li>
                     <li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li>
                 </ul>
@@ -864,8 +876,41 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
     </div>
 </footer>
 
-<!-- FLOATING -->
-<a href="https://wa.me/6281296612892" target="_blank" class="wa-float" id="waFloat" aria-label="Chat WhatsApp">
+<!-- ══════════════════════════════════════════════════
+     WA POPUP (2 Admin)
+     ══════════════════════════════════════════════════ -->
+<div class="wa-popup-overlay" id="waPopup">
+    <div class="wa-popup-card">
+        <button class="wa-popup-close" id="waPopupClose"><i class="fas fa-times"></i></button>
+        <div class="wa-popup-header">
+            <div class="wa-popup-header-icon"><i class="fab fa-whatsapp"></i></div>
+            <h4>Hubungi Kami</h4>
+            <p>Pilih nomor admin yang ingin dihubungi</p>
+        </div>
+        <div class="wa-popup-options">
+            <a href="#" id="waLinkAdmin1" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info">
+                    <span class="wa-popup-option-label">Admin 1</span>
+                    <span class="wa-popup-option-number">+62 812-9661-2892</span>
+                </div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+            <a href="#" id="waLinkAdmin2" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info">
+                    <span class="wa-popup-option-label">Admin 2</span>
+                    <span class="wa-popup-option-number">+62 813-6721-3538</span>
+                </div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+        </div>
+        <div class="wa-popup-footer">Klik salah satu untuk langsung chat via WhatsApp</div>
+    </div>
+</div>
+
+<!-- FLOATING WA (trigger popup) -->
+<a href="#" data-wa-trigger class="wa-float" id="waFloat" aria-label="Chat WhatsApp">
     <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
     <span class="wa-float-tooltip">Hubungi Kami</span>
 </a>
@@ -877,7 +922,54 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
 (function(){
     "use strict";
 
-    /* ── Navbar ── */
+    /* ===== CONFIG WA ===== */
+    var WA_ADMIN1 = "6281296612892";
+    var WA_ADMIN2 = "6281367213538";
+    var WA_DEFAULT_MSG = "Halo PT Nanda Jaya Silika, saya ingin bertanya seputar produk pasir kuarsa Anda. Mohon informasi lebih lanjut.";
+
+    /* ===== WA POPUP ===== */
+    function initWaPopup(){
+        var popup   = document.getElementById("waPopup");
+        var closeBtn = document.getElementById("waPopupClose");
+        var linkA1   = document.getElementById("waLinkAdmin1");
+        var linkA2   = document.getElementById("waLinkAdmin2");
+        if(!popup || !linkA1 || !linkA2) return;
+
+        function setMsg(msg){
+            linkA1.href = "https://wa.me/" + WA_ADMIN1 + "?text=" + encodeURIComponent(msg);
+            linkA2.href = "https://wa.me/" + WA_ADMIN2 + "?text=" + encodeURIComponent(msg);
+        }
+
+        function openPopup(e, customMsg){
+            if(e) e.preventDefault();
+            setMsg(customMsg || WA_DEFAULT_MSG);
+            popup.classList.add("is-open");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closePopup(){
+            popup.classList.remove("is-open");
+            document.body.style.overflow = "";
+        }
+
+        if(closeBtn) closeBtn.addEventListener("click", closePopup);
+        popup.addEventListener("click", function(e){
+            if(e.target === popup) closePopup();
+        });
+        document.addEventListener("keydown", function(e){
+            if(e.key === "Escape" && popup.classList.contains("is-open")) closePopup();
+        });
+
+        /* Semua elemen dengan data-wa-trigger akan membuka popup */
+        document.querySelectorAll("[data-wa-trigger]").forEach(function(btn){
+            btn.addEventListener("click", function(e){
+                var msg = this.getAttribute("data-wa-msg") || null;
+                openPopup(e, msg);
+            });
+        });
+    }
+
+    /* ===== Navbar ===== */
     var nav  = document.getElementById('mainNav');
     var tog  = document.getElementById('navToggler');
     var menu = document.getElementById('navMenu');
@@ -891,7 +983,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
         });
     }
 
-    /* ── Floating buttons ── */
+    /* ===== Floating buttons ===== */
     var btt  = document.getElementById('backToTop');
     var waF  = document.getElementById('waFloat');
     var hero = document.querySelector('.page-hero');
@@ -905,7 +997,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
 
     if(btt) btt.addEventListener('click', function(e){ e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-    /* ── Form submit ── */
+    /* ===== Form submit ===== */
     var form    = document.getElementById('contactForm');
     var success = document.getElementById('formSuccess');
     var waShort = document.querySelector('.wa-shortcut');
@@ -919,7 +1011,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
         });
     }
 
-    /* ── FAQ accordion ── */
+    /* ===== FAQ accordion ===== */
     document.querySelectorAll('[data-faq]').forEach(function(item){
         item.querySelector('.faq-q').addEventListener('click', function(){
             var wasOpen = item.classList.contains('open');
@@ -928,7 +1020,7 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
         });
     });
 
-    /* ── Scroll Reveal ── */
+    /* ===== Scroll Reveal ===== */
     var obs = new IntersectionObserver(function(entries){
         entries.forEach(function(entry){
             if(entry.isIntersecting){
@@ -945,9 +1037,11 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
         setTimeout(function(){ el.classList.add('visible'); }, 80);
     });
 
-    /* ── Smooth scroll ── */
+    /* ===== Smooth scroll ===== */
     document.querySelectorAll('a[href^="#"]').forEach(function(link){
         link.addEventListener('click', function(e){
+            /* Skip jika ini trigger WA popup */
+            if(this.hasAttribute('data-wa-trigger')) return;
             var href = this.getAttribute('href');
             if(href === '#') return;
             var target = document.querySelector(href);
@@ -957,34 +1051,38 @@ textarea.form-ctrl { min-height: 120px; resize: vertical; }
         });
     });
 
+    /* ===== Init ===== */
+    initWaPopup();
+
 })();
 </script>
 
+<!-- Formspree AJAX handler (tetap dipertahankan) -->
 <script>
-const form = document.getElementById("contactForm");
-const success = document.getElementById("formSuccess");
-const waShort = document.querySelector('.wa-shortcut');
+(function(){
+    var form = document.getElementById("contactForm");
+    var success = document.getElementById("formSuccess");
+    var waShort = document.querySelector('.wa-shortcut');
 
-if(form){
-    form.addEventListener("submit", async function(e) {
-        e.preventDefault();
-        const data = new FormData(form);
-        const res = await fetch(form.action, {
-            method: "POST",
-            body: data,
-            headers: {
-                'Accept': 'application/json'
+    if(form){
+        form.addEventListener("submit", async function(e) {
+            e.preventDefault();
+            var data = new FormData(form);
+            var res = await fetch(form.action, {
+                method: "POST",
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (res.ok) {
+                form.style.display = "none";
+                if(waShort) waShort.style.display = 'none';
+                success.style.display = "block";
+            } else {
+                alert("Gagal mengirim. Coba lagi ya.");
             }
         });
-        if (res.ok) {
-            form.style.display = "none";
-            if(waShort) waShort.style.display = 'none';
-            success.style.display = "block";
-        } else {
-            alert("Gagal mengirim. Coba lagi ya.");
-        }
-    });
-}
+    }
+})();
 </script>
 </body>
 </html>

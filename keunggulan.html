@@ -94,7 +94,7 @@ img{max-width:100%;display:block}
 .stext--light{color:rgba(255,255,255,.7)}
 
 /* ══════════════════════════════
-   DATA CARD & TABLE (dari legalitas)
+   DATA CARD & TABLE
    ══════════════════════════════ */
 .data-card{background:#fff;border-radius:18px;border:1px solid var(--gray-mid);box-shadow:var(--ss);overflow:hidden}
 .data-card-header{background:var(--blue-dark);padding:20px 28px;display:flex;align-items:center;gap:14px}
@@ -114,7 +114,7 @@ img{max-width:100%;display:block}
 .data-table .val-blue{display:inline-flex;align-items:center;gap:5px;background:rgba(0,159,227,.1);border:1px solid rgba(0,159,227,.2);color:var(--blue);font-size:12px;padding:3px 10px;border-radius:20px;font-weight:600;font-family:var(--fh)}
 
 /* ══════════════════════════════
-   VISI & RUTE BOX (dari legalitas)
+   VISI & RUTE BOX
    ══════════════════════════════ */
 .visi-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:18px;padding:40px 36px;position:relative;overflow:hidden;border:1px solid rgba(0,159,227,.2)}
 .visi-box::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 28px)}
@@ -123,7 +123,7 @@ img{max-width:100%;display:block}
 .visi-text{font-family:var(--fh);font-size:clamp(16px,2.5vw,22px);font-weight:700;color:#fff;line-height:1.6;position:relative;z-index:2}
 
 /* ══════════════════════════════
-   STATS BAR (keunggulan)
+   STATS BAR
    ══════════════════════════════ */
 .adv-stat-bar{background:var(--blue-dark);padding:48px 0;position:relative;overflow:hidden}
 .adv-stat-bar::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px),repeating-linear-gradient(90deg,rgba(0,159,227,.06) 0,rgba(0,159,227,.06) 1px,transparent 0,transparent 48px)}
@@ -135,7 +135,7 @@ img{max-width:100%;display:block}
 .adv-stat-label{font-size:11px;color:rgba(255,255,255,.5);margin-top:6px;font-family:var(--fh);font-weight:500}
 
 /* ══════════════════════════════
-   ADVANTAGE CARDS (keunggulan)
+   ADVANTAGE CARDS
    ══════════════════════════════ */
 .adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .adv-card{background:#fff;border-radius:18px;border:1px solid var(--gray-mid);padding:32px 26px;text-align:center;box-shadow:var(--ss);transition:all var(--tr);position:relative;overflow:hidden}
@@ -151,7 +151,7 @@ img{max-width:100%;display:block}
 .adv-card p{font-size:13px;color:var(--gray-text);line-height:1.7;margin:0}
 
 /* ══════════════════════════════
-   FEATURE ROWS (keunggulan)
+   FEATURE ROWS
    ══════════════════════════════ */
 .feat-row{display:flex;align-items:center;gap:48px;margin-bottom:64px}
 .feat-row:last-child{margin-bottom:0}
@@ -175,7 +175,7 @@ img{max-width:100%;display:block}
 .feat-list li strong{color:var(--blue-dark);font-weight:600}
 
 /* ══════════════════════════════
-   COMPARISON TABLE (keunggulan)
+   COMPARISON TABLE
    ══════════════════════════════ */
 .cmp-table{width:100%;border-collapse:collapse}
 .cmp-table thead th{background:var(--blue-dark);font-family:var(--fh);font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;padding:14px 18px;text-align:center;border-bottom:2px solid var(--gray-mid)}
@@ -197,7 +197,7 @@ img{max-width:100%;display:block}
    ══════════════════════════════ */
 .cta-section{background:var(--blue-dark);padding:64px 0;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 40px)}
-.btn-cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:14px;padding:14px 32px;border-radius:10px;transition:all var(--tr);border:2px solid var(--red)}
+.btn-cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:14px;padding:14px 32px;border-radius:10px;transition:all var(--tr);border:2px solid var(--red);cursor:pointer}
 .btn-cta-main:hover{background:var(--red-dark);border-color:var(--red-dark);color:#fff;transform:translateY(-2px);box-shadow:0 8px 28px rgba(229,57,53,.4)}
 .btn-cta-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-family:var(--fh);font-weight:600;font-size:14px;padding:13px 28px;border-radius:10px;border:2px solid rgba(255,255,255,.3);transition:all var(--tr)}
 .btn-cta-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);color:#fff}
@@ -231,6 +231,32 @@ img{max-width:100%;display:block}
 .back-to-top.visible{opacity:1;pointer-events:auto}
 .back-to-top:hover{background:var(--red);color:#fff;transform:translateY(-3px)}
 
+/* ══════════════════════════════
+   WA POPUP (2 Admin)
+   ══════════════════════════════ */
+.wa-popup-overlay{position:fixed;inset:0;background:rgba(5,15,28,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.wa-popup-overlay.is-open{opacity:1;pointer-events:auto}
+.wa-popup-card{background:#fff;border-radius:20px;width:100%;max-width:380px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);transform:scale(.88) translateY(24px);transition:transform .35s cubic-bezier(.22,.61,.36,1);position:relative}
+.wa-popup-overlay.is-open .wa-popup-card{transform:scale(1) translateY(0)}
+.wa-popup-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:rgba(255,255,255,.8);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr);z-index:2;backdrop-filter:blur(4px)}
+.wa-popup-close:hover{background:rgba(255,255,255,.3);color:#fff}
+.wa-popup-header{background:linear-gradient(135deg,#075E54 0%,#128C7E 100%);padding:30px 24px 24px;text-align:center;position:relative}
+.wa-popup-header::after{content:'';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);width:24px;height:12px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%)}
+.wa-popup-header-icon{width:56px;height:56px;border-radius:50%;background:rgba(37,211,102,.2);border:2px solid rgba(37,211,102,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#25D366;filter:drop-shadow(0 4px 12px rgba(37,211,102,.35))}
+.wa-popup-header h4{font-family:var(--fh);font-size:18px;font-weight:800;color:#fff;margin:0 0 4px}
+.wa-popup-header p{font-size:13px;color:rgba(255,255,255,.65);margin:0;line-height:1.5}
+.wa-popup-options{padding:20px 16px 16px}
+.wa-popup-option{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:#fff;border:1.5px solid var(--gray-mid);transition:all var(--tr);margin-bottom:10px;color:inherit;text-decoration:none;cursor:pointer;position:relative;overflow:hidden}
+.wa-popup-option:last-child{margin-bottom:0}
+.wa-popup-option:hover{border-color:#25D366;transform:translateX(4px);box-shadow:0 4px 20px rgba(37,211,102,.18)}
+.wa-popup-option-icon{width:46px;height:46px;border-radius:12px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);display:flex;align-items:center;justify-content:center;font-size:22px;color:#25D366;flex-shrink:0}
+.wa-popup-option-info{flex:1;display:flex;flex-direction:column;gap:2px}
+.wa-popup-option-label{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--blue-dark)}
+.wa-popup-option-number{font-size:13px;color:var(--gray-text);font-family:var(--fb)}
+.wa-popup-option-arrow{color:var(--gray-mid);font-size:12px;transition:color var(--tr),transform var(--tr)}
+.wa-popup-option:hover .wa-popup-option-arrow{color:#25D366;transform:translateX(3px)}
+.wa-popup-footer{text-align:center;padding:0 16px 16px;font-size:11px;color:var(--gray-text);font-family:var(--fh)}
+
 /* ── RESPONSIVE ── */
 @media(max-width:991px){
   .adv-stat-grid{grid-template-columns:repeat(2,1fr)}
@@ -255,6 +281,7 @@ img{max-width:100%;display:block}
   .back-to-top{right:16px;bottom:24px;width:44px;height:44px}
   .btn-cta-main,.btn-cta-outline{width:100%;justify-content:center}
   .cta-btn-row{flex-direction:column;align-items:center!important}
+  .wa-popup-card{max-width:340px}
 }
 @media(max-width:480px){
   .adv-stat-grid{grid-template-columns:1fr 1fr}
@@ -577,7 +604,7 @@ img{max-width:100%;display:block}
         <div class="srule srule--center anim-up" style="animation-delay:.1s"></div>
         <p class="stext stext--light mx-auto mb-4 anim-up" style="max-width:480px;animation-delay:.15s">Dapatkan penawaran harga terbaik, sampel material gratis, dan konsultasi teknis langsung dari tim kami.</p>
         <div class="d-flex justify-content-center flex-wrap cta-btn-row anim-up" style="gap:14px;animation-delay:.2s">
-            <a href="https://wa.me/6281296612892?text=Halo%2C%20saya%20tertarik%20dengan%20pasir%20kuarsa%20PT%20Nanda%20Jaya%20Silika.%20Mohon%20informasi%20harga%20dan%20sample." target="_blank" class="btn-cta-main"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
+            <a href="#" data-wa-trigger data-wa-msg="Halo, saya tertarik dengan pasir kuarsa PT Nanda Jaya Silika. Mohon informasi harga dan sample." class="btn-cta-main"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
             <a href="kontak.html" class="btn-cta-outline"><i class="fas fa-envelope"></i> Form Kontak</a>
         </div>
     </div>
@@ -620,6 +647,7 @@ img{max-width:100%;display:block}
                 <ul class="footer-links footer-links--contact">
                     <li><i class="fas fa-map-marker-alt"></i> Desa Sukorahayu, Labuhan Maringgai, Lampung Timur</li>
                     <li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li>
+                    <li><i class="fab fa-whatsapp"></i> +62 813-6721-3538</li>
                     <li><i class="far fa-envelope"></i> silikanandajaya@gmail.com</li>
                     <li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li>
                 </ul>
@@ -634,8 +662,41 @@ img{max-width:100%;display:block}
     </div>
 </footer>
 
-<!-- FLOATING -->
-<a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20tertarik%20dengan%20produk%20Anda.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="wa-float" id="waFloat" aria-label="WhatsApp">
+<!-- ══════════════════════════════
+     WA POPUP (2 Admin)
+     ══════════════════════════════ -->
+<div class="wa-popup-overlay" id="waPopup">
+    <div class="wa-popup-card">
+        <button class="wa-popup-close" id="waPopupClose"><i class="fas fa-times"></i></button>
+        <div class="wa-popup-header">
+            <div class="wa-popup-header-icon"><i class="fab fa-whatsapp"></i></div>
+            <h4>Hubungi Kami</h4>
+            <p>Pilih nomor admin yang ingin dihubungi</p>
+        </div>
+        <div class="wa-popup-options">
+            <a href="#" id="waLinkAdmin1" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info">
+                    <span class="wa-popup-option-label">Admin 1</span>
+                    <span class="wa-popup-option-number">+62 812-9661-2892</span>
+                </div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+            <a href="#" id="waLinkAdmin2" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info">
+                    <span class="wa-popup-option-label">Admin 2</span>
+                    <span class="wa-popup-option-number">+62 813-6721-3538</span>
+                </div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+        </div>
+        <div class="wa-popup-footer">Klik salah satu untuk langsung chat via WhatsApp</div>
+    </div>
+</div>
+
+<!-- FLOATING WA (trigger popup, bukan link langsung) -->
+<a href="#" data-wa-trigger class="wa-float" id="waFloat" aria-label="WhatsApp">
     <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
     <span class="wa-float-tooltip">Hubungi Kami</span>
 </a>
@@ -646,6 +707,55 @@ img{max-width:100%;display:block}
 <script>
 (function(){
   "use strict";
+
+  /* ===== CONFIG WA ===== */
+  var WA_ADMIN1 = "6281296612892";
+  var WA_ADMIN2 = "6281367213538";
+  var WA_DEFAULT_MSG = "Halo PT Nanda Jaya Silika, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut.";
+
+  /* ===== WA POPUP ===== */
+  function initWaPopup(){
+    var popup   = document.getElementById("waPopup");
+    var closeBtn = document.getElementById("waPopupClose");
+    var linkA1   = document.getElementById("waLinkAdmin1");
+    var linkA2   = document.getElementById("waLinkAdmin2");
+    if(!popup || !linkA1 || !linkA2) return;
+
+    function setMsg(msg){
+      linkA1.href = "https://wa.me/" + WA_ADMIN1 + "?text=" + encodeURIComponent(msg);
+      linkA2.href = "https://wa.me/" + WA_ADMIN2 + "?text=" + encodeURIComponent(msg);
+    }
+
+    function openPopup(e, customMsg){
+      if(e) e.preventDefault();
+      setMsg(customMsg || WA_DEFAULT_MSG);
+      popup.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closePopup(){
+      popup.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+
+    if(closeBtn) closeBtn.addEventListener("click", closePopup);
+    popup.addEventListener("click", function(e){
+      if(e.target === popup) closePopup();
+    });
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape" && popup.classList.contains("is-open")) closePopup();
+    });
+
+    /* Semua elemen dengan data-wa-trigger akan membuka popup */
+    document.querySelectorAll("[data-wa-trigger]").forEach(function(btn){
+      btn.addEventListener("click", function(e){
+        var msg = this.getAttribute("data-wa-msg") || null;
+        openPopup(e, msg);
+      });
+    });
+  }
+
+  /* ===== NAVBAR, SCROLL, dll ===== */
   var nav  = document.getElementById('mainNav');
   var tog  = document.getElementById('navToggler');
   var menu = document.getElementById('navMenu');
@@ -693,6 +803,8 @@ img{max-width:100%;display:block}
   /* Smooth scroll anchors */
   document.querySelectorAll('a[href^="#"]').forEach(function(link){
     link.addEventListener('click', function(e){
+      /* Skip jika ini trigger WA popup */
+      if(this.hasAttribute('data-wa-trigger')) return;
       var href = this.getAttribute('href');
       if(href === '#') return;
       var target = document.querySelector(href);
@@ -702,7 +814,11 @@ img{max-width:100%;display:block}
       window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - navH - 16, behavior: 'smooth' });
     });
   });
+
+  /* ===== INIT ===== */
+  initWaPopup();
+
 })();
 </script>
 </body>
-</html>
+</html> 

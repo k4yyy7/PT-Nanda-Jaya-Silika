@@ -10,7 +10,6 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 <style>
-/* ===== ROOT VARIABLES ===== */
 :root {
     --blue: #009FE3;
     --blue-dark: #0A2C4E;
@@ -29,8 +28,6 @@
     --sb: 0 6px 24px rgba(0,159,227,.25);
     --rc: 16px;
 }
-
-/* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: var(--fb); font-size: 15px; color: var(--blue-dark); background: var(--white); line-height: 1.7; overflow-x: hidden; }
@@ -39,7 +36,6 @@ a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 .red-stripe { height: 4px; background: var(--red); }
 
-/* ===== ANIMATIONS ===== */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeRight { from { opacity: 0; transform: translateX(-32px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes floatParticle { 0%,100% { transform: translateY(0) scale(1); opacity: .6; } 50% { transform: translateY(-30px) scale(1.1); opacity: .9; } }
@@ -48,7 +44,6 @@ img { max-width: 100%; display: block; }
 .anim-up.visible { animation: fadeUp .7s ease forwards; }
 .anim-right.visible { animation: fadeRight .7s ease forwards; }
 
-/* ===== NAVBAR ===== */
 .main-nav{background:var(--blue-mid);position:sticky;top:0;z-index:1000;transition:background var(--tr),box-shadow var(--tr)}
 .main-nav.nav-scrolled{background:var(--blue-dark);box-shadow:0 4px 24px rgba(0,0,0,.25)}
 .nav-inner{height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
@@ -76,7 +71,6 @@ img { max-width: 100%; display: block; }
   .nav-inner{padding:0 16px}
 }
 
-/* ===== PAGE HERO ===== */
 .page-hero { background: var(--blue-dark); padding: 72px 0 56px; position: relative; overflow: hidden; }
 .page-hero::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(0,159,227,.06) 0, rgba(0,159,227,.06) 1px, transparent 0, transparent 48px), repeating-linear-gradient(90deg, rgba(0,159,227,.06) 0, rgba(0,159,227,.06) 1px, transparent 0, transparent 48px); }
 .hero-particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
@@ -93,7 +87,6 @@ img { max-width: 100%; display: block; }
 .page-hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,159,227,.15); border: 1px solid rgba(0,159,227,.35); color: #7DD4F5; font-family: var(--fh); font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 20px; margin-bottom: 18px; letter-spacing: .3px; }
 @media (max-width: 767px) { .page-hero { padding: 48px 0 36px; } }
 
-/* ===== SPECS BAR ===== */
 .specs-bar { background: #fff; border-bottom: 1px solid var(--gray-mid); padding: 0; }
 .specs-bar-inner { display: flex; align-items: stretch; overflow-x: auto; }
 .spec-item { flex: 1; min-width: 130px; padding: 20px 14px; text-align: center; border-right: 1px solid var(--gray-mid); transition: background var(--tr); }
@@ -104,7 +97,6 @@ img { max-width: 100%; display: block; }
 .spec-label { font-size: 11px; color: var(--gray-text); margin-top: 4px; font-family: var(--fh); font-weight: 500; }
 @media (max-width: 767px) { .specs-bar-inner { flex-wrap: wrap; } .spec-item { flex: 0 0 50%; border-bottom: 1px solid var(--gray-mid); } }
 
-/* ===== SECTION COMMONS ===== */
 .sec { padding: 72px 0; }
 .sec--gray { background: var(--gray-light); }
 .sbadge { display: inline-block; background: rgba(0,159,227,.1); color: var(--blue); font-family: var(--fh); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 4px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
@@ -118,7 +110,6 @@ img { max-width: 100%; display: block; }
 .stext--light { color: rgba(255,255,255,.7); }
 @media (max-width: 767px) { .sec { padding: 48px 0; } }
 
-/* ===== PRODUCT OVERVIEW GRID ===== */
 .prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .prod-card { border-radius: var(--rc); overflow: hidden; border: 1px solid var(--gray-mid); background: #fff; transition: all .4s ease; cursor: pointer; position: relative; display: flex; flex-direction: column; height: 100%; }
 .prod-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform .4s ease; z-index: 2; }
@@ -149,7 +140,6 @@ img { max-width: 100%; display: block; }
 @media (max-width: 991px) { .prod-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 575px) { .prod-grid { grid-template-columns: 1fr 1fr; gap: 10px; } .prod-card-img { height: 110px; } .prod-card-img i { font-size: 28px; } }
 
-/* ===== PRODUCT GROUP ===== */
 .prod-group { margin-bottom: 56px; }
 .prod-group:last-child { margin-bottom: 0; }
 .prod-group-head { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--gray-mid); }
@@ -161,16 +151,11 @@ img { max-width: 100%; display: block; }
 .prod-group-head h3 { font-family: var(--fh); font-size: clamp(18px, 3vw, 24px); font-weight: 800; margin: 0; line-height: 1.2; }
 .prod-group-head p { font-size: 13px; color: var(--gray-text); margin: 3px 0 0; }
 
-/* ============================================================
-   FIX #1 — Bootstrap kolom jadi flex column, supaya prod-row
-   bisa mengisi tinggi penuh dan semua card sejajar
-   ============================================================ */
 .prod-group .row > [class*="col-"] {
     display: flex;
     flex-direction: column;
 }
 
-/* ===== PRODUCT DETAIL ROW — FIXED HEIGHT ===== */
 .prod-row {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -185,7 +170,7 @@ img { max-width: 100%; display: block; }
     transition: box-shadow .3s;
     width: 100%;
     box-sizing: border-box;
-    height: 100%;          /* FIX #2 — isi penuh tinggi kolom */
+    height: 100%;
 }
 .prod-row:hover { box-shadow: var(--sm); }
 
@@ -195,7 +180,7 @@ img { max-width: 100%; display: block; }
     box-shadow: var(--ss);
     position: relative;
     background: var(--blue-dark);
-    height: 220px;          /* FIX #3 — fixed height, bukan 100% */
+    height: 220px;
     width: 100%;
     flex-shrink: 0;
 }
@@ -226,7 +211,6 @@ img { max-width: 100%; display: block; }
 .ppi-7 { background: linear-gradient(135deg,#2C0A0A,#A03020); }
 .ppi-8 { background: linear-gradient(135deg,#200808,#8B2020); }
 
-/* Info panel */
 .prod-info {
     min-width: 0;
     width: 100%;
@@ -235,7 +219,6 @@ img { max-width: 100%; display: block; }
     flex-direction: column;
 }
 
-/* ===== SIZE TABLE ===== */
 .size-tbl {
     width: 100%;
     border-collapse: collapse;
@@ -268,63 +251,33 @@ img { max-width: 100%; display: block; }
 .up-val { font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--blue); }
 .func-text { font-size: 12px; color: var(--gray-text); line-height: 1.6; }
 
-/* Chips */
 .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--gray-mid); }
 .chip { display: inline-flex; align-items: center; gap: 5px; background: var(--gray-light); border: 1px solid var(--gray-mid); color: var(--gray-text); font-family: var(--fh); font-size: 10px; font-weight: 500; padding: 3px 10px; border-radius: 20px; }
 .chip i { font-size: 9px; color: var(--blue); }
 
-/* CTA row */
 .prod-cta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: auto; }
 .prod-cta-note { font-size: 12px; color: var(--gray-text); font-family: var(--fh); }
 .prod-cta-note i { color: var(--blue); margin-right: 4px; }
 .btn-pwa { display: inline-flex; align-items: center; gap: 8px; background: var(--blue); color: #fff; font-family: var(--fh); font-weight: 600; font-size: 12px; padding: 8px 18px; border-radius: 8px; border: none; cursor: pointer; transition: all var(--tr); white-space: nowrap; }
 .btn-pwa:hover { background: #0090D0; color: #fff; transform: translateY(-1px); }
 
-/* ===== RESPONSIVE — TABLET (≤ 991px) ===== */
 @media (max-width: 991px) {
-    .prod-row {
-        grid-template-columns: 1fr;
-        padding: 16px;
-        gap: 14px;
-    }
-    .prod-photo {
-        height: 180px;        /* FIX #4 — fixed height tablet */
-    }
-    .prod-group .row {
-        margin-left: -8px;
-        margin-right: -8px;
-    }
-    .prod-group .row > [class*="col-"] {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
+    .prod-row { grid-template-columns: 1fr; padding: 16px; gap: 14px; }
+    .prod-photo { height: 180px; }
+    .prod-group .row { margin-left: -8px; margin-right: -8px; }
+    .prod-group .row > [class*="col-"] { padding-left: 8px; padding-right: 8px; }
 }
-
-/* ===== RESPONSIVE — MOBILE (≤ 767px) ===== */
 @media (max-width: 767px) {
-    .prod-row {
-        padding: 12px;
-        margin-bottom: 16px;
-    }
-    .prod-photo {
-        height: 150px;        /* FIX #5 — fixed height mobile */
-    }
+    .prod-row { padding: 12px; margin-bottom: 16px; }
+    .prod-photo { height: 150px; }
     .size-tbl { table-layout: fixed; }
     .size-tbl colgroup col:first-child { width: 65px; }
-    .size-tbl thead th,
-    .size-tbl td { padding: 8px 8px; font-size: 11px; }
+    .size-tbl thead th, .size-tbl td { padding: 8px 8px; font-size: 11px; }
     .func-text { font-size: 11px; }
-    .prod-group .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .prod-group .row > [class*="col-"] {
-        padding-left: 0;
-        padding-right: 0;
-    }
+    .prod-group .row { margin-left: 0; margin-right: 0; }
+    .prod-group .row > [class*="col-"] { padding-left: 0; padding-right: 0; }
 }
 
-/* ===== APP GRID ===== */
 .app-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
 .app-card { background: #fff; border: 1px solid var(--gray-mid); border-radius: 14px; padding: 20px 12px; text-align: center; transition: all var(--tr); }
 .app-card:hover { border-color: var(--blue); box-shadow: var(--ss); transform: translateY(-3px); }
@@ -334,15 +287,13 @@ img { max-width: 100%; display: block; }
 @media (max-width: 991px) { .app-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 575px) { .app-grid { grid-template-columns: repeat(2, 1fr); } }
 
-/* ===== CTA SECTION ===== */
 .cta-section { background: var(--blue-dark); padding: 64px 0; position: relative; overflow: hidden; }
 .cta-section::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(0,159,227,.04) 0, rgba(0,159,227,.04) 1px, transparent 0, transparent 40px); }
-.btn-cta-main { display: inline-flex; align-items: center; gap: 10px; background: var(--red); color: #fff; font-family: var(--fh); font-weight: 700; font-size: 14px; padding: 14px 32px; border-radius: 10px; transition: all var(--tr); border: 2px solid var(--red); }
+.btn-cta-main { display: inline-flex; align-items: center; gap: 10px; background: var(--red); color: #fff; font-family: var(--fh); font-weight: 700; font-size: 14px; padding: 14px 32px; border-radius: 10px; transition: all var(--tr); border: 2px solid var(--red); cursor: pointer; }
 .btn-cta-main:hover { background: var(--red-dark); border-color: var(--red-dark); color: #fff; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(229,57,53,.4); }
 .btn-cta-outline { display: inline-flex; align-items: center; gap: 8px; background: 0 0; color: rgba(255,255,255,.7); font-family: var(--fh); font-weight: 600; font-size: 14px; padding: 13px 28px; border-radius: 10px; border: 1.5px solid rgba(255,255,255,.2); transition: all var(--tr); }
 .btn-cta-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); color: #fff; }
 
-/* ===== FOOTER ===== */
 .site-footer { background: #050F1C; padding: 56px 0 0; color: rgba(255,255,255,.6); }
 .footer-logo-img { width: 42px; height: 42px; object-fit: contain; flex-shrink: 0; }
 .footer-brand-name { font-family: var(--fh); font-weight: 700; font-size: 14px; color: #fff; }
@@ -359,7 +310,6 @@ img { max-width: 100%; display: block; }
 .footer-bottom strong { color: rgba(255,255,255,.6); }
 .footer-bottom-right { color: rgba(0,159,227,.5) !important; }
 
-/* ===== FLOATING BUTTONS ===== */
 .wa-float { position: fixed; left: 24px; bottom: 32px; z-index: 9998; display: flex; align-items: center; opacity: 0; pointer-events: none; transform: translateY(16px); transition: opacity .4s ease, transform .4s ease; }
 .wa-float.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .wa-float-icon { width: 54px; height: 54px; border-radius: 16px; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(37,211,102,.45); border: 2px solid rgba(255,255,255,.2); position: relative; z-index: 2; transition: transform .3s, box-shadow .3s, background .3s; }
@@ -377,6 +327,31 @@ img { max-width: 100%; display: block; }
     .back-to-top { right: 16px; bottom: 24px; }
     .footer-bottom .d-flex { flex-direction: column; text-align: center; gap: 6px; }
 }
+
+/* ===== WA POPUP ===== */
+.wa-popup-overlay{position:fixed;inset:0;background:rgba(5,15,28,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.wa-popup-overlay.is-open{opacity:1;pointer-events:auto}
+.wa-popup-card{background:#fff;border-radius:20px;width:100%;max-width:380px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);transform:scale(.88) translateY(24px);transition:transform .35s cubic-bezier(.22,.61,.36,1);position:relative}
+.wa-popup-overlay.is-open .wa-popup-card{transform:scale(1) translateY(0)}
+.wa-popup-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:rgba(255,255,255,.8);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr);z-index:2;backdrop-filter:blur(4px)}
+.wa-popup-close:hover{background:rgba(255,255,255,.3);color:#fff}
+.wa-popup-header{background:linear-gradient(135deg,#075E54 0%,#128C7E 100%);padding:30px 24px 24px;text-align:center;position:relative}
+.wa-popup-header::after{content:'';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);width:24px;height:12px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%)}
+.wa-popup-header-icon{width:56px;height:56px;border-radius:50%;background:rgba(37,211,102,.2);border:2px solid rgba(37,211,102,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#25D366;filter:drop-shadow(0 4px 12px rgba(37,211,102,.35))}
+.wa-popup-header h4{font-family:var(--fh);font-size:18px;font-weight:800;color:#fff;margin:0 0 4px}
+.wa-popup-header p{font-size:13px;color:rgba(255,255,255,.65);margin:0;line-height:1.5}
+.wa-popup-options{padding:20px 16px 16px}
+.wa-popup-option{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:#fff;border:1.5px solid var(--gray-mid);transition:all var(--tr);margin-bottom:10px;color:inherit;text-decoration:none;cursor:pointer;position:relative;overflow:hidden}
+.wa-popup-option:last-child{margin-bottom:0}
+.wa-popup-option:hover{border-color:#25D366;transform:translateX(4px);box-shadow:0 4px 20px rgba(37,211,102,.18)}
+.wa-popup-option-icon{width:46px;height:46px;border-radius:12px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);display:flex;align-items:center;justify-content:center;font-size:22px;color:#25D366;flex-shrink:0}
+.wa-popup-option-info{flex:1;display:flex;flex-direction:column;gap:2px}
+.wa-popup-option-label{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--blue-dark)}
+.wa-popup-option-number{font-size:13px;color:var(--gray-text);font-family:var(--fb)}
+.wa-popup-option-arrow{color:var(--gray-mid);font-size:12px;transition:color var(--tr),transform var(--tr)}
+.wa-popup-option:hover .wa-popup-option-arrow{color:#25D366;transform:translateX(3px)}
+.wa-popup-footer{text-align:center;padding:0 16px 16px;font-size:11px;color:var(--gray-text);font-family:var(--fh)}
+@media(max-width:767px){.wa-popup-card{max-width:340px}}
 </style>
 </head>
 <body>
@@ -385,7 +360,7 @@ img { max-width: 100%; display: block; }
 <nav class="main-nav" id="mainNav">
     <div class="container-fluid">
         <div class="nav-inner d-flex align-items-center justify-content-between">
-            <a class="nav-logo-compact d-flex align-items-center" href="#hero">
+            <a class="nav-logo-compact d-flex align-items-center" href="index.html">
                 <div class="nav-logo-container"><img src="img/pt-njs.png" alt="PT Nanda Jaya Silika" class="nav-logo-img"></div>
                 <span class="nav-brand-name d-none d-lg-inline">PT Nanda Jaya Silika</span>
             </a>
@@ -506,7 +481,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Volume besar</p>
-                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%202-4%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya ingin bertanya stok dan harga produk pasir kuarsa ukuran 2-4 up. Mohon informasi lebih lanjut." class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -534,7 +509,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Infrastruktur besar</p>
-                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%204-8%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya ingin bertanya stok dan harga produk pasir kuarsa ukuran 4-8 up. Mohon informasi lebih lanjut." class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -572,7 +547,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Bisa dicampur grade</p>
-                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%205-10%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya ingin bertanya stok dan harga produk pasir kuarsa ukuran 5-10 up. Mohon informasi lebih lanjut." class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -601,7 +576,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Stok terbatas</p>
-                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%208-14%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya ingin bertanya stok dan harga produk pasir kuarsa ukuran 8-14 up. Mohon informasi lebih lanjut." class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -640,7 +615,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Volume besar</p>
-                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%2014-20%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya ingin bertanya stok dan harga produk pasir kuarsa ukuran 14-20 up. Mohon informasi lebih lanjut." class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -669,7 +644,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Custom grade</p>
-                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%2016-30%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya ingin bertanya stok dan harga produk pasir kuarsa ukuran 16-30 up. Mohon informasi lebih lanjut." class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -708,7 +683,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Serbaguna</p>
-                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%2020-30%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya ingin bertanya stok dan harga produk pasir kuarsa ukuran 20-30 up. Mohon informasi lebih lanjut." class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -734,7 +709,7 @@ img { max-width: 100%; display: block; }
                             </div>
                             <div class="prod-cta">
                                 <p class="prod-cta-note"><i class="fas fa-check-circle"></i> Presisi tinggi</p>
-                                <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20ingin%20bertanya%20stok%20dan%20harga%20produk%20pasir%20kuarsa%20ukuran%2030%20up.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
+                                <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya ingin bertanya stok dan harga produk pasir kuarsa ukuran 30 up. Mohon informasi lebih lanjut." class="btn-pwa"><i class="fab fa-whatsapp"></i> Tanya Stok</a>
                             </div>
                         </div>
                     </div>
@@ -776,7 +751,7 @@ img { max-width: 100%; display: block; }
         <div class="srule srule--center srule--blue anim-up" style="animation-delay:.1s"></div>
         <p class="stext stext--light mx-auto mb-4 anim-up" style="max-width:480px;animation-delay:.15s">Butuh ukuran di luar katalog? Custom blending antar grade? Tim teknis kami siap konsultasi dan menyiapkan sampel gratis.</p>
         <div class="d-flex justify-content-center flex-wrap anim-up" style="gap:14px;animation-delay:.2s">
-            <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20tertarik%20dengan%20produk%20Anda.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-cta-main"><i class="fab fa-whatsapp"></i> Konsultasi Spesifikasi</a>
+            <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut." class="btn-cta-main"><i class="fab fa-whatsapp"></i> Konsultasi Spesifikasi</a>
             <a href="kontak.html" class="btn-cta-outline"><i class="fas fa-envelope"></i> Form Kontak</a>
         </div>
     </div>
@@ -816,8 +791,9 @@ img { max-width: 100%; display: block; }
             <div class="col-lg-3">
                 <h5 class="footer-heading">Kontak</h5>
                 <ul class="footer-links footer-links--contact">
-                    <li><i class="fas fa-map-marker-alt"></i> Lampung Timur, Lampung</li>`
+                    <li><i class="fas fa-map-marker-alt"></i> Lampung Timur, Lampung</li>
                     <li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li>
+                    <li><i class="fab fa-whatsapp"></i> +62 813-6721-3538</li>
                     <li><i class="far fa-envelope"></i> silikanandajaya@gmail.com</li>
                     <li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li>
                 </ul>
@@ -832,8 +808,33 @@ img { max-width: 100%; display: block; }
     </div>
 </footer>
 
-<!-- FLOATING -->
-<a href="https://wa.me/6281296612892?text=Halo%2C%20saya%20ingin%20bertanya%20seputar%20produk%20pasir%20kuarsa%20PT%20Nanda%20Jaya%20Silika." target="_blank" class="wa-float" id="waFloat" aria-label="WhatsApp">
+<!-- WA POPUP -->
+<div class="wa-popup-overlay" id="waPopup">
+    <div class="wa-popup-card">
+        <button class="wa-popup-close" id="waPopupClose"><i class="fas fa-times"></i></button>
+        <div class="wa-popup-header">
+            <div class="wa-popup-header-icon"><i class="fab fa-whatsapp"></i></div>
+            <h4>Hubungi Kami</h4>
+            <p>Pilih nomor admin yang ingin dihubungi</p>
+        </div>
+        <div class="wa-popup-options">
+            <a href="#" id="waLinkAdmin1" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info"><span class="wa-popup-option-label">Admin 1</span><span class="wa-popup-option-number">+62 812-9661-2892</span></div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+            <a href="#" id="waLinkAdmin2" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info"><span class="wa-popup-option-label">Admin 2</span><span class="wa-popup-option-number">+62 813-6721-3538</span></div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+        </div>
+        <div class="wa-popup-footer">Klik salah satu untuk langsung chat via WhatsApp</div>
+    </div>
+</div>
+
+<!-- FLOATING WA -->
+<a href="#" data-wa-trigger class="wa-float" id="waFloat" aria-label="WhatsApp">
     <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
     <span class="wa-float-tooltip">Hubungi Kami</span>
 </a>
@@ -845,7 +846,50 @@ img { max-width: 100%; display: block; }
 (function () {
     "use strict";
 
-    /* NAVBAR */
+    /* ===== WA POPUP ===== */
+    var WA_ADMIN1 = "6281296612892";
+    var WA_ADMIN2 = "6281367213538";
+    var WA_DEFAULT_MSG = "Halo PT Nanda Jaya Silika, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut.";
+
+    function initWaPopup(){
+        var popup = document.getElementById("waPopup");
+        var closeBtn = document.getElementById("waPopupClose");
+        var linkA1 = document.getElementById("waLinkAdmin1");
+        var linkA2 = document.getElementById("waLinkAdmin2");
+        if(!popup || !linkA1 || !linkA2) return;
+
+        function setMsg(msg){
+            linkA1.href = "https://wa.me/" + WA_ADMIN1 + "?text=" + encodeURIComponent(msg);
+            linkA2.href = "https://wa.me/" + WA_ADMIN2 + "?text=" + encodeURIComponent(msg);
+        }
+
+        function openPopup(e, customMsg){
+            if(e) e.preventDefault();
+            setMsg(customMsg || WA_DEFAULT_MSG);
+            popup.classList.add("is-open");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closePopup(){
+            popup.classList.remove("is-open");
+            document.body.style.overflow = "";
+        }
+
+        if(closeBtn) closeBtn.addEventListener("click", closePopup);
+        popup.addEventListener("click", function(e){ if(e.target === popup) closePopup(); });
+        document.addEventListener("keydown", function(e){
+            if(e.key === "Escape" && popup.classList.contains("is-open")) closePopup();
+        });
+
+        document.querySelectorAll("[data-wa-trigger]").forEach(function(btn){
+            btn.addEventListener("click", function(e){
+                var msg = this.getAttribute("data-wa-msg") || null;
+                openPopup(e, msg);
+            });
+        });
+    }
+
+    /* ===== NAVBAR ===== */
     var nav = document.getElementById('mainNav');
     var tog = document.getElementById('navToggler');
     var menu = document.getElementById('navMenu');
@@ -867,7 +911,7 @@ img { max-width: 100%; display: block; }
         });
     }
 
-    /* FLOATING BUTTONS */
+    /* ===== FLOATING BUTTONS ===== */
     var btt = document.getElementById('backToTop');
     var waF = document.getElementById('waFloat');
     var heroSec = document.querySelector('.page-hero');
@@ -884,7 +928,7 @@ img { max-width: 100%; display: block; }
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    /* PARTICLES */
+    /* ===== PARTICLES ===== */
     var pC = document.getElementById('heroParticles');
     if (pC) {
         var cols = ['rgba(0,159,227,0.7)', 'rgba(0,212,255,0.5)', 'rgba(255,255,255,0.3)'];
@@ -897,7 +941,7 @@ img { max-width: 100%; display: block; }
         }
     }
 
-    /* SCROLL REVEAL */
+    /* ===== SCROLL REVEAL ===== */
     var obs = new IntersectionObserver(function (en) {
         en.forEach(function (e) {
             if (e.isIntersecting) {
@@ -911,6 +955,9 @@ img { max-width: 100%; display: block; }
     document.querySelectorAll('.page-hero-content .anim-up').forEach(function (el, i) {
         setTimeout(function () { el.classList.add('visible'); }, i * 100);
     });
+
+    /* ===== INIT ===== */
+    initWaPopup();
 })();
 </script>
 </body>

@@ -10,24 +10,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 <style>
-:root {
-    --blue: #009FE3;
-    --blue-dark: #0A2C4E;
-    --blue-mid: #0D3A63;
-    --red: #E53935;
-    --red-dark: #C62828;
-    --white: #FFF;
-    --gray-light: #F5F7FA;
-    --gray-mid: #E0E6ED;
-    --gray-text: #3D5A73;
-    --fh: 'Poppins', sans-serif;
-    --fb: 'Inter', sans-serif;
-    --tr: .3s ease;
-    --ss: 0 4px 16px rgba(10,44,78,.08);
-    --sm: 0 8px 32px rgba(10,44,78,.14);
-    --sb: 0 6px 24px rgba(0,159,227,.25);
-    --rc: 16px;
-}
+:root{--blue:#009FE3;--blue-dark:#0A2C4E;--blue-mid:#0D3A63;--red:#E53935;--red-dark:#C62828;--white:#FFF;--gray-light:#F5F7FA;--gray-mid:#E0E6ED;--gray-text:#3D5A73;--fh:'Poppins',sans-serif;--fb:'Inter',sans-serif;--tr:.3s ease;--ss:0 4px 16px rgba(10,44,78,.08);--sm:0 8px 32px rgba(10,44,78,.14);--sb:0 6px 24px rgba(0,159,227,.25);--rc:16px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--fb);font-size:15px;color:var(--blue-dark);background:var(--white);line-height:1.7;overflow-x:hidden}
@@ -38,7 +21,6 @@ img{max-width:100%;display:block}
 .section-pad{padding:80px 0}
 .section-pad--gray{background:var(--gray-light)}
 
-/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeInLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
 @keyframes fadeInRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
@@ -50,7 +32,6 @@ img{max-width:100%;display:block}
 .njs-slide-right.is-visible{animation:fadeInRight .7s ease forwards}
 .njs-slide-left.is-visible{animation:fadeInLeft .7s ease forwards}
 
-/* NAVBAR */
 .main-nav{background:var(--blue-mid);position:sticky;top:0;z-index:1000;transition:background var(--tr),box-shadow var(--tr)}
 .main-nav.nav-scrolled{background:var(--blue-dark);box-shadow:0 4px 24px rgba(0,0,0,.25)}
 .nav-inner{height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
@@ -71,22 +52,20 @@ img{max-width:100%;display:block}
 .nav-toggler.open span:nth-child(2){opacity:0}
 .nav-toggler.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 @media(max-width:991px){
-  .nav-menu{position:fixed;top:64px;left:0;right:0;background:var(--blue-dark);flex-direction:column;align-items:stretch;padding:20px 24px 28px;gap:2px;transform:translateY(-110%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:0 12px 40px rgba(0,0,0,.3);z-index:999;max-height:calc(100vh - 64px);overflow-y:auto}
-  .nav-menu.is-open{transform:translateY(0)}
-  .nav-link-item{padding:12px 16px;font-size:15px;color:rgba(255,255,255,.9);white-space:normal}
-  .btn-nav-cta{margin:12px 0 0;text-align:center;padding:12px;font-size:15px;display:block}
-  .nav-inner{padding:0 16px}
+.nav-menu{position:fixed;top:64px;left:0;right:0;background:var(--blue-dark);flex-direction:column;align-items:stretch;padding:20px 24px 28px;gap:2px;transform:translateY(-110%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:0 12px 40px rgba(0,0,0,.3);z-index:999;max-height:calc(100vh - 64px);overflow-y:auto}
+.nav-menu.is-open{transform:translateY(0)}
+.nav-link-item{padding:12px 16px;font-size:15px;color:rgba(255,255,255,.9);white-space:normal}
+.btn-nav-cta{margin:12px 0 0;text-align:center;padding:12px;font-size:15px;display:block}
+.nav-inner{padding:0 16px}
 }
 
-/* HERO */
 .hero-section{position:relative;width:100%;height:100vh;min-height:560px;overflow:hidden;background:#050d18}
 .hero-scroll-track{display:flex;height:100%;will-change:transform;transition:transform .9s cubic-bezier(.22,.61,.36,1);cursor:grab}
 .hero-scroll-track.dragging{transition:none;cursor:grabbing}
 .hero-slide{position:relative;flex:0 0 100vw;width:100vw;height:100%;overflow:hidden}
-.hero-slide-img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; filter: brightness(0.85) contrast(1.05) saturate(0.95); transform: scale(1.08); transition: transform 8s ease-out; }
-.hero-slide.is-active .hero-slide-img { transform: scale(1.0); }
-.hero-slide-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(5,13,24,0.38) 0%, rgba(5,13,24,0.18) 40%, rgba(5,13,24,0.05) 100%); z-index: 1; }
-/* .hero-slide-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(5,13,24,.88) 0%,rgba(5,13,24,.6) 40%,rgba(5,13,24,.2) 100%);z-index:1} */
+.hero-slide-img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;filter:brightness(.85) contrast(1.05) saturate(.95);transform:scale(1.08);transition:transform 8s ease-out}
+.hero-slide.is-active .hero-slide-img{transform:scale(1)}
+.hero-slide-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(5,13,24,.38) 0%,rgba(5,13,24,.18) 40%,rgba(5,13,24,.05) 100%);z-index:1}
 .hero-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,transparent 25%,rgba(0,0,0,.55) 100%);z-index:2;pointer-events:none}
 .hero-grain{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-repeat:repeat;background-size:200px 200px}
 .hero-content-wrapper{position:absolute;inset:0;z-index:5;display:flex;align-items:center}
@@ -127,7 +106,6 @@ img{max-width:100%;display:block}
 .hero-scroll-indicator span{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:2px;font-family:var(--fh);font-weight:500;text-transform:uppercase}
 .scroll-line{width:1px;height:0;background:var(--blue);animation:scrollLine 1.8s ease infinite}
 
-/* SECTION COMMONS */
 .section-badge{display:inline-block;background:rgba(0,159,227,.1);color:var(--blue);font-family:var(--fh);font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
 .section-badge--light{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9)}
 .section-title{font-size:clamp(20px,3.5vw,32px);font-weight:800;line-height:1.3;margin-bottom:4px}
@@ -138,7 +116,6 @@ img{max-width:100%;display:block}
 .section-text{font-size:15px;color:var(--gray-text);line-height:1.8}
 .section-text--light{color:rgba(255,255,255,.7)}
 
-/* TENTANG */
 .tentang-card{display:flex;background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--gray-mid);box-shadow:var(--sm);position:relative;z-index:1}
 .tentang-card-left{flex-shrink:0;width:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--blue-dark) 0%,#0E4570 100%);padding:48px 28px;text-align:center;position:relative;overflow:hidden}
 .tentang-logo-ring{width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;padding:16px;margin-bottom:18px}
@@ -160,7 +137,6 @@ img{max-width:100%;display:block}
 @media(max-width:991px){.tentang-card-left{width:220px;padding:36px 20px}.tentang-card-right{padding:32px 28px}}
 @media(max-width:767px){.tentang-card{flex-direction:column}.tentang-card-left{width:100%;flex-direction:row;padding:20px 24px;gap:16px}.tentang-logo-ring{width:68px;height:68px;padding:10px;margin-bottom:0;flex-shrink:0}.tentang-card-right{padding:24px 20px}.tentang-stats-strip{grid-template-columns:repeat(2,1fr)}}
 
-/* LEGALITAS */
 .legalitas-section{background:var(--blue-dark);padding:80px 0}
 .legal-card{background:rgba(255,255,255,.06);border:1px solid rgba(0,159,227,.2);border-radius:14px;padding:28px 18px;text-align:center;transition:all var(--tr);height:100%}
 .legal-card:hover{background:rgba(0,159,227,.12);border-color:rgba(0,159,227,.5);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
@@ -169,7 +145,6 @@ img{max-width:100%;display:block}
 .legal-card-key{font-size:11px;color:rgba(255,255,255,.5);margin-bottom:12px;line-height:1.4}
 .legal-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(0,200,120,.15);border:1px solid rgba(0,200,120,.3);color:#4DE89C;font-size:10px;padding:4px 10px;border-radius:20px;font-weight:600;font-family:var(--fh)}
 
-/* VISI MISI */
 .visi-misi-section{padding:80px 0;background:var(--blue-dark);position:relative;overflow:hidden}
 .vm-bg-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 32px),repeating-linear-gradient(-45deg,rgba(229,57,53,.03) 0,rgba(229,57,53,.03) 1px,transparent 0,transparent 32px)}
 .vm-intro-text{font-size:15px;color:rgba(255,255,255,.55);max-width:560px;margin:0 auto;line-height:1.8}
@@ -204,361 +179,79 @@ img{max-width:100%;display:block}
 @media(max-width:767px){.visi-misi-section{padding:56px 0}.vm-section-card{padding:24px 20px}.vm-values-row{flex-wrap:wrap}.vm-value-item{flex:0 0 33.33%;border-bottom:1px solid rgba(255,255,255,.06)}}
 @media(max-width:480px){.vm-value-item{flex:0 0 50%}.vm-section-icon{width:48px;height:48px;font-size:20px}}
 
-/* =============================================
-   PRODUK — 8 Jenis Pasir Kuarsa (UP System)
-   ============================================= */
-.produk-section { background: var(--gray-light); }
+.produk-section{background:var(--gray-light)}
+.produk-grade-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:40px}
+.grade-pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--fh);font-size:12px;font-weight:600;padding:7px 16px;border-radius:50px;border:1.5px solid transparent;cursor:default;transition:all var(--tr)}
+.grade-pill--fine{background:rgba(0,159,227,.1);color:#007BB0;border-color:rgba(0,159,227,.2)}
+.grade-pill--med{background:rgba(18,184,134,.1);color:#0a7a5a;border-color:rgba(18,184,134,.2)}
+.grade-pill--coarse{background:rgba(245,159,0,.1);color:#a06200;border-color:rgba(245,159,0,.2)}
+.grade-pill--xcoarse{background:rgba(229,57,53,.1);color:#b71c1c;border-color:rgba(229,57,53,.2)}
+.produk-grid-8{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pk-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--gray-mid);box-shadow:0 2px 10px rgba(10,44,78,.05);transition:all .4s ease;display:flex;flex-direction:column;position:relative}
+.pk-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform .4s ease;z-index:2;border-radius:16px 16px 0 0}
+.pk-card:hover{transform:translateY(-6px);box-shadow:var(--sm);border-color:transparent}
+.pk-card:hover::before{transform:scaleX(1)}
+.pk-card--fine::before{background:var(--blue)}.pk-card--med::before{background:#12B886}.pk-card--coarse::before{background:#F59F00}.pk-card--xcoarse::before{background:var(--red)}
+.pk-thumb{height:130px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;flex-shrink:0}
+.pk-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;position:relative;z-index:2}
+.pk-card:hover .pk-thumb img{transform:scale(1.07)}
+.pk-thumb-1{background:linear-gradient(135deg,#082840,#0E4A6E)}.pk-thumb-2{background:linear-gradient(135deg,#0A3550,#156D8C)}.pk-thumb-3{background:linear-gradient(135deg,#0A4A30,#1A8A55)}.pk-thumb-4{background:linear-gradient(135deg,#0D4A2A,#22A85A)}.pk-thumb-5{background:linear-gradient(135deg,#3A2A08,#C89A20)}.pk-thumb-6{background:linear-gradient(135deg,#3A1A08,#B87A15)}.pk-thumb-7{background:linear-gradient(135deg,#2C0A0A,#A03020)}.pk-thumb-8{background:linear-gradient(135deg,#200808,#8B2020)}
+.pk-thumb-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:40px;color:rgba(255,255,255,.15);z-index:1}
+.pk-grade-badge{position:absolute;top:10px;left:10px;z-index:3;font-family:var(--fh);font-size:9px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.4px;text-transform:uppercase;color:#fff}
+.pk-badge--fine{background:var(--blue)}.pk-badge--med{background:#12B886}.pk-badge--coarse{background:#F59F00}.pk-badge--xcoarse{background:var(--red)}
+.pk-size-label{position:absolute;bottom:10px;left:0;right:0;text-align:center;z-index:3;font-family:var(--fh);font-size:18px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5);letter-spacing:.5px}
+.pk-body{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
+.pk-name{font-family:var(--fh);font-size:13px;font-weight:700;color:var(--blue-dark);line-height:1.3;margin:0}
+.pk-desc{font-size:11px;color:var(--gray-text);line-height:1.6;margin:0;flex:1}
+.pk-chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:2px}
+.pk-chip{display:inline-flex;align-items:center;gap:4px;font-family:var(--fh);font-size:9px;font-weight:600;padding:2px 8px;border-radius:20px;letter-spacing:.2px}
+.pk-chip--fine{background:rgba(0,159,227,.1);color:#007BB0}.pk-chip--med{background:rgba(18,184,134,.1);color:#0a7a5a}.pk-chip--coarse{background:rgba(245,159,0,.1);color:#a06200}.pk-chip--xcoarse{background:rgba(229,57,53,.1);color:#b71c1c}
+.pk-cta{display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--gray-mid);margin-top:auto}
+.pk-cta-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--fh);font-size:11px;font-weight:600;color:var(--blue);transition:gap var(--tr),color var(--tr)}
+.pk-cta-link:hover{gap:10px;color:var(--red)}.pk-cta-link i{font-size:10px}
+.pk-wa-btn{display:inline-flex;align-items:center;gap:4px;font-family:var(--fh);font-size:10px;font-weight:700;padding:5px 10px;border-radius:6px;background:#25D366;color:#fff;transition:background var(--tr),transform var(--tr);cursor:pointer}
+.pk-wa-btn:hover{background:#20BD5A;color:#fff;transform:translateY(-1px)}
+.produk-cta-bar{margin-top:36px;background:linear-gradient(135deg,var(--blue-dark) 0%,#0E4570 100%);border-radius:16px;padding:28px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border:1px solid rgba(0,159,227,.2)}
+.produk-cta-bar-text h4{font-family:var(--fh);font-size:18px;font-weight:800;color:#fff;margin-bottom:4px}
+.produk-cta-bar-text p{font-size:13px;color:rgba(255,255,255,.6);margin:0}
+.produk-cta-bar-actions{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+.btn-pk-catalog{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-weight:700;font-size:13px;padding:11px 22px;border-radius:9px;background:var(--blue);color:#fff;border:2px solid var(--blue);transition:all var(--tr)}
+.btn-pk-catalog:hover{background:#0090D0;border-color:#0090D0;color:#fff;transform:translateY(-1px)}
+.btn-pk-wa{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-weight:700;font-size:13px;padding:11px 22px;border-radius:9px;background:#25D366;color:#fff;border:2px solid #25D366;transition:all var(--tr);cursor:pointer}
+.btn-pk-wa:hover{background:#20BD5A;border-color:#20BD5A;color:#fff;transform:translateY(-1px)}
+@media(max-width:991px){.produk-grid-8{grid-template-columns:repeat(2,1fr);gap:14px}.produk-cta-bar{padding:22px 24px}}
+@media(max-width:575px){.produk-grid-8{gap:10px}.pk-thumb{height:110px}.pk-size-label{font-size:15px}.pk-body{padding:10px 12px 12px}.pk-name{font-size:12px}.produk-cta-bar{flex-direction:column;align-items:flex-start;padding:20px}.produk-cta-bar-actions{width:100%}.btn-pk-catalog,.btn-pk-wa{flex:1;justify-content:center}}
 
-/* Header tabs / grade pills */
-.produk-grade-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 40px;
-}
-.grade-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--fh);
-    font-size: 12px;
-    font-weight: 600;
-    padding: 7px 16px;
-    border-radius: 50px;
-    border: 1.5px solid transparent;
-    cursor: default;
-    transition: all var(--tr);
-}
-.grade-pill--fine    { background: rgba(0,159,227,.1);  color: #007BB0; border-color: rgba(0,159,227,.2); }
-.grade-pill--med     { background: rgba(18,184,134,.1); color: #0a7a5a; border-color: rgba(18,184,134,.2); }
-.grade-pill--coarse  { background: rgba(245,159,0,.1);  color: #a06200; border-color: rgba(245,159,0,.2); }
-.grade-pill--xcoarse { background: rgba(229,57,53,.1);  color: #b71c1c; border-color: rgba(229,57,53,.2); }
-
-/* 4-column grid desktop */
-.produk-grid-8 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
-
-/* Individual card */
-.pk-card {
-    background: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--gray-mid);
-    box-shadow: 0 2px 10px rgba(10,44,78,.05);
-    transition: all .4s ease;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.pk-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .4s ease;
-    z-index: 2;
-    border-radius: 16px 16px 0 0;
-}
-.pk-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--sm);
-    border-color: transparent;
-}
-.pk-card:hover::before { transform: scaleX(1); }
-
-/* Grade colour accents */
-.pk-card--fine::before    { background: var(--blue); }
-.pk-card--med::before     { background: #12B886; }
-.pk-card--coarse::before  { background: #F59F00; }
-.pk-card--xcoarse::before { background: var(--red); }
-
-/* Thumbnail */
-.pk-thumb {
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-.pk-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .5s ease;
-}
-.pk-card:hover .pk-thumb img { transform: scale(1.07); }
-
-/* Gradient overlays matching the product images */
-.pk-thumb-1 { background: linear-gradient(135deg,#082840,#0E4A6E); }
-.pk-thumb-2 { background: linear-gradient(135deg,#0A3550,#156D8C); }
-.pk-thumb-3 { background: linear-gradient(135deg,#0A4A30,#1A8A55); }
-.pk-thumb-4 { background: linear-gradient(135deg,#0D4A2A,#22A85A); }
-.pk-thumb-5 { background: linear-gradient(135deg,#3A2A08,#C89A20); }
-.pk-thumb-6 { background: linear-gradient(135deg,#3A1A08,#B87A15); }
-.pk-thumb-7 { background: linear-gradient(135deg,#2C0A0A,#A03020); }
-.pk-thumb-8 { background: linear-gradient(135deg,#200808,#8B2020); }
-
-/* Fallback icon when image not loaded */
-.pk-thumb-icon {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    color: rgba(255,255,255,.15);
-    z-index: 1;
-}
-.pk-thumb img { position: relative; z-index: 2; }
-
-/* Grade badge over thumbnail */
-.pk-grade-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 3;
-    font-family: var(--fh);
-    font-size: 9px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
-    letter-spacing: .4px;
-    text-transform: uppercase;
-    color: #fff;
-}
-.pk-badge--fine    { background: var(--blue); }
-.pk-badge--med     { background: #12B886; }
-.pk-badge--coarse  { background: #F59F00; }
-.pk-badge--xcoarse { background: var(--red); }
-
-/* Size label over thumbnail */
-.pk-size-label {
-    position: absolute;
-    bottom: 10px;
-    left: 0; right: 0;
-    text-align: center;
-    z-index: 3;
-    font-family: var(--fh);
-    font-size: 18px;
-    font-weight: 800;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,.5);
-    letter-spacing: .5px;
-}
-
-/* Card body */
-.pk-body {
-    padding: 14px 16px 16px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.pk-name {
-    font-family: var(--fh);
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--blue-dark);
-    line-height: 1.3;
-    margin: 0;
-}
-.pk-desc {
-    font-size: 11px;
-    color: var(--gray-text);
-    line-height: 1.6;
-    margin: 0;
-    flex: 1;
-}
-
-/* Mini spec chips */
-.pk-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-top: 2px;
-}
-.pk-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-family: var(--fh);
-    font-size: 9px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 20px;
-    letter-spacing: .2px;
-}
-.pk-chip--fine    { background: rgba(0,159,227,.1);  color: #007BB0; }
-.pk-chip--med     { background: rgba(18,184,134,.1); color: #0a7a5a; }
-.pk-chip--coarse  { background: rgba(245,159,0,.1);  color: #a06200; }
-.pk-chip--xcoarse { background: rgba(229,57,53,.1);  color: #b71c1c; }
-
-/* CTA button bottom */
-.pk-cta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 10px;
-    border-top: 1px solid var(--gray-mid);
-    margin-top: auto;
-}
-.pk-cta-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--fh);
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--blue);
-    transition: gap var(--tr), color var(--tr);
-}
-.pk-cta-link:hover { gap: 10px; color: var(--red); }
-.pk-cta-link i { font-size: 10px; }
-.pk-wa-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-family: var(--fh);
-    font-size: 10px;
-    font-weight: 700;
-    padding: 5px 10px;
-    border-radius: 6px;
-    background: #25D366;
-    color: #fff;
-    transition: background var(--tr), transform var(--tr);
-}
-.pk-wa-btn:hover { background: #20BD5A; color: #fff; transform: translateY(-1px); }
-
-/* Bottom CTA banner */
-.produk-cta-bar {
-    margin-top: 36px;
-    background: linear-gradient(135deg, var(--blue-dark) 0%, #0E4570 100%);
-    border-radius: 16px;
-    padding: 28px 36px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    border: 1px solid rgba(0,159,227,.2);
-}
-.produk-cta-bar-text h4 {
-    font-family: var(--fh);
-    font-size: 18px;
-    font-weight: 800;
-    color: #fff;
-    margin-bottom: 4px;
-}
-.produk-cta-bar-text p {
-    font-size: 13px;
-    color: rgba(255,255,255,.6);
-    margin: 0;
-}
-.produk-cta-bar-actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    flex-shrink: 0;
-}
-.btn-pk-catalog {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--fh);
-    font-weight: 700;
-    font-size: 13px;
-    padding: 11px 22px;
-    border-radius: 9px;
-    background: var(--blue);
-    color: #fff;
-    border: 2px solid var(--blue);
-    transition: all var(--tr);
-}
-.btn-pk-catalog:hover { background: #0090D0; border-color: #0090D0; color: #fff; transform: translateY(-1px); }
-.btn-pk-wa {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--fh);
-    font-weight: 700;
-    font-size: 13px;
-    padding: 11px 22px;
-    border-radius: 9px;
-    background: #25D366;
-    color: #fff;
-    border: 2px solid #25D366;
-    transition: all var(--tr);
-}
-.btn-pk-wa:hover { background: #20BD5A; border-color: #20BD5A; color: #fff; transform: translateY(-1px); }
-
-/* Responsive */
-@media(max-width:1199px) {
-    .produk-grid-8 { grid-template-columns: repeat(4, 1fr); gap: 14px; }
-}
-@media(max-width:991px) {
-    .produk-grid-8 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .produk-cta-bar { padding: 22px 24px; }
-}
-@media(max-width:575px) {
-    .produk-grid-8 { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .pk-thumb { height: 110px; }
-    .pk-size-label { font-size: 15px; }
-    .pk-body { padding: 10px 12px 12px; }
-    .pk-name { font-size: 12px; }
-    .produk-cta-bar { flex-direction: column; align-items: flex-start; padding: 20px; }
-    .produk-cta-bar-actions { width: 100%; }
-    .btn-pk-catalog,.btn-pk-wa { flex: 1; justify-content: center; }
-}
-
-/* GALERI */
 .galeri-section{background:#fff}
 .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .gal-item{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;aspect-ratio:4/3}
 .gal-item--featured{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-.gal-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;transition:transform .5s ease}
-.gal-placeholder i{font-size:32px;color:rgba(255,255,255,.2)}
-.gal-placeholder span{font-family:var(--fh);font-size:11px;font-weight:600;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1px;text-align:center;padding:0 14px}
 .gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,44,78,.85) 0%,rgba(10,44,78,.3) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;opacity:0;transition:opacity var(--tr)}
 .gal-overlay h4{font-family:var(--fh);font-size:14px;font-weight:700;color:#fff;margin-bottom:3px}
 .gal-overlay p{font-size:12px;color:rgba(255,255,255,.6);margin:0}
 .gal-zoom{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(0,159,227,.7);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;transform:scale(0);transition:transform var(--tr)}
-.gal-item:hover .gal-overlay{opacity:1}.gal-item:hover .gal-zoom{transform:scale(1)}.gal-item:hover .gal-placeholder{transform:scale(1.06)}
-.gp-1{background:linear-gradient(135deg,#0A3550,#164E6E)}.gp-2{background:linear-gradient(135deg,#12374E,#1A5276)}.gp-3{background:linear-gradient(135deg,#0E3350,#1C5570)}.gp-4{background:linear-gradient(135deg,#0C2F48,#194A65)}.gp-5{background:linear-gradient(135deg,#102A42,#1B4660)}.gp-6{background:linear-gradient(135deg,#0A3550,#154060)}.gp-7{background:linear-gradient(135deg,#0E2A40,#1A3858)}.gp-8{background:linear-gradient(135deg,#102838,#1C3C54)}.gp-9{background:linear-gradient(135deg,#0C2640,#183650)}
+.gal-item:hover .gal-overlay{opacity:1}.gal-item:hover .gal-zoom{transform:scale(1)}
 .gal-note{font-size:13px;color:var(--gray-text);background:var(--gray-light);border-radius:8px;padding:10px 20px;display:inline-block}
 @media(max-width:991px){.gal-grid{grid-template-columns:repeat(3,1fr)}.gal-item--featured{grid-column:span 2;grid-row:span 1;aspect-ratio:16/9}}
 @media(max-width:767px){.gal-grid{grid-template-columns:repeat(2,1fr)}.gal-item--featured{grid-column:span 2}}
 @media(max-width:480px){.gal-grid{grid-template-columns:1fr;gap:12px}.gal-item--featured{grid-column:span 1;aspect-ratio:16/10}.gal-item{aspect-ratio:16/10}}
 
-/* KEUNGGULAN */
 .unggulan-card{background:#fff;border-radius:14px;padding:26px 20px;text-align:center;border:1px solid var(--gray-mid);height:100%;transition:all var(--tr)}
 .unggulan-card:hover{border-color:var(--blue);box-shadow:var(--ss);transform:translateY(-3px)}
 .unggulan-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 14px}
-.unggulan-icon--blue{background:rgba(0,159,227,.1);color:var(--blue)}
-.unggulan-icon--red{background:rgba(229,57,53,.1);color:var(--red)}
+.unggulan-icon--blue{background:rgba(0,159,227,.1);color:var(--blue)}.unggulan-icon--red{background:rgba(229,57,53,.1);color:var(--red)}
 .unggulan-title{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--blue-dark);margin-bottom:8px}
 .unggulan-desc{font-size:12px;color:var(--gray-text);line-height:1.7;margin:0}
 
-/* LOKASI */
 .lokasi-info-list{display:flex;flex-direction:column;gap:16px;margin-top:4px}
 .lokasi-info-item{display:flex;align-items:flex-start;gap:14px}
 .lokasi-info-icon{width:40px;height:40px;flex-shrink:0;border-radius:10px;background:rgba(0,159,227,.1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:16px}
 .lokasi-info-label{font-size:11px;color:var(--gray-text);font-family:var(--fh);font-weight:500;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
 .lokasi-info-val{font-size:14px;font-weight:600;color:var(--blue-dark);font-family:var(--fh)}
-.map-wrapper{position:relative}
-.map-wrapper iframe{box-shadow:var(--sm)}
+.map-wrapper{position:relative}.map-wrapper iframe{box-shadow:var(--sm)}
 .map-open-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:600;color:var(--blue);font-family:var(--fh);transition:color var(--tr)}
 .map-open-btn:hover{color:var(--red)}
 
-/* CTA */
 .cta-section{background:var(--blue-dark);padding:80px 0;position:relative;overflow:hidden}
 .cta-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 40px)}
 .cta-contact-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
@@ -566,11 +259,10 @@ img{max-width:100%;display:block}
 .cta-contact-card:hover{background:rgba(255,255,255,.11)}
 .cta-contact-icon{font-size:24px;color:var(--blue)}
 .cta-contact-label{font-size:11px;color:rgba(255,255,255,.5);margin-bottom:2px;font-family:var(--fh);font-weight:500}
-.cta-contact-val{font-size:15px;font-weight:700;color:#fff;font-family:var(--fh)}
-.btn-cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:15px;padding:16px 36px;border-radius:10px;transition:all var(--tr);border:2px solid var(--red)}
+.cta-contact-val{font-size:14px;font-weight:700;color:#fff;font-family:var(--fh)}
+.btn-cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:15px;padding:16px 36px;border-radius:10px;transition:all var(--tr);border:2px solid var(--red);cursor:pointer}
 .btn-cta-main:hover{background:var(--red-dark);border-color:var(--red-dark);color:#fff;transform:translateY(-2px);box-shadow:0 8px 28px rgba(229,57,53,.4)}
 
-/* FOOTER */
 .site-footer{background:#050F1C;padding:56px 0 0;color:rgba(255,255,255,.6)}
 .footer-logo-img{width:42px;height:42px;object-fit:contain}
 .footer-brand-name{font-family:var(--fh);font-weight:700;font-size:14px;color:#fff}
@@ -587,7 +279,6 @@ img{max-width:100%;display:block}
 .footer-bottom strong{color:rgba(255,255,255,.6)}
 .footer-bottom-right{color:rgba(0,159,227,.5)!important}
 
-/* FLOATING */
 .back-to-top{position:fixed;right:24px;bottom:32px;z-index:9999;width:46px;height:46px;border-radius:12px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;opacity:0;pointer-events:none;transition:all var(--tr);box-shadow:0 4px 16px rgba(0,159,227,.4)}
 .back-to-top.visible{opacity:1;pointer-events:auto}
 .back-to-top:hover{background:var(--red);transform:translateY(-3px)}
@@ -600,30 +291,44 @@ img{max-width:100%;display:block}
 .wa-float:hover .wa-float-icon{transform:scale(1.06);background:#20BD5A;box-shadow:0 6px 28px rgba(37,211,102,.6)}
 .wa-float:hover .wa-float-tooltip{opacity:1;transform:translateX(0)}
 
-/* GLOBAL RESPONSIVE */
+/* WA POPUP */
+.wa-popup-overlay{position:fixed;inset:0;background:rgba(5,15,28,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.wa-popup-overlay.is-open{opacity:1;pointer-events:auto}
+.wa-popup-card{background:#fff;border-radius:20px;width:100%;max-width:380px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);transform:scale(.88) translateY(24px);transition:transform .35s cubic-bezier(.22,.61,.36,1);position:relative}
+.wa-popup-overlay.is-open .wa-popup-card{transform:scale(1) translateY(0)}
+.wa-popup-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:rgba(255,255,255,.8);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr);z-index:2;backdrop-filter:blur(4px)}
+.wa-popup-close:hover{background:rgba(255,255,255,.3);color:#fff}
+.wa-popup-header{background:linear-gradient(135deg,#075E54 0%,#128C7E 100%);padding:30px 24px 24px;text-align:center;position:relative}
+.wa-popup-header::after{content:'';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);width:24px;height:12px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%)}
+.wa-popup-header-icon{width:56px;height:56px;border-radius:50%;background:rgba(37,211,102,.2);border:2px solid rgba(37,211,102,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#25D366;filter:drop-shadow(0 4px 12px rgba(37,211,102,.35))}
+.wa-popup-header h4{font-family:var(--fh);font-size:18px;font-weight:800;color:#fff;margin:0 0 4px}
+.wa-popup-header p{font-size:13px;color:rgba(255,255,255,.65);margin:0;line-height:1.5}
+.wa-popup-options{padding:20px 16px 16px}
+.wa-popup-option{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:#fff;border:1.5px solid var(--gray-mid);transition:all var(--tr);margin-bottom:10px;color:inherit;text-decoration:none;cursor:pointer;position:relative;overflow:hidden}
+.wa-popup-option:last-child{margin-bottom:0}
+.wa-popup-option:hover{border-color:#25D366;transform:translateX(4px);box-shadow:0 4px 20px rgba(37,211,102,.18)}
+.wa-popup-option-icon{width:46px;height:46px;border-radius:12px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);display:flex;align-items:center;justify-content:center;font-size:22px;color:#25D366;flex-shrink:0}
+.wa-popup-option-info{flex:1;display:flex;flex-direction:column;gap:2px}
+.wa-popup-option-label{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--blue-dark)}
+.wa-popup-option-number{font-size:13px;color:var(--gray-text);font-family:var(--fb)}
+.wa-popup-option-arrow{color:var(--gray-mid);font-size:12px;transition:color var(--tr),transform var(--tr)}
+.wa-popup-option:hover .wa-popup-option-arrow{color:#25D366;transform:translateX(3px)}
+.wa-popup-footer{text-align:center;padding:0 16px 16px;font-size:11px;color:var(--gray-text);font-family:var(--fh)}
+
 @media(max-width:767px){
-    .section-pad{padding:56px 0}
-    .legalitas-section,.visi-misi-section{padding:56px 0}
-    .hero-section{min-height:480px}
-    .hero-title{font-size:clamp(20px,5vw,28px)}
-    .hero-desc{font-size:13px}
-    .hero-arrow{width:42px;height:42px}
-    .hero-arrow--left{left:12px}.hero-arrow--right{right:12px}
-    .hero-scroll-indicator{display:none}
-    .hero-actions{flex-direction:column}
-    .btn-hero-primary,.btn-hero-outline{justify-content:center;width:100%;max-width:280px}
-    .cta-contact-row{flex-direction:column;align-items:stretch;padding:0 16px}
-    .cta-contact-card{width:100%}
-    .btn-cta-main{width:100%;justify-content:center}
-    .wa-float{left:16px;bottom:24px}
-    .wa-float-icon{width:48px;height:48px;font-size:22px}
-    .back-to-top{right:16px;bottom:24px}
-    .footer-bottom .d-flex{flex-direction:column;text-align:center;gap:6px}
+.section-pad{padding:56px 0}.legalitas-section,.visi-misi-section{padding:56px 0}
+.hero-section{min-height:480px}.hero-title{font-size:clamp(20px,5vw,28px)}.hero-desc{font-size:13px}
+.hero-arrow{width:42px;height:42px}.hero-arrow--left{left:12px}.hero-arrow--right{right:12px}
+.hero-scroll-indicator{display:none}.hero-actions{flex-direction:column}
+.btn-hero-primary,.btn-hero-outline{justify-content:center;width:100%;max-width:280px}
+.cta-contact-row{flex-direction:column;align-items:stretch;padding:0 16px}.cta-contact-card{width:100%}
+.btn-cta-main{width:100%;justify-content:center}
+.wa-float{left:16px;bottom:24px}.wa-float-icon{width:48px;height:48px;font-size:22px}
+.back-to-top{right:16px;bottom:24px}
+.footer-bottom .d-flex{flex-direction:column;text-align:center;gap:6px}
+.wa-popup-card{max-width:340px}
 }
-@media(max-width:480px){
-    .hstat-sep{display:none}
-    .section-pad{padding:44px 0}
-}
+@media(max-width:480px){.hstat-sep{display:none}.section-pad{padding:44px 0}}
 </style>
 </head>
 <body>
@@ -638,15 +343,15 @@ img{max-width:100%;display:block}
             </a>
             <button class="nav-toggler d-lg-none" id="navToggler" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
             <div class="nav-menu" id="navMenu">
-                <a href="#hero"      class="nav-link-item active">Beranda</a>
-                <a href="tentang.html"  class="nav-link-item">Tentang</a>
+                <a href="#hero" class="nav-link-item active">Beranda</a>
+                <a href="tentang.html" class="nav-link-item">Tentang</a>
                 <a href="legalitas.html" class="nav-link-item">Legalitas</a>
-                <a href="visi.html"     class="nav-link-item">Visi &amp; Misi</a>
-                <a href="produk.html"   class="nav-link-item">Produk</a>
-                <a href="galeri.html"   class="nav-link-item">Galeri</a>
+                <a href="visi.html" class="nav-link-item">Visi &amp; Misi</a>
+                <a href="produk.html" class="nav-link-item">Produk</a>
+                <a href="galeri.html" class="nav-link-item">Galeri</a>
                 <a href="keunggulan.html" class="nav-link-item">Keunggulan</a>
-                <a href="lokasi.html"   class="nav-link-item">Lokasi</a>
-                <a href="kontak.html"   class="btn-nav-cta"><i class="fab fa-whatsapp"></i> Hubungi</a>
+                <a href="lokasi.html" class="nav-link-item">Lokasi</a>
+                <a href="kontak.html" class="btn-nav-cta"><i class="fab fa-whatsapp"></i> Hubungi</a>
             </div>
         </div>
     </div>
@@ -666,7 +371,7 @@ img{max-width:100%;display:block}
         <div class="container h-100">
             <div class="hero-content">
                 <div class="hero-text-item is-active" data-slide="0">
-                    <div class="hero-badge"><i class="fas fa-certificate"></i> Berizin Resmi IUP · Lampung Timur</div>
+                    <div class="hero-badge"><i class="fas fa-certificate"></i> Berizin Resmi IUP</div>
                     <h1 class="hero-title">Solusi Pasir Kuarsa<br><span class="text-accent">Berkualitas</span> untuk<br>Kebutuhan Industri</h1>
                     <p class="hero-desc"><strong>PT Nanda Jaya Silika</strong> hadir sebagai perusahaan tambang pasir kuarsa berizin resmi di Lampung Timur. 8 ukuran produk siap memenuhi kebutuhan konstruksi dan industri.</p>
                     <div class="hero-actions">
@@ -688,8 +393,8 @@ img{max-width:100%;display:block}
                     <h1 class="hero-title">Area Tambang<br><span class="text-accent">25,75 Hektar</span><br>di Lampung Timur</h1>
                     <p class="hero-desc">Lahan konsesi luas dengan akses strategis, memungkinkan produksi pasir kuarsa skala besar untuk memenuhi kebutuhan proyek nasional.</p>
                     <div class="hero-actions">
-                        <a href="#tentang" class="btn-hero-primary"><i class="fas fa-info-circle"></i> Tentang Kami</a>
-                        <a href="#lokasi"  class="btn-hero-outline">Lihat Lokasi <i class="fas fa-map-marker-alt"></i></a>
+                        <a href="tentang.html" class="btn-hero-primary"><i class="fas fa-info-circle"></i> Tentang Kami</a>
+                        <a href="lokasi.html" class="btn-hero-outline">Lihat Lokasi <i class="fas fa-map-marker-alt"></i></a>
                     </div>
                     <div class="hero-stats">
                         <div class="hstat"><div class="hstat-num">25,75</div><div class="hstat-unit"> Ha</div><div class="hstat-label">Total Luas</div></div>
@@ -704,11 +409,11 @@ img{max-width:100%;display:block}
                     <h1 class="hero-title">Pasir Kuarsa<br><span class="text-accent">8 Ukuran Up</span><br>Siap Suplai</h1>
                     <p class="hero-desc">Dari 2–4 up hingga 30 up — kandungan SiO₂ tinggi, cocok untuk manufaktur kaca, keramik, fiberglass, konstruksi, dan infrastruktur.</p>
                     <div class="hero-actions">
-                        <a href="#produk" class="btn-hero-primary"><i class="fas fa-box-open"></i> Lihat 8 Produk</a>
-                        <a href="#kontak" class="btn-hero-outline">Tanya Spesifikasi <i class="fas fa-arrow-right"></i></a>
+                        <a href="produk.html" class="btn-hero-primary"><i class="fas fa-box-open"></i> Lihat 8 Produk</a>
+                        <a href="kontak.html" class="btn-hero-outline">Tanya Spesifikasi <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="hero-stats">
-                        <div class="hstat"><div class="hstat-num">SiO₂</div><div class="hstat-label">Kandungan Tinggi</div></div>
+                        <div class="hstat"><div class="hstat-num">SiO2</div><div class="hstat-label">Kandungan Tinggi</div></div>
                         <div class="hstat-sep"></div>
                         <div class="hstat"><div class="hstat-num">8</div><div class="hstat-label">Grade Ukuran</div></div>
                         <div class="hstat-sep"></div>
@@ -720,7 +425,7 @@ img{max-width:100%;display:block}
                     <h1 class="hero-title">Pengiriman<br><span class="text-accent">Tepat Waktu</span><br>ke Seluruh Tujuan</h1>
                     <p class="hero-desc">Armada pengiriman terpadu memastikan material pasir kuarsa tiba di lokasi proyek Anda sesuai jadwal yang disepakati.</p>
                     <div class="hero-actions">
-                        <a href="#kontak"        class="btn-hero-primary"><i class="fab fa-whatsapp"></i> Konsultasi</a>
+                        <a href="kontak.html" class="btn-hero-primary"><i class="fab fa-whatsapp"></i> Konsultasi</a>
                         <a href="keunggulan.html" class="btn-hero-outline">Keunggulan Kami <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="hero-stats">
@@ -737,7 +442,7 @@ img{max-width:100%;display:block}
                     <p class="hero-desc">Seluruh dokumen perizinan lengkap dan terverifikasi — IUP resmi, status Clear &amp; Clean. Jaminan keamanan untuk setiap mitra bisnis.</p>
                     <div class="hero-actions">
                         <a href="legalitas.html" class="btn-hero-primary"><i class="fas fa-file-contract"></i> Lihat Legalitas</a>
-                        <a href="#kontak"         class="btn-hero-outline">Mulai Kerjasama <i class="fas fa-handshake"></i></a>
+                        <a href="kontak.html" class="btn-hero-outline">Mulai Kerjasama <i class="fas fa-handshake"></i></a>
                     </div>
                     <div class="hero-stats">
                         <div class="hstat"><div class="hstat-num">IUP</div><div class="hstat-label">Izin Resmi</div></div>
@@ -750,7 +455,7 @@ img{max-width:100%;display:block}
             </div>
         </div>
     </div>
-    <button class="hero-arrow hero-arrow--left"  id="heroArrowLeft"  aria-label="Sebelumnya"><i class="fas fa-chevron-left"></i></button>
+    <button class="hero-arrow hero-arrow--left" id="heroArrowLeft" aria-label="Sebelumnya"><i class="fas fa-chevron-left"></i></button>
     <button class="hero-arrow hero-arrow--right" id="heroArrowRight" aria-label="Berikutnya"><i class="fas fa-chevron-right"></i></button>
     <div class="hero-slide-counter"><span class="hero-counter-current">01</span><span class="hero-counter-sep">/</span><span class="hero-counter-total">05</span></div>
     <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroProgress"></div></div>
@@ -770,12 +475,12 @@ img{max-width:100%;display:block}
         </div>
         <div class="tentang-card njs-fade-up">
             <div class="tentang-card-left">
-                <div class="tentang-logo-ring"><img src="img/pt-njs.png" alt="Logo PT Nanda Jaya Silika" class="tentang-logo"></div>
+                <div class="tentang-logo-ring"><img src="img/pt-njs.png" alt="Logo" class="tentang-logo"></div>
                 <div class="tentang-logo-label">PT Nanda Jaya Silika</div>
                 <div class="tentang-logo-sublabel">Tambang Pasir Kuarsa</div>
             </div>
             <div class="tentang-card-right">
-                <p><strong>PT Nanda Jaya Silika</strong> merupakan perusahaan pertambangan pasir kuarsa yang telah memiliki izin resmi IUP dari pemerintah, beroperasi di Lampung Timur sejak tahun 2023. Kami berkomitmen menghadirkan material berkualitas tinggi dengan proses penambangan yang bertanggung jawab dan ramah lingkungan.</p>
+                <p><strong>PT Nanda Jaya Silika</strong> merupakan perusahaan pertambangan pasir kuarsa yang telah memiliki izin resmi IUP dari pemerintah, beroperasi di Lampung Timur sejak tahun 2023.</p>
                 <p>Dengan lahan konsesi seluas <strong>25,75 hektar</strong> dan status <strong>Clear &amp; Clean (CNC)</strong>, perusahaan kami siap menjadi mitra andal bagi kebutuhan pasir kuarsa untuk industri dan konstruksi di seluruh Indonesia.</p>
                 <div class="tentang-stats-strip">
                     <div class="tentang-stat-box"><i class="fas fa-mountain"></i><div class="tentang-stat-val">25,75 Ha</div><div class="tentang-stat-key">Luas Konsesi</div></div>
@@ -837,9 +542,9 @@ img{max-width:100%;display:block}
                     <div class="vm-card-header"><div class="vm-section-icon vm-section-icon--red"><i class="fas fa-rocket"></i></div><div><div class="vm-section-tag vm-section-tag--red">MISI</div><h3 class="vm-section-heading">Beroperasi dengan Integritas</h3></div></div>
                     <p class="vm-section-text">Mengoperasikan tambang secara <strong>legal, aman, dan ramah lingkungan</strong> — mengutamakan kualitas produk dan kepuasan mitra bisnis.</p>
                     <div class="vm-pillar-list">
-                        <div class="vm-pillar"><div class="vm-pillar-icon vm-pillar-icon--red"><i class="fas fa-check"></i></div><span>Operasional legal sesuai regulasi pemerintah</span></div>
+                        <div class="vm-pillar"><div class="vm-pillar-icon vm-pillar-icon--red"><i class="fas fa-check"></i></div><span>Operasional legal sesuai regulasi</span></div>
                         <div class="vm-pillar"><div class="vm-pillar-icon vm-pillar-icon--red"><i class="fas fa-check"></i></div><span>Proses penambangan ramah lingkungan</span></div>
-                        <div class="vm-pillar"><div class="vm-pillar-icon vm-pillar-icon--red"><i class="fas fa-check"></i></div><span>Kepuasan mitra bisnis sebagai prioritas</span></div>
+                        <div class="vm-pillar"><div class="vm-pillar-icon vm-pillar-icon--red"><i class="fas fa-check"></i></div><span>Kepuasan mitra bisnis prioritas</span></div>
                         <div class="vm-pillar"><div class="vm-pillar-icon vm-pillar-icon--red"><i class="fas fa-check"></i></div><span>Keselamatan kerja sebagai nilai utama</span></div>
                     </div>
                     <div class="vm-quote vm-quote--red"><i class="fas fa-quote-left vm-quote-icon"></i><span>Integritas dalam setiap butir pasir yang kami suplai.</span></div>
@@ -856,216 +561,38 @@ img{max-width:100%;display:block}
     </div>
 </section>
 
-<!-- =============================================
-     PRODUK — 8 Jenis Pasir Kuarsa
-     ============================================= -->
-
+<!-- PRODUK -->
 <section class="section-pad produk-section" id="produk">
     <div class="container">
-
         <div class="text-center mb-4 njs-fade-up">
             <div class="section-badge">Produk &amp; Layanan</div>
             <h2 class="section-title">8 Jenis Pasir Kuarsa</h2>
             <div class="section-rule section-rule--center"></div>
             <p class="section-text mx-auto" style="max-width:520px">Tersedia dari ukuran 30 up hingga 2–4 up — kandungan SiO₂ &gt;97%, diproduksi dari tambang resmi di Lampung Timur.</p>
         </div>
-
         <div class="produk-grade-nav njs-fade-up">
             <span class="grade-pill grade-pill--fine"><i class="fas fa-circle" style="font-size:7px"></i> Super Fine &amp; Fine (30–16 up)</span>
             <span class="grade-pill grade-pill--med"><i class="fas fa-circle" style="font-size:7px"></i> Medium (14–8 up)</span>
             <span class="grade-pill grade-pill--coarse"><i class="fas fa-circle" style="font-size:7px"></i> Coarse (10–4 up)</span>
             <span class="grade-pill grade-pill--xcoarse"><i class="fas fa-circle" style="font-size:7px"></i> Extra Coarse &amp; Aggregate (4–2 up)</span>
         </div>
-
         <div class="produk-grid-8 njs-fade-up">
-
-            <div class="pk-card pk-card--fine">
-                <div class="pk-thumb pk-thumb-1">
-                    <div class="pk-thumb-icon"><i class="fas fa-microscope"></i></div>
-                    <img src="img/30up.png" alt="Pasir Kuarsa 30 up" onerror="this.style.display='none'">
-                    <span class="pk-grade-badge pk-badge--fine">Super Fine</span>
-                    <div class="pk-size-label">30 up</div>
-                </div>
-                <div class="pk-body">
-                    <h4 class="pk-name">Pasir Kuarsa 30 up</h4>
-                    <p class="pk-desc">Ukuran ultra halus untuk aplikasi presisi tinggi — coating industri, elektronik, komposit, dan kaca optik.</p>
-                    <div class="pk-chips">
-                        <span class="pk-chip pk-chip--fine"><i class="fas fa-microchip"></i> Elektronik</span>
-                        <span class="pk-chip pk-chip--fine"><i class="fas fa-paint-brush"></i> Coating</span>
-                        <span class="pk-chip pk-chip--fine"><i class="fas fa-gem"></i> Optik</span>
-                    </div>
-                    <div class="pk-cta">
-                        <a href="produk.html#g1" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/6281296612892" target="_blank" class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pk-card pk-card--fine">
-                <div class="pk-thumb pk-thumb-2">
-                    <div class="pk-thumb-icon"><i class="fas fa-flask"></i></div>
-                    <img src="img/20-30up.png" alt="Pasir Kuarsa 20-30 up" onerror="this.style.display='none'">
-                    <span class="pk-grade-badge pk-badge--fine">Fine</span>
-                    <div class="pk-size-label">20 – 30 up</div>
-                </div>
-                <div class="pk-body">
-                    <h4 class="pk-name">Pasir Kuarsa 20 – 30 up</h4>
-                    <p class="pk-desc">Kelas halus untuk industri kaca, fiberglass E-glass, keramik halus, porselen, dan sandblasting halus.</p>
-                    <div class="pk-chips">
-                        <span class="pk-chip pk-chip--fine"><i class="fas fa-layer-group"></i> Fiberglass</span>
-                        <span class="pk-chip pk-chip--fine"><i class="fas fa-home"></i> Keramik</span>
-                        <span class="pk-chip pk-chip--fine"><i class="fas fa-wind"></i> Sandblast</span>
-                    </div>
-                    <div class="pk-cta">
-                        <a href="produk.html#g1" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/6281296612892" target="_blank" class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pk-card pk-card--med">
-                <div class="pk-thumb pk-thumb-3">
-                    <div class="pk-thumb-icon"><i class="fas fa-gem"></i></div>
-                    <img src="img/16-30up.png" alt="Pasir Kuarsa 16-30 up" onerror="this.style.display='none'">
-                    <span class="pk-grade-badge pk-badge--med">Medium Fine</span>
-                    <div class="pk-size-label">16 – 30 up</div>
-                </div>
-                <div class="pk-body">
-                    <h4 class="pk-name">Pasir Kuarsa 16 – 30 up</h4>
-                    <p class="pk-desc">Untuk foundry cetakan logam, bata ringan AAC, precast concrete, filter air sedang, dan grouting.</p>
-                    <div class="pk-chips">
-                        <span class="pk-chip pk-chip--med"><i class="fas fa-industry"></i> Foundry</span>
-                        <span class="pk-chip pk-chip--med"><i class="fas fa-building"></i> Precast</span>
-                        <span class="pk-chip pk-chip--med"><i class="fas fa-tint"></i> Filter Air</span>
-                    </div>
-                    <div class="pk-cta">
-                        <a href="produk.html#g2" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/6281296612892" target="_blank" class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pk-card pk-card--med">
-                <div class="pk-thumb pk-thumb-4">
-                    <div class="pk-thumb-icon"><i class="fas fa-tint"></i></div>
-                    <img src="img/14-20up.png" alt="Pasir Kuarsa 14-20 up" onerror="this.style.display='none'">
-                    <span class="pk-grade-badge pk-badge--med">Medium</span>
-                    <div class="pk-size-label">14 – 20 up</div>
-                </div>
-                <div class="pk-body">
-                    <h4 class="pk-name">Pasir Kuarsa 14 – 20 up</h4>
-                    <p class="pk-desc">Beton mutu tinggi K-350, paving block, mortar standar, screed lantai, waterproofing, dan precast beton.</p>
-                    <div class="pk-chips">
-                        <span class="pk-chip pk-chip--med"><i class="fas fa-building"></i> Konstruksi</span>
-                        <span class="pk-chip pk-chip--med"><i class="fas fa-road"></i> Paving</span>
-                        <span class="pk-chip pk-chip--med"><i class="fas fa-wind"></i> Sandblast</span>
-                    </div>
-                    <div class="pk-cta">
-                        <a href="produk.html#g2" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/6281296612892" target="_blank" class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pk-card pk-card--coarse">
-                <div class="pk-thumb pk-thumb-5">
-                    <div class="pk-thumb-icon"><i class="fas fa-layer-group"></i></div>
-                    <img src="img/8-14up.png" alt="Pasir Kuarsa 8-14 up" onerror="this.style.display='none'">
-                    <span class="pk-grade-badge pk-badge--coarse">Medium Coarse</span>
-                    <div class="pk-size-label">8 – 14 up</div>
-                </div>
-                <div class="pk-body">
-                    <h4 class="pk-name">Pasir Kuarsa 8 – 14 up</h4>
-                    <p class="pk-desc">Beton ready-mix komersial, beton struktur K-250–K-350, lapisan dasar jalan, sub-base, dan drainase terbuka.</p>
-                    <div class="pk-chips">
-                        <span class="pk-chip pk-chip--coarse"><i class="fas fa-building"></i> Ready-Mix</span>
-                        <span class="pk-chip pk-chip--coarse"><i class="fas fa-road"></i> Jalan</span>
-                        <span class="pk-chip pk-chip--coarse"><i class="fas fa-home"></i> Struktur</span>
-                    </div>
-                    <div class="pk-cta">
-                        <a href="produk.html#g3" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/6281296612892" target="_blank" class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pk-card pk-card--coarse">
-                <div class="pk-thumb pk-thumb-6">
-                    <div class="pk-thumb-icon"><i class="fas fa-cubes"></i></div>
-                    <img src="img/5-10up.png" alt="Pasir Kuarsa 5-10 up" onerror="this.style.display='none'">
-                    <span class="pk-grade-badge pk-badge--coarse">Coarse</span>
-                    <div class="pk-size-label">5 – 10 up</div>
-                </div>
-                <div class="pk-body">
-                    <h4 class="pk-name">Pasir Kuarsa 5 – 10 up</h4>
-                    <p class="pk-desc">Beton struktur berat, pondasi kolom dan balok, jalan raya, sub-base jalan tol, dan reklamasi.</p>
-                    <div class="pk-chips">
-                        <span class="pk-chip pk-chip--coarse"><i class="fas fa-road"></i> Jalan Tol</span>
-                        <span class="pk-chip pk-chip--coarse"><i class="fas fa-home"></i> Pondasi</span>
-                        <span class="pk-chip pk-chip--coarse"><i class="fas fa-mountain"></i> Reklamasi</span>
-                    </div>
-                    <div class="pk-cta">
-                        <a href="produk.html#g3" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/6281296612892" target="_blank" class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pk-card pk-card--xcoarse">
-                <div class="pk-thumb pk-thumb-7">
-                    <div class="pk-thumb-icon"><i class="fas fa-road"></i></div>
-                    <img src="img/4-8up.png" alt="Pasir Kuarsa 4-8 up" onerror="this.style.display='none'">
-                    <span class="pk-grade-badge pk-badge--xcoarse">Extra Coarse</span>
-                    <div class="pk-size-label">4 – 8 up</div>
-                </div>
-                <div class="pk-body">
-                    <h4 class="pk-name">Pasir Kuarsa 4 – 8 up</h4>
-                    <p class="pk-desc">Campuran hotmix aspal AC-WC, beton masif bendungan, dermaga, tiang pancang, dan infrastruktur nasional.</p>
-                    <div class="pk-chips">
-                        <span class="pk-chip pk-chip--xcoarse"><i class="fas fa-road"></i> Hotmix</span>
-                        <span class="pk-chip pk-chip--xcoarse"><i class="fas fa-anchor"></i> Dermaga</span>
-                        <span class="pk-chip pk-chip--xcoarse"><i class="fas fa-water"></i> Bendungan</span>
-                    </div>
-                    <div class="pk-cta">
-                        <a href="produk.html#g4" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/6281296612892" target="_blank" class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pk-card pk-card--xcoarse">
-                <div class="pk-thumb pk-thumb-8">
-                    <div class="pk-thumb-icon"><i class="fas fa-mountain"></i></div>
-                    <img src="img/2-4up.png" alt="Pasir Kuarsa 2-4 up" onerror="this.style.display='none'">
-                    <span class="pk-grade-badge pk-badge--xcoarse">Aggregate</span>
-                    <div class="pk-size-label">2 – 4 up</div>
-                </div>
-                <div class="pk-body">
-                    <h4 class="pk-name">Pasir Kuarsa 2 – 4 up</h4>
-                    <p class="pk-desc">Agregat kasar untuk pengurukan, landfill, stabilisasi area, drainase dalam, dan landscaping skala besar.</p>
-                    <div class="pk-chips">
-                        <span class="pk-chip pk-chip--xcoarse"><i class="fas fa-truck-loading"></i> Pengurukan</span>
-                        <span class="pk-chip pk-chip--xcoarse"><i class="fas fa-water"></i> Landfill</span>
-                        <span class="pk-chip pk-chip--xcoarse"><i class="fas fa-seedling"></i> Stabilisasi</span>
-                    </div>
-                    <div class="pk-cta">
-                        <a href="produk.html#g4" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/6281296612892" target="_blank" class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a>
-                    </div>
-                </div>
-            </div>
-
-        </div><div class="produk-cta-bar njs-fade-up">
-            <div class="produk-cta-bar-text">
-                <h4>Butuh Spesifikasi Lebih Lengkap?</h4>
-                <p>Lihat katalog detail 8 ukuran lengkap dengan tabel spesifikasi teknis dan aplikasi industri.</p>
-            </div>
+            <div class="pk-card pk-card--fine"><div class="pk-thumb pk-thumb-1"><div class="pk-thumb-icon"><i class="fas fa-microscope"></i></div><img src="img/30up.png" alt="30 up" onerror="this.style.display='none'"><span class="pk-grade-badge pk-badge--fine">Super Fine</span><div class="pk-size-label">30 up</div></div><div class="pk-body"><h4 class="pk-name">Pasir Kuarsa 30 up</h4><p class="pk-desc">Ukuran ultra halus untuk coating industri, elektronik, komposit, dan kaca optik.</p><div class="pk-chips"><span class="pk-chip pk-chip--fine"><i class="fas fa-microchip"></i> Elektronik</span><span class="pk-chip pk-chip--fine"><i class="fas fa-paint-brush"></i> Coating</span></div><div class="pk-cta"><a href="#produk" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a><a href="#" data-wa-trigger data-wa-msg="Halo, saya tertarik dengan Pasir Kuarsa 30 up. Mohon informasi lebih lanjut." class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a></div></div></div>
+            <div class="pk-card pk-card--fine"><div class="pk-thumb pk-thumb-2"><div class="pk-thumb-icon"><i class="fas fa-flask"></i></div><img src="img/20-30up.png" alt="20-30 up" onerror="this.style.display='none'"><span class="pk-grade-badge pk-badge--fine">Fine</span><div class="pk-size-label">20–30 up</div></div><div class="pk-body"><h4 class="pk-name">Pasir Kuarsa 20–30 up</h4><p class="pk-desc">Kelas halus untuk industri kaca, fiberglass, keramik halus, dan sandblasting halus.</p><div class="pk-chips"><span class="pk-chip pk-chip--fine"><i class="fas fa-layer-group"></i> Fiberglass</span><span class="pk-chip pk-chip--fine"><i class="fas fa-home"></i> Keramik</span></div><div class="pk-cta"><a href="#produk" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a><a href="#" data-wa-trigger data-wa-msg="Halo, saya tertarik dengan Pasir Kuarsa 20-30 up. Mohon informasi lebih lanjut." class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a></div></div></div>
+            <div class="pk-card pk-card--med"><div class="pk-thumb pk-thumb-3"><div class="pk-thumb-icon"><i class="fas fa-gem"></i></div><img src="img/16-30up.png" alt="16-30 up" onerror="this.style.display='none'"><span class="pk-grade-badge pk-badge--med">Medium Fine</span><div class="pk-size-label">16–30 up</div></div><div class="pk-body"><h4 class="pk-name">Pasir Kuarsa 16–30 up</h4><p class="pk-desc">Foundry cetakan logam, bata ringan AAC, precast concrete, filter air sedang.</p><div class="pk-chips"><span class="pk-chip pk-chip--med"><i class="fas fa-industry"></i> Foundry</span><span class="pk-chip pk-chip--med"><i class="fas fa-building"></i> Precast</span></div><div class="pk-cta"><a href="#produk" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a><a href="#" data-wa-trigger data-wa-msg="Halo, saya tertarik dengan Pasir Kuarsa 16-30 up. Mohon informasi lebih lanjut." class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a></div></div></div>
+            <div class="pk-card pk-card--med"><div class="pk-thumb pk-thumb-4"><div class="pk-thumb-icon"><i class="fas fa-tint"></i></div><img src="img/14-20up.png" alt="14-20 up" onerror="this.style.display='none'"><span class="pk-grade-badge pk-badge--med">Medium</span><div class="pk-size-label">14–20 up</div></div><div class="pk-body"><h4 class="pk-name">Pasir Kuarsa 14–20 up</h4><p class="pk-desc">Beton mutu tinggi K-350, paving block, mortar standar, screed lantai.</p><div class="pk-chips"><span class="pk-chip pk-chip--med"><i class="fas fa-building"></i> Konstruksi</span><span class="pk-chip pk-chip--med"><i class="fas fa-road"></i> Paving</span></div><div class="pk-cta"><a href="#produk" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a><a href="#" data-wa-trigger data-wa-msg="Halo, saya tertarik dengan Pasir Kuarsa 14-20 up. Mohon informasi lebih lanjut." class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a></div></div></div>
+            <div class="pk-card pk-card--coarse"><div class="pk-thumb pk-thumb-5"><div class="pk-thumb-icon"><i class="fas fa-layer-group"></i></div><img src="img/8-14up.png" alt="8-14 up" onerror="this.style.display='none'"><span class="pk-grade-badge pk-badge--coarse">Med Coarse</span><div class="pk-size-label">8–14 up</div></div><div class="pk-body"><h4 class="pk-name">Pasir Kuarsa 8–14 up</h4><p class="pk-desc">Beton ready-mix, beton struktur K-250–K-350, lapisan dasar jalan, sub-base.</p><div class="pk-chips"><span class="pk-chip pk-chip--coarse"><i class="fas fa-building"></i> Ready-Mix</span><span class="pk-chip pk-chip--coarse"><i class="fas fa-road"></i> Jalan</span></div><div class="pk-cta"><a href="#produk" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a><a href="#" data-wa-trigger data-wa-msg="Halo, saya tertarik dengan Pasir Kuarsa 8-14 up. Mohon informasi lebih lanjut." class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a></div></div></div>
+            <div class="pk-card pk-card--coarse"><div class="pk-thumb pk-thumb-6"><div class="pk-thumb-icon"><i class="fas fa-cubes"></i></div><img src="img/5-10up.png" alt="5-10 up" onerror="this.style.display='none'"><span class="pk-grade-badge pk-badge--coarse">Coarse</span><div class="pk-size-label">5–10 up</div></div><div class="pk-body"><h4 class="pk-name">Pasir Kuarsa 5–10 up</h4><p class="pk-desc">Beton struktur berat, pondasi kolom dan balok, jalan raya, sub-base jalan tol.</p><div class="pk-chips"><span class="pk-chip pk-chip--coarse"><i class="fas fa-road"></i> Jalan Tol</span><span class="pk-chip pk-chip--coarse"><i class="fas fa-home"></i> Pondasi</span></div><div class="pk-cta"><a href="#produk" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a><a href="#" data-wa-trigger data-wa-msg="Halo, saya tertarik dengan Pasir Kuarsa 5-10 up. Mohon informasi lebih lanjut." class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a></div></div></div>
+            <div class="pk-card pk-card--xcoarse"><div class="pk-thumb pk-thumb-7"><div class="pk-thumb-icon"><i class="fas fa-road"></i></div><img src="img/4-8up.png" alt="4-8 up" onerror="this.style.display='none'"><span class="pk-grade-badge pk-badge--xcoarse">X-Coarse</span><div class="pk-size-label">4–8 up</div></div><div class="pk-body"><h4 class="pk-name">Pasir Kuarsa 4–8 up</h4><p class="pk-desc">Hotmix aspal AC-WC, beton masif bendungan, dermaga, tiang pancang.</p><div class="pk-chips"><span class="pk-chip pk-chip--xcoarse"><i class="fas fa-road"></i> Hotmix</span><span class="pk-chip pk-chip--xcoarse"><i class="fas fa-anchor"></i> Dermaga</span></div><div class="pk-cta"><a href="#produk" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a><a href="#" data-wa-trigger data-wa-msg="Halo, saya tertarik dengan Pasir Kuarsa 4-8 up. Mohon informasi lebih lanjut." class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a></div></div></div>
+            <div class="pk-card pk-card--xcoarse"><div class="pk-thumb pk-thumb-8"><div class="pk-thumb-icon"><i class="fas fa-mountain"></i></div><img src="img/2-4up.png" alt="2-4 up" onerror="this.style.display='none'"><span class="pk-grade-badge pk-badge--xcoarse">Aggregate</span><div class="pk-size-label">2–4 up</div></div><div class="pk-body"><h4 class="pk-name">Pasir Kuarsa 2–4 up</h4><p class="pk-desc">Agregat kasar untuk pengurukan, landfill, stabilisasi area, drainase dalam.</p><div class="pk-chips"><span class="pk-chip pk-chip--xcoarse"><i class="fas fa-truck-loading"></i> Pengurukan</span><span class="pk-chip pk-chip--xcoarse"><i class="fas fa-water"></i> Landfill</span></div><div class="pk-cta"><a href="#produk" class="pk-cta-link">Detail <i class="fas fa-arrow-right"></i></a><a href="#" data-wa-trigger data-wa-msg="Halo, saya tertarik dengan Pasir Kuarsa 2-4 up. Mohon informasi lebih lanjut." class="pk-wa-btn"><i class="fab fa-whatsapp"></i> Tanya</a></div></div></div>
+        </div>
+        <div class="produk-cta-bar njs-fade-up">
+            <div class="produk-cta-bar-text"><h4>Butuh Spesifikasi Lebih Lengkap?</h4><p>Lihat katalog detail 8 ukuran lengkap dengan tabel spesifikasi teknis.</p></div>
             <div class="produk-cta-bar-actions">
-                <a href="produk.html" class="btn-pk-catalog"><i class="fas fa-box-open"></i> Lihat Katalog Lengkap</a>
-                <a href="https://wa.me/6281296612892" target="_blank" class="btn-pk-wa"><i class="fab fa-whatsapp"></i> Konsultasi Sekarang</a>
+                <a href="#produk" class="btn-pk-catalog"><i class="fas fa-box-open"></i> Lihat Katalog</a>
+                <a href="#" data-wa-trigger class="btn-pk-wa"><i class="fab fa-whatsapp"></i> Konsultasi Sekarang</a>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -1076,49 +603,19 @@ img{max-width:100%;display:block}
             <div class="section-badge">Dokumentasi</div>
             <h2 class="section-title">Galeri Tambang &amp; Produk</h2>
             <div class="section-rule section-rule--center"></div>
-            <p class="section-text mx-auto" style="max-width:480px">Dokumentasi visual area tambang, proses produksi, material, dan armada pengiriman.</p>
         </div>
         <div class="gal-grid njs-fade-up">
-            <div class="gal-item gal-item--featured">
-                <img src="img/produk4.jpeg" alt="Area Tambang Utama" class="gal-img" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.18));">
-                <div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Area Tambang Utama</h4><p>Pemandangan keseluruhan area 25,75 Ha</p></div>
-            </div>
-            <div class="gal-item">
-                <img src="img/produk1.jpeg" alt="Proses Crushing" class="gal-img" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-                <div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Proses Crushing</h4><p>Pemecahan material kuarsa</p></div>
-            </div>
-            <div class="gal-item">
-                <img src="img/produk2.jpeg" alt="Pasir Kuarsa Mentah" class="gal-img" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-                <div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Pasir Kuarsa Mentah</h4><p>Material hasil tambang</p></div>
-            </div>
-            <div class="gal-item">
-                <img src="img/produk3.jpeg" alt="Batas Konsesi" class="gal-img" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-                <div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Batas Konsesi</h4><p>Patok batas IUP resmi</p></div>
-            </div>
-            <div class="gal-item">
-                <img src="img/produk4.jpeg" alt="Armada Dump Truck" class="gal-img" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-                <div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Armada Dump Truck</h4><p>Kendaraan pengiriman</p></div>
-            </div>
-            <div class="gal-item">
-                <img src="img/produk5.jpeg" alt="Proses Screening" class="gal-img" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-                <div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Proses Screening</h4><p>Ayakan sesuai ukuran mesh</p></div>
-            </div>
-            <div class="gal-item">
-                <img src="img/produk6.jpeg" alt="Pasir Siap Kirim" class="gal-img" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-                <div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Pasir Siap Kirim</h4><p>Material sudah melewati QC</p></div>
-            </div>
-            <div class="gal-item">
-                <img src="img/produk5.jpeg" alt="Proses Screening" class="gal-img" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-                <div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Proses Screening</h4><p>Ayakan sesuai ukuran mesh</p></div>
-            </div>
-            <div class="gal-item">
-                <img src="img/produk6.jpeg" alt="Pasir Siap Kirim" class="gal-img" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) contrast(1.1) drop-shadow(0 6px 24px rgba(10,44,78,0.14));">
-                <div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Pasir Siap Kirim</h4><p>Material sudah melewati QC</p></div>
-            </div>
+            <div class="gal-item gal-item--featured"><img src="img/produk4.jpeg" alt="Area Tambang" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Area Tambang Utama</h4><p>Pemandangan keseluruhan 25,75 Ha</p></div></div>
+            <div class="gal-item"><img src="img/produk1.jpeg" alt="Crushing" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Proses Crushing</h4><p>Pemecahan material kuarsa</p></div></div>
+            <div class="gal-item"><img src="img/produk2.jpeg" alt="Mentah" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Pasir Kuarsa Mentah</h4><p>Material hasil tambang</p></div></div>
+            <div class="gal-item"><img src="img/produk3.jpeg" alt="Konsesi" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Batas Konsesi</h4><p>Patok batas IUP resmi</p></div></div>
+            <div class="gal-item"><img src="img/produk4.jpeg" alt="Dump Truck" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Armada Dump Truck</h4><p>Kendaraan pengiriman</p></div></div>
+            <div class="gal-item"><img src="img/produk5.jpeg" alt="Screening" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Proses Screening</h4><p>Ayakan sesuai ukuran mesh</p></div></div>
+            <div class="gal-item"><img src="img/produk6.jpeg" alt="Siap Kirim" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Pasir Siap Kirim</h4><p>Material melewati QC</p></div></div>
+            <div class="gal-item"><img src="img/produk5.jpeg" alt="Screening 2" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Proses Screening</h4><p>Ayakan sesuai ukuran mesh</p></div></div>
+            <div class="gal-item"><img src="img/produk6.jpeg" alt="Siap Kirim 2" style="width:100%;height:100%;object-fit:cover;filter:brightness(.7) contrast(1.1)"><div class="gal-overlay"><div class="gal-zoom"><i class="fas fa-search-plus"></i></div><h4>Pasir Siap Kirim</h4><p>Material melewati QC</p></div></div>
         </div>
-        <div class="text-center mt-4">
-            <p class="gal-note"><i class="fas fa-info-circle"></i> Foto aktual akan ditampilkan. Hubungi kami untuk dokumentasi lengkap.</p>
-        </div>
+        <div class="text-center mt-4"><p class="gal-note"><i class="fas fa-info-circle"></i> Foto aktual akan ditampilkan. Hubungi kami untuk dokumentasi lengkap.</p></div>
     </div>
 </section>
 
@@ -1149,14 +646,14 @@ img{max-width:100%;display:block}
                 <div class="section-rule"></div>
                 <div class="lokasi-info-list">
                     <div class="lokasi-info-item"><div class="lokasi-info-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="lokasi-info-label">Alamat Tambang</div><div class="lokasi-info-val">Lampung Timur, Provinsi Lampung, Sumatera</div></div></div>
-                    <div class="lokasi-info-item"><div class="lokasi-info-icon"><i class="fab fa-whatsapp"></i></div><div><div class="lokasi-info-label">WhatsApp / Telepon</div><div class="lokasi-info-val">+62 812-9661-2892</div></div></div>
+                    <div class="lokasi-info-item"><div class="lokasi-info-icon"><i class="fab fa-whatsapp"></i></div><div><div class="lokasi-info-label">WhatsApp / Telepon</div><div class="lokasi-info-val">+62 812-9661-2892<br>+62 813-6721-3538</div></div></div>
                     <div class="lokasi-info-item"><div class="lokasi-info-icon"><i class="far fa-envelope"></i></div><div><div class="lokasi-info-label">Email</div><div class="lokasi-info-val">silikanandajaya@gmail.com</div></div></div>
                     <div class="lokasi-info-item"><div class="lokasi-info-icon"><i class="far fa-clock"></i></div><div><div class="lokasi-info-label">Jam Operasional</div><div class="lokasi-info-val">Senin – Sabtu, 08.00 – 17.00 WIB</div></div></div>
                 </div>
             </div>
             <div class="col-lg-7 njs-slide-left">
                 <div class="map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.65908346498!2d105.60131!3d-5.11835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40db98c2c5d3e9%3A0x12345abcde!2sLampung+Timur!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" width="100%" height="340" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.65908346498!2d105.60131!3d-5.11835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40db98c2c5d3e9%3A0x12345abcde!2sLampung+Timur!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" width="100%" height="340" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
                     <a href="https://maps.google.com" target="_blank" class="map-open-btn"><i class="fas fa-external-link-alt"></i> Buka di Google Maps</a>
                 </div>
             </div>
@@ -1173,10 +670,10 @@ img{max-width:100%;display:block}
         <div class="section-rule section-rule--center section-rule--blue"></div>
         <p class="section-text section-text--light mx-auto mb-5" style="max-width:520px">Tim kami siap membantu Anda. Konsultasikan kebutuhan pasir kuarsa — 8 ukuran tersedia, respons cepat, solusi tepat.</p>
         <div class="cta-contact-row">
-            <div class="cta-contact-card"><div class="cta-contact-icon"><i class="fab fa-whatsapp"></i></div><div><div class="cta-contact-label">WhatsApp</div><div class="cta-contact-val">+62 812-9661-2892</div></div></div>
+            <div class="cta-contact-card"><div class="cta-contact-icon"><i class="fab fa-whatsapp"></i></div><div><div class="cta-contact-label">WhatsApp</div><div class="cta-contact-val">+62 812-9661-2892 / +62 813-6721-3538</div></div></div>
             <div class="cta-contact-card"><div class="cta-contact-icon"><i class="far fa-envelope"></i></div><div><div class="cta-contact-label">Email</div><div class="cta-contact-val">silikanandajaya@gmail.com</div></div></div>
         </div>
-        <a href="https://wa.me/6281296612892" target="_blank" class="btn-cta-main"><i class="fab fa-whatsapp"></i> Konsultasi Kebutuhan Pasir Anda</a>
+        <a href="#" data-wa-trigger class="btn-cta-main"><i class="fab fa-whatsapp"></i> Konsultasi Kebutuhan Pasir Anda</a>
     </div>
 </section>
 
@@ -1190,28 +687,54 @@ img{max-width:100%;display:block}
             </div>
             <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                 <h5 class="footer-heading">Navigasi</h5>
-                <ul class="footer-links"><li><a href="#hero">Beranda</a></li><li><a href="#tentang">Tentang Kami</a></li><li><a href="legalitas.html">Legalitas</a></li><li><a href="visi.html">Visi &amp; Misi</a></li><li><a href="#galeri">Galeri</a></li><li><a href="#kontak">Kontak</a></li></ul>
+                <ul class="footer-links"><li><a href="#hero">Beranda</a></li><li><a href="#tentang">Tentang Kami</a></li><li><a href="#legalitas">Legalitas</a></li><li><a href="#visi-misi">Visi &amp; Misi</a></li><li><a href="#galeri">Galeri</a></li><li><a href="#kontak">Kontak</a></li></ul>
             </div>
             <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                 <h5 class="footer-heading">Produk</h5>
-                <ul class="footer-links">
-                    <li><a href="produk.html#g1">2–4 up &amp; 4–8 up (Fine)</a></li>
-                    <li><a href="produk.html#g2">5–10 up &amp; 8–14 up (Medium)</a></li>
-                    <li><a href="produk.html#g3">14–20 up &amp; 16–30 up (Coarse)</a></li>
-                    <li><a href="produk.html#g4">20–30 up &amp; 30 up (X-Coarse)</a></li>
-                </ul>
+                <ul class="footer-links"><li><a href="#produk">2–4 up &amp; 4–8 up</a></li><li><a href="#produk">5–10 up &amp; 8–14 up</a></li><li><a href="#produk">14–20 up &amp; 16–30 up</a></li><li><a href="#produk">20–30 up &amp; 30 up</a></li></ul>
             </div>
             <div class="col-lg-3">
                 <h5 class="footer-heading">Kontak</h5>
-                <ul class="footer-links footer-links--contact"><li><i class="fas fa-map-marker-alt"></i> Lampung Timur, Lampung</li><li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li><li><i class="far fa-envelope"></i> silikanandajaya@gmail.com</li><li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li></ul>
+                <ul class="footer-links footer-links--contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Lampung Timur, Lampung</li>
+                    <li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li>
+                    <li><i class="fab fa-whatsapp"></i> +62 813-6721-3538</li>
+                    <li><i class="far fa-envelope"></i> silikanandajaya@gmail.com</li>
+                    <li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="footer-bottom"><div class="container d-flex flex-wrap justify-content-between align-items-center"><p>&copy; 2024 <strong>PT Nanda Jaya Silika</strong>. Hak cipta dilindungi undang-undang.</p><p class="footer-bottom-right">IUP Resmi · CNC · Lampung Timur</p></div></div>
+    <div class="footer-bottom"><div class="container d-flex flex-wrap justify-content-between align-items-center"><p>&copy; 2024 <strong>PT Nanda Jaya Silika</strong>. Hak cipta dilindungi.</p><p class="footer-bottom-right">IUP Resmi · CNC · Lampung Timur</p></div></div>
 </footer>
 
-<!-- FLOATING -->
-<a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20tertarik%20dengan%20produk%20Anda.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="wa-float" id="waFloat" aria-label="WhatsApp">
+<!-- WA POPUP -->
+<div class="wa-popup-overlay" id="waPopup">
+    <div class="wa-popup-card">
+        <button class="wa-popup-close" id="waPopupClose"><i class="fas fa-times"></i></button>
+        <div class="wa-popup-header">
+            <div class="wa-popup-header-icon"><i class="fab fa-whatsapp"></i></div>
+            <h4>Hubungi Kami</h4>
+            <p>Pilih nomor admin yang ingin dihubungi</p>
+        </div>
+        <div class="wa-popup-options">
+            <a href="#" id="waLinkAdmin1" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info"><span class="wa-popup-option-label">Admin 1</span><span class="wa-popup-option-number">+62 812-9661-2892</span></div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+            <a href="#" id="waLinkAdmin2" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info"><span class="wa-popup-option-label">Admin 2</span><span class="wa-popup-option-number">+62 813-6721-3538</span></div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+        </div>
+        <div class="wa-popup-footer">Klik salah satu untuk langsung chat via WhatsApp</div>
+    </div>
+</div>
+
+<!-- FLOATING WA -->
+<a href="#" data-wa-trigger class="wa-float" id="waFloat" aria-label="WhatsApp">
     <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
     <span class="wa-float-tooltip">Hubungi Kami</span>
 </a>
@@ -1223,104 +746,266 @@ img{max-width:100%;display:block}
 (function(){
 "use strict";
 
-/* SCROLL REVEAL */
-function initScrollReveal(){
-    var els=document.querySelectorAll(".njs-reveal,.njs-fade-up,.njs-slide-right,.njs-slide-left");
-    if(!els.length)return;
-    var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add("is-visible");obs.unobserve(e.target)}})},{threshold:.1,rootMargin:"0px 0px -30px 0px"});
-    els.forEach(function(el){obs.observe(el)});
+/* ===== WA POPUP ===== */
+var WA_ADMIN1 = "6281296612892";
+var WA_ADMIN2 = "6281367213538";
+var WA_DEFAULT_MSG = "Halo PT Nanda Jaya Silika, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut.";
+
+function initWaPopup(){
+    var popup = document.getElementById("waPopup");
+    var closeBtn = document.getElementById("waPopupClose");
+    var linkA1 = document.getElementById("waLinkAdmin1");
+    var linkA2 = document.getElementById("waLinkAdmin2");
+    if(!popup || !linkA1 || !linkA2) return;
+
+    function setMsg(msg){
+        linkA1.href = "https://wa.me/" + WA_ADMIN1 + "?text=" + encodeURIComponent(msg);
+        linkA2.href = "https://wa.me/" + WA_ADMIN2 + "?text=" + encodeURIComponent(msg);
+    }
+
+    function openPopup(e, customMsg){
+        if(e) e.preventDefault();
+        setMsg(customMsg || WA_DEFAULT_MSG);
+        popup.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closePopup(){
+        popup.classList.remove("is-open");
+        document.body.style.overflow = "";
+    }
+
+    if(closeBtn) closeBtn.addEventListener("click", closePopup);
+    popup.addEventListener("click", function(e){ if(e.target === popup) closePopup(); });
+    document.addEventListener("keydown", function(e){
+        if(e.key === "Escape" && popup.classList.contains("is-open")) closePopup();
+    });
+
+    document.querySelectorAll("[data-wa-trigger]").forEach(function(btn){
+        btn.addEventListener("click", function(e){
+            var msg = this.getAttribute("data-wa-msg") || null;
+            openPopup(e, msg);
+        });
+    });
 }
 
-/* NAVBAR */
+/* ===== SCROLL REVEAL ===== */
+function initScrollReveal(){
+    var els = document.querySelectorAll(".njs-reveal,.njs-fade-up,.njs-slide-right,.njs-slide-left");
+    if(!els.length) return;
+    var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+            if(e.isIntersecting){ e.target.classList.add("is-visible"); obs.unobserve(e.target); }
+        });
+    }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+    els.forEach(function(el){ obs.observe(el); });
+}
+
+/* ===== NAVBAR ===== */
+function closeNavMenu(){
+    var btn = document.getElementById("navToggler");
+    var menu = document.getElementById("navMenu");
+    if(menu) menu.classList.remove("is-open");
+    if(btn) btn.classList.remove("open");
+}
+
 function initNav(){
-    var nav=document.getElementById("mainNav");if(!nav)return;
-    window.addEventListener("scroll",function(){nav.classList.toggle("nav-scrolled",window.scrollY>80);updateActiveLink()});
+    var nav = document.getElementById("mainNav");
+    if(!nav) return;
+    window.addEventListener("scroll", function(){
+        nav.classList.toggle("nav-scrolled", window.scrollY > 80);
+        updateActiveLink();
+    });
     document.querySelectorAll('a[href^="#"]').forEach(function(link){
-        link.addEventListener("click",function(e){
-            var href=this.getAttribute("href");if(href==="#")return;
-            var target=document.querySelector(href);if(!target)return;
+        link.addEventListener("click", function(e){
+            if(this.hasAttribute("data-wa-trigger")) return;
+            var href = this.getAttribute("href");
+            if(href === "#") return;
+            var target = document.querySelector(href);
+            if(!target) return;
             e.preventDefault();
-            var offset=nav?nav.offsetHeight:64;
-            window.scrollTo({top:target.getBoundingClientRect().top+window.pageYOffset-offset,behavior:"smooth"});
+            var offset = nav.offsetHeight;
+            window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - offset, behavior: "smooth" });
             closeNavMenu();
         });
     });
 }
+
 function updateActiveLink(){
-    var sections=document.querySelectorAll("section[id]");
-    var links=document.querySelectorAll(".nav-link-item");
-    var pos=window.scrollY+120;
+    var sections = document.querySelectorAll("section[id]");
+    var links = document.querySelectorAll(".nav-link-item");
+    var pos = window.scrollY + 120;
     sections.forEach(function(sec){
-        if(sec.offsetTop<=pos&&sec.offsetTop+sec.offsetHeight>pos){
-            links.forEach(function(l){l.classList.remove("active")});
-            var a=document.querySelector('.nav-link-item[href="#'+sec.id+'"]');if(a)a.classList.add("active");
+        if(sec.offsetTop <= pos && sec.offsetTop + sec.offsetHeight > pos){
+            links.forEach(function(l){ l.classList.remove("active"); });
+            var a = document.querySelector('.nav-link-item[href="#' + sec.id + '"]');
+            if(a) a.classList.add("active");
         }
     });
 }
+
 function initMobileNav(){
-    var btn=document.getElementById("navToggler");var menu=document.getElementById("navMenu");if(!btn||!menu)return;
-    btn.addEventListener("click",function(){var open=menu.classList.toggle("is-open");btn.classList.toggle("open",open)});
-}
-function closeNavMenu(){
-    var btn=document.getElementById("navToggler");var menu=document.getElementById("navMenu");
-    if(menu)menu.classList.remove("is-open");if(btn)btn.classList.remove("open");
+    var btn = document.getElementById("navToggler");
+    var menu = document.getElementById("navMenu");
+    if(!btn || !menu) return;
+    btn.addEventListener("click", function(){
+        var isOpen = menu.classList.toggle("is-open");
+        btn.classList.toggle("open", isOpen);
+    });
 }
 
-/* FLOATING BUTTONS */
+/* ===== FLOATING BUTTONS ===== */
 function initFloatingButtons(){
-    var btt=document.getElementById("backToTop");var waBtn=document.getElementById("waFloat");var heroSec=document.getElementById("hero");
-    function onScroll(){var sy=window.scrollY;var heroH=heroSec?(heroSec.offsetTop+heroSec.offsetHeight-100):500;if(btt)btt.classList.toggle("visible",sy>300);if(waBtn)waBtn.classList.toggle("visible",sy>heroH)}
-    window.addEventListener("scroll",onScroll,{passive:true});
-    if(btt)btt.addEventListener("click",function(e){e.preventDefault();window.scrollTo({top:0,behavior:"smooth"})});
+    var btt = document.getElementById("backToTop");
+    var waBtn = document.getElementById("waFloat");
+    var heroSec = document.getElementById("hero");
+
+    function onScroll(){
+        var sy = window.scrollY;
+        var heroH = heroSec ? (heroSec.offsetTop + heroSec.offsetHeight - 100) : 500;
+        if(btt) btt.classList.toggle("visible", sy > 300);
+        if(waBtn) waBtn.classList.toggle("visible", sy > heroH);
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    if(btt) btt.addEventListener("click", function(e){
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 }
 
-/* HERO SLIDER */
+/* ===== HERO SLIDER ===== */
 function initHeroSlider(){
-    var track=document.getElementById("heroTrack");var btnL=document.getElementById("heroArrowLeft");var btnR=document.getElementById("heroArrowRight");
-    var curEl=document.querySelector(".hero-counter-current");var totEl=document.querySelector(".hero-counter-total");
-    var progEl=document.getElementById("heroProgress");var timerEl=document.getElementById("heroTimer");
-    if(!track)return;
-    var slides=track.querySelectorAll(".hero-slide");var texts=document.querySelectorAll(".hero-text-item");
-    var total=slides.length;var cur=0;var dragging=false;var startX=0;var curX=0;var prevX=0;var autoT=null;var heroVis=true;var DELAY=5000;
-    if(totEl)totEl.textContent=String(total).padStart(2,"0");
+    var track = document.getElementById("heroTrack");
+    var btnL = document.getElementById("heroArrowLeft");
+    var btnR = document.getElementById("heroArrowRight");
+    var curEl = document.querySelector(".hero-counter-current");
+    var totEl = document.querySelector(".hero-counter-total");
+    var progEl = document.getElementById("heroProgress");
+    var timerEl = document.getElementById("heroTimer");
+    if(!track) return;
+
+    var slides = track.querySelectorAll(".hero-slide");
+    var texts = track.closest(".hero-section").querySelectorAll(".hero-text-item");
+    var total = slides.length;
+    var cur = 0;
+    var dragging = false;
+    var startX = 0;
+    var curX = 0;
+    var prevX = 0;
+    var autoT = null;
+    var heroVis = true;
+    var DELAY = 5000;
+
+    if(totEl) totEl.textContent = String(total).padStart(2, "0");
+
     function go(idx){
-        if(idx<0)idx=total-1;if(idx>=total)idx=0;var same=idx===cur;
-        if(!same)texts.forEach(function(t){t.classList.remove("is-active")});
-        cur=idx;curX=-cur*window.innerWidth;prevX=curX;
-        track.classList.remove("dragging");track.style.transform="translateX("+curX+"px)";
-        slides.forEach(function(s,i){s.classList.toggle("is-active",i===cur)});
-        if(!same)setTimeout(function(){if(texts[cur])texts[cur].classList.add("is-active")},150);
-        if(curEl)curEl.textContent=String(cur+1).padStart(2,"0");
-        if(progEl)progEl.style.width=((cur+1)/total*100)+"%";
+        if(idx < 0) idx = total - 1;
+        if(idx >= total) idx = 0;
+        var same = idx === cur;
+        if(!same) texts.forEach(function(t){ t.classList.remove("is-active"); });
+        cur = idx;
+        curX = -cur * window.innerWidth;
+        prevX = curX;
+        track.classList.remove("dragging");
+        track.style.transform = "translateX(" + curX + "px)";
+        slides.forEach(function(s, i){ s.classList.toggle("is-active", i === cur); });
+        if(!same) setTimeout(function(){ if(texts[cur]) texts[cur].classList.add("is-active"); }, 150);
+        if(curEl) curEl.textContent = String(cur + 1).padStart(2, "0");
+        if(progEl) progEl.style.width = ((cur + 1) / total * 100) + "%";
         restartTimer();
     }
-    function restartTimer(){if(!timerEl)return;timerEl.classList.remove("running");void timerEl.offsetWidth;if(heroVis)timerEl.classList.add("running")}
-    function startAuto(){stopAuto();autoT=setInterval(function(){if(heroVis)go(cur+1)},DELAY)}
-    function stopAuto(){if(autoT){clearInterval(autoT);autoT=null}}
-    function resetAuto(){stopAuto();startAuto();restartTimer()}
-    if(btnR)btnR.addEventListener("click",function(){go(cur+1);resetAuto()});
-    if(btnL)btnL.addEventListener("click",function(){go(cur-1);resetAuto()});
-    function gx(e){return e.type.includes("mouse")?e.pageX:e.touches[0].clientX}
-    track.addEventListener("mousedown",function(e){dragging=true;startX=gx(e);track.classList.add("dragging")});
-    track.addEventListener("mousemove",function(e){if(!dragging)return;curX=prevX+(gx(e)-startX);track.style.transform="translateX("+curX+"px)"});
-    track.addEventListener("mouseup",endDrag);track.addEventListener("mouseleave",endDrag);
-    track.addEventListener("touchstart",function(e){dragging=true;startX=gx(e);track.classList.add("dragging")},{passive:true});
-    track.addEventListener("touchmove",function(e){if(!dragging)return;e.preventDefault();curX=prevX+(gx(e)-startX);track.style.transform="translateX("+curX+"px)"},{passive:false});
-    track.addEventListener("touchend",endDrag);
-    function endDrag(){if(!dragging)return;dragging=false;track.classList.remove("dragging");var moved=curX-prevX;var th=window.innerWidth*.18;if(moved<-th)go(cur+1);else if(moved>th)go(cur-1);else go(cur);resetAuto()}
-    var wLock=false;
-    track.addEventListener("wheel",function(e){if(wLock)return;if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){e.preventDefault();wLock=true;if(e.deltaY>20)go(cur+1);else if(e.deltaY<-20)go(cur-1);resetAuto();setTimeout(function(){wLock=false},1000)}},{passive:false});
-    document.addEventListener("keydown",function(e){if(e.key==="ArrowRight"){go(cur+1);resetAuto()}if(e.key==="ArrowLeft"){go(cur-1);resetAuto()}});
-    var hSec=document.getElementById("hero");
-    if(hSec){var hObs=new IntersectionObserver(function(en){en.forEach(function(e){heroVis=e.isIntersecting;if(!heroVis&&timerEl)timerEl.classList.remove("running");else if(heroVis)restartTimer()})},{threshold:.1});hObs.observe(hSec)}
-    var rT;window.addEventListener("resize",function(){clearTimeout(rT);rT=setTimeout(function(){curX=-cur*window.innerWidth;prevX=curX;track.classList.remove("dragging");track.style.transform="translateX("+curX+"px)"},100)});
-    go(0);startAuto();
+
+    function restartTimer(){
+        if(!timerEl) return;
+        timerEl.classList.remove("running");
+        void timerEl.offsetWidth;
+        if(heroVis) timerEl.classList.add("running");
+    }
+
+    function startAuto(){ stopAuto(); autoT = setInterval(function(){ if(heroVis) go(cur + 1); }, DELAY); }
+    function stopAuto(){ if(autoT){ clearInterval(autoT); autoT = null; } }
+    function resetAuto(){ stopAuto(); startAuto(); restartTimer(); }
+
+    if(btnR) btnR.addEventListener("click", function(){ go(cur + 1); resetAuto(); });
+    if(btnL) btnL.addEventListener("click", function(){ go(cur - 1); resetAuto(); });
+
+    function gx(e){ return e.type.indexOf("mouse") > -1 ? e.pageX : e.touches[0].clientX; }
+    function endDrag(){
+        if(!dragging) return;
+        dragging = false;
+        track.classList.remove("dragging");
+        var moved = curX - prevX;
+        var th = window.innerWidth * 0.18;
+        if(moved < -th) go(cur + 1);
+        else if(moved > th) go(cur - 1);
+        else go(cur);
+        resetAuto();
+    }
+
+    track.addEventListener("mousedown", function(e){ dragging = true; startX = gx(e); track.classList.add("dragging"); });
+    track.addEventListener("mousemove", function(e){ if(!dragging) return; curX = prevX + (gx(e) - startX); track.style.transform = "translateX(" + curX + "px)"; });
+    track.addEventListener("mouseup", endDrag);
+    track.addEventListener("mouseleave", endDrag);
+    track.addEventListener("touchstart", function(e){ dragging = true; startX = gx(e); track.classList.add("dragging"); }, { passive: true });
+    track.addEventListener("touchmove", function(e){ if(!dragging) return; e.preventDefault(); curX = prevX + (gx(e) - startX); track.style.transform = "translateX(" + curX + "px)"; }, { passive: false });
+    track.addEventListener("touchend", endDrag);
+
+    var wLock = false;
+    track.addEventListener("wheel", function(e){
+        if(wLock) return;
+        if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){
+            e.preventDefault();
+            wLock = true;
+            if(e.deltaY > 20) go(cur + 1);
+            else if(e.deltaY < -20) go(cur - 1);
+            resetAuto();
+            setTimeout(function(){ wLock = false; }, 1000);
+        }
+    }, { passive: false });
+
+    document.addEventListener("keydown", function(e){
+        if(e.key === "ArrowRight"){ go(cur + 1); resetAuto(); }
+        if(e.key === "ArrowLeft"){ go(cur - 1); resetAuto(); }
+    });
+
+    var hSec = document.getElementById("hero");
+    if(hSec){
+        var hObs = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){
+                heroVis = e.isIntersecting;
+                if(!heroVis && timerEl) timerEl.classList.remove("running");
+                else if(heroVis) restartTimer();
+            });
+        }, { threshold: 0.1 });
+        hObs.observe(hSec);
+    }
+
+    var rT;
+    window.addEventListener("resize", function(){
+        clearTimeout(rT);
+        rT = setTimeout(function(){
+            curX = -cur * window.innerWidth;
+            prevX = curX;
+            track.classList.remove("dragging");
+            track.style.transform = "translateX(" + curX + "px)";
+        }, 100);
+    });
+
+    go(0);
+    startAuto();
 }
 
-/* INIT */
-document.addEventListener("DOMContentLoaded",function(){
-    initHeroSlider();initScrollReveal();initNav();initMobileNav();initFloatingButtons();
+/* ===== INIT ===== */
+document.addEventListener("DOMContentLoaded", function(){
+    initHeroSlider();
+    initScrollReveal();
+    initNav();
+    initMobileNav();
+    initFloatingButtons();
+    initWaPopup();
 });
+
 })();
 </script>
 </body>

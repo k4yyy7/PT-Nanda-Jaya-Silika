@@ -28,6 +28,7 @@ img{max-width:100%;display:block}
 @keyframes fadeUp  {from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
 @keyframes fadeRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes waPulse  {0%{transform:scale(1);opacity:.6}100%{transform:scale(1.25);opacity:0}}
 .anim-up{opacity:0}.anim-left{opacity:0}.anim-right{opacity:0}
 .anim-up.visible{animation:fadeUp .7s ease forwards}
 .anim-left.visible{animation:fadeLeft .7s ease forwards}
@@ -73,8 +74,6 @@ img{max-width:100%;display:block}
 .page-hero-title{font-family:var(--fh);font-size:clamp(24px,4vw,40px);font-weight:800;color:#fff;margin-bottom:8px;line-height:1.2}
 .page-hero-sub{font-size:14px;color:rgba(255,255,255,.6);max-width:560px;line-height:1.8}
 .page-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,159,227,.15);border:1px solid rgba(0,159,227,.35);color:#7DD4F5;font-family:var(--fh);font-size:11px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.3px}
-
-/* Trust badges row */
 .trust-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 .trust-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:8px 16px;border-radius:10px;font-family:var(--fh);font-size:12px;font-weight:600;color:#fff}
 .trust-badge i{color:var(--blue)}
@@ -152,7 +151,6 @@ img{max-width:100%;display:block}
 .lab-table .lab-highlight{background:rgba(0,159,227,.07)}
 .lab-table .lab-highlight .lab-param{color:var(--blue)}
 .lab-table .lab-highlight .lab-result{color:var(--blue);font-size:18px}
-/* Bar chart cell */
 .bar-cell{min-width:120px}
 .bar-track{width:100%;height:8px;background:var(--gray-light);border-radius:4px;overflow:hidden}
 .bar-fill{height:100%;border-radius:4px;transition:width .9s ease;width:0}
@@ -218,7 +216,7 @@ img{max-width:100%;display:block}
    ══════════════════════════════ */
 .cta-section{background:var(--blue-dark);padding:64px 0;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(0,159,227,.04) 0,rgba(0,159,227,.04) 1px,transparent 0,transparent 40px)}
-.btn-cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:14px;padding:14px 32px;border-radius:10px;transition:all var(--tr);border:2px solid var(--red)}
+.btn-cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--fh);font-weight:700;font-size:14px;padding:14px 32px;border-radius:10px;transition:all var(--tr);border:2px solid var(--red);cursor:pointer}
 .btn-cta-main:hover{background:var(--red-dark);border-color:var(--red-dark);color:#fff;transform:translateY(-2px);box-shadow:0 8px 28px rgba(229,57,53,.4)}
 .btn-cta-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-family:var(--fh);font-weight:600;font-size:14px;padding:13px 28px;border-radius:10px;border:2px solid rgba(255,255,255,.3);transition:all var(--tr)}
 .btn-cta-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);color:#fff}
@@ -244,13 +242,38 @@ img{max-width:100%;display:block}
 .wa-float.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
 .wa-float-icon{width:52px;height:52px;border-radius:16px;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;box-shadow:0 4px 20px rgba(37,211,102,.45);border:2px solid rgba(255,255,255,.2);position:relative;z-index:2;transition:transform .3s,box-shadow .3s,background .3s}
 .wa-float-icon::before{content:'';position:absolute;inset:-4px;border-radius:20px;border:2px solid rgba(37,211,102,.4);animation:waPulse 2s ease-out infinite}
-@keyframes waPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.25);opacity:0}}
 .wa-float-tooltip{background:var(--blue-dark);color:#fff;font-family:var(--fh);font-size:12px;font-weight:600;padding:8px 14px;border-radius:0 10px 10px 0;white-space:nowrap;opacity:0;transform:translateX(-10px);pointer-events:none;transition:opacity .25s,transform .25s;border:1px solid rgba(255,255,255,.08);border-left:none;box-shadow:2px 4px 16px rgba(0,0,0,.2);margin-left:-2px;position:relative;z-index:1}
 .wa-float:hover .wa-float-icon{transform:scale(1.06);background:#20BD5A}
 .wa-float:hover .wa-float-tooltip{opacity:1;transform:translateX(0)}
 .back-to-top{position:fixed;right:24px;bottom:32px;z-index:9999;width:46px;height:46px;border-radius:12px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;opacity:0;pointer-events:none;transition:all var(--tr);box-shadow:0 4px 16px rgba(0,159,227,.4)}
 .back-to-top.visible{opacity:1;pointer-events:auto}
 .back-to-top:hover{background:var(--red);color:#fff;transform:translateY(-3px)}
+
+/* ══════════════════════════════
+   WA POPUP (2 Admin)
+   ══════════════════════════════ */
+.wa-popup-overlay{position:fixed;inset:0;background:rgba(5,15,28,.55);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.wa-popup-overlay.is-open{opacity:1;pointer-events:auto}
+.wa-popup-card{background:#fff;border-radius:20px;width:100%;max-width:380px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.35);transform:scale(.88) translateY(24px);transition:transform .35s cubic-bezier(.22,.61,.36,1);position:relative}
+.wa-popup-overlay.is-open .wa-popup-card{transform:scale(1) translateY(0)}
+.wa-popup-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:rgba(255,255,255,.8);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr);z-index:2;backdrop-filter:blur(4px)}
+.wa-popup-close:hover{background:rgba(255,255,255,.3);color:#fff}
+.wa-popup-header{background:linear-gradient(135deg,#075E54 0%,#128C7E 100%);padding:30px 24px 24px;text-align:center;position:relative}
+.wa-popup-header::after{content:'';position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);width:24px;height:12px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%)}
+.wa-popup-header-icon{width:56px;height:56px;border-radius:50%;background:rgba(37,211,102,.2);border:2px solid rgba(37,211,102,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#25D366;filter:drop-shadow(0 4px 12px rgba(37,211,102,.35))}
+.wa-popup-header h4{font-family:var(--fh);font-size:18px;font-weight:800;color:#fff;margin:0 0 4px}
+.wa-popup-header p{font-size:13px;color:rgba(255,255,255,.65);margin:0;line-height:1.5}
+.wa-popup-options{padding:20px 16px 16px}
+.wa-popup-option{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:#fff;border:1.5px solid var(--gray-mid);transition:all var(--tr);margin-bottom:10px;color:inherit;text-decoration:none;cursor:pointer;position:relative;overflow:hidden}
+.wa-popup-option:last-child{margin-bottom:0}
+.wa-popup-option:hover{border-color:#25D366;transform:translateX(4px);box-shadow:0 4px 20px rgba(37,211,102,.18)}
+.wa-popup-option-icon{width:46px;height:46px;border-radius:12px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.2);display:flex;align-items:center;justify-content:center;font-size:22px;color:#25D366;flex-shrink:0}
+.wa-popup-option-info{flex:1;display:flex;flex-direction:column;gap:2px}
+.wa-popup-option-label{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--blue-dark)}
+.wa-popup-option-number{font-size:13px;color:var(--gray-text);font-family:var(--fb)}
+.wa-popup-option-arrow{color:var(--gray-mid);font-size:12px;transition:color var(--tr),transform var(--tr)}
+.wa-popup-option:hover .wa-popup-option-arrow{color:#25D366;transform:translateX(3px)}
+.wa-popup-footer{text-align:center;padding:0 16px 16px;font-size:11px;color:var(--gray-text);font-family:var(--fh)}
 
 /* ── RESPONSIVE ── */
 @media(max-width:991px){
@@ -281,6 +304,7 @@ img{max-width:100%;display:block}
   .back-to-top{right:16px;bottom:24px;width:44px;height:44px}
   .btn-cta-main,.btn-cta-outline{width:100%;justify-content:center}
   .cta-btn-row{flex-direction:column;align-items:center!important}
+  .wa-popup-card{max-width:340px}
 }
 @media(max-width:480px){
   .lab-stat-row{grid-template-columns:1fr 1fr}
@@ -374,7 +398,7 @@ img{max-width:100%;display:block}
                 <div class="lhc-icon icon-cnc"><i class="fas fa-shield-alt"></i></div>
                 <div class="lhc-label">Status Legalitas</div>
                 <div class="lhc-val">Clear &amp; Clean (CNC)</div>
-                <div class="lhc-note">Tidak ada tumpang tindih wilayah dengan izin lain, tidak ada sengketa, dan seluruh kewajiban administratif telah dipenuhi.</div>
+                <div class="lhc-note">Tidak ada tumpang tindah wilayah dengan izin lain, tidak ada sengketa, dan seluruh kewajiban administratif telah dipenuhi.</div>
                 <span class="verified-badge"><i class="fas fa-check-circle"></i> Bersih &amp; Aman</span>
             </div>
         </div>
@@ -412,7 +436,6 @@ img{max-width:100%;display:block}
                 </div>
             </div>
             <div class="col-lg-5 anim-right">
-                <!-- Profil Pimpinan -->
                 <div class="pimpinan-card mb-4">
                     <div class="pimpinan-avatar">MS</div>
                     <div>
@@ -425,7 +448,6 @@ img{max-width:100%;display:block}
                         </div>
                     </div>
                 </div>
-                <!-- Visi Operasional -->
                 <div class="visi-box">
                     <i class="fas fa-quote-left visi-quote-icon"></i>
                     <div class="visi-tag">Visi Operasional</div>
@@ -448,7 +470,6 @@ img{max-width:100%;display:block}
             <p class="stext mx-auto" style="max-width:580px">Hasil uji laboratorium independen SUCOFINDO berdasarkan <strong>Report of Analysis No. 05482/CLACAD</strong>. Kandungan SiO₂ mencapai <strong>97,24%</strong> — memenuhi standar kelas industri kaca dan manufaktur presisi.</p>
         </div>
 
-        <!-- 5 stat highlight -->
         <div class="lab-stat-row anim-up">
             <div class="lab-stat">
                 <div class="lab-stat-formula">SiO₂</div>
@@ -477,7 +498,6 @@ img{max-width:100%;display:block}
             </div>
         </div>
 
-        <!-- Tabel lengkap -->
         <div class="lab-wrap anim-up">
             <div class="lab-head">
                 <div class="lab-head-icon"><i class="fas fa-flask"></i></div>
@@ -687,7 +707,7 @@ img{max-width:100%;display:block}
                 <div>
                     <div class="doc-item-label">Status Legalitas</div>
                     <div class="doc-item-val">Clear &amp; Clean (CNC)</div>
-                    <div class="doc-item-note">Tidak ada tumpang tindih wilayah, tidak ada sengketa, seluruh kewajiban administratif terpenuhi.</div>
+                    <div class="doc-item-note">Tidak ada tumpang tindah wilayah, tidak ada sengketa, seluruh kewajiban administratif terpenuhi.</div>
                     <span class="doc-verified"><i class="fas fa-check-circle"></i> Bersih &amp; Aman</span>
                 </div>
             </div>
@@ -712,7 +732,7 @@ img{max-width:100%;display:block}
         <div class="srule srule--center anim-up" style="animation-delay:.1s"></div>
         <p class="stext stext--light mx-auto mb-4 anim-up" style="max-width:480px;animation-delay:.15s">Seluruh dokumen legalitas lengkap dan dapat diverifikasi. Hubungi kami untuk memulai kerjasama pengadaan pasir kuarsa.</p>
         <div class="d-flex justify-content-center flex-wrap cta-btn-row anim-up" style="gap:14px;animation-delay:.2s">
-            <a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20tertarik%20dengan%20produk%20Anda.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="btn-cta"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
+            <a href="#" data-wa-trigger data-wa-msg="Halo PT Nanda Jaya Silika, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut mengenai legalitas dan ketersediaan produk." class="btn-cta-main"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
             <a href="kontak.html" class="btn-cta-outline"><i class="fas fa-envelope"></i> Form Kontak</a>
         </div>
     </div>
@@ -754,6 +774,7 @@ img{max-width:100%;display:block}
                 <ul class="footer-links footer-links--contact">
                     <li><i class="fas fa-map-marker-alt"></i> Lampung Timur, Lampung</li>
                     <li><i class="fab fa-whatsapp"></i> +62 812-9661-2892</li>
+                    <li><i class="fab fa-whatsapp"></i> +62 813-6721-3538</li>
                     <li><i class="far fa-envelope"></i> silikanandajaya@gmail.com</li>
                     <li><i class="far fa-clock"></i> Sen–Sab, 08.00–17.00</li>
                 </ul>
@@ -768,8 +789,41 @@ img{max-width:100%;display:block}
     </div>
 </footer>
 
-<!-- FLOATING -->
-<a href="https://wa.me/6281296612892?text=Halo%20PT%20Nanda%20Jaya%20Silika%2C%20saya%20tertarik%20dengan%20produk%20Anda.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="wa-float" id="waFloat" aria-label="WhatsApp">
+<!-- ════════════════════════════════════════════════════════════════
+     WA POPUP (2 Admin)
+     ════════════════════════════════════════════════════════════════ -->
+<div class="wa-popup-overlay" id="waPopup">
+    <div class="wa-popup-card">
+        <button class="wa-popup-close" id="waPopupClose"><i class="fas fa-times"></i></button>
+        <div class="wa-popup-header">
+            <div class="wa-popup-header-icon"><i class="fab fa-whatsapp"></i></div>
+            <h4>Hubungi Kami</h4>
+            <p>Pilih nomor admin yang ingin dihubungi</p>
+        </div>
+        <div class="wa-popup-options">
+            <a href="#" id="waLinkAdmin1" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info">
+                    <span class="wa-popup-option-label">Admin 1</span>
+                    <span class="wa-popup-option-number">+62 812-9661-2892</span>
+                </div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+            <a href="#" id="waLinkAdmin2" target="_blank" class="wa-popup-option">
+                <div class="wa-popup-option-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="wa-popup-option-info">
+                    <span class="wa-popup-option-label">Admin 2</span>
+                    <span class="wa-popup-option-number">+62 813-6721-3538</span>
+                </div>
+                <i class="fas fa-chevron-right wa-popup-option-arrow"></i>
+            </a>
+        </div>
+        <div class="wa-popup-footer">Klik salah satu untuk langsung chat via WhatsApp</div>
+    </div>
+</div>
+
+<!-- FLOATING WA (trigger popup) -->
+<a href="#" data-wa-trigger class="wa-float" id="waFloat" aria-label="WhatsApp">
     <span class="wa-float-icon"><i class="fab fa-whatsapp"></i></span>
     <span class="wa-float-tooltip">Hubungi Kami</span>
 </a>
@@ -780,6 +834,54 @@ img{max-width:100%;display:block}
 <script>
 (function(){
   "use strict";
+
+  /* ===== CONFIG WA ===== */
+  var WA_ADMIN1 = "6281296612892";
+  var WA_ADMIN2 = "6281367213538";
+  var WA_DEFAULT_MSG = "Halo PT Nanda Jaya Silika, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut.";
+
+  /* ===== WA POPUP ===== */
+  function initWaPopup(){
+    var popup   = document.getElementById("waPopup");
+    var closeBtn = document.getElementById("waPopupClose");
+    var linkA1   = document.getElementById("waLinkAdmin1");
+    var linkA2   = document.getElementById("waLinkAdmin2");
+    if(!popup || !linkA1 || !linkA2) return;
+
+    function setMsg(msg){
+      linkA1.href = "https://wa.me/" + WA_ADMIN1 + "?text=" + encodeURIComponent(msg);
+      linkA2.href = "https://wa.me/" + WA_ADMIN2 + "?text=" + encodeURIComponent(msg);
+    }
+
+    function openPopup(e, customMsg){
+      if(e) e.preventDefault();
+      setMsg(customMsg || WA_DEFAULT_MSG);
+      popup.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closePopup(){
+      popup.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+
+    if(closeBtn) closeBtn.addEventListener("click", closePopup);
+    popup.addEventListener("click", function(e){
+      if(e.target === popup) closePopup();
+    });
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape" && popup.classList.contains("is-open")) closePopup();
+    });
+
+    document.querySelectorAll("[data-wa-trigger]").forEach(function(btn){
+      btn.addEventListener("click", function(e){
+        var msg = this.getAttribute("data-wa-msg") || null;
+        openPopup(e, msg);
+      });
+    });
+  }
+
+  /* ===== Navbar ===== */
   var nav  = document.getElementById('mainNav');
   var tog  = document.getElementById('navToggler');
   var menu = document.getElementById('navMenu');
@@ -827,6 +929,7 @@ img{max-width:100%;display:block}
   /* Smooth scroll anchors */
   document.querySelectorAll('a[href^="#"]').forEach(function(link){
     link.addEventListener('click', function(e){
+      if(this.hasAttribute('data-wa-trigger')) return;
       var href = this.getAttribute('href');
       if(href === '#') return;
       var target = document.querySelector(href);
@@ -848,6 +951,10 @@ img{max-width:100%;display:block}
     });
   }, {threshold:.2});
   document.querySelectorAll('.bar-fill').forEach(function(el){ barObs.observe(el); });
+
+  /* ===== Init ===== */
+  initWaPopup();
+
 })();
 </script>
 </body>
